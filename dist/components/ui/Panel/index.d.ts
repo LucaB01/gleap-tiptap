@@ -5,7 +5,7 @@ export type PanelProps = {
     asChild?: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;
 export declare const Panel: import("react").ForwardRefExoticComponent<{
-    spacing?: "small" | "medium" | undefined;
+    spacing?: "medium" | "small" | undefined;
     noShadow?: boolean | undefined;
     asChild?: boolean | undefined;
 } & import("react").HTMLAttributes<HTMLDivElement> & import("react").RefAttributes<HTMLDivElement>>;

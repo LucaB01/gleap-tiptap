@@ -1,3 +1,2 @@
-import React from 'react';
-export declare const BlockEditor: ({}: {}) => React.JSX.Element | null;
+export declare const BlockEditor: ({}: {}) => import("react/jsx-runtime").JSX.Element | null;
 export default BlockEditor;

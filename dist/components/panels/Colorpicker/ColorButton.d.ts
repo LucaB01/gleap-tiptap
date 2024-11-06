@@ -4,4 +4,4 @@ export type ColorButtonProps = {
     active?: boolean;
     onColorChange?: (color: string) => void;
 };
-export declare const ColorButton: import("react").MemoExoticComponent<({ color, active, onColorChange }: ColorButtonProps) => import("react").JSX.Element>;
+export declare const ColorButton: import("react").MemoExoticComponent<({ color, active, onColorChange }: ColorButtonProps) => import("react/jsx-runtime").JSX.Element>;

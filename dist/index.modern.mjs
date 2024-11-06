@@ -58,28 +58,6 @@ import * as Popover from '@radix-ui/react-popover';
 import DragHandle from '@tiptap-pro/extension-drag-handle-react';
 import { Doc } from 'yjs';
 
-function _extends() {
-  return _extends = Object.assign ? Object.assign.bind() : function (n) {
-    for (var e = 1; e < arguments.length; e++) {
-      var t = arguments[e];
-      for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]);
-    }
-    return n;
-  }, _extends.apply(null, arguments);
-}
-function _objectDestructuringEmpty(t) {
-  if (null == t) throw new TypeError("Cannot destructure " + t);
-}
-function _objectWithoutPropertiesLoose(r, e) {
-  if (null == r) return {};
-  var t = {};
-  for (var n in r) if ({}.hasOwnProperty.call(r, n)) {
-    if (e.includes(n)) continue;
-    t[n] = r[n];
-  }
-  return t;
-}
-
 function createCommonjsModule(fn) {
   var module = { exports: {} };
 	return fn(module, module.exports), module.exports;
@@ -94,20 +72,20 @@ function createCommonjsModule(fn) {
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-var l=Symbol.for("react.element"),n=Symbol.for("react.portal"),p$1=Symbol.for("react.fragment"),q=Symbol.for("react.strict_mode"),r=Symbol.for("react.profiler"),t=Symbol.for("react.provider"),u=Symbol.for("react.context"),v$1=Symbol.for("react.forward_ref"),w=Symbol.for("react.suspense"),x=Symbol.for("react.memo"),y=Symbol.for("react.lazy"),z$1=Symbol.iterator;function A$1(a){if(null===a||"object"!==typeof a)return null;a=z$1&&a[z$1]||a["@@iterator"];return "function"===typeof a?a:null}
+var l$1=Symbol.for("react.element"),n$1=Symbol.for("react.portal"),p$2=Symbol.for("react.fragment"),q$1=Symbol.for("react.strict_mode"),r=Symbol.for("react.profiler"),t=Symbol.for("react.provider"),u=Symbol.for("react.context"),v$1=Symbol.for("react.forward_ref"),w=Symbol.for("react.suspense"),x=Symbol.for("react.memo"),y=Symbol.for("react.lazy"),z$1=Symbol.iterator;function A$1(a){if(null===a||"object"!==typeof a)return null;a=z$1&&a[z$1]||a["@@iterator"];return "function"===typeof a?a:null}
 var B$1={isMounted:function(){return !1},enqueueForceUpdate:function(){},enqueueReplaceState:function(){},enqueueSetState:function(){}},C$1=Object.assign,D$1={};function E$1(a,b,e){this.props=a;this.context=b;this.refs=D$1;this.updater=e||B$1;}E$1.prototype.isReactComponent={};
 E$1.prototype.setState=function(a,b){if("object"!==typeof a&&"function"!==typeof a&&null!=a)throw Error("setState(...): takes an object of state variables to update or a function which returns an object of state variables.");this.updater.enqueueSetState(this,a,b,"setState");};E$1.prototype.forceUpdate=function(a){this.updater.enqueueForceUpdate(this,a,"forceUpdate");};function F(){}F.prototype=E$1.prototype;function G$1(a,b,e){this.props=a;this.context=b;this.refs=D$1;this.updater=e||B$1;}var H$1=G$1.prototype=new F;
 H$1.constructor=G$1;C$1(H$1,E$1.prototype);H$1.isPureReactComponent=!0;var I$1=Array.isArray,J=Object.prototype.hasOwnProperty,K$1={current:null},L$1={key:!0,ref:!0,__self:!0,__source:!0};
-function M$1(a,b,e){var d,c={},k=null,h=null;if(null!=b)for(d in void 0!==b.ref&&(h=b.ref),void 0!==b.key&&(k=""+b.key),b)J.call(b,d)&&!L$1.hasOwnProperty(d)&&(c[d]=b[d]);var g=arguments.length-2;if(1===g)c.children=e;else if(1<g){for(var f=Array(g),m=0;m<g;m++)f[m]=arguments[m+2];c.children=f;}if(a&&a.defaultProps)for(d in g=a.defaultProps,g)void 0===c[d]&&(c[d]=g[d]);return {$$typeof:l,type:a,key:k,ref:h,props:c,_owner:K$1.current}}
-function N$1(a,b){return {$$typeof:l,type:a.type,key:b,ref:a.ref,props:a.props,_owner:a._owner}}function O$1(a){return "object"===typeof a&&null!==a&&a.$$typeof===l}function escape(a){var b={"=":"=0",":":"=2"};return "$"+a.replace(/[=:]/g,function(a){return b[a]})}var P$1=/\/+/g;function Q$1(a,b){return "object"===typeof a&&null!==a&&null!=a.key?escape(""+a.key):b.toString(36)}
-function R$1(a,b,e,d,c){var k=typeof a;if("undefined"===k||"boolean"===k)a=null;var h=!1;if(null===a)h=!0;else switch(k){case "string":case "number":h=!0;break;case "object":switch(a.$$typeof){case l:case n:h=!0;}}if(h)return h=a,c=c(h),a=""===d?"."+Q$1(h,0):d,I$1(c)?(e="",null!=a&&(e=a.replace(P$1,"$&/")+"/"),R$1(c,b,e,"",function(a){return a})):null!=c&&(O$1(c)&&(c=N$1(c,e+(!c.key||h&&h.key===c.key?"":(""+c.key).replace(P$1,"$&/")+"/")+a)),b.push(c)),1;h=0;d=""===d?".":d+":";if(I$1(a))for(var g=0;g<a.length;g++){k=
+function M$1(a,b,e){var d,c={},k=null,h=null;if(null!=b)for(d in void 0!==b.ref&&(h=b.ref),void 0!==b.key&&(k=""+b.key),b)J.call(b,d)&&!L$1.hasOwnProperty(d)&&(c[d]=b[d]);var g=arguments.length-2;if(1===g)c.children=e;else if(1<g){for(var f=Array(g),m=0;m<g;m++)f[m]=arguments[m+2];c.children=f;}if(a&&a.defaultProps)for(d in g=a.defaultProps,g)void 0===c[d]&&(c[d]=g[d]);return {$$typeof:l$1,type:a,key:k,ref:h,props:c,_owner:K$1.current}}
+function N$1(a,b){return {$$typeof:l$1,type:a.type,key:b,ref:a.ref,props:a.props,_owner:a._owner}}function O$1(a){return "object"===typeof a&&null!==a&&a.$$typeof===l$1}function escape(a){var b={"=":"=0",":":"=2"};return "$"+a.replace(/[=:]/g,function(a){return b[a]})}var P$1=/\/+/g;function Q$1(a,b){return "object"===typeof a&&null!==a&&null!=a.key?escape(""+a.key):b.toString(36)}
+function R$1(a,b,e,d,c){var k=typeof a;if("undefined"===k||"boolean"===k)a=null;var h=!1;if(null===a)h=!0;else switch(k){case "string":case "number":h=!0;break;case "object":switch(a.$$typeof){case l$1:case n$1:h=!0;}}if(h)return h=a,c=c(h),a=""===d?"."+Q$1(h,0):d,I$1(c)?(e="",null!=a&&(e=a.replace(P$1,"$&/")+"/"),R$1(c,b,e,"",function(a){return a})):null!=c&&(O$1(c)&&(c=N$1(c,e+(!c.key||h&&h.key===c.key?"":(""+c.key).replace(P$1,"$&/")+"/")+a)),b.push(c)),1;h=0;d=""===d?".":d+":";if(I$1(a))for(var g=0;g<a.length;g++){k=
 a[g];var f=d+Q$1(k,g);h+=R$1(k,b,e,f,c);}else if(f=A$1(a),"function"===typeof f)for(a=f.call(a),g=0;!(k=a.next()).done;)k=k.value,f=d+Q$1(k,g++),h+=R$1(k,b,e,f,c);else if("object"===k)throw b=String(a),Error("Objects are not valid as a React child (found: "+("[object Object]"===b?"object with keys {"+Object.keys(a).join(", ")+"}":b)+"). If you meant to render a collection of children, use an array instead.");return h}
 function S$1(a,b,e){if(null==a)return a;var d=[],c=0;R$1(a,d,"","",function(a){return b.call(e,a,c++)});return d}function T$1(a){if(-1===a._status){var b=a._result;b=b();b.then(function(b){if(0===a._status||-1===a._status)a._status=1,a._result=b;},function(b){if(0===a._status||-1===a._status)a._status=2,a._result=b;});-1===a._status&&(a._status=0,a._result=b);}if(1===a._status)return a._result.default;throw a._result;}
 var U$1={current:null},V$1={transition:null},W$1={ReactCurrentDispatcher:U$1,ReactCurrentBatchConfig:V$1,ReactCurrentOwner:K$1};function X$1(){throw Error("act(...) is not supported in production builds of React.");}
-var Children={map:S$1,forEach:function(a,b,e){S$1(a,function(){b.apply(this,arguments);},e);},count:function(a){var b=0;S$1(a,function(){b++;});return b},toArray:function(a){return S$1(a,function(a){return a})||[]},only:function(a){if(!O$1(a))throw Error("React.Children.only expected to receive a single React element child.");return a}};var Component=E$1;var Fragment$1=p$1;var Profiler=r;var PureComponent=G$1;var StrictMode=q;var Suspense=w;
+var Children={map:S$1,forEach:function(a,b,e){S$1(a,function(){b.apply(this,arguments);},e);},count:function(a){var b=0;S$1(a,function(){b++;});return b},toArray:function(a){return S$1(a,function(a){return a})||[]},only:function(a){if(!O$1(a))throw Error("React.Children.only expected to receive a single React element child.");return a}};var Component=E$1;var Fragment$1=p$2;var Profiler=r;var PureComponent=G$1;var StrictMode=q$1;var Suspense=w;
 var __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED$1=W$1;var act=X$1;
 var cloneElement=function(a,b,e){if(null===a||void 0===a)throw Error("React.cloneElement(...): The argument must be a React element, but you passed "+a+".");var d=C$1({},a.props),c=a.key,k=a.ref,h=a._owner;if(null!=b){void 0!==b.ref&&(k=b.ref,h=K$1.current);void 0!==b.key&&(c=""+b.key);if(a.type&&a.type.defaultProps)var g=a.type.defaultProps;for(f in b)J.call(b,f)&&!L$1.hasOwnProperty(f)&&(d[f]=void 0===b[f]&&void 0!==g?g[f]:b[f]);}var f=arguments.length-2;if(1===f)d.children=e;else if(1<f){g=Array(f);
-for(var m=0;m<f;m++)g[m]=arguments[m+2];d.children=g;}return {$$typeof:l,type:a.type,key:c,ref:k,props:d,_owner:h}};var createContext=function(a){a={$$typeof:u,_currentValue:a,_currentValue2:a,_threadCount:0,Provider:null,Consumer:null,_defaultValue:null,_globalName:null};a.Provider={$$typeof:t,_context:a};return a.Consumer=a};var createElement=M$1;var createFactory=function(a){var b=M$1.bind(null,a);b.type=a;return b};var createRef=function(){return {current:null}};
+for(var m=0;m<f;m++)g[m]=arguments[m+2];d.children=g;}return {$$typeof:l$1,type:a.type,key:c,ref:k,props:d,_owner:h}};var createContext=function(a){a={$$typeof:u,_currentValue:a,_currentValue2:a,_threadCount:0,Provider:null,Consumer:null,_defaultValue:null,_globalName:null};a.Provider={$$typeof:t,_context:a};return a.Consumer=a};var createElement=M$1;var createFactory=function(a){var b=M$1.bind(null,a);b.type=a;return b};var createRef=function(){return {current:null}};
 var forwardRef=function(a){return {$$typeof:v$1,render:a}};var isValidElement=O$1;var lazy=function(a){return {$$typeof:y,_payload:{_status:-1,_result:a},_init:T$1}};var memo=function(a,b){return {$$typeof:x,type:a,compare:void 0===b?null:b}};var startTransition=function(a){var b=V$1.transition;V$1.transition={};try{a();}finally{V$1.transition=b;}};var unstable_act=X$1;var useCallback=function(a,b){return U$1.current.useCallback(a,b)};var useContext=function(a){return U$1.current.useContext(a)};
 var useDebugValue=function(){};var useDeferredValue=function(a){return U$1.current.useDeferredValue(a)};var useEffect=function(a,b){return U$1.current.useEffect(a,b)};var useId=function(){return U$1.current.useId()};var useImperativeHandle=function(a,b,e){return U$1.current.useImperativeHandle(a,b,e)};var useInsertionEffect=function(a,b){return U$1.current.useInsertionEffect(a,b)};var useLayoutEffect=function(a,b){return U$1.current.useLayoutEffect(a,b)};
 var useMemo=function(a,b){return U$1.current.useMemo(a,b)};var useReducer=function(a,b,e){return U$1.current.useReducer(a,b,e)};var useRef=function(a){return U$1.current.useRef(a)};var useState=function(a){return U$1.current.useState(a)};var useSyncExternalStore=function(a,b,e){return U$1.current.useSyncExternalStore(a,b,e)};var useTransition=function(){return U$1.current.useTransition()};var version$1="18.3.1";
@@ -2900,31 +2878,1398 @@ if (process.env.NODE_ENV === 'production') {
 }
 });
 
-var getConnectionText = function getConnectionText(collabState) {
+/**
+ * @license React
+ * react-jsx-runtime.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+var k=Symbol.for("react.element"),l=Symbol.for("react.fragment"),m=Object.prototype.hasOwnProperty,n=react.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner,p$1={key:!0,ref:!0,__self:!0,__source:!0};
+function q(c,a,g){var b,d={},e=null,h=null;void 0!==g&&(e=""+g);void 0!==a.key&&(e=""+a.key);void 0!==a.ref&&(h=a.ref);for(b in a)m.call(a,b)&&!p$1.hasOwnProperty(b)&&(d[b]=a[b]);if(c&&c.defaultProps)for(b in a=c.defaultProps,a)void 0===d[b]&&(d[b]=a[b]);return {$$typeof:k,type:c,key:e,ref:h,props:d,_owner:n.current}}var Fragment=l;var jsx=q;var jsxs=q;
+
+var reactJsxRuntime_production_min = {
+	Fragment: Fragment,
+	jsx: jsx,
+	jsxs: jsxs
+};
+
+/**
+ * @license React
+ * react-jsx-runtime.development.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+var reactJsxRuntime_development = createCommonjsModule(function (module, exports) {
+
+if (process.env.NODE_ENV !== "production") {
+  (function() {
+
+var React = react;
+
+// ATTENTION
+// When adding new symbols to this file,
+// Please consider also adding to 'react-devtools-shared/src/backend/ReactSymbols'
+// The Symbol used to tag the ReactElement-like types.
+var REACT_ELEMENT_TYPE = Symbol.for('react.element');
+var REACT_PORTAL_TYPE = Symbol.for('react.portal');
+var REACT_FRAGMENT_TYPE = Symbol.for('react.fragment');
+var REACT_STRICT_MODE_TYPE = Symbol.for('react.strict_mode');
+var REACT_PROFILER_TYPE = Symbol.for('react.profiler');
+var REACT_PROVIDER_TYPE = Symbol.for('react.provider');
+var REACT_CONTEXT_TYPE = Symbol.for('react.context');
+var REACT_FORWARD_REF_TYPE = Symbol.for('react.forward_ref');
+var REACT_SUSPENSE_TYPE = Symbol.for('react.suspense');
+var REACT_SUSPENSE_LIST_TYPE = Symbol.for('react.suspense_list');
+var REACT_MEMO_TYPE = Symbol.for('react.memo');
+var REACT_LAZY_TYPE = Symbol.for('react.lazy');
+var REACT_OFFSCREEN_TYPE = Symbol.for('react.offscreen');
+var MAYBE_ITERATOR_SYMBOL = Symbol.iterator;
+var FAUX_ITERATOR_SYMBOL = '@@iterator';
+function getIteratorFn(maybeIterable) {
+  if (maybeIterable === null || typeof maybeIterable !== 'object') {
+    return null;
+  }
+
+  var maybeIterator = MAYBE_ITERATOR_SYMBOL && maybeIterable[MAYBE_ITERATOR_SYMBOL] || maybeIterable[FAUX_ITERATOR_SYMBOL];
+
+  if (typeof maybeIterator === 'function') {
+    return maybeIterator;
+  }
+
+  return null;
+}
+
+var ReactSharedInternals = React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+
+function error(format) {
+  {
+    {
+      for (var _len2 = arguments.length, args = new Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
+        args[_key2 - 1] = arguments[_key2];
+      }
+
+      printWarning('error', format, args);
+    }
+  }
+}
+
+function printWarning(level, format, args) {
+  // When changing this logic, you might want to also
+  // update consoleWithStackDev.www.js as well.
+  {
+    var ReactDebugCurrentFrame = ReactSharedInternals.ReactDebugCurrentFrame;
+    var stack = ReactDebugCurrentFrame.getStackAddendum();
+
+    if (stack !== '') {
+      format += '%s';
+      args = args.concat([stack]);
+    } // eslint-disable-next-line react-internal/safe-string-coercion
+
+
+    var argsWithFormat = args.map(function (item) {
+      return String(item);
+    }); // Careful: RN currently depends on this prefix
+
+    argsWithFormat.unshift('Warning: ' + format); // We intentionally don't use spread (or .apply) directly because it
+    // breaks IE9: https://github.com/facebook/react/issues/13610
+    // eslint-disable-next-line react-internal/no-production-logging
+
+    Function.prototype.apply.call(console[level], console, argsWithFormat);
+  }
+}
+
+// -----------------------------------------------------------------------------
+
+var enableScopeAPI = false; // Experimental Create Event Handle API.
+var enableCacheElement = false;
+var enableTransitionTracing = false; // No known bugs, but needs performance testing
+
+var enableLegacyHidden = false; // Enables unstable_avoidThisFallback feature in Fiber
+// stuff. Intended to enable React core members to more easily debug scheduling
+// issues in DEV builds.
+
+var enableDebugTracing = false; // Track which Fiber(s) schedule render work.
+
+var REACT_MODULE_REFERENCE;
+
+{
+  REACT_MODULE_REFERENCE = Symbol.for('react.module.reference');
+}
+
+function isValidElementType(type) {
+  if (typeof type === 'string' || typeof type === 'function') {
+    return true;
+  } // Note: typeof might be other than 'symbol' or 'number' (e.g. if it's a polyfill).
+
+
+  if (type === REACT_FRAGMENT_TYPE || type === REACT_PROFILER_TYPE || enableDebugTracing  || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || enableLegacyHidden  || type === REACT_OFFSCREEN_TYPE || enableScopeAPI  || enableCacheElement  || enableTransitionTracing ) {
+    return true;
+  }
+
+  if (typeof type === 'object' && type !== null) {
+    if (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE || // This needs to include all possible module reference object
+    // types supported by any Flight configuration anywhere since
+    // we don't know which Flight build this will end up being used
+    // with.
+    type.$$typeof === REACT_MODULE_REFERENCE || type.getModuleId !== undefined) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
+function getWrappedName(outerType, innerType, wrapperName) {
+  var displayName = outerType.displayName;
+
+  if (displayName) {
+    return displayName;
+  }
+
+  var functionName = innerType.displayName || innerType.name || '';
+  return functionName !== '' ? wrapperName + "(" + functionName + ")" : wrapperName;
+} // Keep in sync with react-reconciler/getComponentNameFromFiber
+
+
+function getContextName(type) {
+  return type.displayName || 'Context';
+} // Note that the reconciler package should generally prefer to use getComponentNameFromFiber() instead.
+
+
+function getComponentNameFromType(type) {
+  if (type == null) {
+    // Host root, text node or just invalid type.
+    return null;
+  }
+
+  {
+    if (typeof type.tag === 'number') {
+      error('Received an unexpected object in getComponentNameFromType(). ' + 'This is likely a bug in React. Please file an issue.');
+    }
+  }
+
+  if (typeof type === 'function') {
+    return type.displayName || type.name || null;
+  }
+
+  if (typeof type === 'string') {
+    return type;
+  }
+
+  switch (type) {
+    case REACT_FRAGMENT_TYPE:
+      return 'Fragment';
+
+    case REACT_PORTAL_TYPE:
+      return 'Portal';
+
+    case REACT_PROFILER_TYPE:
+      return 'Profiler';
+
+    case REACT_STRICT_MODE_TYPE:
+      return 'StrictMode';
+
+    case REACT_SUSPENSE_TYPE:
+      return 'Suspense';
+
+    case REACT_SUSPENSE_LIST_TYPE:
+      return 'SuspenseList';
+
+  }
+
+  if (typeof type === 'object') {
+    switch (type.$$typeof) {
+      case REACT_CONTEXT_TYPE:
+        var context = type;
+        return getContextName(context) + '.Consumer';
+
+      case REACT_PROVIDER_TYPE:
+        var provider = type;
+        return getContextName(provider._context) + '.Provider';
+
+      case REACT_FORWARD_REF_TYPE:
+        return getWrappedName(type, type.render, 'ForwardRef');
+
+      case REACT_MEMO_TYPE:
+        var outerName = type.displayName || null;
+
+        if (outerName !== null) {
+          return outerName;
+        }
+
+        return getComponentNameFromType(type.type) || 'Memo';
+
+      case REACT_LAZY_TYPE:
+        {
+          var lazyComponent = type;
+          var payload = lazyComponent._payload;
+          var init = lazyComponent._init;
+
+          try {
+            return getComponentNameFromType(init(payload));
+          } catch (x) {
+            return null;
+          }
+        }
+
+      // eslint-disable-next-line no-fallthrough
+    }
+  }
+
+  return null;
+}
+
+var assign = Object.assign;
+
+// Helpers to patch console.logs to avoid logging during side-effect free
+// replaying on render function. This currently only patches the object
+// lazily which won't cover if the log function was extracted eagerly.
+// We could also eagerly patch the method.
+var disabledDepth = 0;
+var prevLog;
+var prevInfo;
+var prevWarn;
+var prevError;
+var prevGroup;
+var prevGroupCollapsed;
+var prevGroupEnd;
+
+function disabledLog() {}
+
+disabledLog.__reactDisabledLog = true;
+function disableLogs() {
+  {
+    if (disabledDepth === 0) {
+      /* eslint-disable react-internal/no-production-logging */
+      prevLog = console.log;
+      prevInfo = console.info;
+      prevWarn = console.warn;
+      prevError = console.error;
+      prevGroup = console.group;
+      prevGroupCollapsed = console.groupCollapsed;
+      prevGroupEnd = console.groupEnd; // https://github.com/facebook/react/issues/19099
+
+      var props = {
+        configurable: true,
+        enumerable: true,
+        value: disabledLog,
+        writable: true
+      }; // $FlowFixMe Flow thinks console is immutable.
+
+      Object.defineProperties(console, {
+        info: props,
+        log: props,
+        warn: props,
+        error: props,
+        group: props,
+        groupCollapsed: props,
+        groupEnd: props
+      });
+      /* eslint-enable react-internal/no-production-logging */
+    }
+
+    disabledDepth++;
+  }
+}
+function reenableLogs() {
+  {
+    disabledDepth--;
+
+    if (disabledDepth === 0) {
+      /* eslint-disable react-internal/no-production-logging */
+      var props = {
+        configurable: true,
+        enumerable: true,
+        writable: true
+      }; // $FlowFixMe Flow thinks console is immutable.
+
+      Object.defineProperties(console, {
+        log: assign({}, props, {
+          value: prevLog
+        }),
+        info: assign({}, props, {
+          value: prevInfo
+        }),
+        warn: assign({}, props, {
+          value: prevWarn
+        }),
+        error: assign({}, props, {
+          value: prevError
+        }),
+        group: assign({}, props, {
+          value: prevGroup
+        }),
+        groupCollapsed: assign({}, props, {
+          value: prevGroupCollapsed
+        }),
+        groupEnd: assign({}, props, {
+          value: prevGroupEnd
+        })
+      });
+      /* eslint-enable react-internal/no-production-logging */
+    }
+
+    if (disabledDepth < 0) {
+      error('disabledDepth fell below zero. ' + 'This is a bug in React. Please file an issue.');
+    }
+  }
+}
+
+var ReactCurrentDispatcher = ReactSharedInternals.ReactCurrentDispatcher;
+var prefix;
+function describeBuiltInComponentFrame(name, source, ownerFn) {
+  {
+    if (prefix === undefined) {
+      // Extract the VM specific prefix used by each line.
+      try {
+        throw Error();
+      } catch (x) {
+        var match = x.stack.trim().match(/\n( *(at )?)/);
+        prefix = match && match[1] || '';
+      }
+    } // We use the prefix to ensure our stacks line up with native stack frames.
+
+
+    return '\n' + prefix + name;
+  }
+}
+var reentry = false;
+var componentFrameCache;
+
+{
+  var PossiblyWeakMap = typeof WeakMap === 'function' ? WeakMap : Map;
+  componentFrameCache = new PossiblyWeakMap();
+}
+
+function describeNativeComponentFrame(fn, construct) {
+  // If something asked for a stack inside a fake render, it should get ignored.
+  if ( !fn || reentry) {
+    return '';
+  }
+
+  {
+    var frame = componentFrameCache.get(fn);
+
+    if (frame !== undefined) {
+      return frame;
+    }
+  }
+
+  var control;
+  reentry = true;
+  var previousPrepareStackTrace = Error.prepareStackTrace; // $FlowFixMe It does accept undefined.
+
+  Error.prepareStackTrace = undefined;
+  var previousDispatcher;
+
+  {
+    previousDispatcher = ReactCurrentDispatcher.current; // Set the dispatcher in DEV because this might be call in the render function
+    // for warnings.
+
+    ReactCurrentDispatcher.current = null;
+    disableLogs();
+  }
+
+  try {
+    // This should throw.
+    if (construct) {
+      // Something should be setting the props in the constructor.
+      var Fake = function () {
+        throw Error();
+      }; // $FlowFixMe
+
+
+      Object.defineProperty(Fake.prototype, 'props', {
+        set: function () {
+          // We use a throwing setter instead of frozen or non-writable props
+          // because that won't throw in a non-strict mode function.
+          throw Error();
+        }
+      });
+
+      if (typeof Reflect === 'object' && Reflect.construct) {
+        // We construct a different control for this case to include any extra
+        // frames added by the construct call.
+        try {
+          Reflect.construct(Fake, []);
+        } catch (x) {
+          control = x;
+        }
+
+        Reflect.construct(fn, [], Fake);
+      } else {
+        try {
+          Fake.call();
+        } catch (x) {
+          control = x;
+        }
+
+        fn.call(Fake.prototype);
+      }
+    } else {
+      try {
+        throw Error();
+      } catch (x) {
+        control = x;
+      }
+
+      fn();
+    }
+  } catch (sample) {
+    // This is inlined manually because closure doesn't do it for us.
+    if (sample && control && typeof sample.stack === 'string') {
+      // This extracts the first frame from the sample that isn't also in the control.
+      // Skipping one frame that we assume is the frame that calls the two.
+      var sampleLines = sample.stack.split('\n');
+      var controlLines = control.stack.split('\n');
+      var s = sampleLines.length - 1;
+      var c = controlLines.length - 1;
+
+      while (s >= 1 && c >= 0 && sampleLines[s] !== controlLines[c]) {
+        // We expect at least one stack frame to be shared.
+        // Typically this will be the root most one. However, stack frames may be
+        // cut off due to maximum stack limits. In this case, one maybe cut off
+        // earlier than the other. We assume that the sample is longer or the same
+        // and there for cut off earlier. So we should find the root most frame in
+        // the sample somewhere in the control.
+        c--;
+      }
+
+      for (; s >= 1 && c >= 0; s--, c--) {
+        // Next we find the first one that isn't the same which should be the
+        // frame that called our sample function and the control.
+        if (sampleLines[s] !== controlLines[c]) {
+          // In V8, the first line is describing the message but other VMs don't.
+          // If we're about to return the first line, and the control is also on the same
+          // line, that's a pretty good indicator that our sample threw at same line as
+          // the control. I.e. before we entered the sample frame. So we ignore this result.
+          // This can happen if you passed a class to function component, or non-function.
+          if (s !== 1 || c !== 1) {
+            do {
+              s--;
+              c--; // We may still have similar intermediate frames from the construct call.
+              // The next one that isn't the same should be our match though.
+
+              if (c < 0 || sampleLines[s] !== controlLines[c]) {
+                // V8 adds a "new" prefix for native classes. Let's remove it to make it prettier.
+                var _frame = '\n' + sampleLines[s].replace(' at new ', ' at '); // If our component frame is labeled "<anonymous>"
+                // but we have a user-provided "displayName"
+                // splice it in to make the stack more readable.
+
+
+                if (fn.displayName && _frame.includes('<anonymous>')) {
+                  _frame = _frame.replace('<anonymous>', fn.displayName);
+                }
+
+                {
+                  if (typeof fn === 'function') {
+                    componentFrameCache.set(fn, _frame);
+                  }
+                } // Return the line we found.
+
+
+                return _frame;
+              }
+            } while (s >= 1 && c >= 0);
+          }
+
+          break;
+        }
+      }
+    }
+  } finally {
+    reentry = false;
+
+    {
+      ReactCurrentDispatcher.current = previousDispatcher;
+      reenableLogs();
+    }
+
+    Error.prepareStackTrace = previousPrepareStackTrace;
+  } // Fallback to just using the name if we couldn't make it throw.
+
+
+  var name = fn ? fn.displayName || fn.name : '';
+  var syntheticFrame = name ? describeBuiltInComponentFrame(name) : '';
+
+  {
+    if (typeof fn === 'function') {
+      componentFrameCache.set(fn, syntheticFrame);
+    }
+  }
+
+  return syntheticFrame;
+}
+function describeFunctionComponentFrame(fn, source, ownerFn) {
+  {
+    return describeNativeComponentFrame(fn, false);
+  }
+}
+
+function shouldConstruct(Component) {
+  var prototype = Component.prototype;
+  return !!(prototype && prototype.isReactComponent);
+}
+
+function describeUnknownElementTypeFrameInDEV(type, source, ownerFn) {
+
+  if (type == null) {
+    return '';
+  }
+
+  if (typeof type === 'function') {
+    {
+      return describeNativeComponentFrame(type, shouldConstruct(type));
+    }
+  }
+
+  if (typeof type === 'string') {
+    return describeBuiltInComponentFrame(type);
+  }
+
+  switch (type) {
+    case REACT_SUSPENSE_TYPE:
+      return describeBuiltInComponentFrame('Suspense');
+
+    case REACT_SUSPENSE_LIST_TYPE:
+      return describeBuiltInComponentFrame('SuspenseList');
+  }
+
+  if (typeof type === 'object') {
+    switch (type.$$typeof) {
+      case REACT_FORWARD_REF_TYPE:
+        return describeFunctionComponentFrame(type.render);
+
+      case REACT_MEMO_TYPE:
+        // Memo may contain any component type so we recursively resolve it.
+        return describeUnknownElementTypeFrameInDEV(type.type, source, ownerFn);
+
+      case REACT_LAZY_TYPE:
+        {
+          var lazyComponent = type;
+          var payload = lazyComponent._payload;
+          var init = lazyComponent._init;
+
+          try {
+            // Lazy may contain any component type so we recursively resolve it.
+            return describeUnknownElementTypeFrameInDEV(init(payload), source, ownerFn);
+          } catch (x) {}
+        }
+    }
+  }
+
+  return '';
+}
+
+var hasOwnProperty = Object.prototype.hasOwnProperty;
+
+var loggedTypeFailures = {};
+var ReactDebugCurrentFrame = ReactSharedInternals.ReactDebugCurrentFrame;
+
+function setCurrentlyValidatingElement(element) {
+  {
+    if (element) {
+      var owner = element._owner;
+      var stack = describeUnknownElementTypeFrameInDEV(element.type, element._source, owner ? owner.type : null);
+      ReactDebugCurrentFrame.setExtraStackFrame(stack);
+    } else {
+      ReactDebugCurrentFrame.setExtraStackFrame(null);
+    }
+  }
+}
+
+function checkPropTypes(typeSpecs, values, location, componentName, element) {
+  {
+    // $FlowFixMe This is okay but Flow doesn't know it.
+    var has = Function.call.bind(hasOwnProperty);
+
+    for (var typeSpecName in typeSpecs) {
+      if (has(typeSpecs, typeSpecName)) {
+        var error$1 = void 0; // Prop type validation may throw. In case they do, we don't want to
+        // fail the render phase where it didn't fail before. So we log it.
+        // After these have been cleaned up, we'll let them throw.
+
+        try {
+          // This is intentionally an invariant that gets caught. It's the same
+          // behavior as without this statement except with a better message.
+          if (typeof typeSpecs[typeSpecName] !== 'function') {
+            // eslint-disable-next-line react-internal/prod-error-codes
+            var err = Error((componentName || 'React class') + ': ' + location + ' type `' + typeSpecName + '` is invalid; ' + 'it must be a function, usually from the `prop-types` package, but received `' + typeof typeSpecs[typeSpecName] + '`.' + 'This often happens because of typos such as `PropTypes.function` instead of `PropTypes.func`.');
+            err.name = 'Invariant Violation';
+            throw err;
+          }
+
+          error$1 = typeSpecs[typeSpecName](values, typeSpecName, componentName, location, null, 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED');
+        } catch (ex) {
+          error$1 = ex;
+        }
+
+        if (error$1 && !(error$1 instanceof Error)) {
+          setCurrentlyValidatingElement(element);
+
+          error('%s: type specification of %s' + ' `%s` is invalid; the type checker ' + 'function must return `null` or an `Error` but returned a %s. ' + 'You may have forgotten to pass an argument to the type checker ' + 'creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and ' + 'shape all require an argument).', componentName || 'React class', location, typeSpecName, typeof error$1);
+
+          setCurrentlyValidatingElement(null);
+        }
+
+        if (error$1 instanceof Error && !(error$1.message in loggedTypeFailures)) {
+          // Only monitor this failure once because there tends to be a lot of the
+          // same error.
+          loggedTypeFailures[error$1.message] = true;
+          setCurrentlyValidatingElement(element);
+
+          error('Failed %s type: %s', location, error$1.message);
+
+          setCurrentlyValidatingElement(null);
+        }
+      }
+    }
+  }
+}
+
+var isArrayImpl = Array.isArray; // eslint-disable-next-line no-redeclare
+
+function isArray(a) {
+  return isArrayImpl(a);
+}
+
+/*
+ * The `'' + value` pattern (used in in perf-sensitive code) throws for Symbol
+ * and Temporal.* types. See https://github.com/facebook/react/pull/22064.
+ *
+ * The functions in this module will throw an easier-to-understand,
+ * easier-to-debug exception with a clear errors message message explaining the
+ * problem. (Instead of a confusing exception thrown inside the implementation
+ * of the `value` object).
+ */
+// $FlowFixMe only called in DEV, so void return is not possible.
+function typeName(value) {
+  {
+    // toStringTag is needed for namespaced types like Temporal.Instant
+    var hasToStringTag = typeof Symbol === 'function' && Symbol.toStringTag;
+    var type = hasToStringTag && value[Symbol.toStringTag] || value.constructor.name || 'Object';
+    return type;
+  }
+} // $FlowFixMe only called in DEV, so void return is not possible.
+
+
+function willCoercionThrow(value) {
+  {
+    try {
+      testStringCoercion(value);
+      return false;
+    } catch (e) {
+      return true;
+    }
+  }
+}
+
+function testStringCoercion(value) {
+  // If you ended up here by following an exception call stack, here's what's
+  // happened: you supplied an object or symbol value to React (as a prop, key,
+  // DOM attribute, CSS property, string ref, etc.) and when React tried to
+  // coerce it to a string using `'' + value`, an exception was thrown.
+  //
+  // The most common types that will cause this exception are `Symbol` instances
+  // and Temporal objects like `Temporal.Instant`. But any object that has a
+  // `valueOf` or `[Symbol.toPrimitive]` method that throws will also cause this
+  // exception. (Library authors do this to prevent users from using built-in
+  // numeric operators like `+` or comparison operators like `>=` because custom
+  // methods are needed to perform accurate arithmetic or comparison.)
+  //
+  // To fix the problem, coerce this object or symbol value to a string before
+  // passing it to React. The most reliable way is usually `String(value)`.
+  //
+  // To find which value is throwing, check the browser or debugger console.
+  // Before this exception was thrown, there should be `console.error` output
+  // that shows the type (Symbol, Temporal.PlainDate, etc.) that caused the
+  // problem and how that type was used: key, atrribute, input value prop, etc.
+  // In most cases, this console output also shows the component and its
+  // ancestor components where the exception happened.
+  //
+  // eslint-disable-next-line react-internal/safe-string-coercion
+  return '' + value;
+}
+function checkKeyStringCoercion(value) {
+  {
+    if (willCoercionThrow(value)) {
+      error('The provided key is an unsupported type %s.' + ' This value must be coerced to a string before before using it here.', typeName(value));
+
+      return testStringCoercion(value); // throw (to help callers find troubleshooting comments)
+    }
+  }
+}
+
+var ReactCurrentOwner = ReactSharedInternals.ReactCurrentOwner;
+var RESERVED_PROPS = {
+  key: true,
+  ref: true,
+  __self: true,
+  __source: true
+};
+var specialPropKeyWarningShown;
+var specialPropRefWarningShown;
+var didWarnAboutStringRefs;
+
+{
+  didWarnAboutStringRefs = {};
+}
+
+function hasValidRef(config) {
+  {
+    if (hasOwnProperty.call(config, 'ref')) {
+      var getter = Object.getOwnPropertyDescriptor(config, 'ref').get;
+
+      if (getter && getter.isReactWarning) {
+        return false;
+      }
+    }
+  }
+
+  return config.ref !== undefined;
+}
+
+function hasValidKey(config) {
+  {
+    if (hasOwnProperty.call(config, 'key')) {
+      var getter = Object.getOwnPropertyDescriptor(config, 'key').get;
+
+      if (getter && getter.isReactWarning) {
+        return false;
+      }
+    }
+  }
+
+  return config.key !== undefined;
+}
+
+function warnIfStringRefCannotBeAutoConverted(config, self) {
+  {
+    if (typeof config.ref === 'string' && ReactCurrentOwner.current && self && ReactCurrentOwner.current.stateNode !== self) {
+      var componentName = getComponentNameFromType(ReactCurrentOwner.current.type);
+
+      if (!didWarnAboutStringRefs[componentName]) {
+        error('Component "%s" contains the string ref "%s". ' + 'Support for string refs will be removed in a future major release. ' + 'This case cannot be automatically converted to an arrow function. ' + 'We ask you to manually fix this case by using useRef() or createRef() instead. ' + 'Learn more about using refs safely here: ' + 'https://reactjs.org/link/strict-mode-string-ref', getComponentNameFromType(ReactCurrentOwner.current.type), config.ref);
+
+        didWarnAboutStringRefs[componentName] = true;
+      }
+    }
+  }
+}
+
+function defineKeyPropWarningGetter(props, displayName) {
+  {
+    var warnAboutAccessingKey = function () {
+      if (!specialPropKeyWarningShown) {
+        specialPropKeyWarningShown = true;
+
+        error('%s: `key` is not a prop. Trying to access it will result ' + 'in `undefined` being returned. If you need to access the same ' + 'value within the child component, you should pass it as a different ' + 'prop. (https://reactjs.org/link/special-props)', displayName);
+      }
+    };
+
+    warnAboutAccessingKey.isReactWarning = true;
+    Object.defineProperty(props, 'key', {
+      get: warnAboutAccessingKey,
+      configurable: true
+    });
+  }
+}
+
+function defineRefPropWarningGetter(props, displayName) {
+  {
+    var warnAboutAccessingRef = function () {
+      if (!specialPropRefWarningShown) {
+        specialPropRefWarningShown = true;
+
+        error('%s: `ref` is not a prop. Trying to access it will result ' + 'in `undefined` being returned. If you need to access the same ' + 'value within the child component, you should pass it as a different ' + 'prop. (https://reactjs.org/link/special-props)', displayName);
+      }
+    };
+
+    warnAboutAccessingRef.isReactWarning = true;
+    Object.defineProperty(props, 'ref', {
+      get: warnAboutAccessingRef,
+      configurable: true
+    });
+  }
+}
+/**
+ * Factory method to create a new React element. This no longer adheres to
+ * the class pattern, so do not use new to call it. Also, instanceof check
+ * will not work. Instead test $$typeof field against Symbol.for('react.element') to check
+ * if something is a React Element.
+ *
+ * @param {*} type
+ * @param {*} props
+ * @param {*} key
+ * @param {string|object} ref
+ * @param {*} owner
+ * @param {*} self A *temporary* helper to detect places where `this` is
+ * different from the `owner` when React.createElement is called, so that we
+ * can warn. We want to get rid of owner and replace string `ref`s with arrow
+ * functions, and as long as `this` and owner are the same, there will be no
+ * change in behavior.
+ * @param {*} source An annotation object (added by a transpiler or otherwise)
+ * indicating filename, line number, and/or other information.
+ * @internal
+ */
+
+
+var ReactElement = function (type, key, ref, self, source, owner, props) {
+  var element = {
+    // This tag allows us to uniquely identify this as a React Element
+    $$typeof: REACT_ELEMENT_TYPE,
+    // Built-in properties that belong on the element
+    type: type,
+    key: key,
+    ref: ref,
+    props: props,
+    // Record the component responsible for creating this element.
+    _owner: owner
+  };
+
+  {
+    // The validation flag is currently mutative. We put it on
+    // an external backing store so that we can freeze the whole object.
+    // This can be replaced with a WeakMap once they are implemented in
+    // commonly used development environments.
+    element._store = {}; // To make comparing ReactElements easier for testing purposes, we make
+    // the validation flag non-enumerable (where possible, which should
+    // include every environment we run tests in), so the test framework
+    // ignores it.
+
+    Object.defineProperty(element._store, 'validated', {
+      configurable: false,
+      enumerable: false,
+      writable: true,
+      value: false
+    }); // self and source are DEV only properties.
+
+    Object.defineProperty(element, '_self', {
+      configurable: false,
+      enumerable: false,
+      writable: false,
+      value: self
+    }); // Two elements created in two different places should be considered
+    // equal for testing purposes and therefore we hide it from enumeration.
+
+    Object.defineProperty(element, '_source', {
+      configurable: false,
+      enumerable: false,
+      writable: false,
+      value: source
+    });
+
+    if (Object.freeze) {
+      Object.freeze(element.props);
+      Object.freeze(element);
+    }
+  }
+
+  return element;
+};
+/**
+ * https://github.com/reactjs/rfcs/pull/107
+ * @param {*} type
+ * @param {object} props
+ * @param {string} key
+ */
+
+function jsxDEV(type, config, maybeKey, source, self) {
+  {
+    var propName; // Reserved names are extracted
+
+    var props = {};
+    var key = null;
+    var ref = null; // Currently, key can be spread in as a prop. This causes a potential
+    // issue if key is also explicitly declared (ie. <div {...props} key="Hi" />
+    // or <div key="Hi" {...props} /> ). We want to deprecate key spread,
+    // but as an intermediary step, we will use jsxDEV for everything except
+    // <div {...props} key="Hi" />, because we aren't currently able to tell if
+    // key is explicitly declared to be undefined or not.
+
+    if (maybeKey !== undefined) {
+      {
+        checkKeyStringCoercion(maybeKey);
+      }
+
+      key = '' + maybeKey;
+    }
+
+    if (hasValidKey(config)) {
+      {
+        checkKeyStringCoercion(config.key);
+      }
+
+      key = '' + config.key;
+    }
+
+    if (hasValidRef(config)) {
+      ref = config.ref;
+      warnIfStringRefCannotBeAutoConverted(config, self);
+    } // Remaining properties are added to a new props object
+
+
+    for (propName in config) {
+      if (hasOwnProperty.call(config, propName) && !RESERVED_PROPS.hasOwnProperty(propName)) {
+        props[propName] = config[propName];
+      }
+    } // Resolve default props
+
+
+    if (type && type.defaultProps) {
+      var defaultProps = type.defaultProps;
+
+      for (propName in defaultProps) {
+        if (props[propName] === undefined) {
+          props[propName] = defaultProps[propName];
+        }
+      }
+    }
+
+    if (key || ref) {
+      var displayName = typeof type === 'function' ? type.displayName || type.name || 'Unknown' : type;
+
+      if (key) {
+        defineKeyPropWarningGetter(props, displayName);
+      }
+
+      if (ref) {
+        defineRefPropWarningGetter(props, displayName);
+      }
+    }
+
+    return ReactElement(type, key, ref, self, source, ReactCurrentOwner.current, props);
+  }
+}
+
+var ReactCurrentOwner$1 = ReactSharedInternals.ReactCurrentOwner;
+var ReactDebugCurrentFrame$1 = ReactSharedInternals.ReactDebugCurrentFrame;
+
+function setCurrentlyValidatingElement$1(element) {
+  {
+    if (element) {
+      var owner = element._owner;
+      var stack = describeUnknownElementTypeFrameInDEV(element.type, element._source, owner ? owner.type : null);
+      ReactDebugCurrentFrame$1.setExtraStackFrame(stack);
+    } else {
+      ReactDebugCurrentFrame$1.setExtraStackFrame(null);
+    }
+  }
+}
+
+var propTypesMisspellWarningShown;
+
+{
+  propTypesMisspellWarningShown = false;
+}
+/**
+ * Verifies the object is a ReactElement.
+ * See https://reactjs.org/docs/react-api.html#isvalidelement
+ * @param {?object} object
+ * @return {boolean} True if `object` is a ReactElement.
+ * @final
+ */
+
+
+function isValidElement(object) {
+  {
+    return typeof object === 'object' && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
+  }
+}
+
+function getDeclarationErrorAddendum() {
+  {
+    if (ReactCurrentOwner$1.current) {
+      var name = getComponentNameFromType(ReactCurrentOwner$1.current.type);
+
+      if (name) {
+        return '\n\nCheck the render method of `' + name + '`.';
+      }
+    }
+
+    return '';
+  }
+}
+
+function getSourceInfoErrorAddendum(source) {
+  {
+    if (source !== undefined) {
+      var fileName = source.fileName.replace(/^.*[\\\/]/, '');
+      var lineNumber = source.lineNumber;
+      return '\n\nCheck your code at ' + fileName + ':' + lineNumber + '.';
+    }
+
+    return '';
+  }
+}
+/**
+ * Warn if there's no key explicitly set on dynamic arrays of children or
+ * object keys are not valid. This allows us to keep track of children between
+ * updates.
+ */
+
+
+var ownerHasKeyUseWarning = {};
+
+function getCurrentComponentErrorInfo(parentType) {
+  {
+    var info = getDeclarationErrorAddendum();
+
+    if (!info) {
+      var parentName = typeof parentType === 'string' ? parentType : parentType.displayName || parentType.name;
+
+      if (parentName) {
+        info = "\n\nCheck the top-level render call using <" + parentName + ">.";
+      }
+    }
+
+    return info;
+  }
+}
+/**
+ * Warn if the element doesn't have an explicit key assigned to it.
+ * This element is in an array. The array could grow and shrink or be
+ * reordered. All children that haven't already been validated are required to
+ * have a "key" property assigned to it. Error statuses are cached so a warning
+ * will only be shown once.
+ *
+ * @internal
+ * @param {ReactElement} element Element that requires a key.
+ * @param {*} parentType element's parent's type.
+ */
+
+
+function validateExplicitKey(element, parentType) {
+  {
+    if (!element._store || element._store.validated || element.key != null) {
+      return;
+    }
+
+    element._store.validated = true;
+    var currentComponentErrorInfo = getCurrentComponentErrorInfo(parentType);
+
+    if (ownerHasKeyUseWarning[currentComponentErrorInfo]) {
+      return;
+    }
+
+    ownerHasKeyUseWarning[currentComponentErrorInfo] = true; // Usually the current owner is the offender, but if it accepts children as a
+    // property, it may be the creator of the child that's responsible for
+    // assigning it a key.
+
+    var childOwner = '';
+
+    if (element && element._owner && element._owner !== ReactCurrentOwner$1.current) {
+      // Give the component that originally created this child.
+      childOwner = " It was passed a child from " + getComponentNameFromType(element._owner.type) + ".";
+    }
+
+    setCurrentlyValidatingElement$1(element);
+
+    error('Each child in a list should have a unique "key" prop.' + '%s%s See https://reactjs.org/link/warning-keys for more information.', currentComponentErrorInfo, childOwner);
+
+    setCurrentlyValidatingElement$1(null);
+  }
+}
+/**
+ * Ensure that every element either is passed in a static location, in an
+ * array with an explicit keys property defined, or in an object literal
+ * with valid key property.
+ *
+ * @internal
+ * @param {ReactNode} node Statically passed child of any type.
+ * @param {*} parentType node's parent's type.
+ */
+
+
+function validateChildKeys(node, parentType) {
+  {
+    if (typeof node !== 'object') {
+      return;
+    }
+
+    if (isArray(node)) {
+      for (var i = 0; i < node.length; i++) {
+        var child = node[i];
+
+        if (isValidElement(child)) {
+          validateExplicitKey(child, parentType);
+        }
+      }
+    } else if (isValidElement(node)) {
+      // This element was passed in a valid location.
+      if (node._store) {
+        node._store.validated = true;
+      }
+    } else if (node) {
+      var iteratorFn = getIteratorFn(node);
+
+      if (typeof iteratorFn === 'function') {
+        // Entry iterators used to provide implicit keys,
+        // but now we print a separate warning for them later.
+        if (iteratorFn !== node.entries) {
+          var iterator = iteratorFn.call(node);
+          var step;
+
+          while (!(step = iterator.next()).done) {
+            if (isValidElement(step.value)) {
+              validateExplicitKey(step.value, parentType);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/**
+ * Given an element, validate that its props follow the propTypes definition,
+ * provided by the type.
+ *
+ * @param {ReactElement} element
+ */
+
+
+function validatePropTypes(element) {
+  {
+    var type = element.type;
+
+    if (type === null || type === undefined || typeof type === 'string') {
+      return;
+    }
+
+    var propTypes;
+
+    if (typeof type === 'function') {
+      propTypes = type.propTypes;
+    } else if (typeof type === 'object' && (type.$$typeof === REACT_FORWARD_REF_TYPE || // Note: Memo only checks outer props here.
+    // Inner props are checked in the reconciler.
+    type.$$typeof === REACT_MEMO_TYPE)) {
+      propTypes = type.propTypes;
+    } else {
+      return;
+    }
+
+    if (propTypes) {
+      // Intentionally inside to avoid triggering lazy initializers:
+      var name = getComponentNameFromType(type);
+      checkPropTypes(propTypes, element.props, 'prop', name, element);
+    } else if (type.PropTypes !== undefined && !propTypesMisspellWarningShown) {
+      propTypesMisspellWarningShown = true; // Intentionally inside to avoid triggering lazy initializers:
+
+      var _name = getComponentNameFromType(type);
+
+      error('Component %s declared `PropTypes` instead of `propTypes`. Did you misspell the property assignment?', _name || 'Unknown');
+    }
+
+    if (typeof type.getDefaultProps === 'function' && !type.getDefaultProps.isReactClassApproved) {
+      error('getDefaultProps is only used on classic React.createClass ' + 'definitions. Use a static property named `defaultProps` instead.');
+    }
+  }
+}
+/**
+ * Given a fragment, validate that it can only be provided with fragment props
+ * @param {ReactElement} fragment
+ */
+
+
+function validateFragmentProps(fragment) {
+  {
+    var keys = Object.keys(fragment.props);
+
+    for (var i = 0; i < keys.length; i++) {
+      var key = keys[i];
+
+      if (key !== 'children' && key !== 'key') {
+        setCurrentlyValidatingElement$1(fragment);
+
+        error('Invalid prop `%s` supplied to `React.Fragment`. ' + 'React.Fragment can only have `key` and `children` props.', key);
+
+        setCurrentlyValidatingElement$1(null);
+        break;
+      }
+    }
+
+    if (fragment.ref !== null) {
+      setCurrentlyValidatingElement$1(fragment);
+
+      error('Invalid attribute `ref` supplied to `React.Fragment`.');
+
+      setCurrentlyValidatingElement$1(null);
+    }
+  }
+}
+
+var didWarnAboutKeySpread = {};
+function jsxWithValidation(type, props, key, isStaticChildren, source, self) {
+  {
+    var validType = isValidElementType(type); // We warn in this case but don't throw. We expect the element creation to
+    // succeed and there will likely be errors in render.
+
+    if (!validType) {
+      var info = '';
+
+      if (type === undefined || typeof type === 'object' && type !== null && Object.keys(type).length === 0) {
+        info += ' You likely forgot to export your component from the file ' + "it's defined in, or you might have mixed up default and named imports.";
+      }
+
+      var sourceInfo = getSourceInfoErrorAddendum(source);
+
+      if (sourceInfo) {
+        info += sourceInfo;
+      } else {
+        info += getDeclarationErrorAddendum();
+      }
+
+      var typeString;
+
+      if (type === null) {
+        typeString = 'null';
+      } else if (isArray(type)) {
+        typeString = 'array';
+      } else if (type !== undefined && type.$$typeof === REACT_ELEMENT_TYPE) {
+        typeString = "<" + (getComponentNameFromType(type.type) || 'Unknown') + " />";
+        info = ' Did you accidentally export a JSX literal instead of a component?';
+      } else {
+        typeString = typeof type;
+      }
+
+      error('React.jsx: type is invalid -- expected a string (for ' + 'built-in components) or a class/function (for composite ' + 'components) but got: %s.%s', typeString, info);
+    }
+
+    var element = jsxDEV(type, props, key, source, self); // The result can be nullish if a mock or a custom function is used.
+    // TODO: Drop this when these are no longer allowed as the type argument.
+
+    if (element == null) {
+      return element;
+    } // Skip key warning if the type isn't valid since our key validation logic
+    // doesn't expect a non-string/function type and can throw confusing errors.
+    // We don't want exception behavior to differ between dev and prod.
+    // (Rendering will throw with a helpful message and as soon as the type is
+    // fixed, the key warnings will appear.)
+
+
+    if (validType) {
+      var children = props.children;
+
+      if (children !== undefined) {
+        if (isStaticChildren) {
+          if (isArray(children)) {
+            for (var i = 0; i < children.length; i++) {
+              validateChildKeys(children[i], type);
+            }
+
+            if (Object.freeze) {
+              Object.freeze(children);
+            }
+          } else {
+            error('React.jsx: Static children should always be an array. ' + 'You are likely explicitly calling React.jsxs or React.jsxDEV. ' + 'Use the Babel transform instead.');
+          }
+        } else {
+          validateChildKeys(children, type);
+        }
+      }
+    }
+
+    {
+      if (hasOwnProperty.call(props, 'key')) {
+        var componentName = getComponentNameFromType(type);
+        var keys = Object.keys(props).filter(function (k) {
+          return k !== 'key';
+        });
+        var beforeExample = keys.length > 0 ? '{key: someKey, ' + keys.join(': ..., ') + ': ...}' : '{key: someKey}';
+
+        if (!didWarnAboutKeySpread[componentName + beforeExample]) {
+          var afterExample = keys.length > 0 ? '{' + keys.join(': ..., ') + ': ...}' : '{}';
+
+          error('A props object containing a "key" prop is being spread into JSX:\n' + '  let props = %s;\n' + '  <%s {...props} />\n' + 'React keys must be passed directly to JSX without using spread:\n' + '  let props = %s;\n' + '  <%s key={someKey} {...props} />', beforeExample, componentName, afterExample, componentName);
+
+          didWarnAboutKeySpread[componentName + beforeExample] = true;
+        }
+      }
+    }
+
+    if (type === REACT_FRAGMENT_TYPE) {
+      validateFragmentProps(element);
+    } else {
+      validatePropTypes(element);
+    }
+
+    return element;
+  }
+} // These two functions exist to still get child warnings in dev
+// even with the prod transform. This means that jsxDEV is purely
+// opt-in behavior for better messages but that we won't stop
+// giving you warnings if you use production apis.
+
+function jsxWithValidationStatic(type, props, key) {
+  {
+    return jsxWithValidation(type, props, key, true);
+  }
+}
+function jsxWithValidationDynamic(type, props, key) {
+  {
+    return jsxWithValidation(type, props, key, false);
+  }
+}
+
+var jsx =  jsxWithValidationDynamic ; // we may want to special case jsxs internally to take advantage of static children.
+// for now we can ship identical prod functions
+
+var jsxs =  jsxWithValidationStatic ;
+
+exports.Fragment = REACT_FRAGMENT_TYPE;
+exports.jsx = jsx;
+exports.jsxs = jsxs;
+  })();
+}
+});
+
+var jsxRuntime = createCommonjsModule(function (module) {
+
+if (process.env.NODE_ENV === 'production') {
+  module.exports = reactJsxRuntime_production_min;
+} else {
+  module.exports = reactJsxRuntime_development;
+}
+});
+
+const getConnectionText = collabState => {
   switch (collabState) {
     case WebSocketStatus.Connected:
-      return "Connected";
+      return `Connected`;
     case WebSocketStatus.Connecting:
-      return "Connecting...";
+      return `Connecting...`;
     case WebSocketStatus.Disconnected:
-      return "Disconnected";
+      return `Disconnected`;
     default:
-      return "Connecting...";
+      return `Connecting...`;
   }
 };
 
-var getRenderContainer = function getRenderContainer(editor, nodeType) {
-  var view = editor.view,
-    from = editor.state.selection.from;
-  var elements = document.querySelectorAll('.has-focus');
-  var elementCount = elements.length;
-  var innermostNode = elements[elementCount - 1];
-  var element = innermostNode;
+const getRenderContainer = (editor, nodeType) => {
+  const {
+    view,
+    state: {
+      selection: {
+        from
+      }
+    }
+  } = editor;
+  const elements = document.querySelectorAll('.has-focus');
+  const elementCount = elements.length;
+  const innermostNode = elements[elementCount - 1];
+  const element = innermostNode;
   if (element && element.getAttribute('data-type') && element.getAttribute('data-type') === nodeType || element && element.classList && element.classList.contains(nodeType)) {
     return element;
   }
-  var node = view.domAtPos(from).node;
-  var container = node;
+  const node = view.domAtPos(from).node;
+  let container = node;
   if (!container.tagName) {
     container = node.parentElement;
   }
@@ -2934,14 +4279,16 @@ var getRenderContainer = function getRenderContainer(editor, nodeType) {
   return container;
 };
 
-var Selection = Extension.create({
+const Selection = Extension.create({
   name: 'selection',
-  addProseMirrorPlugins: function addProseMirrorPlugins() {
-    var editor = this.editor;
+  addProseMirrorPlugins() {
+    const {
+      editor
+    } = this;
     return [new Plugin({
       key: new PluginKey('selection'),
       props: {
-        decorations: function decorations(state) {
+        decorations(state) {
           if (state.selection.empty) {
             return null;
           }
@@ -2949,7 +4296,7 @@ var Selection = Extension.create({
             return null;
           }
           return DecorationSet.create(state.doc, [Decoration.inline(state.selection.from, state.selection.to, {
-            "class": 'selection'
+            class: 'selection'
           })]);
         }
       }
@@ -2957,152 +4304,196 @@ var Selection = Extension.create({
   }
 });
 
-var _excluded$5 = ["active", "buttonSize", "children", "disabled", "variant", "className", "activeClassname"];
-var Button = /*#__PURE__*/react.forwardRef(function (_ref, ref) {
-  var active = _ref.active,
-    _ref$buttonSize = _ref.buttonSize,
-    buttonSize = _ref$buttonSize === void 0 ? 'medium' : _ref$buttonSize,
-    children = _ref.children,
-    disabled = _ref.disabled,
-    _ref$variant = _ref.variant,
-    variant = _ref$variant === void 0 ? 'primary' : _ref$variant,
-    className = _ref.className,
-    activeClassname = _ref.activeClassname,
+function _extends() {
+  return _extends = Object.assign ? Object.assign.bind() : function (n) {
+    for (var e = 1; e < arguments.length; e++) {
+      var t = arguments[e];
+      for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]);
+    }
+    return n;
+  }, _extends.apply(null, arguments);
+}
+function _objectWithoutPropertiesLoose(r, e) {
+  if (null == r) return {};
+  var t = {};
+  for (var n in r) if ({}.hasOwnProperty.call(r, n)) {
+    if (e.includes(n)) continue;
+    t[n] = r[n];
+  }
+  return t;
+}
+
+const _excluded$5 = ["active", "buttonSize", "children", "disabled", "variant", "className", "activeClassname"];
+const Button = /*#__PURE__*/react.forwardRef((_ref, ref) => {
+  let {
+      active,
+      buttonSize = 'medium',
+      children,
+      disabled,
+      variant = 'primary',
+      className,
+      activeClassname
+    } = _ref,
     rest = _objectWithoutPropertiesLoose(_ref, _excluded$5);
-  var buttonClassName = cn('flex group items-center justify-center border border-transparent gap-2 text-sm font-semibold rounded-md disabled:opacity-50 whitespace-nowrap', variant === 'primary' && cn('text-white bg-black border-black dark:text-black dark:bg-white dark:border-white', !disabled && !active && 'hover:bg-neutral-800 active:bg-neutral-900 dark:hover:bg-neutral-200 dark:active:bg-neutral-300', active && cn('bg-neutral-900 dark:bg-neutral-300', activeClassname)), variant === 'secondary' && cn('text-neutral-900 dark:text-white', !disabled && !active && 'hover:bg-neutral-100 active:bg-neutral-200 dark:hover:bg-neutral-900 dark:active:bg-neutral-800', active && 'bg-neutral-200 dark:bg-neutral-800'), variant === 'tertiary' && cn('bg-neutral-50 text-neutral-900 dark:bg-neutral-900 dark:text-white dark:border-neutral-900', !disabled && !active && 'hover:bg-neutral-100 active:bg-neutral-200 dark:hover:bg-neutral-800 dark:active:bg-neutral-700', active && cn('bg-neutral-200 dark:bg-neutral-800', activeClassname)), variant === 'ghost' && cn('bg-transparent border-transparent text-neutral-500 dark:text-neutral-400', !disabled && !active && 'hover:bg-black/5 hover:text-neutral-700 active:bg-black/10 active:text-neutral-800 dark:hover:bg-white/10 dark:hover:text-neutral-300 dark:active:text-neutral-200', active && cn('bg-black/10 text-neutral-800 dark:bg-white/20 dark:text-neutral-200', activeClassname)), buttonSize === 'medium' && 'py-2 px-3', buttonSize === 'small' && 'py-1 px-2', buttonSize === 'icon' && 'w-8 h-8', buttonSize === 'iconSmall' && 'w-6 h-6', className);
-  return /*#__PURE__*/react.createElement("button", _extends({
+  const buttonClassName = cn('flex group items-center justify-center border border-transparent gap-2 text-sm font-semibold rounded-md disabled:opacity-50 whitespace-nowrap', variant === 'primary' && cn('text-white bg-black border-black dark:text-black dark:bg-white dark:border-white', !disabled && !active && 'hover:bg-neutral-800 active:bg-neutral-900 dark:hover:bg-neutral-200 dark:active:bg-neutral-300', active && cn('bg-neutral-900 dark:bg-neutral-300', activeClassname)), variant === 'secondary' && cn('text-neutral-900 dark:text-white', !disabled && !active && 'hover:bg-neutral-100 active:bg-neutral-200 dark:hover:bg-neutral-900 dark:active:bg-neutral-800', active && 'bg-neutral-200 dark:bg-neutral-800'), variant === 'tertiary' && cn('bg-neutral-50 text-neutral-900 dark:bg-neutral-900 dark:text-white dark:border-neutral-900', !disabled && !active && 'hover:bg-neutral-100 active:bg-neutral-200 dark:hover:bg-neutral-800 dark:active:bg-neutral-700', active && cn('bg-neutral-200 dark:bg-neutral-800', activeClassname)), variant === 'ghost' && cn('bg-transparent border-transparent text-neutral-500 dark:text-neutral-400', !disabled && !active && 'hover:bg-black/5 hover:text-neutral-700 active:bg-black/10 active:text-neutral-800 dark:hover:bg-white/10 dark:hover:text-neutral-300 dark:active:text-neutral-200', active && cn('bg-black/10 text-neutral-800 dark:bg-white/20 dark:text-neutral-200', activeClassname)), buttonSize === 'medium' && 'py-2 px-3', buttonSize === 'small' && 'py-1 px-2', buttonSize === 'icon' && 'w-8 h-8', buttonSize === 'iconSmall' && 'w-6 h-6', className);
+  return jsxRuntime.jsx("button", _extends({
     ref: ref,
     disabled: disabled,
     className: buttonClassName
-  }, rest), children);
+  }, rest, {
+    children: children
+  }));
 });
 Button.displayName = 'Button';
 
-var _excluded$4 = ["children", "className", "withShadow", "withBorder"];
-var Surface = /*#__PURE__*/react.forwardRef(function (_ref, ref) {
-  var children = _ref.children,
-    className = _ref.className,
-    _ref$withShadow = _ref.withShadow,
-    withShadow = _ref$withShadow === void 0 ? true : _ref$withShadow,
-    _ref$withBorder = _ref.withBorder,
-    withBorder = _ref$withBorder === void 0 ? true : _ref$withBorder,
+const _excluded$4 = ["children", "className", "withShadow", "withBorder"];
+const Surface = /*#__PURE__*/react.forwardRef((_ref, ref) => {
+  let {
+      children,
+      className,
+      withShadow = true,
+      withBorder = true
+    } = _ref,
     props = _objectWithoutPropertiesLoose(_ref, _excluded$4);
-  var surfaceClass = cn(className, 'bg-white rounded-lg dark:bg-black', withShadow ? 'shadow-sm' : '', withBorder ? 'border border-neutral-200 dark:border-neutral-800' : '');
-  return /*#__PURE__*/React.createElement("div", _extends({
+  const surfaceClass = cn(className, 'bg-white rounded-lg dark:bg-black', withShadow ? 'shadow-sm' : '', withBorder ? 'border border-neutral-200 dark:border-neutral-800' : '');
+  return jsxRuntime.jsx("div", _extends({
     className: surfaceClass
   }, props, {
-    ref: ref
-  }), children);
+    ref: ref,
+    children: children
+  }));
 });
 Surface.displayName = 'Surface';
 
-var _excluded$3 = ["asChild", "className", "children", "spacing", "noShadow"],
+const _excluded$3 = ["asChild", "className", "children", "spacing", "noShadow"],
   _excluded2$1 = ["asChild", "className", "children"],
   _excluded3$1 = ["asChild", "className", "children"],
   _excluded4 = ["asChild", "className", "children"],
   _excluded5 = ["asChild", "className", "children"],
   _excluded6 = ["asChild", "className", "children"];
-var Panel = /*#__PURE__*/react.forwardRef(function (_ref, ref) {
-  var asChild = _ref.asChild,
-    className = _ref.className,
-    children = _ref.children,
-    spacing = _ref.spacing,
-    noShadow = _ref.noShadow,
+const Panel = /*#__PURE__*/react.forwardRef((_ref, ref) => {
+  let {
+      asChild,
+      className,
+      children,
+      spacing,
+      noShadow
+    } = _ref,
     rest = _objectWithoutPropertiesLoose(_ref, _excluded$3);
-  var panelClass = cn('p-2', spacing === 'small' && 'p-[0.2rem]', className);
-  var Comp = asChild ? Slot : 'div';
-  return /*#__PURE__*/React.createElement(Comp, _extends({
+  const panelClass = cn('p-2', spacing === 'small' && 'p-[0.2rem]', className);
+  const Comp = asChild ? Slot : 'div';
+  return jsxRuntime.jsx(Comp, _extends({
     ref: ref
-  }, rest), /*#__PURE__*/React.createElement(Surface, {
-    className: panelClass,
-    withShadow: !noShadow
-  }, children));
+  }, rest, {
+    children: jsxRuntime.jsx(Surface, {
+      className: panelClass,
+      withShadow: !noShadow,
+      children: children
+    })
+  }));
 });
 Panel.displayName = 'Panel';
-var PanelDivider = /*#__PURE__*/react.forwardRef(function (_ref2, ref) {
-  var asChild = _ref2.asChild,
-    className = _ref2.className,
-    children = _ref2.children,
+const PanelDivider = /*#__PURE__*/react.forwardRef((_ref2, ref) => {
+  let {
+      asChild,
+      className,
+      children
+    } = _ref2,
     rest = _objectWithoutPropertiesLoose(_ref2, _excluded2$1);
-  var dividerClass = cn('border-b border-b-black/10 mb-2 pb-2', className);
-  var Comp = asChild ? Slot : 'div';
-  return /*#__PURE__*/React.createElement(Comp, _extends({
+  const dividerClass = cn('border-b border-b-black/10 mb-2 pb-2', className);
+  const Comp = asChild ? Slot : 'div';
+  return jsxRuntime.jsx(Comp, _extends({
     className: dividerClass
   }, rest, {
-    ref: ref
-  }), children);
+    ref: ref,
+    children: children
+  }));
 });
 PanelDivider.displayName = 'PanelDivider';
-var PanelHeader = /*#__PURE__*/react.forwardRef(function (_ref3, ref) {
-  var asChild = _ref3.asChild,
-    className = _ref3.className,
-    children = _ref3.children,
+const PanelHeader = /*#__PURE__*/react.forwardRef((_ref3, ref) => {
+  let {
+      asChild,
+      className,
+      children
+    } = _ref3,
     rest = _objectWithoutPropertiesLoose(_ref3, _excluded3$1);
-  var headerClass = cn('border-b border-b-black/10 text-sm mb-2 pb-2', className);
-  var Comp = asChild ? Slot : 'div';
-  return /*#__PURE__*/React.createElement(Comp, _extends({
+  const headerClass = cn('border-b border-b-black/10 text-sm mb-2 pb-2', className);
+  const Comp = asChild ? Slot : 'div';
+  return jsxRuntime.jsx(Comp, _extends({
     className: headerClass
   }, rest, {
-    ref: ref
-  }), children);
+    ref: ref,
+    children: children
+  }));
 });
 PanelHeader.displayName = 'PanelHeader';
-var PanelSection = /*#__PURE__*/react.forwardRef(function (_ref4, ref) {
-  var asChild = _ref4.asChild,
-    className = _ref4.className,
-    children = _ref4.children,
+const PanelSection = /*#__PURE__*/react.forwardRef((_ref4, ref) => {
+  let {
+      asChild,
+      className,
+      children
+    } = _ref4,
     rest = _objectWithoutPropertiesLoose(_ref4, _excluded4);
-  var sectionClass = cn('mt-4 first:mt-1', className);
-  var Comp = asChild ? Slot : 'div';
-  return /*#__PURE__*/React.createElement(Comp, _extends({
+  const sectionClass = cn('mt-4 first:mt-1', className);
+  const Comp = asChild ? Slot : 'div';
+  return jsxRuntime.jsx(Comp, _extends({
     className: sectionClass
   }, rest, {
-    ref: ref
-  }), children);
+    ref: ref,
+    children: children
+  }));
 });
 PanelSection.displayName = 'PanelSection';
-var PanelHeadline = /*#__PURE__*/react.forwardRef(function (_ref5, ref) {
-  var asChild = _ref5.asChild,
-    className = _ref5.className,
-    children = _ref5.children,
+const PanelHeadline = /*#__PURE__*/react.forwardRef((_ref5, ref) => {
+  let {
+      asChild,
+      className,
+      children
+    } = _ref5,
     rest = _objectWithoutPropertiesLoose(_ref5, _excluded5);
-  var headlineClass = cn('text-black/80 dark:text-white/80 text-xs font-medium mb-2 ml-1.5', className);
-  var Comp = asChild ? Slot : 'div';
-  return /*#__PURE__*/React.createElement(Comp, _extends({
+  const headlineClass = cn('text-black/80 dark:text-white/80 text-xs font-medium mb-2 ml-1.5', className);
+  const Comp = asChild ? Slot : 'div';
+  return jsxRuntime.jsx(Comp, _extends({
     className: headlineClass
   }, rest, {
-    ref: ref
-  }), children);
+    ref: ref,
+    children: children
+  }));
 });
 PanelHeadline.displayName = 'PanelHeadline';
-var PanelFooter = /*#__PURE__*/react.forwardRef(function (_ref6, ref) {
-  var asChild = _ref6.asChild,
-    className = _ref6.className,
-    children = _ref6.children,
+const PanelFooter = /*#__PURE__*/react.forwardRef((_ref6, ref) => {
+  let {
+      asChild,
+      className,
+      children
+    } = _ref6,
     rest = _objectWithoutPropertiesLoose(_ref6, _excluded6);
-  var footerClass = cn('border-t border-black/10 text-sm mt-2 pt-2', className);
-  var Comp = asChild ? Slot : 'div';
-  return /*#__PURE__*/React.createElement(Comp, _extends({
+  const footerClass = cn('border-t border-black/10 text-sm mt-2 pt-2', className);
+  const Comp = asChild ? Slot : 'div';
+  return jsxRuntime.jsx(Comp, _extends({
     className: footerClass
   }, rest, {
-    ref: ref
-  }), children);
+    ref: ref,
+    children: children
+  }));
 });
 PanelFooter.displayName = 'PanelFooter';
 
-var _excluded$2 = ["className"];
-var Textarea = /*#__PURE__*/react.forwardRef(function (_ref, ref) {
-  var className = _ref.className,
+const _excluded$2 = ["className"];
+const Textarea = /*#__PURE__*/react.forwardRef((_ref, ref) => {
+  let {
+      className
+    } = _ref,
     rest = _objectWithoutPropertiesLoose(_ref, _excluded$2);
-  var textAreaClassName = cn('bg-black/5 border-0 rounded-lg caret-black block text-black text-sm font-medium h-[4.5rem] px-2 py-1 w-full', 'dark:bg-white/10 dark:text-white dark:caret-white', 'hover:bg-black/10', 'dark:hover:bg-white/20', 'focus:bg-transparent active:bg-transparent focus:outline focus:outline-black active:outline active:outline-black', 'dark:focus:outline-white dark:active:outline-white', className);
-  return /*#__PURE__*/React.createElement("textarea", _extends({
+  const textAreaClassName = cn('bg-black/5 border-0 rounded-lg caret-black block text-black text-sm font-medium h-[4.5rem] px-2 py-1 w-full', 'dark:bg-white/10 dark:text-white dark:caret-white', 'hover:bg-black/10', 'dark:hover:bg-white/20', 'focus:bg-transparent active:bg-transparent focus:outline focus:outline-black active:outline active:outline-black', 'dark:focus:outline-white dark:active:outline-white', className);
+  return jsxRuntime.jsx("textarea", _extends({
     className: textAreaClassName,
     ref: ref
   }, rest));
 });
 Textarea.displayName = 'Textarea';
 
-var languages = [{
+const languages = [{
   name: 'arabic',
   label: 'Arabic',
   value: 'ar'
@@ -3155,7 +4546,7 @@ var languages = [{
   label: 'Ukrainian',
   value: 'ua'
 }];
-var tones = [{
+const tones = [{
   name: 'academic',
   label: 'Academic',
   value: 'academic'
@@ -3212,200 +4603,213 @@ var tones = [{
   label: 'Poetic',
   value: 'poetic'
 }];
-var userNames = ['Lea Thompson', 'Cyndi Lauper', 'Tom Cruise', 'Madonna', 'Jerry Hall', 'Joan Collins', 'Winona Ryder', 'Christina Applegate', 'Alyssa Milano', 'Molly Ringwald', 'Ally Sheedy', 'Debbie Harry', 'Olivia Newton-John', 'Elton John', 'Michael J. Fox', 'Axl Rose', 'Emilio Estevez', 'Ralph Macchio', 'Rob Lowe', 'Jennifer Grey', 'Mickey Rourke', 'John Cusack', 'Matthew Broderick', 'Justine Bateman', 'Lisa Bonet'];
-var userColors = ['#fb7185', '#fdba74', '#d9f99d', '#a7f3d0', '#a5f3fc', '#a5b4fc', '#f0abfc'];
-var themeColors = ['#fb7185', '#fdba74', '#d9f99d', '#a7f3d0', '#a5f3fc', '#a5b4fc'];
+const userNames = ['Lea Thompson', 'Cyndi Lauper', 'Tom Cruise', 'Madonna', 'Jerry Hall', 'Joan Collins', 'Winona Ryder', 'Christina Applegate', 'Alyssa Milano', 'Molly Ringwald', 'Ally Sheedy', 'Debbie Harry', 'Olivia Newton-John', 'Elton John', 'Michael J. Fox', 'Axl Rose', 'Emilio Estevez', 'Ralph Macchio', 'Rob Lowe', 'Jennifer Grey', 'Mickey Rourke', 'John Cusack', 'Matthew Broderick', 'Justine Bateman', 'Lisa Bonet'];
+const userColors = ['#fb7185', '#fdba74', '#d9f99d', '#a7f3d0', '#a5f3fc', '#a5b4fc', '#f0abfc'];
+const themeColors = ['#fb7185', '#fdba74', '#d9f99d', '#a7f3d0', '#a5f3fc', '#a5b4fc'];
 
-var isMac = typeof window !== 'undefined' ? navigator.platform.toUpperCase().indexOf('MAC') >= 0 : false;
-var ShortcutKey = function ShortcutKey(_ref) {
-  var children = _ref.children;
-  var className = 'inline-flex items-center justify-center w-5 h-5 p-1 text-[0.625rem] rounded font-semibold leading-none border border-neutral-200 text-neutral-500 border-b-2';
+const isMac = typeof window !== 'undefined' ? navigator.platform.toUpperCase().indexOf('MAC') >= 0 : false;
+const ShortcutKey = ({
+  children
+}) => {
+  const className = 'inline-flex items-center justify-center w-5 h-5 p-1 text-[0.625rem] rounded font-semibold leading-none border border-neutral-200 text-neutral-500 border-b-2';
   if (children === 'Mod') {
-    return /*#__PURE__*/react.createElement("kbd", {
-      className: className
-    }, isMac ? '⌘' : 'Ctrl'); // ⌃
+    return jsxRuntime.jsx("kbd", {
+      className: className,
+      children: isMac ? '⌘' : 'Ctrl'
+    }); // ⌃
   }
   if (children === 'Shift') {
-    return /*#__PURE__*/react.createElement("kbd", {
-      className: className
-    }, "\u21E7");
+    return jsxRuntime.jsx("kbd", {
+      className: className,
+      children: "\u21E7"
+    });
   }
   if (children === 'Alt') {
-    return /*#__PURE__*/react.createElement("kbd", {
-      className: className
-    }, isMac ? '⌥' : 'Alt');
+    return jsxRuntime.jsx("kbd", {
+      className: className,
+      children: isMac ? '⌥' : 'Alt'
+    });
   }
-  return /*#__PURE__*/react.createElement("kbd", {
-    className: className
-  }, children);
+  return jsxRuntime.jsx("kbd", {
+    className: className,
+    children: children
+  });
 };
-var Tooltip = function Tooltip(_ref2) {
-  var children = _ref2.children,
-    _ref2$enabled = _ref2.enabled,
-    enabled = _ref2$enabled === void 0 ? true : _ref2$enabled,
-    title = _ref2.title,
-    shortcut = _ref2.shortcut,
-    _ref2$tippyOptions = _ref2.tippyOptions,
-    tippyOptions = _ref2$tippyOptions === void 0 ? {} : _ref2$tippyOptions;
-  var renderTooltip = react.useCallback(function (attrs) {
-    return /*#__PURE__*/react.createElement("span", {
-      className: "flex items-center gap-2 px-2.5 py-1 bg-white border border-neutral-100 rounded-lg shadow-sm z-[999]",
-      tabIndex: -1,
-      "data-placement": attrs['data-placement'],
-      "data-reference-hidden": attrs['data-reference-hidden'],
-      "data-escaped": attrs['data-escaped']
-    }, title && /*#__PURE__*/react.createElement("span", {
-      className: "text-xs font-medium text-neutral-500"
-    }, title), shortcut && /*#__PURE__*/react.createElement("span", {
-      className: "flex items-center gap-0.5"
-    }, shortcut.map(function (shortcutKey) {
-      return /*#__PURE__*/react.createElement(ShortcutKey, {
-        key: shortcutKey
-      }, shortcutKey);
-    })));
-  }, [shortcut, title]);
-  if (enabled) {
-    return /*#__PURE__*/react.createElement(Tippy, _extends({
+const Tooltip = ({
+  children,
+  enabled: _enabled = true,
+  title,
+  shortcut,
+  tippyOptions: _tippyOptions = {}
+}) => {
+  const renderTooltip = react.useCallback(attrs => jsxRuntime.jsxs("span", {
+    className: "flex items-center gap-2 px-2.5 py-1 bg-white border border-neutral-100 rounded-lg shadow-sm z-[999]",
+    tabIndex: -1,
+    "data-placement": attrs['data-placement'],
+    "data-reference-hidden": attrs['data-reference-hidden'],
+    "data-escaped": attrs['data-escaped'],
+    children: [title && jsxRuntime.jsx("span", {
+      className: "text-xs font-medium text-neutral-500",
+      children: title
+    }), shortcut && jsxRuntime.jsx("span", {
+      className: "flex items-center gap-0.5",
+      children: shortcut.map(shortcutKey => jsxRuntime.jsx(ShortcutKey, {
+        children: shortcutKey
+      }, shortcutKey))
+    })]
+  }), [shortcut, title]);
+  if (_enabled) {
+    return jsxRuntime.jsx(Tippy, _extends({
       delay: 500,
       offset: [0, 8],
       touch: false,
       zIndex: 99999,
       appendTo: document.body
-      // eslint-disable-next-line react/jsx-props-no-spreading
-    }, tippyOptions, {
-      render: renderTooltip
-    }), /*#__PURE__*/react.createElement("span", null, children));
+    }, _tippyOptions, {
+      render: renderTooltip,
+      children: jsxRuntime.jsx("span", {
+        children: children
+      })
+    }));
   }
-  return /*#__PURE__*/react.createElement(Fragment, null, children);
+  return jsxRuntime.jsx(jsxRuntime.Fragment, {
+    children: children
+  });
 };
 
-var _excluded$1 = ["shouldShowContent", "children", "isVertical", "className"],
+const _excluded$1 = ["shouldShowContent", "children", "isVertical", "className"],
   _excluded2 = ["horizontal", "className"],
   _excluded3 = ["children", "buttonSize", "variant", "className", "tooltip", "tooltipShortcut", "activeClassname"];
-var ToolbarWrapper = /*#__PURE__*/react.forwardRef(function (_ref, ref) {
-  var _ref$shouldShowConten = _ref.shouldShowContent,
-    shouldShowContent = _ref$shouldShowConten === void 0 ? true : _ref$shouldShowConten,
-    children = _ref.children,
-    _ref$isVertical = _ref.isVertical,
-    isVertical = _ref$isVertical === void 0 ? false : _ref$isVertical,
-    className = _ref.className,
+const ToolbarWrapper = /*#__PURE__*/react.forwardRef((_ref, ref) => {
+  let {
+      shouldShowContent = true,
+      children,
+      isVertical = false,
+      className
+    } = _ref,
     rest = _objectWithoutPropertiesLoose(_ref, _excluded$1);
-  var toolbarClassName = cn('text-black inline-flex h-full leading-none gap-0.5', isVertical ? 'flex-col p-2' : 'flex-row p-1 items-center', className);
-  return shouldShowContent && /*#__PURE__*/react.createElement(Surface, _extends({
+  const toolbarClassName = cn('text-black inline-flex h-full leading-none gap-0.5', isVertical ? 'flex-col p-2' : 'flex-row p-1 items-center', className);
+  return shouldShowContent && jsxRuntime.jsx(Surface, _extends({
     className: toolbarClassName
   }, rest, {
-    ref: ref
-  }), children);
+    ref: ref,
+    children: children
+  }));
 });
 ToolbarWrapper.displayName = 'Toolbar';
-var ToolbarDivider = /*#__PURE__*/react.forwardRef(function (_ref2, ref) {
-  var horizontal = _ref2.horizontal,
-    className = _ref2.className,
+const ToolbarDivider = /*#__PURE__*/react.forwardRef((_ref2, ref) => {
+  let {
+      horizontal,
+      className
+    } = _ref2,
     rest = _objectWithoutPropertiesLoose(_ref2, _excluded2);
-  var dividerClassName = cn('bg-neutral-200 dark:bg-neutral-800', horizontal ? 'w-full min-w-[1.5rem] h-[1px] my-1 first:mt-0 last:mt-0' : 'h-full min-h-[1.5rem] w-[1px] mx-1 first:ml-0 last:mr-0', className);
-  return /*#__PURE__*/react.createElement("div", _extends({
+  const dividerClassName = cn('bg-neutral-200 dark:bg-neutral-800', horizontal ? 'w-full min-w-[1.5rem] h-[1px] my-1 first:mt-0 last:mt-0' : 'h-full min-h-[1.5rem] w-[1px] mx-1 first:ml-0 last:mr-0', className);
+  return jsxRuntime.jsx("div", _extends({
     className: dividerClassName,
     ref: ref
   }, rest));
 });
 ToolbarDivider.displayName = 'Toolbar.Divider';
-var ToolbarButton = /*#__PURE__*/react.forwardRef(function (_ref3, ref) {
-  var children = _ref3.children,
-    _ref3$buttonSize = _ref3.buttonSize,
-    buttonSize = _ref3$buttonSize === void 0 ? 'icon' : _ref3$buttonSize,
-    _ref3$variant = _ref3.variant,
-    variant = _ref3$variant === void 0 ? 'ghost' : _ref3$variant,
-    className = _ref3.className,
-    tooltip = _ref3.tooltip,
-    tooltipShortcut = _ref3.tooltipShortcut,
-    activeClassname = _ref3.activeClassname,
+const ToolbarButton = /*#__PURE__*/react.forwardRef((_ref3, ref) => {
+  let {
+      children,
+      buttonSize = 'icon',
+      variant = 'ghost',
+      className,
+      tooltip,
+      tooltipShortcut,
+      activeClassname
+    } = _ref3,
     rest = _objectWithoutPropertiesLoose(_ref3, _excluded3);
-  var buttonClass = cn('gap-1 min-w-[2rem] px-2 w-auto', className);
-  var content = /*#__PURE__*/react.createElement(Button, _extends({
+  const buttonClass = cn('gap-1 min-w-[2rem] px-2 w-auto', className);
+  const content = jsxRuntime.jsx(Button, _extends({
     activeClassname: activeClassname,
     className: buttonClass,
     variant: variant,
     buttonSize: buttonSize,
     ref: ref
-  }, rest), children);
+  }, rest, {
+    children: children
+  }));
   if (tooltip) {
-    return /*#__PURE__*/react.createElement(Tooltip, {
+    return jsxRuntime.jsx(Tooltip, {
       title: tooltip,
-      shortcut: tooltipShortcut
-    }, content);
+      shortcut: tooltipShortcut,
+      children: content
+    });
   }
   return content;
 });
 ToolbarButton.displayName = 'ToolbarButton';
-var Toolbar = {
+const Toolbar = {
   Wrapper: ToolbarWrapper,
   Divider: ToolbarDivider,
   Button: ToolbarButton
 };
 
-var DropdownCategoryTitle = function DropdownCategoryTitle(_ref) {
-  var children = _ref.children;
-  return /*#__PURE__*/react.createElement("div", {
-    className: "text-[.65rem] font-semibold mb-1 uppercase text-neutral-500 dark:text-neutral-400 px-1.5"
-  }, children);
+const DropdownCategoryTitle = ({
+  children
+}) => {
+  return jsxRuntime.jsx("div", {
+    className: "text-[.65rem] font-semibold mb-1 uppercase text-neutral-500 dark:text-neutral-400 px-1.5",
+    children: children
+  });
 };
-var DropdownButton = /*#__PURE__*/react.forwardRef(function DropdownButtonInner(_ref2, ref) {
-  var children = _ref2.children,
-    isActive = _ref2.isActive,
-    onClick = _ref2.onClick,
-    disabled = _ref2.disabled,
-    className = _ref2.className;
-  var buttonClass = cn('flex items-center gap-2 p-1.5 text-sm font-medium text-neutral-500 dark:text-neutral-400 text-left bg-transparent w-full rounded', !isActive && !disabled, 'hover:bg-neutral-100 hover:text-neutral-800 dark:hover:bg-neutral-900 dark:hover:text-neutral-200', isActive && !disabled && 'bg-neutral-100 text-neutral-800 dark:bg-neutral-900 dark:text-neutral-200', disabled && 'text-neutral-400 cursor-not-allowed dark:text-neutral-600', className);
-  return /*#__PURE__*/react.createElement("button", {
+const DropdownButton = /*#__PURE__*/react.forwardRef(function DropdownButtonInner({
+  children,
+  isActive,
+  onClick,
+  disabled,
+  className
+}, ref) {
+  const buttonClass = cn('flex items-center gap-2 p-1.5 text-sm font-medium text-neutral-500 dark:text-neutral-400 text-left bg-transparent w-full rounded', !isActive && !disabled, 'hover:bg-neutral-100 hover:text-neutral-800 dark:hover:bg-neutral-900 dark:hover:text-neutral-200', isActive && !disabled && 'bg-neutral-100 text-neutral-800 dark:bg-neutral-900 dark:text-neutral-200', disabled && 'text-neutral-400 cursor-not-allowed dark:text-neutral-600', className);
+  return jsxRuntime.jsx("button", {
     className: buttonClass,
     disabled: disabled,
     onClick: onClick,
-    ref: ref
-  }, children);
+    ref: ref,
+    children: children
+  });
 });
 
-var TIPTAP_AI_APP_ID = process.env.NEXT_PUBLIC_TIPTAP_AI_APP_ID;
-var TIPTAP_AI_BASE_URL = process.env.NEXT_PUBLIC_TIPTAP_AI_BASE_URL || 'https://api.tiptap.dev/v1/ai';
-var Ai$1 = AiExtension.configure({
+const TIPTAP_AI_APP_ID = process.env.NEXT_PUBLIC_TIPTAP_AI_APP_ID;
+const TIPTAP_AI_BASE_URL = process.env.NEXT_PUBLIC_TIPTAP_AI_BASE_URL || 'https://api.tiptap.dev/v1/ai';
+const Ai$1 = AiExtension.configure({
   appId: TIPTAP_AI_APP_ID,
   baseUrl: TIPTAP_AI_BASE_URL,
   autocompletion: true
 });
 
 // TODO rewrite this component to use the new Ai extension features
-var AiWriterView = function AiWriterView(_ref) {
+const AiWriterView = ({
+  editor,
+  node,
+  getPos,
+  deleteNode
+}) => {
   var _tryParseToTiptapHTML;
-  var editor = _ref.editor,
-    node = _ref.node,
-    getPos = _ref.getPos,
-    deleteNode = _ref.deleteNode;
-  var _useEditorState = useEditorState({
-      editor: editor,
-      selector: function selector(ctx) {
-        var aiStorage = ctx.editor.storage.ai;
-        return {
-          isLoading: aiStorage.state === 'loading',
-          generatedText: aiStorage.response,
-          error: aiStorage.error
-        };
-      }
-    }),
-    isLoading = _useEditorState.isLoading,
-    generatedText = _useEditorState.generatedText,
-    error = _useEditorState.error;
-  var _useState = react.useState({
-      text: '',
-      tone: undefined
-    }),
-    data = _useState[0],
-    setData = _useState[1];
-  var currentTone = tones.find(function (t) {
-    return t.value === data.tone;
+  const {
+    isLoading,
+    generatedText,
+    error
+  } = useEditorState({
+    editor,
+    selector: ctx => {
+      const aiStorage = ctx.editor.storage.ai;
+      return {
+        isLoading: aiStorage.state === 'loading',
+        generatedText: aiStorage.response,
+        error: aiStorage.error
+      };
+    }
   });
-  var textareaId = react.useMemo(function () {
-    return v4();
-  }, []);
-  var generateText = react.useCallback(function () {
+  const [data, setData] = react.useState({
+    text: '',
+    tone: undefined
+  });
+  const currentTone = tones.find(t => t.value === data.tone);
+  const textareaId = react.useMemo(() => v4(), []);
+  const generateText = react.useCallback(() => {
     if (!data.text) {
       toast.error('Please enter a description');
       return;
@@ -3418,214 +4822,220 @@ var AiWriterView = function AiWriterView(_ref) {
       format: 'rich-text'
     });
   }, [data.text, data.tone, editor]);
-  react.useEffect(function () {
+  react.useEffect(() => {
     if (error) {
       toast.error(error.message);
     }
   }, [error]);
-  var insert = react.useCallback(function () {
-    var from = getPos();
-    var to = from + node.nodeSize;
+  const insert = react.useCallback(() => {
+    const from = getPos();
+    const to = from + node.nodeSize;
     editor.chain().focus().aiAccept({
       insertAt: {
-        from: from,
-        to: to
+        from,
+        to
       },
       append: false
     }).run();
   }, [editor, getPos, node.nodeSize]);
-  var discard = react.useCallback(function () {
+  const discard = react.useCallback(() => {
     deleteNode();
   }, [deleteNode]);
-  var onTextAreaChange = react.useCallback(function (e) {
-    setData(function (prevData) {
-      return _extends({}, prevData, {
-        text: e.target.value
-      });
-    });
+  const onTextAreaChange = react.useCallback(e => {
+    setData(prevData => _extends({}, prevData, {
+      text: e.target.value
+    }));
   }, []);
-  var onUndoClick = react.useCallback(function () {
-    setData(function (prevData) {
-      return _extends({}, prevData, {
-        tone: undefined
-      });
-    });
+  const onUndoClick = react.useCallback(() => {
+    setData(prevData => _extends({}, prevData, {
+      tone: undefined
+    }));
   }, []);
-  var createItemClickHandler = react.useCallback(function (tone) {
-    return function () {
-      setData(function (prevData) {
-        return _extends({}, prevData, {
-          tone: tone.value
-        });
-      });
+  const createItemClickHandler = react.useCallback(tone => {
+    return () => {
+      setData(prevData => _extends({}, prevData, {
+        tone: tone.value
+      }));
     };
   }, []);
-  return /*#__PURE__*/React.createElement(NodeViewWrapper, {
-    "data-drag-handle": true
-  }, /*#__PURE__*/React.createElement(Panel, {
-    noShadow: true,
-    className: "w-full"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "flex flex-col p-1"
-  }, generatedText && /*#__PURE__*/React.createElement(Fragment, null, /*#__PURE__*/React.createElement(PanelHeadline, null, "Preview"), /*#__PURE__*/React.createElement("div", {
-    className: "bg-white dark:bg-black border-l-4 border-neutral-100 dark:border-neutral-700 text-black dark:text-white text-base max-h-[14rem] mb-4 ml-2.5 overflow-y-auto px-4 relative",
-    dangerouslySetInnerHTML: {
-      __html: (_tryParseToTiptapHTML = tryParseToTiptapHTML(generatedText, editor)) != null ? _tryParseToTiptapHTML : ''
-    }
-  })), /*#__PURE__*/React.createElement("div", {
-    className: "flex flex-row items-center justify-between gap-1"
-  }, /*#__PURE__*/React.createElement(PanelHeadline, {
-    asChild: true
-  }, /*#__PURE__*/React.createElement("label", {
-    htmlFor: textareaId
-  }, "Prompt"))), /*#__PURE__*/React.createElement(Textarea, {
-    id: textareaId,
-    value: data.text,
-    onChange: onTextAreaChange,
-    placeholder: 'Tell me what you want me to write about.',
-    required: true,
-    className: "mb-2"
-  }), /*#__PURE__*/React.createElement("div", {
-    className: "flex flex-row items-center justify-between gap-1"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "flex justify-between w-auto gap-1"
-  }, /*#__PURE__*/React.createElement(Dropdown.Root, null, /*#__PURE__*/React.createElement(Dropdown.Trigger, {
-    asChild: true
-  }, /*#__PURE__*/React.createElement(Button, {
-    variant: "tertiary"
-  }, /*#__PURE__*/React.createElement(Icon, {
-    name: "Mic"
-  }), (currentTone == null ? void 0 : currentTone.label) || 'Change tone', /*#__PURE__*/React.createElement(Icon, {
-    name: "ChevronDown"
-  }))), /*#__PURE__*/React.createElement(Dropdown.Portal, null, /*#__PURE__*/React.createElement(Dropdown.Content, {
-    side: "bottom",
-    align: "start",
-    asChild: true
-  }, /*#__PURE__*/React.createElement(Surface, {
-    className: "p-2 min-w-[12rem]"
-  }, !!data.tone && /*#__PURE__*/React.createElement(Fragment, null, /*#__PURE__*/React.createElement(Dropdown.Item, {
-    asChild: true
-  }, /*#__PURE__*/React.createElement(DropdownButton, {
-    isActive: data.tone === undefined,
-    onClick: onUndoClick
-  }, /*#__PURE__*/React.createElement(Icon, {
-    name: "Undo2"
-  }), "Reset")), /*#__PURE__*/React.createElement(Toolbar.Divider, {
-    horizontal: true
-  })), tones.map(function (tone) {
-    return /*#__PURE__*/React.createElement(Dropdown.Item, {
-      asChild: true,
-      key: tone.value
-    }, /*#__PURE__*/React.createElement(DropdownButton, {
-      isActive: tone.value === data.tone,
-      onClick: createItemClickHandler(tone)
-    }, tone.label));
-  })))))), /*#__PURE__*/React.createElement("div", {
-    className: "flex justify-between w-auto gap-1"
-  }, generatedText && /*#__PURE__*/React.createElement(Button, {
-    variant: "ghost",
-    className: "text-red-500 hover:bg-red-500/10 hover:text-red-500",
-    onClick: discard
-  }, /*#__PURE__*/React.createElement(Icon, {
-    name: "Trash"
-  }), "Discard"), generatedText && /*#__PURE__*/React.createElement(Button, {
-    variant: "ghost",
-    onClick: insert,
-    disabled: !generatedText
-  }, /*#__PURE__*/React.createElement(Icon, {
-    name: "Check"
-  }), "Insert"), /*#__PURE__*/React.createElement(Button, {
-    variant: "primary",
-    onClick: generateText,
-    style: {
-      whiteSpace: 'nowrap'
-    },
-    disabled: isLoading
-  }, generatedText ? /*#__PURE__*/React.createElement(Icon, {
-    name: "Repeat"
-  }) : /*#__PURE__*/React.createElement(Icon, {
-    name: "Sparkles"
-  }), generatedText ? 'Regenerate' : 'Generate text'))))));
+  return jsxRuntime.jsx(NodeViewWrapper, {
+    "data-drag-handle": true,
+    children: jsxRuntime.jsx(Panel, {
+      noShadow: true,
+      className: "w-full",
+      children: jsxRuntime.jsxs("div", {
+        className: "flex flex-col p-1",
+        children: [generatedText && jsxRuntime.jsxs(jsxRuntime.Fragment, {
+          children: [jsxRuntime.jsx(PanelHeadline, {
+            children: "Preview"
+          }), jsxRuntime.jsx("div", {
+            className: "bg-white dark:bg-black border-l-4 border-neutral-100 dark:border-neutral-700 text-black dark:text-white text-base max-h-[14rem] mb-4 ml-2.5 overflow-y-auto px-4 relative",
+            dangerouslySetInnerHTML: {
+              __html: (_tryParseToTiptapHTML = tryParseToTiptapHTML(generatedText, editor)) != null ? _tryParseToTiptapHTML : ''
+            }
+          })]
+        }), jsxRuntime.jsx("div", {
+          className: "flex flex-row items-center justify-between gap-1",
+          children: jsxRuntime.jsx(PanelHeadline, {
+            asChild: true,
+            children: jsxRuntime.jsx("label", {
+              htmlFor: textareaId,
+              children: "Prompt"
+            })
+          })
+        }), jsxRuntime.jsx(Textarea, {
+          id: textareaId,
+          value: data.text,
+          onChange: onTextAreaChange,
+          placeholder: 'Tell me what you want me to write about.',
+          required: true,
+          className: "mb-2"
+        }), jsxRuntime.jsxs("div", {
+          className: "flex flex-row items-center justify-between gap-1",
+          children: [jsxRuntime.jsx("div", {
+            className: "flex justify-between w-auto gap-1",
+            children: jsxRuntime.jsxs(Dropdown.Root, {
+              children: [jsxRuntime.jsx(Dropdown.Trigger, {
+                asChild: true,
+                children: jsxRuntime.jsxs(Button, {
+                  variant: "tertiary",
+                  children: [jsxRuntime.jsx(Icon, {
+                    name: "Mic"
+                  }), (currentTone == null ? void 0 : currentTone.label) || 'Change tone', jsxRuntime.jsx(Icon, {
+                    name: "ChevronDown"
+                  })]
+                })
+              }), jsxRuntime.jsx(Dropdown.Portal, {
+                children: jsxRuntime.jsx(Dropdown.Content, {
+                  side: "bottom",
+                  align: "start",
+                  asChild: true,
+                  children: jsxRuntime.jsxs(Surface, {
+                    className: "p-2 min-w-[12rem]",
+                    children: [!!data.tone && jsxRuntime.jsxs(jsxRuntime.Fragment, {
+                      children: [jsxRuntime.jsx(Dropdown.Item, {
+                        asChild: true,
+                        children: jsxRuntime.jsxs(DropdownButton, {
+                          isActive: data.tone === undefined,
+                          onClick: onUndoClick,
+                          children: [jsxRuntime.jsx(Icon, {
+                            name: "Undo2"
+                          }), "Reset"]
+                        })
+                      }), jsxRuntime.jsx(Toolbar.Divider, {
+                        horizontal: true
+                      })]
+                    }), tones.map(tone => jsxRuntime.jsx(Dropdown.Item, {
+                      asChild: true,
+                      children: jsxRuntime.jsx(DropdownButton, {
+                        isActive: tone.value === data.tone,
+                        onClick: createItemClickHandler(tone),
+                        children: tone.label
+                      })
+                    }, tone.value))]
+                  })
+                })
+              })]
+            })
+          }), jsxRuntime.jsxs("div", {
+            className: "flex justify-between w-auto gap-1",
+            children: [generatedText && jsxRuntime.jsxs(Button, {
+              variant: "ghost",
+              className: "text-red-500 hover:bg-red-500/10 hover:text-red-500",
+              onClick: discard,
+              children: [jsxRuntime.jsx(Icon, {
+                name: "Trash"
+              }), "Discard"]
+            }), generatedText && jsxRuntime.jsxs(Button, {
+              variant: "ghost",
+              onClick: insert,
+              disabled: !generatedText,
+              children: [jsxRuntime.jsx(Icon, {
+                name: "Check"
+              }), "Insert"]
+            }), jsxRuntime.jsxs(Button, {
+              variant: "primary",
+              onClick: generateText,
+              style: {
+                whiteSpace: 'nowrap'
+              },
+              disabled: isLoading,
+              children: [generatedText ? jsxRuntime.jsx(Icon, {
+                name: "Repeat"
+              }) : jsxRuntime.jsx(Icon, {
+                name: "Sparkles"
+              }), generatedText ? 'Regenerate' : 'Generate text']
+            })]
+          })]
+        })]
+      })
+    })
+  });
 };
 
-var AiWriter = Node.create({
+const AiWriter = Node.create({
   name: 'aiWriter',
   group: 'block',
   draggable: true,
-  addOptions: function addOptions() {
+  addOptions() {
     return {
       authorId: undefined,
       authorName: undefined,
       HTMLAttributes: {
-        "class": "node-" + this.name
+        class: `node-${this.name}`
       }
     };
   },
-  addAttributes: function addAttributes() {
+  addAttributes() {
     return {
       id: {
-        "default": undefined,
-        parseHTML: function parseHTML(element) {
-          return element.getAttribute('data-id');
-        },
-        renderHTML: function renderHTML(attributes) {
-          return {
-            'data-id': attributes.id
-          };
-        }
+        default: undefined,
+        parseHTML: element => element.getAttribute('data-id'),
+        renderHTML: attributes => ({
+          'data-id': attributes.id
+        })
       },
       authorId: {
-        "default": undefined,
-        parseHTML: function parseHTML(element) {
-          return element.getAttribute('data-author-id');
-        },
-        renderHTML: function renderHTML(attributes) {
-          return {
-            'data-author-id': attributes.authorId
-          };
-        }
+        default: undefined,
+        parseHTML: element => element.getAttribute('data-author-id'),
+        renderHTML: attributes => ({
+          'data-author-id': attributes.authorId
+        })
       },
       authorName: {
-        "default": undefined,
-        parseHTML: function parseHTML(element) {
-          return element.getAttribute('data-author-name');
-        },
-        renderHTML: function renderHTML(attributes) {
-          return {
-            'data-author-name': attributes.authorName
-          };
-        }
+        default: undefined,
+        parseHTML: element => element.getAttribute('data-author-name'),
+        renderHTML: attributes => ({
+          'data-author-name': attributes.authorName
+        })
       }
     };
   },
-  parseHTML: function parseHTML() {
+  parseHTML() {
     return [{
-      tag: "div.node-" + this.name
+      tag: `div.node-${this.name}`
     }];
   },
-  renderHTML: function renderHTML(_ref) {
-    var HTMLAttributes = _ref.HTMLAttributes;
+  renderHTML({
+    HTMLAttributes
+  }) {
     return ['div', mergeAttributes(this.options.HTMLAttributes, HTMLAttributes)];
   },
-  addCommands: function addCommands() {
-    var _this = this;
+  addCommands() {
     return {
-      setAiWriter: function setAiWriter() {
-        return function (_ref2) {
-          var chain = _ref2.chain;
-          return chain().focus().insertContent({
-            type: _this.name,
-            attrs: {
-              id: v4(),
-              authorId: _this.options.authorId,
-              authorName: _this.options.authorName
-            }
-          }).run();
-        };
-      }
+      setAiWriter: () => ({
+        chain
+      }) => chain().focus().insertContent({
+        type: this.name,
+        attrs: {
+          id: v4(),
+          authorId: this.options.authorId,
+          authorName: this.options.authorName
+        }
+      }).run()
     };
   },
-  addNodeView: function addNodeView() {
+  addNodeView() {
     return ReactNodeViewRenderer(AiWriterView);
   }
 });
@@ -34537,50 +35947,44 @@ if (process.env.NODE_ENV === 'production') {
 }
 });
 
-var LoadingWrapper = function LoadingWrapper(_ref) {
-  var label = _ref.label;
-  return /*#__PURE__*/React.createElement("div", {
-    className: "flex flex-col items-center justify-center gap-2 p-4 text-white bg-black rounded-lg shadow-2xl dark:text-black dark:bg-white"
-  }, /*#__PURE__*/React.createElement("svg", {
-    xmlns: "http://www.w3.org/2000/svg",
-    viewBox: "0 0 24 24",
-    fill: "none",
-    stroke: "currentColor",
-    strokeWidth: "2",
-    strokeLinecap: "round",
-    strokeLinejoin: "round",
-    className: "w-8 h-8 animate-spin"
-  }, /*#__PURE__*/React.createElement("path", {
-    d: "M21 12a9 9 0 1 1-6.219-8.56"
-  })), label && /*#__PURE__*/React.createElement("p", {
-    className: "text-sm font-semibold leading-tight text-white dark:text-black"
-  }, label));
+const LoadingWrapper = ({
+  label
+}) => {
+  return jsxRuntime.jsxs("div", {
+    className: "flex flex-col items-center justify-center gap-2 p-4 text-white bg-black rounded-lg shadow-2xl dark:text-black dark:bg-white",
+    children: [jsxRuntime.jsx("svg", {
+      xmlns: "http://www.w3.org/2000/svg",
+      viewBox: "0 0 24 24",
+      fill: "none",
+      stroke: "currentColor",
+      strokeWidth: "2",
+      strokeLinecap: "round",
+      strokeLinejoin: "round",
+      className: "w-8 h-8 animate-spin",
+      children: jsxRuntime.jsx("path", {
+        d: "M21 12a9 9 0 1 1-6.219-8.56"
+      })
+    }), label && jsxRuntime.jsx("p", {
+      className: "text-sm font-semibold leading-tight text-white dark:text-black",
+      children: label
+    })]
+  });
 };
-var Loader = function Loader(_ref2) {
-  var _ref2$hasOverlay = _ref2.hasOverlay,
-    hasOverlay = _ref2$hasOverlay === void 0 ? true : _ref2$hasOverlay,
-    label = _ref2.label;
-  return hasOverlay ? (/*#__PURE__*/reactDom.createPortal(/*#__PURE__*/React.createElement("div", {
-    className: "items-center justify-center bg-black/60 flex h-full w-full fixed top-0 left-0 select-none z-[9999]"
-  }, /*#__PURE__*/React.createElement(LoadingWrapper, {
-    label: label
-  })), document.body)) : /*#__PURE__*/React.createElement(LoadingWrapper, {
+const Loader = ({
+  hasOverlay: _hasOverlay = true,
+  label
+}) => {
+  return _hasOverlay ? (/*#__PURE__*/reactDom.createPortal(jsxRuntime.jsx("div", {
+    className: "items-center justify-center bg-black/60 flex h-full w-full fixed top-0 left-0 select-none z-[9999]",
+    children: jsxRuntime.jsx(LoadingWrapper, {
+      label: label
+    })
+  }), document.body)) : jsxRuntime.jsx(LoadingWrapper, {
     label: label
   });
 };
 
-function _catch$1(body, recover) {
-  try {
-    var result = body();
-  } catch (e) {
-    return recover(e);
-  }
-  if (result && result.then) {
-    return result.then(void 0, recover);
-  }
-  return result;
-}
-var imageStyles = [{
+const imageStyles = [{
   name: 'photorealistic',
   label: 'Photorealistic',
   value: 'photorealistic'
@@ -34609,334 +36013,308 @@ var imageStyles = [{
   label: '3D model',
   value: '3d_model'
 }];
-var AiImageView = function AiImageView(_ref) {
-  var editor = _ref.editor,
-    getPos = _ref.getPos,
-    deleteNode = _ref.deleteNode;
-  var aiOptions = editor.extensionManager.extensions.find(function (ext) {
-    return ext.name === 'ai';
-  }).options;
-  var _useState = react.useState({
-      text: '',
-      imageStyle: undefined
-    }),
-    data = _useState[0],
-    setData = _useState[1];
-  var currentImageStyle = imageStyles.find(function (t) {
-    return t.value === data.imageStyle;
+const AiImageView = ({
+  editor,
+  node,
+  getPos,
+  deleteNode
+}) => {
+  const aiOptions = editor.extensionManager.extensions.find(ext => ext.name === 'ai').options;
+  const [data, setData] = react.useState({
+    text: '',
+    imageStyle: undefined
   });
-  var _useState2 = react.useState(undefined),
-    previewImage = _useState2[0],
-    setPreviewImage = _useState2[1];
-  var _useState3 = react.useState(false),
-    isFetching = _useState3[0],
-    setIsFetching = _useState3[1];
-  var textareaId = react.useMemo(function () {
-    return v4();
-  }, []);
-  var generateImage = react.useCallback(function () {
+  const currentImageStyle = imageStyles.find(t => t.value === data.imageStyle);
+  const [previewImage, setPreviewImage] = react.useState(undefined);
+  const [isFetching, setIsFetching] = react.useState(false);
+  const textareaId = react.useMemo(() => v4(), []);
+  const generateImage = react.useCallback(async () => {
+    if (!data.text) {
+      toast.error('Please enter a description for the image');
+      return;
+    }
+    setIsFetching(true);
+    const payload = {
+      text: data.text,
+      style: data.imageStyle
+    };
     try {
-      if (!data.text) {
-        toast.error('Please enter a description for the image');
-        return Promise.resolve();
+      const {
+        baseUrl,
+        appId,
+        token
+      } = aiOptions;
+      const response = await fetch(`${baseUrl}/image/prompt`, {
+        method: 'POST',
+        headers: {
+          accept: 'application.json',
+          'Content-Type': 'application/json',
+          'X-App-Id': appId.trim(),
+          Authorization: `Bearer ${token.trim()}`
+        },
+        body: JSON.stringify(payload)
+      });
+      const json = await response.json();
+      const url = json.response;
+      if (!url.length) {
+        return;
       }
-      setIsFetching(true);
-      var payload = {
-        text: data.text,
-        style: data.imageStyle
-      };
-      return Promise.resolve(_catch$1(function () {
-        var baseUrl = aiOptions.baseUrl,
-          appId = aiOptions.appId,
-          token = aiOptions.token;
-        return Promise.resolve(fetch(baseUrl + "/image/prompt", {
-          method: 'POST',
-          headers: {
-            accept: 'application.json',
-            'Content-Type': 'application/json',
-            'X-App-Id': appId.trim(),
-            Authorization: "Bearer " + token.trim()
-          },
-          body: JSON.stringify(payload)
-        })).then(function (response) {
-          return Promise.resolve(response.json()).then(function (json) {
-            var url = json.response;
-            if (!url.length) {
-              return;
-            }
-            setPreviewImage(url);
-            setIsFetching(false);
-          });
-        });
-      }, function (errPayload) {
-        var _errPayload$response;
-        var errorMessage = errPayload == null || (_errPayload$response = errPayload.response) == null || (_errPayload$response = _errPayload$response.data) == null ? void 0 : _errPayload$response.error;
-        var message = errorMessage !== 'An error occurred' ? "An error has occured: " + errorMessage : errorMessage;
-        setIsFetching(false);
-        toast.error(message);
-      }));
-    } catch (e) {
-      return Promise.reject(e);
+      setPreviewImage(url);
+      setIsFetching(false);
+    } catch (errPayload) {
+      var _errPayload$response;
+      const errorMessage = errPayload == null || (_errPayload$response = errPayload.response) == null || (_errPayload$response = _errPayload$response.data) == null ? void 0 : _errPayload$response.error;
+      const message = errorMessage !== 'An error occurred' ? `An error has occured: ${errorMessage}` : errorMessage;
+      setIsFetching(false);
+      toast.error(message);
     }
   }, [data, aiOptions]);
-  var insert = react.useCallback(function () {
+  const insert = react.useCallback(() => {
     if (!(previewImage != null && previewImage.length)) {
       return;
     }
-    editor.chain().insertContent("<img src=\"" + previewImage + "\" alt=\"\" />").deleteRange({
+    editor.chain().insertContent(`<img src="${previewImage}" alt="" />`).deleteRange({
       from: getPos(),
       to: getPos()
     }).focus().run();
     setIsFetching(false);
   }, [editor, previewImage, getPos]);
-  var discard = react.useCallback(function () {
+  const discard = react.useCallback(() => {
     deleteNode();
   }, [deleteNode]);
-  var handleTextareaChange = react.useCallback(function (e) {
-    return setData(function (prevData) {
-      return _extends({}, prevData, {
-        text: e.target.value
-      });
-    });
-  }, []);
-  var onUndoClick = react.useCallback(function () {
-    setData(function (prevData) {
-      return _extends({}, prevData, {
-        imageStyle: undefined
-      });
-    });
+  const handleTextareaChange = react.useCallback(e => setData(prevData => _extends({}, prevData, {
+    text: e.target.value
+  })), []);
+  const onUndoClick = react.useCallback(() => {
+    setData(prevData => _extends({}, prevData, {
+      imageStyle: undefined
+    }));
     setPreviewImage(undefined);
   }, []);
-  var createItemClickHandler = react.useCallback(function (style) {
-    return function () {
-      return setData(function (prevData) {
-        return _extends({}, prevData, {
-          imageStyle: style.value
-        });
-      });
-    };
+  const createItemClickHandler = react.useCallback(style => {
+    return () => setData(prevData => _extends({}, prevData, {
+      imageStyle: style.value
+    }));
   }, []);
-  return /*#__PURE__*/React.createElement(NodeViewWrapper, {
-    "data-drag-handle": true
-  }, /*#__PURE__*/React.createElement(Panel, {
-    noShadow: true,
-    className: "w-full"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "flex flex-col p-1"
-  }, isFetching && /*#__PURE__*/React.createElement(Loader, {
-    label: "AI is now doing its job!"
-  }), previewImage && /*#__PURE__*/React.createElement(Fragment, null, /*#__PURE__*/React.createElement(PanelHeadline, null, "Preview"), /*#__PURE__*/React.createElement("div", {
-    className: "w-full mb-4 bg-white bg-center bg-no-repeat bg-contain border border-black rounded dark:border-neutral-700 aspect-square",
-    style: {
-      backgroundImage: "url(" + previewImage + ")"
-    }
-  })), /*#__PURE__*/React.createElement("div", {
-    className: "flex items-center justify-between gap-2 row"
-  }, /*#__PURE__*/React.createElement(PanelHeadline, {
-    asChild: true
-  }, /*#__PURE__*/React.createElement("label", {
-    htmlFor: textareaId
-  }, "Prompt"))), /*#__PURE__*/React.createElement(Textarea, {
-    id: textareaId,
-    value: data.text,
-    onChange: handleTextareaChange,
-    placeholder: "Describe the image that you want me to generate.",
-    required: true,
-    className: "mb-2"
-  }), /*#__PURE__*/React.createElement("div", {
-    className: "flex flex-row items-center justify-between gap-1"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "flex justify-between w-auto gap-1"
-  }, /*#__PURE__*/React.createElement(Dropdown.Root, null, /*#__PURE__*/React.createElement(Dropdown.Trigger, {
-    asChild: true
-  }, /*#__PURE__*/React.createElement(Button, {
-    variant: "tertiary"
-  }, /*#__PURE__*/React.createElement(Icon, {
-    name: "Image"
-  }), (currentImageStyle == null ? void 0 : currentImageStyle.label) || 'Image style', /*#__PURE__*/React.createElement(Icon, {
-    name: "ChevronDown"
-  }))), /*#__PURE__*/React.createElement(Dropdown.Portal, null, /*#__PURE__*/React.createElement(Dropdown.Content, {
-    side: "bottom",
-    align: "start",
-    asChild: true
-  }, /*#__PURE__*/React.createElement(Surface, {
-    className: "p-2 min-w-[12rem]"
-  }, !!data.imageStyle && /*#__PURE__*/React.createElement(Fragment, null, /*#__PURE__*/React.createElement(DropdownButton, {
-    isActive: data.imageStyle === undefined,
-    onClick: onUndoClick
-  }, /*#__PURE__*/React.createElement(Icon, {
-    name: "Undo2"
-  }), "Reset"), /*#__PURE__*/React.createElement(Toolbar.Divider, {
-    horizontal: true
-  })), imageStyles.map(function (style) {
-    return /*#__PURE__*/React.createElement(DropdownButton, {
-      isActive: style.value === data.imageStyle,
-      key: style.value,
-      onClick: createItemClickHandler(style)
-    }, style.label);
-  })))))), /*#__PURE__*/React.createElement("div", {
-    className: "flex flex-row items-center justify-between gap-1"
-  }, previewImage && /*#__PURE__*/React.createElement(Button, {
-    variant: "ghost",
-    className: "text-red-500 hover:bg-red-500/10 hover:text-red-500",
-    onClick: discard
-  }, /*#__PURE__*/React.createElement(Icon, {
-    name: "Trash"
-  }), "Discard"), previewImage && /*#__PURE__*/React.createElement(Button, {
-    variant: "ghost",
-    onClick: insert
-  }, /*#__PURE__*/React.createElement(Icon, {
-    name: "Check"
-  }), "Insert"), /*#__PURE__*/React.createElement(Button, {
-    variant: "primary",
-    onClick: generateImage
-  }, previewImage ? /*#__PURE__*/React.createElement(Icon, {
-    name: "Repeat"
-  }) : /*#__PURE__*/React.createElement(Icon, {
-    name: "Sparkles"
-  }), previewImage ? 'Regenerate' : 'Generate image'))))));
+  return jsxRuntime.jsx(NodeViewWrapper, {
+    "data-drag-handle": true,
+    children: jsxRuntime.jsx(Panel, {
+      noShadow: true,
+      className: "w-full",
+      children: jsxRuntime.jsxs("div", {
+        className: "flex flex-col p-1",
+        children: [isFetching && jsxRuntime.jsx(Loader, {
+          label: "AI is now doing its job!"
+        }), previewImage && jsxRuntime.jsxs(jsxRuntime.Fragment, {
+          children: [jsxRuntime.jsx(PanelHeadline, {
+            children: "Preview"
+          }), jsxRuntime.jsx("div", {
+            className: "w-full mb-4 bg-white bg-center bg-no-repeat bg-contain border border-black rounded dark:border-neutral-700 aspect-square",
+            style: {
+              backgroundImage: `url(${previewImage})`
+            }
+          })]
+        }), jsxRuntime.jsx("div", {
+          className: "flex items-center justify-between gap-2 row",
+          children: jsxRuntime.jsx(PanelHeadline, {
+            asChild: true,
+            children: jsxRuntime.jsx("label", {
+              htmlFor: textareaId,
+              children: "Prompt"
+            })
+          })
+        }), jsxRuntime.jsx(Textarea, {
+          id: textareaId,
+          value: data.text,
+          onChange: handleTextareaChange,
+          placeholder: `Describe the image that you want me to generate.`,
+          required: true,
+          className: "mb-2"
+        }), jsxRuntime.jsxs("div", {
+          className: "flex flex-row items-center justify-between gap-1",
+          children: [jsxRuntime.jsx("div", {
+            className: "flex justify-between w-auto gap-1",
+            children: jsxRuntime.jsxs(Dropdown.Root, {
+              children: [jsxRuntime.jsx(Dropdown.Trigger, {
+                asChild: true,
+                children: jsxRuntime.jsxs(Button, {
+                  variant: "tertiary",
+                  children: [jsxRuntime.jsx(Icon, {
+                    name: "Image"
+                  }), (currentImageStyle == null ? void 0 : currentImageStyle.label) || 'Image style', jsxRuntime.jsx(Icon, {
+                    name: "ChevronDown"
+                  })]
+                })
+              }), jsxRuntime.jsx(Dropdown.Portal, {
+                children: jsxRuntime.jsx(Dropdown.Content, {
+                  side: "bottom",
+                  align: "start",
+                  asChild: true,
+                  children: jsxRuntime.jsxs(Surface, {
+                    className: "p-2 min-w-[12rem]",
+                    children: [!!data.imageStyle && jsxRuntime.jsxs(jsxRuntime.Fragment, {
+                      children: [jsxRuntime.jsxs(DropdownButton, {
+                        isActive: data.imageStyle === undefined,
+                        onClick: onUndoClick,
+                        children: [jsxRuntime.jsx(Icon, {
+                          name: "Undo2"
+                        }), "Reset"]
+                      }), jsxRuntime.jsx(Toolbar.Divider, {
+                        horizontal: true
+                      })]
+                    }), imageStyles.map(style => jsxRuntime.jsx(DropdownButton, {
+                      isActive: style.value === data.imageStyle,
+                      onClick: createItemClickHandler(style),
+                      children: style.label
+                    }, style.value))]
+                  })
+                })
+              })]
+            })
+          }), jsxRuntime.jsxs("div", {
+            className: "flex flex-row items-center justify-between gap-1",
+            children: [previewImage && jsxRuntime.jsxs(Button, {
+              variant: "ghost",
+              className: "text-red-500 hover:bg-red-500/10 hover:text-red-500",
+              onClick: discard,
+              children: [jsxRuntime.jsx(Icon, {
+                name: "Trash"
+              }), "Discard"]
+            }), previewImage && jsxRuntime.jsxs(Button, {
+              variant: "ghost",
+              onClick: insert,
+              children: [jsxRuntime.jsx(Icon, {
+                name: "Check"
+              }), "Insert"]
+            }), jsxRuntime.jsxs(Button, {
+              variant: "primary",
+              onClick: generateImage,
+              children: [previewImage ? jsxRuntime.jsx(Icon, {
+                name: "Repeat"
+              }) : jsxRuntime.jsx(Icon, {
+                name: "Sparkles"
+              }), previewImage ? 'Regenerate' : 'Generate image']
+            })]
+          })]
+        })]
+      })
+    })
+  });
 };
 
-var AiImage = Node.create({
+const AiImage = Node.create({
   name: 'aiImage',
   group: 'block',
   draggable: true,
-  addOptions: function addOptions() {
+  addOptions() {
     return {
       authorId: undefined,
       authorName: undefined,
       HTMLAttributes: {
-        "class": "node-" + this.name
+        class: `node-${this.name}`
       }
     };
   },
-  addAttributes: function addAttributes() {
+  addAttributes() {
     return {
       id: {
-        "default": undefined,
-        parseHTML: function parseHTML(element) {
-          return element.getAttribute('data-id');
-        },
-        renderHTML: function renderHTML(attributes) {
-          return {
-            'data-id': attributes.id
-          };
-        }
+        default: undefined,
+        parseHTML: element => element.getAttribute('data-id'),
+        renderHTML: attributes => ({
+          'data-id': attributes.id
+        })
       },
       authorId: {
-        "default": undefined,
-        parseHTML: function parseHTML(element) {
-          return element.getAttribute('data-author-id');
-        },
-        renderHTML: function renderHTML(attributes) {
-          return {
-            'data-author-id': attributes.authorId
-          };
-        }
+        default: undefined,
+        parseHTML: element => element.getAttribute('data-author-id'),
+        renderHTML: attributes => ({
+          'data-author-id': attributes.authorId
+        })
       },
       authorName: {
-        "default": undefined,
-        parseHTML: function parseHTML(element) {
-          return element.getAttribute('data-author-name');
-        },
-        renderHTML: function renderHTML(attributes) {
-          return {
-            'data-author-name': attributes.authorName
-          };
-        }
+        default: undefined,
+        parseHTML: element => element.getAttribute('data-author-name'),
+        renderHTML: attributes => ({
+          'data-author-name': attributes.authorName
+        })
       }
     };
   },
-  parseHTML: function parseHTML() {
+  parseHTML() {
     return [{
-      tag: "div.node-" + this.name
+      tag: `div.node-${this.name}`
     }];
   },
-  renderHTML: function renderHTML(_ref) {
-    var HTMLAttributes = _ref.HTMLAttributes;
+  renderHTML({
+    HTMLAttributes
+  }) {
     return ['div', mergeAttributes(this.options.HTMLAttributes, HTMLAttributes)];
   },
-  addCommands: function addCommands() {
-    var _this = this;
+  addCommands() {
     return {
-      setAiImage: function setAiImage() {
-        return function (_ref2) {
-          var chain = _ref2.chain;
-          return chain().focus().insertContent({
-            type: _this.name,
-            attrs: {
-              id: v4(),
-              authorId: _this.options.authorId,
-              authorName: _this.options.authorName
-            }
-          }).run();
-        };
-      }
+      setAiImage: () => ({
+        chain
+      }) => chain().focus().insertContent({
+        type: this.name,
+        attrs: {
+          id: v4(),
+          authorId: this.options.authorId,
+          authorName: this.options.authorName
+        }
+      }).run()
     };
   },
-  addNodeView: function addNodeView() {
+  addNodeView() {
     return ReactNodeViewRenderer(AiImageView);
   }
 });
 
-var Table = TiptapTable.configure({
+const Table = TiptapTable.configure({
   resizable: true,
   lastColumnResizable: false
 });
 
-var isRectSelected = function isRectSelected(rect) {
-  return function (selection) {
-    var map = TableMap.get(selection.$anchorCell.node(-1));
-    var start = selection.$anchorCell.start(-1);
-    var cells = map.cellsInRect(rect);
-    var selectedCells = map.cellsInRect(map.rectBetween(selection.$anchorCell.pos - start, selection.$headCell.pos - start));
-    for (var i = 0, count = cells.length; i < count; i += 1) {
-      if (selectedCells.indexOf(cells[i]) === -1) {
-        return false;
-      }
+const isRectSelected = rect => selection => {
+  const map = TableMap.get(selection.$anchorCell.node(-1));
+  const start = selection.$anchorCell.start(-1);
+  const cells = map.cellsInRect(rect);
+  const selectedCells = map.cellsInRect(map.rectBetween(selection.$anchorCell.pos - start, selection.$headCell.pos - start));
+  for (let i = 0, count = cells.length; i < count; i += 1) {
+    if (selectedCells.indexOf(cells[i]) === -1) {
+      return false;
     }
-    return true;
-  };
+  }
+  return true;
 };
-var findTable = function findTable(selection) {
-  return findParentNode(function (node) {
-    return node.type.spec.tableRole && node.type.spec.tableRole === 'table';
-  })(selection);
-};
-var isCellSelection = function isCellSelection(selection) {
-  return selection instanceof CellSelection;
-};
-var isColumnSelected = function isColumnSelected(columnIndex) {
-  return function (selection) {
-    if (isCellSelection(selection)) {
-      var map = TableMap.get(selection.$anchorCell.node(-1));
-      return isRectSelected({
-        left: columnIndex,
-        right: columnIndex + 1,
-        top: 0,
-        bottom: map.height
-      })(selection);
-    }
-    return false;
-  };
-};
-var isRowSelected = function isRowSelected(rowIndex) {
-  return function (selection) {
-    if (isCellSelection(selection)) {
-      var map = TableMap.get(selection.$anchorCell.node(-1));
-      return isRectSelected({
-        left: 0,
-        right: map.width,
-        top: rowIndex,
-        bottom: rowIndex + 1
-      })(selection);
-    }
-    return false;
-  };
-};
-var isTableSelected = function isTableSelected(selection) {
+const findTable = selection => findParentNode(node => node.type.spec.tableRole && node.type.spec.tableRole === 'table')(selection);
+const isCellSelection = selection => selection instanceof CellSelection;
+const isColumnSelected = columnIndex => selection => {
   if (isCellSelection(selection)) {
-    var map = TableMap.get(selection.$anchorCell.node(-1));
+    const map = TableMap.get(selection.$anchorCell.node(-1));
+    return isRectSelected({
+      left: columnIndex,
+      right: columnIndex + 1,
+      top: 0,
+      bottom: map.height
+    })(selection);
+  }
+  return false;
+};
+const isRowSelected = rowIndex => selection => {
+  if (isCellSelection(selection)) {
+    const map = TableMap.get(selection.$anchorCell.node(-1));
+    return isRectSelected({
+      left: 0,
+      right: map.width,
+      top: rowIndex,
+      bottom: rowIndex + 1
+    })(selection);
+  }
+  return false;
+};
+const isTableSelected = selection => {
+  if (isCellSelection(selection)) {
+    const map = TableMap.get(selection.$anchorCell.node(-1));
     return isRectSelected({
       left: 0,
       right: map.width,
@@ -34946,174 +36324,171 @@ var isTableSelected = function isTableSelected(selection) {
   }
   return false;
 };
-var getCellsInColumn = function getCellsInColumn(columnIndex) {
-  return function (selection) {
-    var table = findTable(selection);
-    if (table) {
-      var map = TableMap.get(table.node);
-      var indexes = Array.isArray(columnIndex) ? columnIndex : Array.from([columnIndex]);
-      return indexes.reduce(function (acc, index) {
-        if (index >= 0 && index <= map.width - 1) {
-          var cells = map.cellsInRect({
-            left: index,
-            right: index + 1,
-            top: 0,
-            bottom: map.height
-          });
-          return acc.concat(cells.map(function (nodePos) {
-            var node = table.node.nodeAt(nodePos);
-            var pos = nodePos + table.start;
-            return {
-              pos: pos,
-              start: pos + 1,
-              node: node
-            };
-          }));
-        }
-        return acc;
-      }, []);
-    }
-    return null;
-  };
-};
-var getCellsInRow = function getCellsInRow(rowIndex) {
-  return function (selection) {
-    var table = findTable(selection);
-    if (table) {
-      var map = TableMap.get(table.node);
-      var indexes = Array.isArray(rowIndex) ? rowIndex : Array.from([rowIndex]);
-      return indexes.reduce(function (acc, index) {
-        if (index >= 0 && index <= map.height - 1) {
-          var cells = map.cellsInRect({
-            left: 0,
-            right: map.width,
-            top: index,
-            bottom: index + 1
-          });
-          return acc.concat(cells.map(function (nodePos) {
-            var node = table.node.nodeAt(nodePos);
-            var pos = nodePos + table.start;
-            return {
-              pos: pos,
-              start: pos + 1,
-              node: node
-            };
-          }));
-        }
-        return acc;
-      }, []);
-    }
-    return null;
-  };
-};
-var select = function select(type) {
-  return function (index) {
-    return function (tr) {
-      var table = findTable(tr.selection);
-      var isRowSelection = type === 'row';
-      if (table) {
-        var map = TableMap.get(table.node);
-        // Check if the index is valid
-        if (index >= 0 && index < (isRowSelection ? map.height : map.width)) {
-          var left = isRowSelection ? 0 : index;
-          var top = isRowSelection ? index : 0;
-          var right = isRowSelection ? map.width : index + 1;
-          var bottom = isRowSelection ? index + 1 : map.height;
-          var cellsInFirstRow = map.cellsInRect({
-            left: left,
-            top: top,
-            right: isRowSelection ? right : left + 1,
-            bottom: isRowSelection ? top + 1 : bottom
-          });
-          var cellsInLastRow = bottom - top === 1 ? cellsInFirstRow : map.cellsInRect({
-            left: isRowSelection ? left : right - 1,
-            top: isRowSelection ? bottom - 1 : top,
-            right: right,
-            bottom: bottom
-          });
-          var head = table.start + cellsInFirstRow[0];
-          var anchor = table.start + cellsInLastRow[cellsInLastRow.length - 1];
-          var $head = tr.doc.resolve(head);
-          var $anchor = tr.doc.resolve(anchor);
-          return tr.setSelection(new CellSelection($anchor, $head));
-        }
+const getCellsInColumn = columnIndex => selection => {
+  const table = findTable(selection);
+  if (table) {
+    const map = TableMap.get(table.node);
+    const indexes = Array.isArray(columnIndex) ? columnIndex : Array.from([columnIndex]);
+    return indexes.reduce((acc, index) => {
+      if (index >= 0 && index <= map.width - 1) {
+        const cells = map.cellsInRect({
+          left: index,
+          right: index + 1,
+          top: 0,
+          bottom: map.height
+        });
+        return acc.concat(cells.map(nodePos => {
+          const node = table.node.nodeAt(nodePos);
+          const pos = nodePos + table.start;
+          return {
+            pos,
+            start: pos + 1,
+            node
+          };
+        }));
       }
-      return tr;
-    };
-  };
+      return acc;
+    }, []);
+  }
+  return null;
 };
-var selectColumn = select('column');
-var selectRow = select('row');
+const getCellsInRow = rowIndex => selection => {
+  const table = findTable(selection);
+  if (table) {
+    const map = TableMap.get(table.node);
+    const indexes = Array.isArray(rowIndex) ? rowIndex : Array.from([rowIndex]);
+    return indexes.reduce((acc, index) => {
+      if (index >= 0 && index <= map.height - 1) {
+        const cells = map.cellsInRect({
+          left: 0,
+          right: map.width,
+          top: index,
+          bottom: index + 1
+        });
+        return acc.concat(cells.map(nodePos => {
+          const node = table.node.nodeAt(nodePos);
+          const pos = nodePos + table.start;
+          return {
+            pos,
+            start: pos + 1,
+            node
+          };
+        }));
+      }
+      return acc;
+    }, []);
+  }
+  return null;
+};
+const select = type => index => tr => {
+  const table = findTable(tr.selection);
+  const isRowSelection = type === 'row';
+  if (table) {
+    const map = TableMap.get(table.node);
+    // Check if the index is valid
+    if (index >= 0 && index < (isRowSelection ? map.height : map.width)) {
+      const left = isRowSelection ? 0 : index;
+      const top = isRowSelection ? index : 0;
+      const right = isRowSelection ? map.width : index + 1;
+      const bottom = isRowSelection ? index + 1 : map.height;
+      const cellsInFirstRow = map.cellsInRect({
+        left,
+        top,
+        right: isRowSelection ? right : left + 1,
+        bottom: isRowSelection ? top + 1 : bottom
+      });
+      const cellsInLastRow = bottom - top === 1 ? cellsInFirstRow : map.cellsInRect({
+        left: isRowSelection ? left : right - 1,
+        top: isRowSelection ? bottom - 1 : top,
+        right,
+        bottom
+      });
+      const head = table.start + cellsInFirstRow[0];
+      const anchor = table.start + cellsInLastRow[cellsInLastRow.length - 1];
+      const $head = tr.doc.resolve(head);
+      const $anchor = tr.doc.resolve(anchor);
+      return tr.setSelection(new CellSelection($anchor, $head));
+    }
+  }
+  return tr;
+};
+const selectColumn = select('column');
+const selectRow = select('row');
 
-var TableCell = Node.create({
+const TableCell = Node.create({
   name: 'tableCell',
   content: 'block+',
   tableRole: 'cell',
   isolating: true,
-  addOptions: function addOptions() {
+  addOptions() {
     return {
       HTMLAttributes: {}
     };
   },
-  parseHTML: function parseHTML() {
+  parseHTML() {
     return [{
       tag: 'td'
     }];
   },
-  renderHTML: function renderHTML(_ref) {
-    var HTMLAttributes = _ref.HTMLAttributes;
+  renderHTML({
+    HTMLAttributes
+  }) {
     return ['td', mergeAttributes(this.options.HTMLAttributes, HTMLAttributes), 0];
   },
-  addAttributes: function addAttributes() {
+  addAttributes() {
     return {
       colspan: {
-        "default": 1,
-        parseHTML: function parseHTML(element) {
-          var colspan = element.getAttribute('colspan');
-          var value = colspan ? parseInt(colspan, 10) : 1;
+        default: 1,
+        parseHTML: element => {
+          const colspan = element.getAttribute('colspan');
+          const value = colspan ? parseInt(colspan, 10) : 1;
           return value;
         }
       },
       rowspan: {
-        "default": 1,
-        parseHTML: function parseHTML(element) {
-          var rowspan = element.getAttribute('rowspan');
-          var value = rowspan ? parseInt(rowspan, 10) : 1;
+        default: 1,
+        parseHTML: element => {
+          const rowspan = element.getAttribute('rowspan');
+          const value = rowspan ? parseInt(rowspan, 10) : 1;
           return value;
         }
       },
       colwidth: {
-        "default": null,
-        parseHTML: function parseHTML(element) {
-          var colwidth = element.getAttribute('colwidth');
-          var value = colwidth ? [parseInt(colwidth, 10)] : null;
+        default: null,
+        parseHTML: element => {
+          const colwidth = element.getAttribute('colwidth');
+          const value = colwidth ? [parseInt(colwidth, 10)] : null;
           return value;
         }
       },
       style: {
-        "default": null
+        default: null
       }
     };
   },
-  addProseMirrorPlugins: function addProseMirrorPlugins() {
-    var _this = this;
-    var isEditable = this.editor.isEditable;
+  addProseMirrorPlugins() {
+    const {
+      isEditable
+    } = this.editor;
     return [new Plugin({
       props: {
-        decorations: function decorations(state) {
+        decorations: state => {
           if (!isEditable) {
             return DecorationSet.empty;
           }
-          var doc = state.doc,
-            selection = state.selection;
-          var decorations = [];
-          var cells = getCellsInColumn(0)(selection);
+          const {
+            doc,
+            selection
+          } = state;
+          const decorations = [];
+          const cells = getCellsInColumn(0)(selection);
           if (cells) {
-            cells.forEach(function (_ref2, index) {
-              var pos = _ref2.pos;
-              decorations.push(Decoration.widget(pos + 1, function () {
-                var rowSelected = isRowSelected(index)(selection);
-                var className = 'grip-row';
+            cells.forEach(({
+              pos
+            }, index) => {
+              decorations.push(Decoration.widget(pos + 1, () => {
+                const rowSelected = isRowSelected(index)(selection);
+                let className = 'grip-row';
                 if (rowSelected) {
                   className += ' selected';
                 }
@@ -35123,12 +36498,12 @@ var TableCell = Node.create({
                 if (index === cells.length - 1) {
                   className += ' last';
                 }
-                var grip = document.createElement('a');
+                const grip = document.createElement('a');
                 grip.className = className;
-                grip.addEventListener('mousedown', function (event) {
+                grip.addEventListener('mousedown', event => {
                   event.preventDefault();
                   event.stopImmediatePropagation();
-                  _this.editor.view.dispatch(selectRow(index)(_this.editor.state.tr));
+                  this.editor.view.dispatch(selectRow(index)(this.editor.state.tr));
                 });
                 return grip;
               }));
@@ -35141,54 +36516,56 @@ var TableCell = Node.create({
   }
 });
 
-var TableRow = TiptapTableRow.extend({
+const TableRow = TiptapTableRow.extend({
   allowGapCursor: false,
   content: 'tableCell*'
 });
 
-var TableHeader = TiptapTableHeader.extend({
-  addAttributes: function addAttributes() {
+const TableHeader = TiptapTableHeader.extend({
+  addAttributes() {
     return {
       colspan: {
-        "default": 1
+        default: 1
       },
       rowspan: {
-        "default": 1
+        default: 1
       },
       colwidth: {
-        "default": null,
-        parseHTML: function parseHTML(element) {
-          var colwidth = element.getAttribute('colwidth');
-          var value = colwidth ? colwidth.split(',').map(function (item) {
-            return parseInt(item, 10);
-          }) : null;
+        default: null,
+        parseHTML: element => {
+          const colwidth = element.getAttribute('colwidth');
+          const value = colwidth ? colwidth.split(',').map(item => parseInt(item, 10)) : null;
           return value;
         }
       },
       style: {
-        "default": null
+        default: null
       }
     };
   },
-  addProseMirrorPlugins: function addProseMirrorPlugins() {
-    var _this = this;
-    var isEditable = this.editor.isEditable;
+  addProseMirrorPlugins() {
+    const {
+      isEditable
+    } = this.editor;
     return [new Plugin({
       props: {
-        decorations: function decorations(state) {
+        decorations: state => {
           if (!isEditable) {
             return DecorationSet.empty;
           }
-          var doc = state.doc,
-            selection = state.selection;
-          var decorations = [];
-          var cells = getCellsInRow(0)(selection);
+          const {
+            doc,
+            selection
+          } = state;
+          const decorations = [];
+          const cells = getCellsInRow(0)(selection);
           if (cells) {
-            cells.forEach(function (_ref, index) {
-              var pos = _ref.pos;
-              decorations.push(Decoration.widget(pos + 1, function () {
-                var colSelected = isColumnSelected(index)(selection);
-                var className = 'grip-column';
+            cells.forEach(({
+              pos
+            }, index) => {
+              decorations.push(Decoration.widget(pos + 1, () => {
+                const colSelected = isColumnSelected(index)(selection);
+                let className = 'grip-column';
                 if (colSelected) {
                   className += ' selected';
                 }
@@ -35198,12 +36575,12 @@ var TableHeader = TiptapTableHeader.extend({
                 if (index === cells.length - 1) {
                   className += ' last';
                 }
-                var grip = document.createElement('a');
+                const grip = document.createElement('a');
                 grip.className = className;
-                grip.addEventListener('mousedown', function (event) {
+                grip.addEventListener('mousedown', event => {
                   event.preventDefault();
                   event.stopImmediatePropagation();
-                  _this.editor.view.dispatch(selectColumn(index)(_this.editor.state.tr));
+                  this.editor.view.dispatch(selectColumn(index)(this.editor.state.tr));
                 });
                 return grip;
               }));
@@ -35216,67 +36593,65 @@ var TableHeader = TiptapTableHeader.extend({
   }
 });
 
-var HorizontalRule = TiptapHorizontalRule.extend({
-  renderHTML: function renderHTML() {
+const HorizontalRule = TiptapHorizontalRule.extend({
+  renderHTML() {
     return ['div', mergeAttributes(this.options.HTMLAttributes, {
       'data-type': this.name
     }), ['hr']];
   }
 });
 
-var Heading = TiptapHeading.extend({
-  renderHTML: function renderHTML(_ref) {
-    var node = _ref.node,
-      HTMLAttributes = _ref.HTMLAttributes;
-    var nodeLevel = parseInt(node.attrs.level, 10);
-    var hasLevel = this.options.levels.includes(nodeLevel);
-    var level = hasLevel ? nodeLevel : this.options.levels[0];
-    return ["h" + level, mergeAttributes(this.options.HTMLAttributes, HTMLAttributes), 0];
+const Heading = TiptapHeading.extend({
+  renderHTML({
+    node,
+    HTMLAttributes
+  }) {
+    const nodeLevel = parseInt(node.attrs.level, 10);
+    const hasLevel = this.options.levels.includes(nodeLevel);
+    const level = hasLevel ? nodeLevel : this.options.levels[0];
+    return [`h${level}`, mergeAttributes(this.options.HTMLAttributes, HTMLAttributes), 0];
   }
 });
 
-var lowlight = createLowlight(all);
-var CodeBlock = CodeBlockLowlight.configure({
-  lowlight: lowlight,
+const lowlight = createLowlight(all);
+const CodeBlock = CodeBlockLowlight.configure({
+  lowlight,
   defaultLanguage: 'javascript'
 });
 
-var Document = Document$1.extend({
+const Document = Document$1.extend({
   content: '(block|columns)+'
 });
 
 // @ts-ignore
-function nodeEqualsType(_ref) {
-  var types = _ref.types,
-    node = _ref.node;
+function nodeEqualsType({
+  types,
+  node
+}) {
   return Array.isArray(types) && types.includes(node.type) || node.type === types;
 }
-var TrailingNode = Extension.create({
+const TrailingNode = Extension.create({
   name: 'trailingNode',
-  addOptions: function addOptions() {
+  addOptions() {
     return {
       node: 'paragraph',
       notAfter: ['paragraph']
     };
   },
-  addProseMirrorPlugins: function addProseMirrorPlugins() {
-    var _this = this;
-    var plugin = new PluginKey(this.name);
-    var disabledNodes = Object.entries(this.editor.schema.nodes).map(function (_ref2) {
-      var value = _ref2[1];
-      return value;
-    }).filter(function (node) {
-      return _this.options.notAfter.includes(node.name);
-    });
+  addProseMirrorPlugins() {
+    const plugin = new PluginKey(this.name);
+    const disabledNodes = Object.entries(this.editor.schema.nodes).map(([, value]) => value).filter(node => this.options.notAfter.includes(node.name));
     return [new Plugin({
       key: plugin,
-      appendTransaction: function appendTransaction(_, __, state) {
-        var doc = state.doc,
-          tr = state.tr,
-          schema = state.schema;
-        var shouldInsertNodeAtEnd = plugin.getState(state);
-        var endPosition = doc.content.size;
-        var type = schema.nodes[_this.options.node];
+      appendTransaction: (_, __, state) => {
+        const {
+          doc,
+          tr,
+          schema
+        } = state;
+        const shouldInsertNodeAtEnd = plugin.getState(state);
+        const endPosition = doc.content.size;
+        const type = schema.nodes[this.options.node];
         if (!shouldInsertNodeAtEnd) {
           return;
         }
@@ -35284,18 +36659,18 @@ var TrailingNode = Extension.create({
         return tr.insert(endPosition, type.create());
       },
       state: {
-        init: function init(_, state) {
-          var lastNode = state.tr.doc.lastChild;
+        init: (_, state) => {
+          const lastNode = state.tr.doc.lastChild;
           return !nodeEqualsType({
             node: lastNode,
             types: disabledNodes
           });
         },
-        apply: function apply(tr, value) {
+        apply: (tr, value) => {
           if (!tr.docChanged) {
             return value;
           }
-          var lastNode = tr.doc.lastChild;
+          const lastNode = tr.doc.lastChild;
           return !nodeEqualsType({
             node: lastNode,
             types: disabledNodes
@@ -35306,7 +36681,7 @@ var TrailingNode = Extension.create({
   }
 });
 
-var GROUPS = [{
+const GROUPS = [{
   name: 'ai',
   title: 'AI',
   commands: [{
@@ -35314,23 +36689,15 @@ var GROUPS = [{
     label: 'AI Writer',
     iconName: 'Sparkles',
     description: 'Let AI finish your thoughts',
-    shouldBeHidden: function shouldBeHidden(editor) {
-      return editor.isActive('columns');
-    },
-    action: function action(editor) {
-      return editor.chain().focus().setAiWriter().run();
-    }
+    shouldBeHidden: editor => editor.isActive('columns'),
+    action: editor => editor.chain().focus().setAiWriter().run()
   }, {
     name: 'aiImage',
     label: 'AI Image',
     iconName: 'Sparkles',
     description: 'Generate an image from text',
-    shouldBeHidden: function shouldBeHidden(editor) {
-      return editor.isActive('columns');
-    },
-    action: function action(editor) {
-      return editor.chain().focus().setAiImage().run();
-    }
+    shouldBeHidden: editor => editor.isActive('columns'),
+    action: editor => editor.chain().focus().setAiImage().run()
   }]
 }, {
   name: 'format',
@@ -35341,7 +36708,7 @@ var GROUPS = [{
     iconName: 'Heading1',
     description: 'High priority section title',
     aliases: ['h1'],
-    action: function action(editor) {
+    action: editor => {
       editor.chain().focus().setHeading({
         level: 1
       }).run();
@@ -35352,7 +36719,7 @@ var GROUPS = [{
     iconName: 'Heading2',
     description: 'Medium priority section title',
     aliases: ['h2'],
-    action: function action(editor) {
+    action: editor => {
       editor.chain().focus().setHeading({
         level: 2
       }).run();
@@ -35363,7 +36730,7 @@ var GROUPS = [{
     iconName: 'Heading3',
     description: 'Low priority section title',
     aliases: ['h3'],
-    action: function action(editor) {
+    action: editor => {
       editor.chain().focus().setHeading({
         level: 3
       }).run();
@@ -35374,7 +36741,7 @@ var GROUPS = [{
     iconName: 'List',
     description: 'Unordered list of items',
     aliases: ['ul'],
-    action: function action(editor) {
+    action: editor => {
       editor.chain().focus().toggleBulletList().run();
     }
   }, {
@@ -35383,7 +36750,7 @@ var GROUPS = [{
     iconName: 'ListOrdered',
     description: 'Ordered list of items',
     aliases: ['ol'],
-    action: function action(editor) {
+    action: editor => {
       editor.chain().focus().toggleOrderedList().run();
     }
   }, {
@@ -35392,7 +36759,7 @@ var GROUPS = [{
     iconName: 'ListTodo',
     description: 'Task list with todo items',
     aliases: ['todo'],
-    action: function action(editor) {
+    action: editor => {
       editor.chain().focus().toggleTaskList().run();
     }
   }, {
@@ -35401,7 +36768,7 @@ var GROUPS = [{
     iconName: 'ListCollapse',
     description: 'Toggles can show and hide content',
     aliases: ['toggle'],
-    action: function action(editor) {
+    action: editor => {
       editor.chain().focus().setDetails().run();
     }
   }, {
@@ -35409,7 +36776,7 @@ var GROUPS = [{
     label: 'Blockquote',
     iconName: 'Quote',
     description: 'Element for quoting',
-    action: function action(editor) {
+    action: editor => {
       editor.chain().focus().setBlockquote().run();
     }
   }, {
@@ -35417,10 +36784,8 @@ var GROUPS = [{
     label: 'Code Block',
     iconName: 'SquareCode',
     description: 'Code block with syntax highlighting',
-    shouldBeHidden: function shouldBeHidden(editor) {
-      return editor.isActive('columns');
-    },
-    action: function action(editor) {
+    shouldBeHidden: editor => editor.isActive('columns'),
+    action: editor => {
       editor.chain().focus().setCodeBlock().run();
     }
   }]
@@ -35432,10 +36797,8 @@ var GROUPS = [{
     label: 'Table',
     iconName: 'Table',
     description: 'Insert a table',
-    shouldBeHidden: function shouldBeHidden(editor) {
-      return editor.isActive('columns');
-    },
-    action: function action(editor) {
+    shouldBeHidden: editor => editor.isActive('columns'),
+    action: editor => {
       editor.chain().focus().insertTable({
         rows: 3,
         cols: 3,
@@ -35448,7 +36811,7 @@ var GROUPS = [{
     iconName: 'Image',
     description: 'Insert an image',
     aliases: ['img'],
-    action: function action(editor) {
+    action: editor => {
       editor.chain().focus().setImageUpload().run();
     }
   }, {
@@ -35457,10 +36820,8 @@ var GROUPS = [{
     iconName: 'Columns2',
     description: 'Add two column content',
     aliases: ['cols'],
-    shouldBeHidden: function shouldBeHidden(editor) {
-      return editor.isActive('columns');
-    },
-    action: function action(editor) {
+    shouldBeHidden: editor => editor.isActive('columns'),
+    action: editor => {
       editor.chain().focus().setColumns().focus(editor.state.selection.head - 1).run();
     }
   }, {
@@ -35469,7 +36830,7 @@ var GROUPS = [{
     iconName: 'Minus',
     description: 'Insert a horizontal divider',
     aliases: ['hr'],
-    action: function action(editor) {
+    action: editor => {
       editor.chain().focus().setHorizontalRule().run();
     }
   }, {
@@ -35478,133 +36839,124 @@ var GROUPS = [{
     iconName: 'Book',
     aliases: ['outline'],
     description: 'Insert a table of contents',
-    shouldBeHidden: function shouldBeHidden(editor) {
-      return editor.isActive('columns');
-    },
-    action: function action(editor) {
+    shouldBeHidden: editor => editor.isActive('columns'),
+    action: editor => {
       editor.chain().focus().insertTableOfContents().run();
     }
   }]
 }];
 
-var MenuList = /*#__PURE__*/react.forwardRef(function (props, ref) {
-  var scrollContainer = react.useRef(null);
-  var activeItem = react.useRef(null);
-  var _useState = react.useState(0),
-    selectedGroupIndex = _useState[0],
-    setSelectedGroupIndex = _useState[1];
-  var _useState2 = react.useState(0),
-    selectedCommandIndex = _useState2[0],
-    setSelectedCommandIndex = _useState2[1];
+const MenuList = /*#__PURE__*/react.forwardRef((props, ref) => {
+  const scrollContainer = react.useRef(null);
+  const activeItem = react.useRef(null);
+  const [selectedGroupIndex, setSelectedGroupIndex] = react.useState(0);
+  const [selectedCommandIndex, setSelectedCommandIndex] = react.useState(0);
   // Anytime the groups change, i.e. the user types to narrow it down, we want to
   // reset the current selection to the first menu item
-  react.useEffect(function () {
+  react.useEffect(() => {
     setSelectedGroupIndex(0);
     setSelectedCommandIndex(0);
   }, [props.items]);
-  var selectItem = react.useCallback(function (groupIndex, commandIndex) {
-    var command = props.items[groupIndex].commands[commandIndex];
+  const selectItem = react.useCallback((groupIndex, commandIndex) => {
+    const command = props.items[groupIndex].commands[commandIndex];
     props.command(command);
   }, [props]);
-  react.useImperativeHandle(ref, function () {
-    return {
-      onKeyDown: function onKeyDown(_ref) {
-        var event = _ref.event;
-        if (event.key === 'ArrowDown') {
-          if (!props.items.length) {
-            return false;
-          }
-          var commands = props.items[selectedGroupIndex].commands;
-          var newCommandIndex = selectedCommandIndex + 1;
-          var newGroupIndex = selectedGroupIndex;
-          if (commands.length - 1 < newCommandIndex) {
-            newCommandIndex = 0;
-            newGroupIndex = selectedGroupIndex + 1;
-          }
-          if (props.items.length - 1 < newGroupIndex) {
-            newGroupIndex = 0;
-          }
-          setSelectedCommandIndex(newCommandIndex);
-          setSelectedGroupIndex(newGroupIndex);
-          return true;
+  react.useImperativeHandle(ref, () => ({
+    onKeyDown: ({
+      event
+    }) => {
+      if (event.key === 'ArrowDown') {
+        if (!props.items.length) {
+          return false;
         }
-        if (event.key === 'ArrowUp') {
-          if (!props.items.length) {
-            return false;
-          }
-          var _newCommandIndex = selectedCommandIndex - 1;
-          var _newGroupIndex = selectedGroupIndex;
-          if (_newCommandIndex < 0) {
-            var _props$items$_newGrou;
-            _newGroupIndex = selectedGroupIndex - 1;
-            _newCommandIndex = ((_props$items$_newGrou = props.items[_newGroupIndex]) == null ? void 0 : _props$items$_newGrou.commands.length) - 1 || 0;
-          }
-          if (_newGroupIndex < 0) {
-            _newGroupIndex = props.items.length - 1;
-            _newCommandIndex = props.items[_newGroupIndex].commands.length - 1;
-          }
-          setSelectedCommandIndex(_newCommandIndex);
-          setSelectedGroupIndex(_newGroupIndex);
-          return true;
+        const commands = props.items[selectedGroupIndex].commands;
+        let newCommandIndex = selectedCommandIndex + 1;
+        let newGroupIndex = selectedGroupIndex;
+        if (commands.length - 1 < newCommandIndex) {
+          newCommandIndex = 0;
+          newGroupIndex = selectedGroupIndex + 1;
         }
-        if (event.key === 'Enter') {
-          if (!props.items.length || selectedGroupIndex === -1 || selectedCommandIndex === -1) {
-            return false;
-          }
-          selectItem(selectedGroupIndex, selectedCommandIndex);
-          return true;
+        if (props.items.length - 1 < newGroupIndex) {
+          newGroupIndex = 0;
         }
-        return false;
+        setSelectedCommandIndex(newCommandIndex);
+        setSelectedGroupIndex(newGroupIndex);
+        return true;
       }
-    };
-  });
-  react.useEffect(function () {
+      if (event.key === 'ArrowUp') {
+        if (!props.items.length) {
+          return false;
+        }
+        let newCommandIndex = selectedCommandIndex - 1;
+        let newGroupIndex = selectedGroupIndex;
+        if (newCommandIndex < 0) {
+          var _props$items$newGroup;
+          newGroupIndex = selectedGroupIndex - 1;
+          newCommandIndex = ((_props$items$newGroup = props.items[newGroupIndex]) == null ? void 0 : _props$items$newGroup.commands.length) - 1 || 0;
+        }
+        if (newGroupIndex < 0) {
+          newGroupIndex = props.items.length - 1;
+          newCommandIndex = props.items[newGroupIndex].commands.length - 1;
+        }
+        setSelectedCommandIndex(newCommandIndex);
+        setSelectedGroupIndex(newGroupIndex);
+        return true;
+      }
+      if (event.key === 'Enter') {
+        if (!props.items.length || selectedGroupIndex === -1 || selectedCommandIndex === -1) {
+          return false;
+        }
+        selectItem(selectedGroupIndex, selectedCommandIndex);
+        return true;
+      }
+      return false;
+    }
+  }));
+  react.useEffect(() => {
     if (activeItem.current && scrollContainer.current) {
-      var offsetTop = activeItem.current.offsetTop;
-      var offsetHeight = activeItem.current.offsetHeight;
+      const offsetTop = activeItem.current.offsetTop;
+      const offsetHeight = activeItem.current.offsetHeight;
       scrollContainer.current.scrollTop = offsetTop - offsetHeight;
     }
   }, [selectedCommandIndex, selectedGroupIndex]);
-  var createCommandClickHandler = react.useCallback(function (groupIndex, commandIndex) {
-    return function () {
+  const createCommandClickHandler = react.useCallback((groupIndex, commandIndex) => {
+    return () => {
       selectItem(groupIndex, commandIndex);
     };
   }, [selectItem]);
   if (!props.items.length) {
     return null;
   }
-  return /*#__PURE__*/react.createElement(Surface, {
+  return jsxRuntime.jsx(Surface, {
     ref: scrollContainer,
-    className: "text-black max-h-[min(80vh,24rem)] overflow-auto flex-wrap mb-8 p-2"
-  }, /*#__PURE__*/react.createElement("div", {
-    className: "grid grid-cols-1 gap-0.5"
-  }, props.items.map(function (group, groupIndex) {
-    return /*#__PURE__*/react.createElement(react.Fragment, {
-      key: group.title + "-wrapper"
-    }, /*#__PURE__*/react.createElement("div", {
-      className: "text-neutral-500 text-[0.65rem] col-[1/-1] mx-2 mt-4 font-semibold tracking-wider select-none uppercase first:mt-0.5",
-      key: "" + group.title
-    }, group.title), group.commands.map(function (command, commandIndex) {
-      return /*#__PURE__*/react.createElement(DropdownButton, {
-        key: "" + command.label,
-        ref: selectedGroupIndex === groupIndex && selectedCommandIndex === commandIndex ? activeItem : null,
-        isActive: selectedGroupIndex === groupIndex && selectedCommandIndex === commandIndex,
-        onClick: createCommandClickHandler(groupIndex, commandIndex)
-      }, /*#__PURE__*/react.createElement(Icon, {
-        name: command.iconName,
-        className: "mr-1"
-      }), command.label);
-    }));
-  })));
+    className: "text-black max-h-[min(80vh,24rem)] overflow-auto flex-wrap mb-8 p-2",
+    children: jsxRuntime.jsx("div", {
+      className: "grid grid-cols-1 gap-0.5",
+      children: props.items.map((group, groupIndex) => jsxRuntime.jsxs(react.Fragment, {
+        children: [jsxRuntime.jsx("div", {
+          className: "text-neutral-500 text-[0.65rem] col-[1/-1] mx-2 mt-4 font-semibold tracking-wider select-none uppercase first:mt-0.5",
+          children: group.title
+        }, `${group.title}`), group.commands.map((command, commandIndex) => jsxRuntime.jsxs(DropdownButton, {
+          ref: selectedGroupIndex === groupIndex && selectedCommandIndex === commandIndex ? activeItem : null,
+          isActive: selectedGroupIndex === groupIndex && selectedCommandIndex === commandIndex,
+          onClick: createCommandClickHandler(groupIndex, commandIndex),
+          children: [jsxRuntime.jsx(Icon, {
+            name: command.iconName,
+            className: "mr-1"
+          }), command.label]
+        }, `${command.label}`))]
+      }, `${group.title}-wrapper`))
+    })
+  });
 });
 MenuList.displayName = 'MenuList';
 
-var extensionName = 'slashCommand';
-var popup;
-var SlashCommand = Extension.create({
+const extensionName = 'slashCommand';
+let popup;
+const SlashCommand = Extension.create({
   name: extensionName,
   priority: 200,
-  onCreate: function onCreate() {
+  onCreate() {
     popup = tippy('body', {
       interactive: true,
       trigger: 'manual',
@@ -35621,145 +36973,142 @@ var SlashCommand = Extension.create({
       }
     });
   },
-  addProseMirrorPlugins: function addProseMirrorPlugins() {
-    var _this = this;
+  addProseMirrorPlugins() {
     return [Suggestion({
       editor: this.editor,
-      "char": '/',
+      char: '/',
       allowSpaces: true,
       startOfLine: true,
       pluginKey: new PluginKey(extensionName),
-      allow: function allow(_ref) {
+      allow: ({
+        state,
+        range
+      }) => {
         var _$from$parent$textCon, _$from$parent$textCon2, _$from$parent$textCon3;
-        var state = _ref.state,
-          range = _ref.range;
-        var $from = state.doc.resolve(range.from);
-        var isRootDepth = $from.depth === 1;
-        var isParagraph = $from.parent.type.name === 'paragraph';
-        var isStartOfNode = ((_$from$parent$textCon = $from.parent.textContent) == null ? void 0 : _$from$parent$textCon.charAt(0)) === '/';
+        const $from = state.doc.resolve(range.from);
+        const isRootDepth = $from.depth === 1;
+        const isParagraph = $from.parent.type.name === 'paragraph';
+        const isStartOfNode = ((_$from$parent$textCon = $from.parent.textContent) == null ? void 0 : _$from$parent$textCon.charAt(0)) === '/';
         // TODO
-        var isInColumn = _this.editor.isActive('column');
-        var afterContent = (_$from$parent$textCon2 = $from.parent.textContent) == null ? void 0 : _$from$parent$textCon2.substring((_$from$parent$textCon3 = $from.parent.textContent) == null ? void 0 : _$from$parent$textCon3.indexOf('/'));
-        var isValidAfterContent = !(afterContent != null && afterContent.endsWith('  '));
+        const isInColumn = this.editor.isActive('column');
+        const afterContent = (_$from$parent$textCon2 = $from.parent.textContent) == null ? void 0 : _$from$parent$textCon2.substring((_$from$parent$textCon3 = $from.parent.textContent) == null ? void 0 : _$from$parent$textCon3.indexOf('/'));
+        const isValidAfterContent = !(afterContent != null && afterContent.endsWith('  '));
         return (isRootDepth && isParagraph && isStartOfNode || isInColumn && isParagraph && isStartOfNode) && isValidAfterContent;
       },
-      command: function command(_ref2) {
+      command: ({
+        editor,
+        props
+      }) => {
         var _$head$nodeBefore$tex, _$head$nodeBefore$tex2, _$head$nodeBefore$tex3;
-        var editor = _ref2.editor,
-          props = _ref2.props;
-        var view = editor.view,
-          state = editor.state;
-        var _view$state$selection = view.state.selection,
-          $head = _view$state$selection.$head,
-          $from = _view$state$selection.$from;
-        var end = $from.pos;
-        var from = $head != null && $head.nodeBefore ? end - ((_$head$nodeBefore$tex = (_$head$nodeBefore$tex2 = $head.nodeBefore.text) == null ? void 0 : _$head$nodeBefore$tex2.substring((_$head$nodeBefore$tex3 = $head.nodeBefore.text) == null ? void 0 : _$head$nodeBefore$tex3.indexOf('/')).length) != null ? _$head$nodeBefore$tex : 0) : $from.start();
-        var tr = state.tr.deleteRange(from, end);
+        const {
+          view,
+          state
+        } = editor;
+        const {
+          $head,
+          $from
+        } = view.state.selection;
+        const end = $from.pos;
+        const from = $head != null && $head.nodeBefore ? end - ((_$head$nodeBefore$tex = (_$head$nodeBefore$tex2 = $head.nodeBefore.text) == null ? void 0 : _$head$nodeBefore$tex2.substring((_$head$nodeBefore$tex3 = $head.nodeBefore.text) == null ? void 0 : _$head$nodeBefore$tex3.indexOf('/')).length) != null ? _$head$nodeBefore$tex : 0) : $from.start();
+        const tr = state.tr.deleteRange(from, end);
         view.dispatch(tr);
         props.action(editor);
         view.focus();
       },
-      items: function items(_ref3) {
-        var query = _ref3.query;
-        var withFilteredCommands = GROUPS.map(function (group) {
-          return _extends({}, group, {
-            commands: group.commands.filter(function (item) {
-              var labelNormalized = item.label.toLowerCase().trim();
-              var queryNormalized = query.toLowerCase().trim();
-              if (item.aliases) {
-                var aliases = item.aliases.map(function (alias) {
-                  return alias.toLowerCase().trim();
-                });
-                return labelNormalized.includes(queryNormalized) || aliases.includes(queryNormalized);
-              }
-              return labelNormalized.includes(queryNormalized);
-            }).filter(function (command) {
-              return command.shouldBeHidden ? !command.shouldBeHidden(_this.editor) : true;
-            })
-          });
-        });
-        var withoutEmptyGroups = withFilteredCommands.filter(function (group) {
+      items: ({
+        query
+      }) => {
+        const withFilteredCommands = GROUPS.map(group => _extends({}, group, {
+          commands: group.commands.filter(item => {
+            const labelNormalized = item.label.toLowerCase().trim();
+            const queryNormalized = query.toLowerCase().trim();
+            if (item.aliases) {
+              const aliases = item.aliases.map(alias => alias.toLowerCase().trim());
+              return labelNormalized.includes(queryNormalized) || aliases.includes(queryNormalized);
+            }
+            return labelNormalized.includes(queryNormalized);
+          }).filter(command => command.shouldBeHidden ? !command.shouldBeHidden(this.editor) : true)
+        }));
+        const withoutEmptyGroups = withFilteredCommands.filter(group => {
           if (group.commands.length > 0) {
             return true;
           }
           return false;
         });
-        var withEnabledSettings = withoutEmptyGroups.map(function (group) {
-          return _extends({}, group, {
-            commands: group.commands.map(function (command) {
-              return _extends({}, command, {
-                isEnabled: true
-              });
-            })
-          });
-        });
+        const withEnabledSettings = withoutEmptyGroups.map(group => _extends({}, group, {
+          commands: group.commands.map(command => _extends({}, command, {
+            isEnabled: true
+          }))
+        }));
         return withEnabledSettings;
       },
-      render: function render() {
-        var component;
-        var scrollHandler = null;
+      render: () => {
+        let component;
+        let scrollHandler = null;
         return {
-          onStart: function onStart(props) {
+          onStart: props => {
             var _view$dom$parentEleme, _popup2, _popup3;
             component = new ReactRenderer(MenuList, {
-              props: props,
+              props,
               editor: props.editor
             });
-            var view = props.editor.view;
-            var getReferenceClientRect = function getReferenceClientRect() {
+            const {
+              view
+            } = props.editor;
+            const getReferenceClientRect = () => {
               if (!props.clientRect) {
                 return props.editor.storage[extensionName].rect;
               }
-              var rect = props.clientRect();
+              const rect = props.clientRect();
               if (!rect) {
                 return props.editor.storage[extensionName].rect;
               }
-              var yPos = rect.y;
+              let yPos = rect.y;
               if (rect.top + component.element.offsetHeight + 40 > window.innerHeight) {
-                var diff = rect.top + component.element.offsetHeight - window.innerHeight + 40;
+                const diff = rect.top + component.element.offsetHeight - window.innerHeight + 40;
                 yPos = rect.y - diff;
               }
               return new DOMRect(rect.x, yPos, rect.width, rect.height);
             };
-            scrollHandler = function scrollHandler() {
+            scrollHandler = () => {
               var _popup;
               (_popup = popup) == null || _popup[0].setProps({
-                getReferenceClientRect: getReferenceClientRect
+                getReferenceClientRect
               });
             };
             (_view$dom$parentEleme = view.dom.parentElement) == null || _view$dom$parentEleme.addEventListener('scroll', scrollHandler);
             (_popup2 = popup) == null || _popup2[0].setProps({
-              getReferenceClientRect: getReferenceClientRect,
-              appendTo: function appendTo() {
-                return document.body;
-              },
+              getReferenceClientRect,
+              appendTo: () => document.body,
               content: component.element
             });
             (_popup3 = popup) == null || _popup3[0].show();
           },
-          onUpdate: function onUpdate(props) {
+          onUpdate(props) {
             var _view$dom$parentEleme2, _popup5;
             component.updateProps(props);
-            var view = props.editor.view;
-            var getReferenceClientRect = function getReferenceClientRect() {
+            const {
+              view
+            } = props.editor;
+            const getReferenceClientRect = () => {
               if (!props.clientRect) {
                 return props.editor.storage[extensionName].rect;
               }
-              var rect = props.clientRect();
+              const rect = props.clientRect();
               if (!rect) {
                 return props.editor.storage[extensionName].rect;
               }
-              var yPos = rect.y;
+              let yPos = rect.y;
               if (rect.top + component.element.offsetHeight + 40 > window.innerHeight) {
-                var diff = rect.top + component.element.offsetHeight - window.innerHeight + 40;
+                const diff = rect.top + component.element.offsetHeight - window.innerHeight + 40;
                 yPos = rect.y - diff;
               }
               return new DOMRect(rect.x, yPos, rect.width, rect.height);
             };
-            var scrollHandler = function scrollHandler() {
+            let scrollHandler = () => {
               var _popup4;
               (_popup4 = popup) == null || _popup4[0].setProps({
-                getReferenceClientRect: getReferenceClientRect
+                getReferenceClientRect
               });
             };
             (_view$dom$parentEleme2 = view.dom.parentElement) == null || _view$dom$parentEleme2.addEventListener('scroll', scrollHandler);
@@ -35773,10 +37122,10 @@ var SlashCommand = Extension.create({
               bottom: 0
             };
             (_popup5 = popup) == null || _popup5[0].setProps({
-              getReferenceClientRect: getReferenceClientRect
+              getReferenceClientRect
             });
           },
-          onKeyDown: function onKeyDown(props) {
+          onKeyDown(props) {
             var _popup7, _component$ref;
             if (props.event.key === 'Escape') {
               var _popup6;
@@ -35789,12 +37138,14 @@ var SlashCommand = Extension.create({
             }
             return (_component$ref = component.ref) == null ? void 0 : _component$ref.onKeyDown(props);
           },
-          onExit: function onExit(props) {
+          onExit(props) {
             var _popup9;
             (_popup9 = popup) == null || _popup9[0].hide();
             if (scrollHandler) {
               var _view$dom$parentEleme3;
-              var view = props.editor.view;
+              const {
+                view
+              } = props.editor;
               (_view$dom$parentEleme3 = view.dom.parentElement) == null || _view$dom$parentEleme3.removeEventListener('scroll', scrollHandler);
             }
             component.destroy();
@@ -35803,7 +37154,7 @@ var SlashCommand = Extension.create({
       }
     })];
   },
-  addStorage: function addStorage() {
+  addStorage() {
     return {
       rect: {
         width: 0,
@@ -35817,63 +37168,55 @@ var SlashCommand = Extension.create({
   }
 });
 
-var FontSize = Extension.create({
+const FontSize = Extension.create({
   name: 'fontSize',
-  addOptions: function addOptions() {
+  addOptions() {
     return {
       types: ['textStyle']
     };
   },
-  addGlobalAttributes: function addGlobalAttributes() {
+  addGlobalAttributes() {
     return [{
       types: ['paragraph'],
       attributes: {
-        "class": {}
+        class: {}
       }
     }, {
       types: this.options.types,
       attributes: {
         fontSize: {
-          parseHTML: function parseHTML(element) {
-            return element.style.fontSize.replace(/['"]+/g, '');
-          },
-          renderHTML: function renderHTML(attributes) {
+          parseHTML: element => element.style.fontSize.replace(/['"]+/g, ''),
+          renderHTML: attributes => {
             if (!attributes.fontSize) {
               return {};
             }
             return {
-              style: "font-size: " + attributes.fontSize
+              style: `font-size: ${attributes.fontSize}`
             };
           }
         }
       }
     }];
   },
-  addCommands: function addCommands() {
+  addCommands() {
     return {
-      setFontSize: function setFontSize(fontSize) {
-        return function (_ref) {
-          var chain = _ref.chain;
-          return chain().setMark('textStyle', {
-            fontSize: fontSize
-          }).run();
-        };
-      },
-      unsetFontSize: function unsetFontSize() {
-        return function (_ref2) {
-          var chain = _ref2.chain;
-          return chain().setMark('textStyle', {
-            fontSize: null
-          }).removeEmptyTextStyle().run();
-        };
-      }
+      setFontSize: fontSize => ({
+        chain
+      }) => chain().setMark('textStyle', {
+        fontSize
+      }).run(),
+      unsetFontSize: () => ({
+        chain
+      }) => chain().setMark('textStyle', {
+        fontSize: null
+      }).removeEmptyTextStyle().run()
     };
   }
 });
 
-var Figure = Node.create({
+const Figure = Node.create({
   name: 'figure',
-  addOptions: function addOptions() {
+  addOptions() {
     return {
       HTMLAttributes: {}
     };
@@ -35883,30 +37226,30 @@ var Figure = Node.create({
   draggable: true,
   defining: true,
   selectable: true,
-  parseHTML: function parseHTML() {
+  parseHTML() {
     return [{
-      tag: "figure[data-type=\"" + this.name + "\"]"
+      tag: `figure[data-type="${this.name}"]`
     }];
   },
-  renderHTML: function renderHTML(_ref) {
-    var HTMLAttributes = _ref.HTMLAttributes;
+  renderHTML({
+    HTMLAttributes
+  }) {
     return ['figure', mergeAttributes(HTMLAttributes, {
       'data-type': this.name
     }), 0];
   },
-  addProseMirrorPlugins: function addProseMirrorPlugins() {
-    var _this = this;
+  addProseMirrorPlugins() {
     return [new Plugin({
       props: {
         handleDOMEvents: {
           // Prevent dragging child nodes from figure
-          dragstart: function dragstart(view, event) {
+          dragstart: (view, event) => {
             if (!event.target) {
               return false;
             }
-            var pos = view.posAtDOM(event.target, 0);
-            var $pos = view.state.doc.resolve(pos);
-            if ($pos.parent.type.name === _this.type.name) {
+            const pos = view.posAtDOM(event.target, 0);
+            const $pos = view.state.doc.resolve(pos);
+            if ($pos.parent.type.name === this.type.name) {
               event.preventDefault();
             }
             return false;
@@ -35917,13 +37260,13 @@ var Figure = Node.create({
   }
 });
 
-var Image = Image$1.extend({
+const Image = Image$1.extend({
   group: 'block'
 });
 
-var Figcaption = Node.create({
+const Figcaption = Node.create({
   name: 'figcaption',
-  addOptions: function addOptions() {
+  addOptions() {
     return {
       HTMLAttributes: {}
     };
@@ -35932,48 +37275,59 @@ var Figcaption = Node.create({
   selectable: false,
   draggable: false,
   marks: 'link',
-  parseHTML: function parseHTML() {
+  parseHTML() {
     return [{
       tag: 'figcaption'
     }];
   },
-  addKeyboardShortcuts: function addKeyboardShortcuts() {
-    var _this = this;
+  addKeyboardShortcuts() {
     return {
       // On Enter at the end of line, create new paragraph and focus
-      Enter: function Enter(_ref) {
-        var editor = _ref.editor;
-        var _editor$state$selecti = editor.state.selection,
-          $from = _editor$state$selecti.$from,
-          empty = _editor$state$selecti.empty;
-        if (!empty || $from.parent.type !== _this.type) {
+      Enter: ({
+        editor
+      }) => {
+        const {
+          state: {
+            selection: {
+              $from,
+              empty
+            }
+          }
+        } = editor;
+        if (!empty || $from.parent.type !== this.type) {
           return false;
         }
-        var isAtEnd = $from.parentOffset === $from.parent.nodeSize - 2;
+        const isAtEnd = $from.parentOffset === $from.parent.nodeSize - 2;
         if (!isAtEnd) {
           return false;
         }
-        var pos = editor.state.selection.$from.end();
+        const pos = editor.state.selection.$from.end();
         return editor.chain().focus(pos).insertContentAt(pos, {
           type: 'paragraph'
         }).run();
       },
       // On Backspace at the beginning of line,
       // dont delete content of image before
-      Backspace: function Backspace(_ref2) {
-        var editor = _ref2.editor;
-        var _editor$state$selecti2 = editor.state.selection,
-          $from = _editor$state$selecti2.$from,
-          empty = _editor$state$selecti2.empty;
-        if (!empty || $from.parent.type !== _this.type) {
+      Backspace: ({
+        editor
+      }) => {
+        const {
+          state: {
+            selection: {
+              $from,
+              empty
+            }
+          }
+        } = editor;
+        if (!empty || $from.parent.type !== this.type) {
           return false;
         }
-        var isAtStart = $from.parentOffset === 0;
+        const isAtStart = $from.parentOffset === 0;
         if (!isAtStart) {
           return false;
         }
         // if the node before is of type image, don't do anything
-        var nodeBefore = editor.state.doc.nodeAt($from.pos - 2);
+        const nodeBefore = editor.state.doc.nodeAt($from.pos - 2);
         if ((nodeBefore == null ? void 0 : nodeBefore.type.name) === Image.name) {
           return true;
         }
@@ -35981,67 +37335,73 @@ var Figcaption = Node.create({
       }
     };
   },
-  renderHTML: function renderHTML(_ref3) {
-    var HTMLAttributes = _ref3.HTMLAttributes;
+  renderHTML({
+    HTMLAttributes
+  }) {
     return ['figcaption', mergeAttributes(HTMLAttributes), 0];
   }
 });
 
-var Quote = Node.create({
+const Quote = Node.create({
   name: 'quote',
   content: 'paragraph+',
   defining: true,
   marks: '',
-  parseHTML: function parseHTML() {
+  parseHTML() {
     return [{
       tag: 'blockquote'
     }];
   },
-  renderHTML: function renderHTML(_ref) {
-    var HTMLAttributes = _ref.HTMLAttributes;
+  renderHTML({
+    HTMLAttributes
+  }) {
     return ['blockquote', HTMLAttributes, 0];
   },
-  addKeyboardShortcuts: function addKeyboardShortcuts() {
+  addKeyboardShortcuts() {
     return {
-      Backspace: function Backspace() {
-        return false;
-      }
+      Backspace: () => false
     };
   }
 });
 
-var QuoteCaption = Node.create({
+const QuoteCaption = Node.create({
   name: 'quoteCaption',
   group: 'block',
   content: 'text*',
   defining: true,
   isolating: true,
-  parseHTML: function parseHTML() {
+  parseHTML() {
     return [{
       tag: 'figcaption'
     }];
   },
-  renderHTML: function renderHTML(_ref) {
-    var HTMLAttributes = _ref.HTMLAttributes;
+  renderHTML({
+    HTMLAttributes
+  }) {
     return ['figcaption', HTMLAttributes, 0];
   },
-  addKeyboardShortcuts: function addKeyboardShortcuts() {
-    var _this = this;
+  addKeyboardShortcuts() {
     return {
       // On Enter at the end of line, create new paragraph and focus
-      Enter: function Enter(_ref2) {
-        var editor = _ref2.editor;
-        var _editor$state$selecti = editor.state.selection,
-          $from = _editor$state$selecti.$from,
-          empty = _editor$state$selecti.empty;
-        if (!empty || $from.parent.type !== _this.type) {
+      Enter: ({
+        editor
+      }) => {
+        const {
+          state: {
+            selection: {
+              $from,
+              empty
+            }
+          }
+        } = editor;
+        if (!empty || $from.parent.type !== this.type) {
           return false;
         }
-        var isAtEnd = $from.parentOffset === $from.parent.nodeSize - 2;
+        const isAtEnd = $from.parentOffset === $from.parent.nodeSize - 2;
         if (!isAtEnd) {
           return false;
         }
-        var pos = editor.state.selection.$from.end();
+        const pos = editor.state.selection.$from.end();
         return editor.chain().focus(pos).insertContentAt(pos, {
           type: 'paragraph'
         }).run();
@@ -36050,80 +37410,82 @@ var QuoteCaption = Node.create({
   }
 });
 
-var BlockquoteFigure = Figure.extend({
+const BlockquoteFigure = Figure.extend({
   name: 'blockquoteFigure',
   group: 'block',
   content: 'quote quoteCaption',
   isolating: true,
-  addExtensions: function addExtensions() {
+  addExtensions() {
     return [Quote, QuoteCaption];
   },
-  renderHTML: function renderHTML(_ref) {
-    var HTMLAttributes = _ref.HTMLAttributes;
+  renderHTML({
+    HTMLAttributes
+  }) {
     return ['figure', mergeAttributes(HTMLAttributes, {
       'data-type': this.name
     }), ['div', {}, 0]];
   },
-  addKeyboardShortcuts: function addKeyboardShortcuts() {
+  addKeyboardShortcuts() {
     return {
-      Enter: function Enter() {
-        return false;
-      }
+      Enter: () => false
     };
   },
-  addAttributes: function addAttributes() {
+  addAttributes() {
     var _this$parent;
     return _extends({}, (_this$parent = this.parent) == null ? void 0 : _this$parent.call(this));
   },
-  addCommands: function addCommands() {
-    var _this = this;
+  addCommands() {
     return {
-      setBlockquote: function setBlockquote() {
-        return function (_ref2) {
-          var state = _ref2.state,
-            chain = _ref2.chain;
-          var position = state.selection.$from.start();
-          var selectionContent = state.selection.content();
-          return chain().focus().insertContent({
-            type: _this.name,
-            content: [{
-              type: 'quote',
-              content: selectionContent.content.toJSON() || [{
-                type: 'paragraph',
-                attrs: {
-                  textAlign: 'left'
-                }
-              }]
-            }, {
-              type: 'quoteCaption'
+      setBlockquote: () => ({
+        state,
+        chain
+      }) => {
+        const position = state.selection.$from.start();
+        const selectionContent = state.selection.content();
+        return chain().focus().insertContent({
+          type: this.name,
+          content: [{
+            type: 'quote',
+            content: selectionContent.content.toJSON() || [{
+              type: 'paragraph',
+              attrs: {
+                textAlign: 'left'
+              }
             }]
-          }).focus(position + 1).run();
-        };
+          }, {
+            type: 'quoteCaption'
+          }]
+        }).focus(position + 1).run();
       }
     };
   }
 });
 
-var Link = TiptapLink.extend({
+const Link = TiptapLink.extend({
   inclusive: false,
-  parseHTML: function parseHTML() {
+  parseHTML() {
     return [{
       tag: 'a[href]:not([data-type="button"]):not([href *= "javascript:" i])'
     }];
   },
-  renderHTML: function renderHTML(_ref) {
-    var HTMLAttributes = _ref.HTMLAttributes;
+  renderHTML({
+    HTMLAttributes
+  }) {
     return ['a', mergeAttributes(this.options.HTMLAttributes, HTMLAttributes, {
-      "class": 'link'
+      class: 'link'
     }), 0];
   },
-  addProseMirrorPlugins: function addProseMirrorPlugins() {
+  addProseMirrorPlugins() {
     var _this$parent;
-    var editor = this.editor;
-    return [].concat(((_this$parent = this.parent) == null ? void 0 : _this$parent.call(this)) || [], [new Plugin({
+    const {
+      editor
+    } = this;
+    return [...(((_this$parent = this.parent) == null ? void 0 : _this$parent.call(this)) || []), new Plugin({
       props: {
-        handleKeyDown: function handleKeyDown(view, event) {
-          var selection = editor.state.selection;
+        handleKeyDown: (view, event) => {
+          const {
+            selection
+          } = editor.state;
           if (event.key === 'Escape' && selection.empty !== true) {
             editor.commands.focus(selection.to, {
               scrollIntoView: false
@@ -36132,214 +37494,192 @@ var Link = TiptapLink.extend({
           return false;
         }
       }
-    })]);
+    })];
   }
 });
 
-var _excluded = ["className"];
-var Spinner = /*#__PURE__*/react.forwardRef(function (_ref, ref) {
-  var className = _ref.className,
+const _excluded = ["className"];
+const Spinner = /*#__PURE__*/react.forwardRef((_ref, ref) => {
+  let {
+      className
+    } = _ref,
     rest = _objectWithoutPropertiesLoose(_ref, _excluded);
-  var spinnerClass = cn('animate-spin rounded-full border-2 border-current border-t-transparent h-4 w-4', className);
-  return /*#__PURE__*/React.createElement("div", _extends({
+  const spinnerClass = cn('animate-spin rounded-full border-2 border-current border-t-transparent h-4 w-4', className);
+  return jsxRuntime.jsx("div", _extends({
     className: spinnerClass,
     ref: ref
   }, rest));
 });
 Spinner.displayName = 'Spinner';
 
-var API = function API() {};
-API.uploadImage = function (_file) {
-  try {
-    console.log('Image upload is disabled in the demo... Please implement the API.uploadImage method in your project.');
-    return Promise.resolve(new Promise(function (r) {
-      return setTimeout(r, 500);
-    })).then(function () {
-      return '/placeholder-image.jpg';
-    });
-  } catch (e) {
-    return Promise.reject(e);
-  }
+class API {}
+API.uploadImage = async _file => {
+  console.log('Image upload is disabled in the demo... Please implement the API.uploadImage method in your project.');
+  await new Promise(r => setTimeout(r, 500));
+  return '/placeholder-image.jpg';
 };
 
-function _catch(body, recover) {
-  try {
-    var result = body();
-  } catch (e) {
-    return recover(e);
-  }
-  if (result && result.then) {
-    return result.then(void 0, recover);
-  }
-  return result;
-}
-var useUploader = function useUploader(_ref) {
-  var onUpload = _ref.onUpload;
-  var _useState = react.useState(false),
-    loading = _useState[0],
-    setLoading = _useState[1];
-  var uploadFile = react.useCallback(function (file) {
+const useUploader = ({
+  onUpload
+}) => {
+  const [loading, setLoading] = react.useState(false);
+  const uploadFile = react.useCallback(async file => {
+    setLoading(true);
     try {
-      var _temp2 = function _temp2() {
-        setLoading(false);
-      };
-      setLoading(true);
-      var _temp = _catch(function () {
-        return Promise.resolve(API.uploadImage(file)).then(function (url) {
-          onUpload(url);
-        });
-      }, function (errPayload) {
-        var _errPayload$response;
-        var error = (errPayload == null || (_errPayload$response = errPayload.response) == null || (_errPayload$response = _errPayload$response.data) == null ? void 0 : _errPayload$response.error) || 'Something went wrong';
-        toast.error(error);
-      });
-      return Promise.resolve(_temp && _temp.then ? _temp.then(_temp2) : _temp2(_temp));
-    } catch (e) {
-      return Promise.reject(e);
+      const url = await API.uploadImage(file);
+      onUpload(url);
+    } catch (errPayload) {
+      var _errPayload$response;
+      const error = (errPayload == null || (_errPayload$response = errPayload.response) == null || (_errPayload$response = _errPayload$response.data) == null ? void 0 : _errPayload$response.error) || 'Something went wrong';
+      toast.error(error);
     }
+    setLoading(false);
   }, [onUpload]);
   return {
-    loading: loading,
-    uploadFile: uploadFile
+    loading,
+    uploadFile
   };
 };
-var useFileUpload = function useFileUpload() {
-  var fileInput = react.useRef(null);
-  var handleUploadClick = react.useCallback(function () {
+const useFileUpload = () => {
+  const fileInput = react.useRef(null);
+  const handleUploadClick = react.useCallback(() => {
     var _fileInput$current;
     (_fileInput$current = fileInput.current) == null || _fileInput$current.click();
   }, []);
   return {
     ref: fileInput,
-    handleUploadClick: handleUploadClick
+    handleUploadClick
   };
 };
-var useDropZone = function useDropZone(_ref2) {
-  var uploader = _ref2.uploader;
-  var _useState2 = react.useState(false),
-    isDragging = _useState2[0],
-    setIsDragging = _useState2[1];
-  var _useState3 = react.useState(false),
-    draggedInside = _useState3[0],
-    setDraggedInside = _useState3[1];
-  react.useEffect(function () {
-    var dragStartHandler = function dragStartHandler() {
+const useDropZone = ({
+  uploader
+}) => {
+  const [isDragging, setIsDragging] = react.useState(false);
+  const [draggedInside, setDraggedInside] = react.useState(false);
+  react.useEffect(() => {
+    const dragStartHandler = () => {
       setIsDragging(true);
     };
-    var dragEndHandler = function dragEndHandler() {
+    const dragEndHandler = () => {
       setIsDragging(false);
     };
     document.body.addEventListener('dragstart', dragStartHandler);
     document.body.addEventListener('dragend', dragEndHandler);
-    return function () {
+    return () => {
       document.body.removeEventListener('dragstart', dragStartHandler);
       document.body.removeEventListener('dragend', dragEndHandler);
     };
   }, []);
-  var onDrop = react.useCallback(function (e) {
+  const onDrop = react.useCallback(e => {
     setDraggedInside(false);
     if (e.dataTransfer.files.length === 0) {
       return;
     }
-    var fileList = e.dataTransfer.files;
-    var files = [];
-    for (var i = 0; i < fileList.length; i += 1) {
-      var item = fileList.item(i);
+    const fileList = e.dataTransfer.files;
+    const files = [];
+    for (let i = 0; i < fileList.length; i += 1) {
+      const item = fileList.item(i);
       if (item) {
         files.push(item);
       }
     }
-    if (files.some(function (file) {
-      return file.type.indexOf('image') === -1;
-    })) {
+    if (files.some(file => file.type.indexOf('image') === -1)) {
       return;
     }
     e.preventDefault();
-    var filteredFiles = files.filter(function (f) {
-      return f.type.indexOf('image') !== -1;
-    });
-    var file = filteredFiles.length > 0 ? filteredFiles[0] : undefined;
+    const filteredFiles = files.filter(f => f.type.indexOf('image') !== -1);
+    const file = filteredFiles.length > 0 ? filteredFiles[0] : undefined;
     if (file) {
       uploader(file);
     }
   }, [uploader]);
-  var onDragEnter = function onDragEnter() {
+  const onDragEnter = () => {
     setDraggedInside(true);
   };
-  var onDragLeave = function onDragLeave() {
+  const onDragLeave = () => {
     setDraggedInside(false);
   };
   return {
-    isDragging: isDragging,
-    draggedInside: draggedInside,
-    onDragEnter: onDragEnter,
-    onDragLeave: onDragLeave,
-    onDrop: onDrop
+    isDragging,
+    draggedInside,
+    onDragEnter,
+    onDragLeave,
+    onDrop
   };
 };
 
-var ImageUploader = function ImageUploader(_ref) {
-  var onUpload = _ref.onUpload;
-  var _useUploader = useUploader({
-      onUpload: onUpload
-    }),
-    loading = _useUploader.loading,
-    uploadFile = _useUploader.uploadFile;
-  var _useFileUpload = useFileUpload(),
-    handleUploadClick = _useFileUpload.handleUploadClick,
-    ref = _useFileUpload.ref;
-  var _useDropZone = useDropZone({
-      uploader: uploadFile
-    }),
-    draggedInside = _useDropZone.draggedInside,
-    onDrop = _useDropZone.onDrop,
-    onDragEnter = _useDropZone.onDragEnter,
-    onDragLeave = _useDropZone.onDragLeave;
-  var onFileChange = react.useCallback(function (e) {
-    return e.target.files ? uploadFile(e.target.files[0]) : null;
-  }, [uploadFile]);
+const ImageUploader = ({
+  onUpload
+}) => {
+  const {
+    loading,
+    uploadFile
+  } = useUploader({
+    onUpload
+  });
+  const {
+    handleUploadClick,
+    ref
+  } = useFileUpload();
+  const {
+    draggedInside,
+    onDrop,
+    onDragEnter,
+    onDragLeave
+  } = useDropZone({
+    uploader: uploadFile
+  });
+  const onFileChange = react.useCallback(e => e.target.files ? uploadFile(e.target.files[0]) : null, [uploadFile]);
   if (loading) {
-    return /*#__PURE__*/React.createElement("div", {
-      className: "flex items-center justify-center p-8 rounded-lg min-h-[10rem] bg-opacity-80"
-    }, /*#__PURE__*/React.createElement(Spinner, {
-      className: "text-neutral-500",
-      size: 1.5
-    }));
+    return jsxRuntime.jsx("div", {
+      className: "flex items-center justify-center p-8 rounded-lg min-h-[10rem] bg-opacity-80",
+      children: jsxRuntime.jsx(Spinner, {
+        className: "text-neutral-500",
+        size: 1.5
+      })
+    });
   }
-  var wrapperClass = cn('flex flex-col items-center justify-center px-8 py-10 rounded-lg bg-opacity-80', draggedInside && 'bg-neutral-100');
-  return /*#__PURE__*/React.createElement("div", {
+  const wrapperClass = cn('flex flex-col items-center justify-center px-8 py-10 rounded-lg bg-opacity-80', draggedInside && 'bg-neutral-100');
+  return jsxRuntime.jsxs("div", {
     className: wrapperClass,
     onDrop: onDrop,
     onDragOver: onDragEnter,
     onDragLeave: onDragLeave,
-    contentEditable: false
-  }, /*#__PURE__*/React.createElement(Icon, {
-    name: "Image",
-    className: "w-12 h-12 mb-4 text-black dark:text-white opacity-20"
-  }), /*#__PURE__*/React.createElement("div", {
-    className: "flex flex-col items-center justify-center gap-2"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "text-sm font-medium text-center text-neutral-400 dark:text-neutral-500"
-  }, draggedInside ? 'Drop image here' : 'Drag and drop or'), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Button, {
-    disabled: draggedInside,
-    onClick: handleUploadClick,
-    variant: "primary",
-    buttonSize: "small"
-  }, /*#__PURE__*/React.createElement(Icon, {
-    name: "Upload"
-  }), "Upload an image"))), /*#__PURE__*/React.createElement("input", {
-    className: "w-0 h-0 overflow-hidden opacity-0",
-    ref: ref,
-    type: "file",
-    accept: ".jpg,.jpeg,.png,.webp,.gif",
-    onChange: onFileChange
-  }));
+    contentEditable: false,
+    children: [jsxRuntime.jsx(Icon, {
+      name: "Image",
+      className: "w-12 h-12 mb-4 text-black dark:text-white opacity-20"
+    }), jsxRuntime.jsxs("div", {
+      className: "flex flex-col items-center justify-center gap-2",
+      children: [jsxRuntime.jsx("div", {
+        className: "text-sm font-medium text-center text-neutral-400 dark:text-neutral-500",
+        children: draggedInside ? 'Drop image here' : 'Drag and drop or'
+      }), jsxRuntime.jsx("div", {
+        children: jsxRuntime.jsxs(Button, {
+          disabled: draggedInside,
+          onClick: handleUploadClick,
+          variant: "primary",
+          buttonSize: "small",
+          children: [jsxRuntime.jsx(Icon, {
+            name: "Upload"
+          }), "Upload an image"]
+        })
+      })]
+    }), jsxRuntime.jsx("input", {
+      className: "w-0 h-0 overflow-hidden opacity-0",
+      ref: ref,
+      type: "file",
+      accept: ".jpg,.jpeg,.png,.webp,.gif",
+      onChange: onFileChange
+    })]
+  });
 };
 
-var ImageUpload$1 = function ImageUpload(_ref) {
-  var getPos = _ref.getPos,
-    editor = _ref.editor;
-  var onUpload = react.useCallback(function (url) {
+const ImageUpload$1 = ({
+  getPos,
+  editor
+}) => {
+  const onUpload = react.useCallback(url => {
     if (url) {
       editor.chain().setImageBlock({
         src: url
@@ -36349,15 +37689,18 @@ var ImageUpload$1 = function ImageUpload(_ref) {
       }).focus().run();
     }
   }, [getPos, editor]);
-  return /*#__PURE__*/React.createElement(NodeViewWrapper, null, /*#__PURE__*/React.createElement("div", {
-    className: "p-0 m-0",
-    "data-drag-handle": true
-  }, /*#__PURE__*/React.createElement(ImageUploader, {
-    onUpload: onUpload
-  })));
+  return jsxRuntime.jsx(NodeViewWrapper, {
+    children: jsxRuntime.jsx("div", {
+      className: "p-0 m-0",
+      "data-drag-handle": true,
+      children: jsxRuntime.jsx(ImageUploader, {
+        onUpload: onUpload
+      })
+    })
+  });
 };
 
-var ImageUpload = Node$1.create({
+const ImageUpload = Node$1.create({
   name: 'imageUpload',
   isolating: true,
   defining: true,
@@ -36365,163 +37708,144 @@ var ImageUpload = Node$1.create({
   draggable: true,
   selectable: true,
   inline: false,
-  parseHTML: function parseHTML() {
+  parseHTML() {
     return [{
-      tag: "div[data-type=\"" + this.name + "\"]"
+      tag: `div[data-type="${this.name}"]`
     }];
   },
-  renderHTML: function renderHTML() {
+  renderHTML() {
     return ['div', {
       'data-type': this.name
     }];
   },
-  addCommands: function addCommands() {
-    var _this = this;
+  addCommands() {
     return {
-      setImageUpload: function setImageUpload() {
-        return function (_ref) {
-          var commands = _ref.commands;
-          return commands.insertContent("<div data-type=\"" + _this.name + "\"></div>");
-        };
-      }
+      setImageUpload: () => ({
+        commands
+      }) => commands.insertContent(`<div data-type="${this.name}"></div>`)
     };
   },
-  addNodeView: function addNodeView() {
+  addNodeView() {
     return ReactNodeViewRenderer(ImageUpload$1);
   }
 });
 
-var ImageBlockView = function ImageBlockView(props) {
-  var editor = props.editor,
-    getPos = props.getPos,
-    node = props.node;
-  var imageWrapperRef = react.useRef(null);
-  var src = node.attrs.src;
-  var wrapperClassName = cn(node.attrs.align === 'left' ? 'ml-0' : 'ml-auto', node.attrs.align === 'right' ? 'mr-0' : 'mr-auto', node.attrs.align === 'center' && 'mx-auto');
-  var onClick = react.useCallback(function () {
+const ImageBlockView = props => {
+  const {
+    editor,
+    getPos,
+    node
+  } = props;
+  const imageWrapperRef = react.useRef(null);
+  const {
+    src
+  } = node.attrs;
+  const wrapperClassName = cn(node.attrs.align === 'left' ? 'ml-0' : 'ml-auto', node.attrs.align === 'right' ? 'mr-0' : 'mr-auto', node.attrs.align === 'center' && 'mx-auto');
+  const onClick = react.useCallback(() => {
     editor.commands.setNodeSelection(getPos());
   }, [getPos, editor.commands]);
-  return /*#__PURE__*/React.createElement(NodeViewWrapper, null, /*#__PURE__*/React.createElement("div", {
-    className: wrapperClassName,
-    style: {
-      width: node.attrs.width
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    contentEditable: false,
-    ref: imageWrapperRef
-  }, /*#__PURE__*/React.createElement("img", {
-    className: "block",
-    src: src,
-    alt: "",
-    onClick: onClick
-  }))));
+  return jsxRuntime.jsx(NodeViewWrapper, {
+    children: jsxRuntime.jsx("div", {
+      className: wrapperClassName,
+      style: {
+        width: node.attrs.width
+      },
+      children: jsxRuntime.jsx("div", {
+        contentEditable: false,
+        ref: imageWrapperRef,
+        children: jsxRuntime.jsx("img", {
+          className: "block",
+          src: src,
+          alt: "",
+          onClick: onClick
+        })
+      })
+    })
+  });
 };
 
-var ImageBlock = Image.extend({
+const ImageBlock = Image.extend({
   name: 'imageBlock',
   group: 'block',
   defining: true,
   isolating: true,
-  addAttributes: function addAttributes() {
+  addAttributes() {
     return {
       src: {
-        "default": '',
-        parseHTML: function parseHTML(element) {
-          return element.getAttribute('src');
-        },
-        renderHTML: function renderHTML(attributes) {
-          return {
-            src: attributes.src
-          };
-        }
+        default: '',
+        parseHTML: element => element.getAttribute('src'),
+        renderHTML: attributes => ({
+          src: attributes.src
+        })
       },
       width: {
-        "default": '100%',
-        parseHTML: function parseHTML(element) {
-          return element.getAttribute('data-width');
-        },
-        renderHTML: function renderHTML(attributes) {
-          return {
-            'data-width': attributes.width
-          };
-        }
+        default: '100%',
+        parseHTML: element => element.getAttribute('data-width'),
+        renderHTML: attributes => ({
+          'data-width': attributes.width
+        })
       },
       align: {
-        "default": 'center',
-        parseHTML: function parseHTML(element) {
-          return element.getAttribute('data-align');
-        },
-        renderHTML: function renderHTML(attributes) {
-          return {
-            'data-align': attributes.align
-          };
-        }
+        default: 'center',
+        parseHTML: element => element.getAttribute('data-align'),
+        renderHTML: attributes => ({
+          'data-align': attributes.align
+        })
       },
       alt: {
-        "default": undefined,
-        parseHTML: function parseHTML(element) {
-          return element.getAttribute('alt');
-        },
-        renderHTML: function renderHTML(attributes) {
-          return {
-            alt: attributes.alt
-          };
-        }
+        default: undefined,
+        parseHTML: element => element.getAttribute('alt'),
+        renderHTML: attributes => ({
+          alt: attributes.alt
+        })
       }
     };
   },
-  parseHTML: function parseHTML() {
+  parseHTML() {
     return [{
       tag: 'img[src*="tiptap.dev"]:not([src^="data:"]), img[src*="windows.net"]:not([src^="data:"])'
     }];
   },
-  renderHTML: function renderHTML(_ref) {
-    var HTMLAttributes = _ref.HTMLAttributes;
+  renderHTML({
+    HTMLAttributes
+  }) {
     return ['img', mergeAttributes(this.options.HTMLAttributes, HTMLAttributes)];
   },
-  addCommands: function addCommands() {
+  addCommands() {
     return {
-      setImageBlock: function setImageBlock(attrs) {
-        return function (_ref2) {
-          var commands = _ref2.commands;
-          return commands.insertContent({
-            type: 'imageBlock',
-            attrs: {
-              src: attrs.src
-            }
-          });
-        };
+      setImageBlock: attrs => ({
+        commands
+      }) => {
+        return commands.insertContent({
+          type: 'imageBlock',
+          attrs: {
+            src: attrs.src
+          }
+        });
       },
-      setImageBlockAt: function setImageBlockAt(attrs) {
-        return function (_ref3) {
-          var commands = _ref3.commands;
-          return commands.insertContentAt(attrs.pos, {
-            type: 'imageBlock',
-            attrs: {
-              src: attrs.src
-            }
-          });
-        };
+      setImageBlockAt: attrs => ({
+        commands
+      }) => {
+        return commands.insertContentAt(attrs.pos, {
+          type: 'imageBlock',
+          attrs: {
+            src: attrs.src
+          }
+        });
       },
-      setImageBlockAlign: function setImageBlockAlign(align) {
-        return function (_ref4) {
-          var commands = _ref4.commands;
-          return commands.updateAttributes('imageBlock', {
-            align: align
-          });
-        };
-      },
-      setImageBlockWidth: function setImageBlockWidth(width) {
-        return function (_ref5) {
-          var commands = _ref5.commands;
-          return commands.updateAttributes('imageBlock', {
-            width: Math.max(0, Math.min(100, width)) + "%"
-          });
-        };
-      }
+      setImageBlockAlign: align => ({
+        commands
+      }) => commands.updateAttributes('imageBlock', {
+        align
+      }),
+      setImageBlockWidth: width => ({
+        commands
+      }) => commands.updateAttributes('imageBlock', {
+        width: `${Math.max(0, Math.min(100, width))}%`
+      })
     };
   },
-  addNodeView: function addNodeView() {
+  addNodeView() {
     return ReactNodeViewRenderer(ImageBlockView);
   }
 });
@@ -36532,103 +37856,91 @@ var ColumnLayout;
   ColumnLayout["SidebarRight"] = "sidebar-right";
   ColumnLayout["TwoColumn"] = "two-column";
 })(ColumnLayout || (ColumnLayout = {}));
-var Columns = Node.create({
+const Columns = Node.create({
   name: 'columns',
   group: 'columns',
   content: 'column column',
   defining: true,
   isolating: true,
-  addAttributes: function addAttributes() {
+  addAttributes() {
     return {
       layout: {
-        "default": ColumnLayout.TwoColumn
+        default: ColumnLayout.TwoColumn
       }
     };
   },
-  addCommands: function addCommands() {
+  addCommands() {
     return {
-      setColumns: function setColumns() {
-        return function (_ref) {
-          var commands = _ref.commands;
-          return commands.insertContent("<div data-type=\"columns\"><div data-type=\"column\" data-position=\"left\"><p></p></div><div data-type=\"column\" data-position=\"right\"><p></p></div></div>");
-        };
-      },
-      setLayout: function setLayout(layout) {
-        return function (_ref2) {
-          var commands = _ref2.commands;
-          return commands.updateAttributes('columns', {
-            layout: layout
-          });
-        };
-      }
+      setColumns: () => ({
+        commands
+      }) => commands.insertContent(`<div data-type="columns"><div data-type="column" data-position="left"><p></p></div><div data-type="column" data-position="right"><p></p></div></div>`),
+      setLayout: layout => ({
+        commands
+      }) => commands.updateAttributes('columns', {
+        layout
+      })
     };
   },
-  renderHTML: function renderHTML(_ref3) {
-    var HTMLAttributes = _ref3.HTMLAttributes;
+  renderHTML({
+    HTMLAttributes
+  }) {
     return ['div', {
       'data-type': 'columns',
-      "class": "layout-" + HTMLAttributes.layout
+      class: `layout-${HTMLAttributes.layout}`
     }, 0];
   },
-  parseHTML: function parseHTML() {
+  parseHTML() {
     return [{
       tag: 'div[data-type="columns"]'
     }];
   }
 });
 
-var Column = Node.create({
+const Column = Node.create({
   name: 'column',
   content: 'block+',
   isolating: true,
-  addAttributes: function addAttributes() {
+  addAttributes() {
     return {
       position: {
-        "default": '',
-        parseHTML: function parseHTML(element) {
-          return element.getAttribute('data-position');
-        },
-        renderHTML: function renderHTML(attributes) {
-          return {
-            'data-position': attributes.position
-          };
-        }
+        default: '',
+        parseHTML: element => element.getAttribute('data-position'),
+        renderHTML: attributes => ({
+          'data-position': attributes.position
+        })
       }
     };
   },
-  renderHTML: function renderHTML(_ref) {
-    var HTMLAttributes = _ref.HTMLAttributes;
+  renderHTML({
+    HTMLAttributes
+  }) {
     return ['div', mergeAttributes(HTMLAttributes, {
       'data-type': 'column'
     }), 0];
   },
-  parseHTML: function parseHTML() {
+  parseHTML() {
     return [{
       tag: 'div[data-type="column"]'
     }];
   }
 });
 
-var EmojiList = /*#__PURE__*/react.forwardRef(function (props, ref) {
-  var _useState = react.useState(0),
-    selectedIndex = _useState[0],
-    setSelectedIndex = _useState[1];
-  react.useEffect(function () {
-    return setSelectedIndex(0);
-  }, [props.items]);
-  var selectItem = react.useCallback(function (index) {
-    var item = props.items[index];
+const EmojiList = /*#__PURE__*/react.forwardRef((props, ref) => {
+  const [selectedIndex, setSelectedIndex] = react.useState(0);
+  react.useEffect(() => setSelectedIndex(0), [props.items]);
+  const selectItem = react.useCallback(index => {
+    const item = props.items[index];
     if (item) {
       props.command({
         name: item.name
       });
     }
   }, [props]);
-  react.useImperativeHandle(ref, function () {
-    var scrollIntoView = function scrollIntoView(index) {
-      var item = props.items[index];
+  react.useImperativeHandle(ref, () => {
+    const scrollIntoView = index => {
+      const item = props.items[index];
       if (item) {
-        var node = document.querySelector("[data-emoji-name=\"" + item.name + "\"]");
+        const node = document.querySelector(`[data-emoji-name="${item.name}"]`);
         if (node) {
           node.scrollIntoView({
             block: 'nearest'
@@ -36636,22 +37948,23 @@ var EmojiList = /*#__PURE__*/react.forwardRef(function (props, ref) {
         }
       }
     };
-    var upHandler = function upHandler() {
-      var newIndex = (selectedIndex + props.items.length - 1) % props.items.length;
+    const upHandler = () => {
+      const newIndex = (selectedIndex + props.items.length - 1) % props.items.length;
       setSelectedIndex(newIndex);
       scrollIntoView(newIndex);
     };
-    var downHandler = function downHandler() {
-      var newIndex = (selectedIndex + 1) % props.items.length;
+    const downHandler = () => {
+      const newIndex = (selectedIndex + 1) % props.items.length;
       setSelectedIndex(newIndex);
       scrollIntoView(newIndex);
     };
-    var enterHandler = function enterHandler() {
+    const enterHandler = () => {
       selectItem(selectedIndex);
     };
     return {
-      onKeyDown: function onKeyDown(_ref) {
-        var event = _ref.event;
+      onKeyDown: ({
+        event
+      }) => {
         if (event.key === 'ArrowUp') {
           upHandler();
           return true;
@@ -36668,65 +37981,53 @@ var EmojiList = /*#__PURE__*/react.forwardRef(function (props, ref) {
       }
     };
   }, [props, selectedIndex, selectItem]);
-  var createClickHandler = react.useCallback(function (index) {
-    return function () {
-      return selectItem(index);
-    };
-  }, [selectItem]);
+  const createClickHandler = react.useCallback(index => () => selectItem(index), [selectItem]);
   if (!props.items || !props.items.length) {
     return null;
   }
-  return /*#__PURE__*/react.createElement(Panel, {
-    className: "overflow-y-auto max-w-[18rem] max-h-[18rem]"
-  }, props.items.map(function (item, index) {
-    return /*#__PURE__*/react.createElement(Button, {
+  return jsxRuntime.jsx(Panel, {
+    className: "overflow-y-auto max-w-[18rem] max-h-[18rem]",
+    children: props.items.map((item, index) => jsxRuntime.jsxs(Button, {
       active: index === selectedIndex,
       variant: "ghost",
       className: "justify-start w-full",
       buttonSize: "small",
-      key: item.name,
       onClick: createClickHandler(index),
-      "data-emoji-name": item.name
-    }, item.fallbackImage ? /*#__PURE__*/react.createElement("img", {
-      src: item.fallbackImage,
-      className: "w-5 h-5",
-      alt: "emoji"
-    }) : item.emoji, ' ', /*#__PURE__*/react.createElement("span", {
-      className: "truncate text-ellipsis"
-    }, ":", item.name, ":"));
-  }));
+      "data-emoji-name": item.name,
+      children: [item.fallbackImage ? jsxRuntime.jsx("img", {
+        src: item.fallbackImage,
+        className: "w-5 h-5",
+        alt: "emoji"
+      }) : item.emoji, ' ', jsxRuntime.jsxs("span", {
+        className: "truncate text-ellipsis",
+        children: [":", item.name, ":"]
+      })]
+    }, item.name))
+  });
 });
 EmojiList.displayName = 'EmojiList';
 
-var emojiSuggestion = {
-  items: function items(_ref) {
-    var editor = _ref.editor,
-      query = _ref.query;
-    return editor.storage.emoji.emojis.filter(function (_ref2) {
-      var shortcodes = _ref2.shortcodes,
-        tags = _ref2.tags;
-      return shortcodes.find(function (shortcode) {
-        return shortcode.startsWith(query.toLowerCase());
-      }) || tags.find(function (tag) {
-        return tag.startsWith(query.toLowerCase());
-      });
-    }).slice(0, 250);
-  },
+const emojiSuggestion = {
+  items: ({
+    editor,
+    query
+  }) => editor.storage.emoji.emojis.filter(({
+    shortcodes,
+    tags
+  }) => shortcodes.find(shortcode => shortcode.startsWith(query.toLowerCase())) || tags.find(tag => tag.startsWith(query.toLowerCase()))).slice(0, 250),
   allowSpaces: false,
-  render: function render() {
-    var component;
-    var popup;
+  render: () => {
+    let component;
+    let popup;
     return {
-      onStart: function onStart(props) {
+      onStart: props => {
         component = new ReactRenderer(EmojiList, {
-          props: props,
+          props,
           editor: props.editor
         });
         popup = tippy('body', {
           getReferenceClientRect: props.clientRect,
-          appendTo: function appendTo() {
-            return document.body;
-          },
+          appendTo: () => document.body,
           content: component.element,
           showOnCreate: true,
           interactive: true,
@@ -36734,13 +38035,13 @@ var emojiSuggestion = {
           placement: 'bottom-start'
         });
       },
-      onUpdate: function onUpdate(props) {
+      onUpdate(props) {
         component.updateProps(props);
         popup[0].setProps({
           getReferenceClientRect: props.clientRect
         });
       },
-      onKeyDown: function onKeyDown(props) {
+      onKeyDown(props) {
         var _component$ref$onKeyD, _component$ref;
         if (props.event.key === 'Escape') {
           popup[0].hide();
@@ -36749,7 +38050,7 @@ var emojiSuggestion = {
         }
         return (_component$ref$onKeyD = (_component$ref = component.ref) == null ? void 0 : _component$ref.onKeyDown(props)) != null ? _component$ref$onKeyD : false;
       },
-      onExit: function onExit() {
+      onExit() {
         popup[0].destroy();
         component.destroy();
       }
@@ -36757,202 +38058,220 @@ var emojiSuggestion = {
   }
 };
 
-var TableOfContents = /*#__PURE__*/react.memo(function (_ref) {
-  var editor = _ref.editor,
-    onItemClick = _ref.onItemClick;
-  var content = useEditorState({
-    editor: editor,
-    selector: function selector(ctx) {
-      return ctx.editor.storage.tableOfContents.content;
-    }
+const TableOfContents = /*#__PURE__*/react.memo(({
+  editor,
+  onItemClick
+}) => {
+  const content = useEditorState({
+    editor,
+    selector: ctx => ctx.editor.storage.tableOfContents.content
   });
-  return /*#__PURE__*/react.createElement(Fragment, null, /*#__PURE__*/react.createElement("div", {
-    className: "mb-2 text-xs font-semibold uppercase text-neutral-500 dark:text-neutral-400"
-  }, "Table of contents"), content.length > 0 ? /*#__PURE__*/react.createElement("div", {
-    className: "flex flex-col gap-1"
-  }, content.map(function (item) {
-    return /*#__PURE__*/react.createElement("a", {
-      key: item.id,
-      href: "#" + item.id,
-      style: {
-        marginLeft: 1 * item.level - 1 + "rem"
-      },
-      onClick: onItemClick,
-      className: cn('block font-medium text-neutral-500 dark:text-neutral-300 p-1 rounded bg-opacity-10 text-sm hover:text-neutral-800 transition-all hover:bg-black hover:bg-opacity-5 truncate w-full', item.isActive && 'text-neutral-800 bg-neutral-100 dark:text-neutral-100 dark:bg-neutral-900')
-    }, item.itemIndex, ". ", item.textContent);
-  })) : /*#__PURE__*/react.createElement("div", {
-    className: "text-sm text-neutral-500"
-  }, "Start adding headlines to your document \u2026"));
+  return jsxRuntime.jsxs(jsxRuntime.Fragment, {
+    children: [jsxRuntime.jsx("div", {
+      className: "mb-2 text-xs font-semibold uppercase text-neutral-500 dark:text-neutral-400",
+      children: "Table of contents"
+    }), content.length > 0 ? jsxRuntime.jsx("div", {
+      className: "flex flex-col gap-1",
+      children: content.map(item => jsxRuntime.jsxs("a", {
+        href: `#${item.id}`,
+        style: {
+          marginLeft: `${1 * item.level - 1}rem`
+        },
+        onClick: onItemClick,
+        className: cn('block font-medium text-neutral-500 dark:text-neutral-300 p-1 rounded bg-opacity-10 text-sm hover:text-neutral-800 transition-all hover:bg-black hover:bg-opacity-5 truncate w-full', item.isActive && 'text-neutral-800 bg-neutral-100 dark:text-neutral-100 dark:bg-neutral-900'),
+        children: [item.itemIndex, ". ", item.textContent]
+      }, item.id))
+    }) : jsxRuntime.jsx("div", {
+      className: "text-sm text-neutral-500",
+      children: "Start adding headlines to your document \u2026"
+    })]
+  });
 });
 TableOfContents.displayName = 'TableOfContents';
 
-var TableOfNodeContent = function TableOfNodeContent(props) {
-  var editor = props.editor;
-  return /*#__PURE__*/react.createElement(NodeViewWrapper, null, /*#__PURE__*/react.createElement("div", {
-    className: "p-2 -m-2 rounded-lg",
-    contentEditable: false
-  }, /*#__PURE__*/react.createElement(TableOfContents, {
-    editor: editor
-  })));
+const TableOfNodeContent = props => {
+  const {
+    editor
+  } = props;
+  return jsxRuntime.jsx(NodeViewWrapper, {
+    children: jsxRuntime.jsx("div", {
+      className: "p-2 -m-2 rounded-lg",
+      contentEditable: false,
+      children: jsxRuntime.jsx(TableOfContents, {
+        editor: editor
+      })
+    })
+  });
 };
-var TableOfContentsNode = Node.create({
+const TableOfContentsNode = Node.create({
   name: 'tableOfContentsNode',
   group: 'block',
   atom: true,
   selectable: true,
   draggable: true,
   inline: false,
-  parseHTML: function parseHTML() {
+  parseHTML() {
     return [{
       tag: 'div[data-type="table-of-content"]'
     }];
   },
-  renderHTML: function renderHTML(_ref) {
-    var HTMLAttributes = _ref.HTMLAttributes;
+  renderHTML({
+    HTMLAttributes
+  }) {
     return ['div', _extends({}, HTMLAttributes, {
       'data-type': 'table-of-content'
     })];
   },
-  addNodeView: function addNodeView() {
+  addNodeView() {
     return ReactNodeViewRenderer(TableOfNodeContent);
   },
-  addCommands: function addCommands() {
-    var _this = this;
+  addCommands() {
     return {
-      insertTableOfContents: function insertTableOfContents() {
-        return function (_ref2) {
-          var commands = _ref2.commands;
-          return commands.insertContent({
-            type: _this.name
-          });
-        };
+      insertTableOfContents: () => ({
+        commands
+      }) => {
+        return commands.insertContent({
+          type: this.name
+        });
       }
     };
   }
 });
 
-var isTableGripSelected = function isTableGripSelected(node) {
-  var container = node;
+const isTableGripSelected = node => {
+  let container = node;
   while (container && !['TD', 'TH'].includes(container.tagName)) {
     container = container.parentElement;
   }
-  var gripColumn = container && container.querySelector && container.querySelector('a.grip-column.selected');
-  var gripRow = container && container.querySelector && container.querySelector('a.grip-row.selected');
+  const gripColumn = container && container.querySelector && container.querySelector('a.grip-column.selected');
+  const gripRow = container && container.querySelector && container.querySelector('a.grip-row.selected');
   if (gripColumn || gripRow) {
     return true;
   }
   return false;
 };
-var isCustomNodeSelected = function isCustomNodeSelected(editor, node) {
-  var customNodes = [HorizontalRule.name, ImageBlock.name, ImageUpload.name, CodeBlock.name, ImageBlock.name, Link.name, AiWriter.name, AiImage.name, Figcaption.name, TableOfContentsNode.name];
-  return customNodes.some(function (type) {
-    return editor.isActive(type);
-  }) || isTableGripSelected(node);
+const isCustomNodeSelected = (editor, node) => {
+  const customNodes = [HorizontalRule.name, ImageBlock.name, ImageUpload.name, CodeBlock.name, ImageBlock.name, Link.name, AiWriter.name, AiImage.name, Figcaption.name, TableOfContentsNode.name];
+  return customNodes.some(type => editor.isActive(type)) || isTableGripSelected(node);
 };
 
-var isTextSelected = function isTextSelected(_ref) {
-  var editor = _ref.editor;
-  var _editor$state = editor.state,
-    doc = _editor$state.doc,
-    selection = _editor$state.selection,
-    _editor$state$selecti = _editor$state.selection,
-    empty = _editor$state$selecti.empty,
-    from = _editor$state$selecti.from,
-    to = _editor$state$selecti.to;
+const isTextSelected = ({
+  editor
+}) => {
+  const {
+    state: {
+      doc,
+      selection,
+      selection: {
+        empty,
+        from,
+        to
+      }
+    }
+  } = editor;
   // Sometime check for `empty` is not enough.
   // Doubleclick an empty paragraph returns a node size of 2.
   // So we check also for an empty text size.
-  var isEmptyTextBlock = !doc.textBetween(from, to).length && isTextSelection(selection);
+  const isEmptyTextBlock = !doc.textBetween(from, to).length && isTextSelection(selection);
   if (empty || isEmptyTextBlock || !editor.isEditable) {
     return false;
   }
   return true;
 };
 
-function cn() {
-  return twMerge(clsx([].slice.call(arguments)));
+function cn(...inputs) {
+  return twMerge(clsx(inputs));
 }
 function randomElement(array) {
   return array[Math.floor(Math.random() * array.length)];
 }
 
-var Icon = /*#__PURE__*/react.memo(function (_ref) {
-  var name = _ref.name,
-    className = _ref.className,
-    strokeWidth = _ref.strokeWidth;
-  var IconComponent = icons[name];
+const Icon = /*#__PURE__*/react.memo(({
+  name,
+  className,
+  strokeWidth
+}) => {
+  const IconComponent = icons[name];
   if (!IconComponent) {
     return null;
   }
-  return /*#__PURE__*/React.createElement(IconComponent, {
+  return jsxRuntime.jsx(IconComponent, {
     className: cn('w-4 h-4', className),
     strokeWidth: strokeWidth || 2.5
   });
 });
 Icon.displayName = 'Icon';
 
-var LinkPreviewPanel = function LinkPreviewPanel(_ref) {
-  var onClear = _ref.onClear,
-    onEdit = _ref.onEdit,
-    url = _ref.url;
-  return /*#__PURE__*/React.createElement(Surface, {
-    className: "flex items-center gap-2 p-2"
-  }, /*#__PURE__*/React.createElement("a", {
-    href: url,
-    target: "_blank",
-    rel: "noopener noreferrer",
-    className: "text-sm underline break-all"
-  }, url), /*#__PURE__*/React.createElement(Toolbar.Divider, null), /*#__PURE__*/React.createElement(Tooltip, {
-    title: "Edit link"
-  }, /*#__PURE__*/React.createElement(Toolbar.Button, {
-    onClick: onEdit
-  }, /*#__PURE__*/React.createElement(Icon, {
-    name: "Pen"
-  }))), /*#__PURE__*/React.createElement(Tooltip, {
-    title: "Remove link"
-  }, /*#__PURE__*/React.createElement(Toolbar.Button, {
-    onClick: onClear
-  }, /*#__PURE__*/React.createElement(Icon, {
-    name: "Trash2"
-  }))));
+const LinkPreviewPanel = ({
+  onClear,
+  onEdit,
+  url
+}) => {
+  return jsxRuntime.jsxs(Surface, {
+    className: "flex items-center gap-2 p-2",
+    children: [jsxRuntime.jsx("a", {
+      href: url,
+      target: "_blank",
+      rel: "noopener noreferrer",
+      className: "text-sm underline break-all",
+      children: url
+    }), jsxRuntime.jsx(Toolbar.Divider, {}), jsxRuntime.jsx(Tooltip, {
+      title: "Edit link",
+      children: jsxRuntime.jsx(Toolbar.Button, {
+        onClick: onEdit,
+        children: jsxRuntime.jsx(Icon, {
+          name: "Pen"
+        })
+      })
+    }), jsxRuntime.jsx(Tooltip, {
+      title: "Remove link",
+      children: jsxRuntime.jsx(Toolbar.Button, {
+        onClick: onClear,
+        children: jsxRuntime.jsx(Icon, {
+          name: "Trash2"
+        })
+      })
+    })]
+  });
 };
 
-var ColorButton = /*#__PURE__*/react.memo(function (_ref) {
-  var color = _ref.color,
-    active = _ref.active,
-    onColorChange = _ref.onColorChange;
-  var wrapperClassName = cn('flex items-center justify-center px-1.5 py-1.5 rounded group', !active && 'hover:bg-neutral-100', active && 'bg-neutral-100');
-  var bubbleClassName = cn('w-4 h-4 rounded bg-slate-100 shadow-sm ring-offset-2 ring-current', !active && "hover:ring-1", active && "ring-1");
-  var handleClick = react.useCallback(function () {
+const ColorButton = /*#__PURE__*/react.memo(({
+  color,
+  active,
+  onColorChange
+}) => {
+  const wrapperClassName = cn('flex items-center justify-center px-1.5 py-1.5 rounded group', !active && 'hover:bg-neutral-100', active && 'bg-neutral-100');
+  const bubbleClassName = cn('w-4 h-4 rounded bg-slate-100 shadow-sm ring-offset-2 ring-current', !active && `hover:ring-1`, active && `ring-1`);
+  const handleClick = react.useCallback(() => {
     if (onColorChange) {
       onColorChange(color || '');
     }
   }, [onColorChange, color]);
-  return /*#__PURE__*/React.createElement("button", {
+  return jsxRuntime.jsx("button", {
     onClick: handleClick,
-    className: wrapperClassName
-  }, /*#__PURE__*/React.createElement("div", {
-    style: {
-      backgroundColor: color,
-      color: color
-    },
-    className: bubbleClassName
-  }));
+    className: wrapperClassName,
+    children: jsxRuntime.jsx("div", {
+      style: {
+        backgroundColor: color,
+        color: color
+      },
+      className: bubbleClassName
+    })
+  });
 });
 ColorButton.displayName = 'ColorButton';
 
-var ColorPicker = function ColorPicker(_ref) {
-  var color = _ref.color,
-    onChange = _ref.onChange,
-    onClear = _ref.onClear;
-  var _useState = react.useState(color || ''),
-    colorInputValue = _useState[0],
-    setColorInputValue = _useState[1];
-  var handleColorUpdate = react.useCallback(function (event) {
+const ColorPicker = ({
+  color,
+  onChange,
+  onClear
+}) => {
+  const [colorInputValue, setColorInputValue] = react.useState(color || '');
+  const handleColorUpdate = react.useCallback(event => {
     setColorInputValue(event.target.value);
   }, []);
-  var handleColorChange = react.useCallback(function () {
-    var isCorrectColor = /^#([0-9A-F]{3}){1,2}$/i.test(colorInputValue);
+  const handleColorChange = react.useCallback(() => {
+    const isCorrectColor = /^#([0-9A-F]{3}){1,2}$/i.test(colorInputValue);
     if (!isCorrectColor) {
       if (onChange) {
         onChange('');
@@ -36963,173 +38282,175 @@ var ColorPicker = function ColorPicker(_ref) {
       onChange(colorInputValue);
     }
   }, [colorInputValue, onChange]);
-  return /*#__PURE__*/React.createElement("div", {
-    className: "flex flex-col gap-2"
-  }, /*#__PURE__*/React.createElement(HexColorPicker, {
-    className: "w-full",
-    color: color || '',
-    onChange: onChange
-  }), /*#__PURE__*/React.createElement("input", {
-    type: "text",
-    className: "w-full p-2 text-black bg-white border rounded dark:bg-black dark:text-white border-neutral-200 dark:border-neutral-800 focus:outline-1 focus:ring-0 focus:outline-neutral-300 dark:focus:outline-neutral-700",
-    placeholder: "#000000",
-    value: colorInputValue,
-    onChange: handleColorUpdate,
-    onBlur: handleColorChange
-  }), /*#__PURE__*/React.createElement("div", {
-    className: "flex flex-wrap items-center gap-1 max-w-[15rem]"
-  }, themeColors.map(function (currentColor) {
-    return /*#__PURE__*/React.createElement(ColorButton, {
-      active: currentColor === color,
-      color: currentColor,
-      key: currentColor,
-      onColorChange: onChange
-    });
-  }), /*#__PURE__*/React.createElement(Toolbar.Button, {
-    tooltip: "Reset color to default",
-    onClick: onClear
-  }, /*#__PURE__*/React.createElement(Icon, {
-    name: "Undo"
-  }))));
+  return jsxRuntime.jsxs("div", {
+    className: "flex flex-col gap-2",
+    children: [jsxRuntime.jsx(HexColorPicker, {
+      className: "w-full",
+      color: color || '',
+      onChange: onChange
+    }), jsxRuntime.jsx("input", {
+      type: "text",
+      className: "w-full p-2 text-black bg-white border rounded dark:bg-black dark:text-white border-neutral-200 dark:border-neutral-800 focus:outline-1 focus:ring-0 focus:outline-neutral-300 dark:focus:outline-neutral-700",
+      placeholder: "#000000",
+      value: colorInputValue,
+      onChange: handleColorUpdate,
+      onBlur: handleColorChange
+    }), jsxRuntime.jsxs("div", {
+      className: "flex flex-wrap items-center gap-1 max-w-[15rem]",
+      children: [themeColors.map(currentColor => jsxRuntime.jsx(ColorButton, {
+        active: currentColor === color,
+        color: currentColor,
+        onColorChange: onChange
+      }, currentColor)), jsxRuntime.jsx(Toolbar.Button, {
+        tooltip: "Reset color to default",
+        onClick: onClear,
+        children: jsxRuntime.jsx(Icon, {
+          name: "Undo"
+        })
+      })]
+    })]
+  });
 };
 
-var Toggle = function Toggle(_ref) {
-  var onChange = _ref.onChange,
-    _ref$active = _ref.active,
-    active = _ref$active === void 0 ? false : _ref$active,
-    _ref$size = _ref.size,
-    size = _ref$size === void 0 ? 'large' : _ref$size;
-  var state = active ? 'checked' : 'unchecked';
-  var value = active ? 'on' : 'off';
-  var buttonClass = cn('inline-flex cursor-pointer items-center rounded-full border-transparent transition-colors', !active ? 'bg-neutral-200 hover:bg-neutral-300' : 'bg-black', !active ? 'dark:bg-neutral-800 dark:hover:bg-neutral-700' : 'dark:bg-white', size === 'small' && 'h-3 w-6 px-0.5', size === 'large' && 'h-5 w-9 px-0.5');
-  var pinClass = cn('rounded-full pointer-events-none block transition-transform', 'bg-white dark:bg-black', size === 'small' && 'h-2 w-2', size === 'large' && 'h-4 w-4', active ? cn(size === 'small' ? 'translate-x-3' : '', size === 'large' ? 'translate-x-4' : '') : 'translate-x-0');
-  var handleChange = react.useCallback(function () {
-    onChange(!active);
-  }, [active, onChange]);
-  return /*#__PURE__*/React.createElement("button", {
+const Toggle = ({
+  onChange,
+  active: _active = false,
+  size: _size = 'large'
+}) => {
+  const state = _active ? 'checked' : 'unchecked';
+  const value = _active ? 'on' : 'off';
+  const buttonClass = cn('inline-flex cursor-pointer items-center rounded-full border-transparent transition-colors', !_active ? 'bg-neutral-200 hover:bg-neutral-300' : 'bg-black', !_active ? 'dark:bg-neutral-800 dark:hover:bg-neutral-700' : 'dark:bg-white', _size === 'small' && 'h-3 w-6 px-0.5', _size === 'large' && 'h-5 w-9 px-0.5');
+  const pinClass = cn('rounded-full pointer-events-none block transition-transform', 'bg-white dark:bg-black', _size === 'small' && 'h-2 w-2', _size === 'large' && 'h-4 w-4', _active ? cn(_size === 'small' ? 'translate-x-3' : '', _size === 'large' ? 'translate-x-4' : '') : 'translate-x-0');
+  const handleChange = react.useCallback(() => {
+    onChange(!_active);
+  }, [_active, onChange]);
+  return jsxRuntime.jsx("button", {
     className: buttonClass,
     type: "button",
     role: "switch",
-    "aria-checked": active,
+    "aria-checked": _active,
     "data-state": state,
     value: value,
-    onClick: handleChange
-  }, /*#__PURE__*/React.createElement("span", {
-    className: pinClass,
-    "data-state": state
-  }));
+    onClick: handleChange,
+    children: jsxRuntime.jsx("span", {
+      className: pinClass,
+      "data-state": state
+    })
+  });
 };
 
-var useLinkEditorState = function useLinkEditorState(_ref) {
-  var initialUrl = _ref.initialUrl,
-    initialOpenInNewTab = _ref.initialOpenInNewTab,
-    onSetLink = _ref.onSetLink;
-  var _useState = react.useState(initialUrl || ''),
-    url = _useState[0],
-    setUrl = _useState[1];
-  var _useState2 = react.useState(initialOpenInNewTab || false),
-    openInNewTab = _useState2[0],
-    setOpenInNewTab = _useState2[1];
-  var onChange = react.useCallback(function (event) {
+const useLinkEditorState = ({
+  initialUrl,
+  initialOpenInNewTab,
+  onSetLink
+}) => {
+  const [url, setUrl] = react.useState(initialUrl || '');
+  const [openInNewTab, setOpenInNewTab] = react.useState(initialOpenInNewTab || false);
+  const onChange = react.useCallback(event => {
     setUrl(event.target.value);
   }, []);
-  var isValidUrl = react.useMemo(function () {
-    return /^(\S+):(\/\/)?\S+$/.test(url);
-  }, [url]);
-  var handleSubmit = react.useCallback(function (e) {
+  const isValidUrl = react.useMemo(() => /^(\S+):(\/\/)?\S+$/.test(url), [url]);
+  const handleSubmit = react.useCallback(e => {
     e.preventDefault();
     if (isValidUrl) {
       onSetLink(url, openInNewTab);
     }
   }, [url, isValidUrl, openInNewTab, onSetLink]);
   return {
-    url: url,
-    setUrl: setUrl,
-    openInNewTab: openInNewTab,
-    setOpenInNewTab: setOpenInNewTab,
-    onChange: onChange,
-    handleSubmit: handleSubmit,
-    isValidUrl: isValidUrl
+    url,
+    setUrl,
+    openInNewTab,
+    setOpenInNewTab,
+    onChange,
+    handleSubmit,
+    isValidUrl
   };
 };
-var LinkEditorPanel = function LinkEditorPanel(_ref2) {
-  var onSetLink = _ref2.onSetLink,
-    initialOpenInNewTab = _ref2.initialOpenInNewTab,
-    initialUrl = _ref2.initialUrl;
-  var state = useLinkEditorState({
-    onSetLink: onSetLink,
-    initialOpenInNewTab: initialOpenInNewTab,
-    initialUrl: initialUrl
+const LinkEditorPanel = ({
+  onSetLink,
+  initialOpenInNewTab,
+  initialUrl
+}) => {
+  const state = useLinkEditorState({
+    onSetLink,
+    initialOpenInNewTab,
+    initialUrl
   });
-  return /*#__PURE__*/React.createElement(Surface, {
-    className: "p-2"
-  }, /*#__PURE__*/React.createElement("form", {
-    onSubmit: state.handleSubmit,
-    className: "flex items-center gap-2"
-  }, /*#__PURE__*/React.createElement("label", {
-    className: "flex items-center gap-2 p-2 rounded-lg bg-neutral-100 dark:bg-neutral-900 cursor-text"
-  }, /*#__PURE__*/React.createElement(Icon, {
-    name: "Link",
-    className: "flex-none text-black dark:text-white"
-  }), /*#__PURE__*/React.createElement("input", {
-    type: "url",
-    className: "flex-1 bg-transparent outline-none min-w-[12rem] text-black text-sm dark:text-white",
-    placeholder: "Enter URL",
-    value: state.url,
-    onChange: state.onChange
-  })), /*#__PURE__*/React.createElement(Button, {
-    variant: "primary",
-    buttonSize: "small",
-    type: "submit",
-    disabled: !state.isValidUrl
-  }, "Set Link")), /*#__PURE__*/React.createElement("div", {
-    className: "mt-3"
-  }, /*#__PURE__*/React.createElement("label", {
-    className: "flex items-center justify-start gap-2 text-sm font-semibold cursor-pointer select-none text-neutral-500 dark:text-neutral-400"
-  }, "Open in new tab", /*#__PURE__*/React.createElement(Toggle, {
-    active: state.openInNewTab,
-    onChange: state.setOpenInNewTab
-  }))));
+  return jsxRuntime.jsxs(Surface, {
+    className: "p-2",
+    children: [jsxRuntime.jsxs("form", {
+      onSubmit: state.handleSubmit,
+      className: "flex items-center gap-2",
+      children: [jsxRuntime.jsxs("label", {
+        className: "flex items-center gap-2 p-2 rounded-lg bg-neutral-100 dark:bg-neutral-900 cursor-text",
+        children: [jsxRuntime.jsx(Icon, {
+          name: "Link",
+          className: "flex-none text-black dark:text-white"
+        }), jsxRuntime.jsx("input", {
+          type: "url",
+          className: "flex-1 bg-transparent outline-none min-w-[12rem] text-black text-sm dark:text-white",
+          placeholder: "Enter URL",
+          value: state.url,
+          onChange: state.onChange
+        })]
+      }), jsxRuntime.jsx(Button, {
+        variant: "primary",
+        buttonSize: "small",
+        type: "submit",
+        disabled: !state.isValidUrl,
+        children: "Set Link"
+      })]
+    }), jsxRuntime.jsx("div", {
+      className: "mt-3",
+      children: jsxRuntime.jsxs("label", {
+        className: "flex items-center justify-start gap-2 text-sm font-semibold cursor-pointer select-none text-neutral-500 dark:text-neutral-400",
+        children: ["Open in new tab", jsxRuntime.jsx(Toggle, {
+          active: state.openInNewTab,
+          onChange: state.setOpenInNewTab
+        })]
+      })
+    })]
+  });
 };
 
-var LinkMenu = function LinkMenu(_ref) {
-  var editor = _ref.editor,
-    _appendTo = _ref.appendTo;
-  var _useState = react.useState(false),
-    showEdit = _useState[0],
-    setShowEdit = _useState[1];
-  var _useEditorState = useEditorState({
-      editor: editor,
-      selector: function selector(ctx) {
-        var attrs = ctx.editor.getAttributes('link');
-        return {
-          link: attrs.href,
-          target: attrs.target
-        };
-      }
-    }),
-    link = _useEditorState.link,
-    target = _useEditorState.target;
-  var shouldShow = react.useCallback(function () {
-    var isActive = editor.isActive('link');
+const LinkMenu = ({
+  editor,
+  appendTo
+}) => {
+  const [showEdit, setShowEdit] = react.useState(false);
+  const {
+    link,
+    target
+  } = useEditorState({
+    editor,
+    selector: ctx => {
+      const attrs = ctx.editor.getAttributes('link');
+      return {
+        link: attrs.href,
+        target: attrs.target
+      };
+    }
+  });
+  const shouldShow = react.useCallback(() => {
+    const isActive = editor.isActive('link');
     return isActive;
   }, [editor]);
-  var handleEdit = react.useCallback(function () {
+  const handleEdit = react.useCallback(() => {
     setShowEdit(true);
   }, []);
-  var onSetLink = react.useCallback(function (url, openInNewTab) {
+  const onSetLink = react.useCallback((url, openInNewTab) => {
     editor.chain().focus().extendMarkRange('link').setLink({
       href: url,
       target: openInNewTab ? '_blank' : ''
     }).run();
     setShowEdit(false);
   }, [editor]);
-  var onUnsetLink = react.useCallback(function () {
+  const onUnsetLink = react.useCallback(() => {
     editor.chain().focus().extendMarkRange('link').unsetLink().run();
     setShowEdit(false);
     return null;
   }, [editor]);
-  return /*#__PURE__*/react.createElement(BubbleMenu, {
+  return jsxRuntime.jsx(BubbleMenu, {
     editor: editor,
     pluginKey: "textMenu",
     shouldShow: shouldShow,
@@ -37141,183 +38462,132 @@ var LinkMenu = function LinkMenu(_ref) {
           enabled: false
         }]
       },
-      appendTo: function appendTo() {
-        return _appendTo == null ? void 0 : _appendTo.current;
+      appendTo: () => {
+        return appendTo == null ? void 0 : appendTo.current;
       },
-      onHidden: function onHidden() {
+      onHidden: () => {
         setShowEdit(false);
       }
-    }
-  }, showEdit ? /*#__PURE__*/react.createElement(LinkEditorPanel, {
-    initialUrl: link,
-    initialOpenInNewTab: target === '_blank',
-    onSetLink: onSetLink
-  }) : /*#__PURE__*/react.createElement(LinkPreviewPanel, {
-    url: link,
-    onClear: onUnsetLink,
-    onEdit: handleEdit
-  }));
+    },
+    children: showEdit ? jsxRuntime.jsx(LinkEditorPanel, {
+      initialUrl: link,
+      initialOpenInNewTab: target === '_blank',
+      onSetLink: onSetLink
+    }) : jsxRuntime.jsx(LinkPreviewPanel, {
+      url: link,
+      onClear: onUnsetLink,
+      onEdit: handleEdit
+    })
+  });
 };
 
-var useTextmenuCommands = function useTextmenuCommands(editor) {
-  var onBold = react.useCallback(function () {
-    return editor.chain().focus().toggleBold().run();
-  }, [editor]);
-  var onItalic = react.useCallback(function () {
-    return editor.chain().focus().toggleItalic().run();
-  }, [editor]);
-  var onStrike = react.useCallback(function () {
-    return editor.chain().focus().toggleStrike().run();
-  }, [editor]);
-  var onUnderline = react.useCallback(function () {
-    return editor.chain().focus().toggleUnderline().run();
-  }, [editor]);
-  var onCode = react.useCallback(function () {
-    return editor.chain().focus().toggleCode().run();
-  }, [editor]);
-  var onCodeBlock = react.useCallback(function () {
-    return editor.chain().focus().toggleCodeBlock().run();
-  }, [editor]);
-  var onSubscript = react.useCallback(function () {
-    return editor.chain().focus().toggleSubscript().run();
-  }, [editor]);
-  var onSuperscript = react.useCallback(function () {
-    return editor.chain().focus().toggleSuperscript().run();
-  }, [editor]);
-  var onAlignLeft = react.useCallback(function () {
-    return editor.chain().focus().setTextAlign('left').run();
-  }, [editor]);
-  var onAlignCenter = react.useCallback(function () {
-    return editor.chain().focus().setTextAlign('center').run();
-  }, [editor]);
-  var onAlignRight = react.useCallback(function () {
-    return editor.chain().focus().setTextAlign('right').run();
-  }, [editor]);
-  var onAlignJustify = react.useCallback(function () {
-    return editor.chain().focus().setTextAlign('justify').run();
-  }, [editor]);
-  var onChangeColor = react.useCallback(function (color) {
-    return editor.chain().setColor(color).run();
-  }, [editor]);
-  var onClearColor = react.useCallback(function () {
-    return editor.chain().focus().unsetColor().run();
-  }, [editor]);
-  var onChangeHighlight = react.useCallback(function (color) {
-    return editor.chain().setHighlight({
-      color: color
-    }).run();
-  }, [editor]);
-  var onClearHighlight = react.useCallback(function () {
-    return editor.chain().focus().unsetHighlight().run();
-  }, [editor]);
-  var onSimplify = react.useCallback(function () {
-    return editor.chain().focus().aiSimplify({
-      stream: true,
-      format: 'rich-text'
-    }).run();
-  }, [editor]);
-  var onEmojify = react.useCallback(function () {
-    return editor.chain().focus().aiEmojify({
-      stream: true,
-      format: 'rich-text'
-    }).run();
-  }, [editor]);
-  var onCompleteSentence = react.useCallback(function () {
-    return editor.chain().focus().aiComplete({
-      stream: true,
-      format: 'rich-text'
-    }).run();
-  }, [editor]);
-  var onFixSpelling = react.useCallback(function () {
-    return editor.chain().focus().aiFixSpellingAndGrammar({
-      stream: true,
-      format: 'rich-text'
-    }).run();
-  }, [editor]);
-  var onMakeLonger = react.useCallback(function () {
-    return editor.chain().focus().aiExtend({
-      stream: true,
-      format: 'rich-text'
-    }).run();
-  }, [editor]);
-  var onMakeShorter = react.useCallback(function () {
-    return editor.chain().focus().aiShorten({
-      stream: true,
-      format: 'rich-text'
-    }).run();
-  }, [editor]);
-  var onTldr = react.useCallback(function () {
-    return editor.chain().focus().aiTldr({
-      stream: true,
-      format: 'rich-text'
-    }).run();
-  }, [editor]);
-  var onTone = react.useCallback(function (tone) {
-    return editor.chain().focus().aiAdjustTone(tone, {
-      stream: true,
-      format: 'rich-text'
-    }).run();
-  }, [editor]);
-  var onTranslate = react.useCallback(function (language) {
-    return editor.chain().focus().aiTranslate(language, {
-      stream: true,
-      format: 'rich-text'
-    }).run();
-  }, [editor]);
-  var onLink = react.useCallback(function (url, inNewTab) {
-    return editor.chain().focus().setLink({
-      href: url,
-      target: inNewTab ? '_blank' : ''
-    }).run();
-  }, [editor]);
-  var onSetFont = react.useCallback(function (font) {
+const useTextmenuCommands = editor => {
+  const onBold = react.useCallback(() => editor.chain().focus().toggleBold().run(), [editor]);
+  const onItalic = react.useCallback(() => editor.chain().focus().toggleItalic().run(), [editor]);
+  const onStrike = react.useCallback(() => editor.chain().focus().toggleStrike().run(), [editor]);
+  const onUnderline = react.useCallback(() => editor.chain().focus().toggleUnderline().run(), [editor]);
+  const onCode = react.useCallback(() => editor.chain().focus().toggleCode().run(), [editor]);
+  const onCodeBlock = react.useCallback(() => editor.chain().focus().toggleCodeBlock().run(), [editor]);
+  const onSubscript = react.useCallback(() => editor.chain().focus().toggleSubscript().run(), [editor]);
+  const onSuperscript = react.useCallback(() => editor.chain().focus().toggleSuperscript().run(), [editor]);
+  const onAlignLeft = react.useCallback(() => editor.chain().focus().setTextAlign('left').run(), [editor]);
+  const onAlignCenter = react.useCallback(() => editor.chain().focus().setTextAlign('center').run(), [editor]);
+  const onAlignRight = react.useCallback(() => editor.chain().focus().setTextAlign('right').run(), [editor]);
+  const onAlignJustify = react.useCallback(() => editor.chain().focus().setTextAlign('justify').run(), [editor]);
+  const onChangeColor = react.useCallback(color => editor.chain().setColor(color).run(), [editor]);
+  const onClearColor = react.useCallback(() => editor.chain().focus().unsetColor().run(), [editor]);
+  const onChangeHighlight = react.useCallback(color => editor.chain().setHighlight({
+    color
+  }).run(), [editor]);
+  const onClearHighlight = react.useCallback(() => editor.chain().focus().unsetHighlight().run(), [editor]);
+  const onSimplify = react.useCallback(() => editor.chain().focus().aiSimplify({
+    stream: true,
+    format: 'rich-text'
+  }).run(), [editor]);
+  const onEmojify = react.useCallback(() => editor.chain().focus().aiEmojify({
+    stream: true,
+    format: 'rich-text'
+  }).run(), [editor]);
+  const onCompleteSentence = react.useCallback(() => editor.chain().focus().aiComplete({
+    stream: true,
+    format: 'rich-text'
+  }).run(), [editor]);
+  const onFixSpelling = react.useCallback(() => editor.chain().focus().aiFixSpellingAndGrammar({
+    stream: true,
+    format: 'rich-text'
+  }).run(), [editor]);
+  const onMakeLonger = react.useCallback(() => editor.chain().focus().aiExtend({
+    stream: true,
+    format: 'rich-text'
+  }).run(), [editor]);
+  const onMakeShorter = react.useCallback(() => editor.chain().focus().aiShorten({
+    stream: true,
+    format: 'rich-text'
+  }).run(), [editor]);
+  const onTldr = react.useCallback(() => editor.chain().focus().aiTldr({
+    stream: true,
+    format: 'rich-text'
+  }).run(), [editor]);
+  const onTone = react.useCallback(tone => editor.chain().focus().aiAdjustTone(tone, {
+    stream: true,
+    format: 'rich-text'
+  }).run(), [editor]);
+  const onTranslate = react.useCallback(language => editor.chain().focus().aiTranslate(language, {
+    stream: true,
+    format: 'rich-text'
+  }).run(), [editor]);
+  const onLink = react.useCallback((url, inNewTab) => editor.chain().focus().setLink({
+    href: url,
+    target: inNewTab ? '_blank' : ''
+  }).run(), [editor]);
+  const onSetFont = react.useCallback(font => {
     if (!font || font.length === 0) {
       return editor.chain().focus().unsetFontFamily().run();
     }
     return editor.chain().focus().setFontFamily(font).run();
   }, [editor]);
-  var onSetFontSize = react.useCallback(function (fontSize) {
+  const onSetFontSize = react.useCallback(fontSize => {
     if (!fontSize || fontSize.length === 0) {
       return editor.chain().focus().unsetFontSize().run();
     }
     return editor.chain().focus().setFontSize(fontSize).run();
   }, [editor]);
   return {
-    onBold: onBold,
-    onItalic: onItalic,
-    onStrike: onStrike,
-    onUnderline: onUnderline,
-    onCode: onCode,
-    onCodeBlock: onCodeBlock,
-    onSubscript: onSubscript,
-    onSuperscript: onSuperscript,
-    onAlignLeft: onAlignLeft,
-    onAlignCenter: onAlignCenter,
-    onAlignRight: onAlignRight,
-    onAlignJustify: onAlignJustify,
-    onChangeColor: onChangeColor,
-    onClearColor: onClearColor,
-    onChangeHighlight: onChangeHighlight,
-    onClearHighlight: onClearHighlight,
-    onSetFont: onSetFont,
-    onSetFontSize: onSetFontSize,
-    onSimplify: onSimplify,
-    onEmojify: onEmojify,
-    onCompleteSentence: onCompleteSentence,
-    onFixSpelling: onFixSpelling,
-    onMakeLonger: onMakeLonger,
-    onMakeShorter: onMakeShorter,
-    onTldr: onTldr,
-    onTone: onTone,
-    onTranslate: onTranslate,
-    onLink: onLink
+    onBold,
+    onItalic,
+    onStrike,
+    onUnderline,
+    onCode,
+    onCodeBlock,
+    onSubscript,
+    onSuperscript,
+    onAlignLeft,
+    onAlignCenter,
+    onAlignRight,
+    onAlignJustify,
+    onChangeColor,
+    onClearColor,
+    onChangeHighlight,
+    onClearHighlight,
+    onSetFont,
+    onSetFontSize,
+    onSimplify,
+    onEmojify,
+    onCompleteSentence,
+    onFixSpelling,
+    onMakeLonger,
+    onMakeShorter,
+    onTldr,
+    onTone,
+    onTranslate,
+    onLink
   };
 };
 
-var useTextmenuStates = function useTextmenuStates(editor) {
-  var states = useEditorState({
-    editor: editor,
-    selector: function selector(ctx) {
+const useTextmenuStates = editor => {
+  const states = useEditorState({
+    editor,
+    selector: ctx => {
       var _ctx$editor$getAttrib, _ctx$editor$getAttrib2, _ctx$editor$getAttrib3, _ctx$editor$getAttrib4;
       return {
         isBold: ctx.editor.isActive('bold'),
@@ -37346,28 +38616,29 @@ var useTextmenuStates = function useTextmenuStates(editor) {
       };
     }
   });
-  var shouldShow = react.useCallback(function (_ref) {
-    var view = _ref.view,
-      from = _ref.from;
+  const shouldShow = react.useCallback(({
+    view,
+    from
+  }) => {
     if (!view || editor.view.dragging) {
       return false;
     }
-    var domAtPos = view.domAtPos(from || 0).node;
-    var nodeDOM = view.nodeDOM(from || 0);
-    var node = nodeDOM || domAtPos;
+    const domAtPos = view.domAtPos(from || 0).node;
+    const nodeDOM = view.nodeDOM(from || 0);
+    const node = nodeDOM || domAtPos;
     if (isCustomNodeSelected(editor, node)) {
       return false;
     }
     return isTextSelected({
-      editor: editor
+      editor
     });
   }, [editor]);
   return _extends({
-    shouldShow: shouldShow
+    shouldShow
   }, states);
 };
 
-var FONT_FAMILY_GROUPS = [{
+const FONT_FAMILY_GROUPS = [{
   label: 'Sans Serif',
   options: [{
     label: 'Inter',
@@ -37401,51 +38672,49 @@ var FONT_FAMILY_GROUPS = [{
     value: 'Courier New'
   }]
 }];
-var FONT_FAMILIES = FONT_FAMILY_GROUPS.flatMap(function (group) {
-  return [group.options];
-}).flat();
-var FontFamilyPicker = function FontFamilyPicker(_ref) {
-  var onChange = _ref.onChange,
-    value = _ref.value;
-  var currentValue = FONT_FAMILIES.find(function (size) {
-    return size.value === value;
+const FONT_FAMILIES = FONT_FAMILY_GROUPS.flatMap(group => [group.options]).flat();
+const FontFamilyPicker = ({
+  onChange,
+  value
+}) => {
+  const currentValue = FONT_FAMILIES.find(size => size.value === value);
+  const currentFontLabel = (currentValue == null ? void 0 : currentValue.label.split(' ')[0]) || 'Inter';
+  const selectFont = react.useCallback(font => () => onChange(font), [onChange]);
+  return jsxRuntime.jsxs(Dropdown.Root, {
+    children: [jsxRuntime.jsx(Dropdown.Trigger, {
+      asChild: true,
+      children: jsxRuntime.jsxs(Toolbar.Button, {
+        active: !!(currentValue != null && currentValue.value),
+        children: [currentFontLabel, jsxRuntime.jsx(Icon, {
+          name: "ChevronDown",
+          className: "w-2 h-2"
+        })]
+      })
+    }), jsxRuntime.jsx(Dropdown.Content, {
+      asChild: true,
+      children: jsxRuntime.jsx(Surface, {
+        className: "flex flex-col gap-1 px-2 py-4",
+        children: FONT_FAMILY_GROUPS.map(group => jsxRuntime.jsxs("div", {
+          className: "mt-2.5 first:mt-0 gap-0.5 flex flex-col",
+          children: [jsxRuntime.jsx(DropdownCategoryTitle, {
+            children: group.label
+          }), group.options.map(font => jsxRuntime.jsx(DropdownButton, {
+            isActive: value === font.value,
+            onClick: selectFont(font.value),
+            children: jsxRuntime.jsx("span", {
+              style: {
+                fontFamily: font.value
+              },
+              children: font.label
+            })
+          }, `${font.label}_${font.value}`))]
+        }, group.label))
+      })
+    })]
   });
-  var currentFontLabel = (currentValue == null ? void 0 : currentValue.label.split(' ')[0]) || 'Inter';
-  var selectFont = react.useCallback(function (font) {
-    return function () {
-      return onChange(font);
-    };
-  }, [onChange]);
-  return /*#__PURE__*/React.createElement(Dropdown.Root, null, /*#__PURE__*/React.createElement(Dropdown.Trigger, {
-    asChild: true
-  }, /*#__PURE__*/React.createElement(Toolbar.Button, {
-    active: !!(currentValue != null && currentValue.value)
-  }, currentFontLabel, /*#__PURE__*/React.createElement(Icon, {
-    name: "ChevronDown",
-    className: "w-2 h-2"
-  }))), /*#__PURE__*/React.createElement(Dropdown.Content, {
-    asChild: true
-  }, /*#__PURE__*/React.createElement(Surface, {
-    className: "flex flex-col gap-1 px-2 py-4"
-  }, FONT_FAMILY_GROUPS.map(function (group) {
-    return /*#__PURE__*/React.createElement("div", {
-      className: "mt-2.5 first:mt-0 gap-0.5 flex flex-col",
-      key: group.label
-    }, /*#__PURE__*/React.createElement(DropdownCategoryTitle, null, group.label), group.options.map(function (font) {
-      return /*#__PURE__*/React.createElement(DropdownButton, {
-        isActive: value === font.value,
-        onClick: selectFont(font.value),
-        key: font.label + "_" + font.value
-      }, /*#__PURE__*/React.createElement("span", {
-        style: {
-          fontFamily: font.value
-        }
-      }, font.label));
-    }));
-  }))));
 };
 
-var FONT_SIZES = [{
+const FONT_SIZES = [{
   label: 'Smaller',
   value: '12px'
 }, {
@@ -37461,338 +38730,339 @@ var FONT_SIZES = [{
   label: 'Extra Large',
   value: '24px'
 }];
-var FontSizePicker = function FontSizePicker(_ref) {
-  var onChange = _ref.onChange,
-    value = _ref.value;
-  var currentValue = FONT_SIZES.find(function (size) {
-    return size.value === value;
+const FontSizePicker = ({
+  onChange,
+  value
+}) => {
+  const currentValue = FONT_SIZES.find(size => size.value === value);
+  const currentSizeLabel = (currentValue == null ? void 0 : currentValue.label.split(' ')[0]) || 'Medium';
+  const selectSize = react.useCallback(size => () => onChange(size), [onChange]);
+  return jsxRuntime.jsxs(Dropdown.Root, {
+    children: [jsxRuntime.jsx(Dropdown.Trigger, {
+      asChild: true,
+      children: jsxRuntime.jsxs(Toolbar.Button, {
+        active: !!(currentValue != null && currentValue.value),
+        children: [currentSizeLabel, jsxRuntime.jsx(Icon, {
+          name: "ChevronDown",
+          className: "w-2 h-2"
+        })]
+      })
+    }), jsxRuntime.jsx(Dropdown.Content, {
+      asChild: true,
+      children: jsxRuntime.jsx(Surface, {
+        className: "flex flex-col gap-1 px-2 py-4",
+        children: FONT_SIZES.map(size => jsxRuntime.jsx(DropdownButton, {
+          isActive: value === size.value,
+          onClick: selectSize(size.value),
+          children: jsxRuntime.jsx("span", {
+            style: {
+              fontSize: size.value
+            },
+            children: size.label
+          })
+        }, `${size.label}_${size.value}`))
+      })
+    })]
   });
-  var currentSizeLabel = (currentValue == null ? void 0 : currentValue.label.split(' ')[0]) || 'Medium';
-  var selectSize = react.useCallback(function (size) {
-    return function () {
-      return onChange(size);
-    };
-  }, [onChange]);
-  return /*#__PURE__*/React.createElement(Dropdown.Root, null, /*#__PURE__*/React.createElement(Dropdown.Trigger, {
-    asChild: true
-  }, /*#__PURE__*/React.createElement(Toolbar.Button, {
-    active: !!(currentValue != null && currentValue.value)
-  }, currentSizeLabel, /*#__PURE__*/React.createElement(Icon, {
-    name: "ChevronDown",
-    className: "w-2 h-2"
-  }))), /*#__PURE__*/React.createElement(Dropdown.Content, {
-    asChild: true
-  }, /*#__PURE__*/React.createElement(Surface, {
-    className: "flex flex-col gap-1 px-2 py-4"
-  }, FONT_SIZES.map(function (size) {
-    return /*#__PURE__*/React.createElement(DropdownButton, {
-      isActive: value === size.value,
-      onClick: selectSize(size.value),
-      key: size.label + "_" + size.value
-    }, /*#__PURE__*/React.createElement("span", {
-      style: {
-        fontSize: size.value
-      }
-    }, size.label));
-  }))));
 };
 
-var useTextmenuContentTypes = function useTextmenuContentTypes(editor) {
+const useTextmenuContentTypes = editor => {
   return useEditorState({
-    editor: editor,
-    selector: function selector(ctx) {
-      return [{
-        type: 'category',
-        label: 'Hierarchy',
-        id: 'hierarchy'
-      }, {
-        icon: 'Pilcrow',
-        onClick: function onClick() {
-          return ctx.editor.chain().focus().lift('taskItem').liftListItem('listItem').setParagraph().run();
-        },
-        id: 'paragraph',
-        disabled: function disabled() {
-          return !ctx.editor.can().setParagraph();
-        },
-        isActive: function isActive() {
-          return ctx.editor.isActive('paragraph') && !ctx.editor.isActive('orderedList') && !ctx.editor.isActive('bulletList') && !ctx.editor.isActive('taskList');
-        },
-        label: 'Paragraph',
-        type: 'option'
-      }, {
-        icon: 'Heading1',
-        onClick: function onClick() {
-          return ctx.editor.chain().focus().lift('taskItem').liftListItem('listItem').setHeading({
-            level: 1
-          }).run();
-        },
-        id: 'heading1',
-        disabled: function disabled() {
-          return !ctx.editor.can().setHeading({
-            level: 1
-          });
-        },
-        isActive: function isActive() {
-          return ctx.editor.isActive('heading', {
-            level: 1
-          });
-        },
-        label: 'Heading 1',
-        type: 'option'
-      }, {
-        icon: 'Heading2',
-        onClick: function onClick() {
-          return ctx.editor.chain().focus().lift('taskItem').liftListItem('listItem').setHeading({
-            level: 2
-          }).run();
-        },
-        id: 'heading2',
-        disabled: function disabled() {
-          return !ctx.editor.can().setHeading({
-            level: 2
-          });
-        },
-        isActive: function isActive() {
-          return ctx.editor.isActive('heading', {
-            level: 2
-          });
-        },
-        label: 'Heading 2',
-        type: 'option'
-      }, {
-        icon: 'Heading3',
-        onClick: function onClick() {
-          return ctx.editor.chain().focus().lift('taskItem').liftListItem('listItem').setHeading({
-            level: 3
-          }).run();
-        },
-        id: 'heading3',
-        disabled: function disabled() {
-          return !ctx.editor.can().setHeading({
-            level: 3
-          });
-        },
-        isActive: function isActive() {
-          return ctx.editor.isActive('heading', {
-            level: 3
-          });
-        },
-        label: 'Heading 3',
-        type: 'option'
-      }, {
-        type: 'category',
-        label: 'Lists',
-        id: 'lists'
-      }, {
-        icon: 'List',
-        onClick: function onClick() {
-          return ctx.editor.chain().focus().toggleBulletList().run();
-        },
-        id: 'bulletList',
-        disabled: function disabled() {
-          return !ctx.editor.can().toggleBulletList();
-        },
-        isActive: function isActive() {
-          return ctx.editor.isActive('bulletList');
-        },
-        label: 'Bullet list',
-        type: 'option'
-      }, {
-        icon: 'ListOrdered',
-        onClick: function onClick() {
-          return ctx.editor.chain().focus().toggleOrderedList().run();
-        },
-        id: 'orderedList',
-        disabled: function disabled() {
-          return !ctx.editor.can().toggleOrderedList();
-        },
-        isActive: function isActive() {
-          return ctx.editor.isActive('orderedList');
-        },
-        label: 'Numbered list',
-        type: 'option'
-      }, {
-        icon: 'ListTodo',
-        onClick: function onClick() {
-          return ctx.editor.chain().focus().toggleTaskList().run();
-        },
-        id: 'todoList',
-        disabled: function disabled() {
-          return !ctx.editor.can().toggleTaskList();
-        },
-        isActive: function isActive() {
-          return ctx.editor.isActive('taskList');
-        },
-        label: 'Todo list',
-        type: 'option'
-      }];
-    }
+    editor,
+    selector: ctx => [{
+      type: 'category',
+      label: 'Hierarchy',
+      id: 'hierarchy'
+    }, {
+      icon: 'Pilcrow',
+      onClick: () => ctx.editor.chain().focus().lift('taskItem').liftListItem('listItem').setParagraph().run(),
+      id: 'paragraph',
+      disabled: () => !ctx.editor.can().setParagraph(),
+      isActive: () => ctx.editor.isActive('paragraph') && !ctx.editor.isActive('orderedList') && !ctx.editor.isActive('bulletList') && !ctx.editor.isActive('taskList'),
+      label: 'Paragraph',
+      type: 'option'
+    }, {
+      icon: 'Heading1',
+      onClick: () => ctx.editor.chain().focus().lift('taskItem').liftListItem('listItem').setHeading({
+        level: 1
+      }).run(),
+      id: 'heading1',
+      disabled: () => !ctx.editor.can().setHeading({
+        level: 1
+      }),
+      isActive: () => ctx.editor.isActive('heading', {
+        level: 1
+      }),
+      label: 'Heading 1',
+      type: 'option'
+    }, {
+      icon: 'Heading2',
+      onClick: () => ctx.editor.chain().focus().lift('taskItem').liftListItem('listItem').setHeading({
+        level: 2
+      }).run(),
+      id: 'heading2',
+      disabled: () => !ctx.editor.can().setHeading({
+        level: 2
+      }),
+      isActive: () => ctx.editor.isActive('heading', {
+        level: 2
+      }),
+      label: 'Heading 2',
+      type: 'option'
+    }, {
+      icon: 'Heading3',
+      onClick: () => ctx.editor.chain().focus().lift('taskItem').liftListItem('listItem').setHeading({
+        level: 3
+      }).run(),
+      id: 'heading3',
+      disabled: () => !ctx.editor.can().setHeading({
+        level: 3
+      }),
+      isActive: () => ctx.editor.isActive('heading', {
+        level: 3
+      }),
+      label: 'Heading 3',
+      type: 'option'
+    }, {
+      type: 'category',
+      label: 'Lists',
+      id: 'lists'
+    }, {
+      icon: 'List',
+      onClick: () => ctx.editor.chain().focus().toggleBulletList().run(),
+      id: 'bulletList',
+      disabled: () => !ctx.editor.can().toggleBulletList(),
+      isActive: () => ctx.editor.isActive('bulletList'),
+      label: 'Bullet list',
+      type: 'option'
+    }, {
+      icon: 'ListOrdered',
+      onClick: () => ctx.editor.chain().focus().toggleOrderedList().run(),
+      id: 'orderedList',
+      disabled: () => !ctx.editor.can().toggleOrderedList(),
+      isActive: () => ctx.editor.isActive('orderedList'),
+      label: 'Numbered list',
+      type: 'option'
+    }, {
+      icon: 'ListTodo',
+      onClick: () => ctx.editor.chain().focus().toggleTaskList().run(),
+      id: 'todoList',
+      disabled: () => !ctx.editor.can().toggleTaskList(),
+      isActive: () => ctx.editor.isActive('taskList'),
+      label: 'Todo list',
+      type: 'option'
+    }]
   });
 };
 
-var isOption = function isOption(option) {
-  return option.type === 'option';
-};
-var isCategory = function isCategory(option) {
-  return option.type === 'category';
-};
-var ContentTypePicker = function ContentTypePicker(_ref) {
-  var options = _ref.options;
-  var activeItem = react.useMemo(function () {
-    return options.find(function (option) {
-      return option.type === 'option' && option.isActive();
-    });
-  }, [options]);
-  return /*#__PURE__*/React.createElement(Dropdown.Root, null, /*#__PURE__*/React.createElement(Dropdown.Trigger, {
-    asChild: true
-  }, /*#__PURE__*/React.createElement(Toolbar.Button, {
-    active: (activeItem == null ? void 0 : activeItem.id) !== 'paragraph' && !!(activeItem != null && activeItem.type)
-  }, /*#__PURE__*/React.createElement(Icon, {
-    name: (activeItem == null ? void 0 : activeItem.type) === 'option' && activeItem.icon || 'Pilcrow'
-  }), /*#__PURE__*/React.createElement(Icon, {
-    name: "ChevronDown",
-    className: "w-2 h-2"
-  }))), /*#__PURE__*/React.createElement(Dropdown.Content, {
-    asChild: true
-  }, /*#__PURE__*/React.createElement(Surface, {
-    className: "flex flex-col gap-1 px-2 py-4"
-  }, options.map(function (option) {
-    if (isOption(option)) {
-      return /*#__PURE__*/React.createElement(DropdownButton, {
-        key: option.id,
-        onClick: option.onClick,
-        isActive: option.isActive()
-      }, /*#__PURE__*/React.createElement(Icon, {
-        name: option.icon,
-        className: "w-4 h-4 mr-1"
-      }), option.label);
-    } else if (isCategory(option)) {
-      return /*#__PURE__*/React.createElement("div", {
-        className: "mt-2 first:mt-0",
-        key: option.id
-      }, /*#__PURE__*/React.createElement(DropdownCategoryTitle, {
-        key: option.id
-      }, option.label));
-    }
-  }))));
-};
-
-var AIDropdown = function AIDropdown(_ref) {
-  var onCompleteSentence = _ref.onCompleteSentence,
-    onEmojify = _ref.onEmojify,
-    onFixSpelling = _ref.onFixSpelling,
-    onMakeLonger = _ref.onMakeLonger,
-    onMakeShorter = _ref.onMakeShorter,
-    onSimplify = _ref.onSimplify,
-    onTldr = _ref.onTldr,
-    onTone = _ref.onTone,
-    onTranslate = _ref.onTranslate;
-  var handleTone = react.useCallback(function (tone) {
-    return function () {
-      return onTone(tone);
-    };
-  }, [onTone]);
-  var handleTranslate = react.useCallback(function (language) {
-    return function () {
-      return onTranslate(language);
-    };
-  }, [onTranslate]);
-  return /*#__PURE__*/React.createElement(Dropdown.Root, null, /*#__PURE__*/React.createElement(Dropdown.Trigger, {
-    asChild: true
-  }, /*#__PURE__*/React.createElement(Toolbar.Button, {
-    className: "text-purple-500 hover:text-purple-600 active:text-purple-600 dark:text-purple-400 dark:hover:text-purple-300 dark:active:text-purple-400",
-    activeClassname: "text-purple-600 hover:text-purple-600 dark:text-purple-400 dark:hover:text-purple-200"
-  }, /*#__PURE__*/React.createElement(Icon, {
-    name: "Sparkles",
-    className: "mr-1"
-  }), "AI Tools", /*#__PURE__*/React.createElement(Icon, {
-    name: "ChevronDown",
-    className: "w-2 h-2 ml-1"
-  }))), /*#__PURE__*/React.createElement(Dropdown.Content, {
-    asChild: true
-  }, /*#__PURE__*/React.createElement(Surface, {
-    className: "p-2 min-w-[10rem]"
-  }, /*#__PURE__*/React.createElement(Dropdown.Item, {
-    onClick: onSimplify
-  }, /*#__PURE__*/React.createElement(DropdownButton, null, /*#__PURE__*/React.createElement(Icon, {
-    name: "CircleSlash"
-  }), "Simplify")), /*#__PURE__*/React.createElement(Dropdown.Item, {
-    onClick: onFixSpelling
-  }, /*#__PURE__*/React.createElement(DropdownButton, null, /*#__PURE__*/React.createElement(Icon, {
-    name: "Eraser"
-  }), "Fix spelling & grammar")), /*#__PURE__*/React.createElement(Dropdown.Item, {
-    onClick: onMakeShorter
-  }, /*#__PURE__*/React.createElement(DropdownButton, null, /*#__PURE__*/React.createElement(Icon, {
-    name: "ArrowLeftToLine"
-  }), "Make shorter")), /*#__PURE__*/React.createElement(Dropdown.Item, {
-    onClick: onMakeLonger
-  }, /*#__PURE__*/React.createElement(DropdownButton, null, /*#__PURE__*/React.createElement(Icon, {
-    name: "ArrowRightToLine"
-  }), "Make longer")), /*#__PURE__*/React.createElement(Dropdown.Sub, null, /*#__PURE__*/React.createElement(Dropdown.SubTrigger, null, /*#__PURE__*/React.createElement(DropdownButton, null, /*#__PURE__*/React.createElement(Icon, {
-    name: "Mic"
-  }), "Change tone", /*#__PURE__*/React.createElement(Icon, {
-    name: "ChevronRight",
-    className: "w-4 h-4 ml-auto"
-  }))), /*#__PURE__*/React.createElement(Dropdown.SubContent, null, /*#__PURE__*/React.createElement(Surface, {
-    className: "flex flex-col min-w-[15rem] p-2 max-h-[20rem] overflow-auto"
-  }, tones.map(function (tone) {
-    return /*#__PURE__*/React.createElement(Dropdown.Item, {
-      onClick: handleTone(tone.value),
-      key: tone.value
-    }, /*#__PURE__*/React.createElement(DropdownButton, null, tone.label));
-  })))), /*#__PURE__*/React.createElement(Dropdown.Item, {
-    onClick: onTldr
-  }, /*#__PURE__*/React.createElement(DropdownButton, null, /*#__PURE__*/React.createElement(Icon, {
-    name: "Ellipsis"
-  }), "Tl;dr:")), /*#__PURE__*/React.createElement(Dropdown.Item, {
-    onClick: onEmojify
-  }, /*#__PURE__*/React.createElement(DropdownButton, null, /*#__PURE__*/React.createElement(Icon, {
-    name: "SmilePlus"
-  }), "Emojify")), /*#__PURE__*/React.createElement(Dropdown.Sub, null, /*#__PURE__*/React.createElement(Dropdown.SubTrigger, null, /*#__PURE__*/React.createElement(DropdownButton, null, /*#__PURE__*/React.createElement(Icon, {
-    name: "Languages"
-  }), "Translate", /*#__PURE__*/React.createElement(Icon, {
-    name: "ChevronRight",
-    className: "w-4 h-4 ml-auto"
-  }))), /*#__PURE__*/React.createElement(Dropdown.SubContent, null, /*#__PURE__*/React.createElement(Surface, {
-    className: "flex flex-col min-w-[15rem] p-2 max-h-[20rem] overflow-auto"
-  }, languages.map(function (lang) {
-    return /*#__PURE__*/React.createElement(Dropdown.Item, {
-      onClick: handleTranslate(lang.value),
-      key: lang.value
-    }, /*#__PURE__*/React.createElement(DropdownButton, null, lang.label));
-  })))), /*#__PURE__*/React.createElement(Dropdown.Item, {
-    onClick: onCompleteSentence
-  }, /*#__PURE__*/React.createElement(DropdownButton, null, /*#__PURE__*/React.createElement(Icon, {
-    name: "PenLine"
-  }), "Complete sentence")))));
+const isOption = option => option.type === 'option';
+const isCategory = option => option.type === 'category';
+const ContentTypePicker = ({
+  options
+}) => {
+  const activeItem = react.useMemo(() => options.find(option => option.type === 'option' && option.isActive()), [options]);
+  return jsxRuntime.jsxs(Dropdown.Root, {
+    children: [jsxRuntime.jsx(Dropdown.Trigger, {
+      asChild: true,
+      children: jsxRuntime.jsxs(Toolbar.Button, {
+        active: (activeItem == null ? void 0 : activeItem.id) !== 'paragraph' && !!(activeItem != null && activeItem.type),
+        children: [jsxRuntime.jsx(Icon, {
+          name: (activeItem == null ? void 0 : activeItem.type) === 'option' && activeItem.icon || 'Pilcrow'
+        }), jsxRuntime.jsx(Icon, {
+          name: "ChevronDown",
+          className: "w-2 h-2"
+        })]
+      })
+    }), jsxRuntime.jsx(Dropdown.Content, {
+      asChild: true,
+      children: jsxRuntime.jsx(Surface, {
+        className: "flex flex-col gap-1 px-2 py-4",
+        children: options.map(option => {
+          if (isOption(option)) {
+            return jsxRuntime.jsxs(DropdownButton, {
+              onClick: option.onClick,
+              isActive: option.isActive(),
+              children: [jsxRuntime.jsx(Icon, {
+                name: option.icon,
+                className: "w-4 h-4 mr-1"
+              }), option.label]
+            }, option.id);
+          } else if (isCategory(option)) {
+            return jsxRuntime.jsx("div", {
+              className: "mt-2 first:mt-0",
+              children: jsxRuntime.jsx(DropdownCategoryTitle, {
+                children: option.label
+              }, option.id)
+            }, option.id);
+          }
+        })
+      })
+    })]
+  });
 };
 
-var EditLinkPopover = function EditLinkPopover(_ref) {
-  var onSetLink = _ref.onSetLink;
-  return /*#__PURE__*/React.createElement(Popover.Root, null, /*#__PURE__*/React.createElement(Popover.Trigger, {
-    asChild: true
-  }, /*#__PURE__*/React.createElement(Toolbar.Button, {
-    tooltip: "Set Link"
-  }, /*#__PURE__*/React.createElement(Icon, {
-    name: "Link"
-  }))), /*#__PURE__*/React.createElement(Popover.Content, null, /*#__PURE__*/React.createElement(LinkEditorPanel, {
-    onSetLink: onSetLink
-  })));
+const AIDropdown = ({
+  onCompleteSentence,
+  onEmojify,
+  onFixSpelling,
+  onMakeLonger,
+  onMakeShorter,
+  onSimplify,
+  onTldr,
+  onTone,
+  onTranslate
+}) => {
+  const handleTone = react.useCallback(tone => () => onTone(tone), [onTone]);
+  const handleTranslate = react.useCallback(language => () => onTranslate(language), [onTranslate]);
+  return jsxRuntime.jsxs(Dropdown.Root, {
+    children: [jsxRuntime.jsx(Dropdown.Trigger, {
+      asChild: true,
+      children: jsxRuntime.jsxs(Toolbar.Button, {
+        className: "text-purple-500 hover:text-purple-600 active:text-purple-600 dark:text-purple-400 dark:hover:text-purple-300 dark:active:text-purple-400",
+        activeClassname: "text-purple-600 hover:text-purple-600 dark:text-purple-400 dark:hover:text-purple-200",
+        children: [jsxRuntime.jsx(Icon, {
+          name: "Sparkles",
+          className: "mr-1"
+        }), "AI Tools", jsxRuntime.jsx(Icon, {
+          name: "ChevronDown",
+          className: "w-2 h-2 ml-1"
+        })]
+      })
+    }), jsxRuntime.jsx(Dropdown.Content, {
+      asChild: true,
+      children: jsxRuntime.jsxs(Surface, {
+        className: "p-2 min-w-[10rem]",
+        children: [jsxRuntime.jsx(Dropdown.Item, {
+          onClick: onSimplify,
+          children: jsxRuntime.jsxs(DropdownButton, {
+            children: [jsxRuntime.jsx(Icon, {
+              name: "CircleSlash"
+            }), "Simplify"]
+          })
+        }), jsxRuntime.jsx(Dropdown.Item, {
+          onClick: onFixSpelling,
+          children: jsxRuntime.jsxs(DropdownButton, {
+            children: [jsxRuntime.jsx(Icon, {
+              name: "Eraser"
+            }), "Fix spelling & grammar"]
+          })
+        }), jsxRuntime.jsx(Dropdown.Item, {
+          onClick: onMakeShorter,
+          children: jsxRuntime.jsxs(DropdownButton, {
+            children: [jsxRuntime.jsx(Icon, {
+              name: "ArrowLeftToLine"
+            }), "Make shorter"]
+          })
+        }), jsxRuntime.jsx(Dropdown.Item, {
+          onClick: onMakeLonger,
+          children: jsxRuntime.jsxs(DropdownButton, {
+            children: [jsxRuntime.jsx(Icon, {
+              name: "ArrowRightToLine"
+            }), "Make longer"]
+          })
+        }), jsxRuntime.jsxs(Dropdown.Sub, {
+          children: [jsxRuntime.jsx(Dropdown.SubTrigger, {
+            children: jsxRuntime.jsxs(DropdownButton, {
+              children: [jsxRuntime.jsx(Icon, {
+                name: "Mic"
+              }), "Change tone", jsxRuntime.jsx(Icon, {
+                name: "ChevronRight",
+                className: "w-4 h-4 ml-auto"
+              })]
+            })
+          }), jsxRuntime.jsx(Dropdown.SubContent, {
+            children: jsxRuntime.jsx(Surface, {
+              className: "flex flex-col min-w-[15rem] p-2 max-h-[20rem] overflow-auto",
+              children: tones.map(tone => jsxRuntime.jsx(Dropdown.Item, {
+                onClick: handleTone(tone.value),
+                children: jsxRuntime.jsx(DropdownButton, {
+                  children: tone.label
+                })
+              }, tone.value))
+            })
+          })]
+        }), jsxRuntime.jsx(Dropdown.Item, {
+          onClick: onTldr,
+          children: jsxRuntime.jsxs(DropdownButton, {
+            children: [jsxRuntime.jsx(Icon, {
+              name: "Ellipsis"
+            }), "Tl;dr:"]
+          })
+        }), jsxRuntime.jsx(Dropdown.Item, {
+          onClick: onEmojify,
+          children: jsxRuntime.jsxs(DropdownButton, {
+            children: [jsxRuntime.jsx(Icon, {
+              name: "SmilePlus"
+            }), "Emojify"]
+          })
+        }), jsxRuntime.jsxs(Dropdown.Sub, {
+          children: [jsxRuntime.jsx(Dropdown.SubTrigger, {
+            children: jsxRuntime.jsxs(DropdownButton, {
+              children: [jsxRuntime.jsx(Icon, {
+                name: "Languages"
+              }), "Translate", jsxRuntime.jsx(Icon, {
+                name: "ChevronRight",
+                className: "w-4 h-4 ml-auto"
+              })]
+            })
+          }), jsxRuntime.jsx(Dropdown.SubContent, {
+            children: jsxRuntime.jsx(Surface, {
+              className: "flex flex-col min-w-[15rem] p-2 max-h-[20rem] overflow-auto",
+              children: languages.map(lang => jsxRuntime.jsx(Dropdown.Item, {
+                onClick: handleTranslate(lang.value),
+                children: jsxRuntime.jsx(DropdownButton, {
+                  children: lang.label
+                })
+              }, lang.value))
+            })
+          })]
+        }), jsxRuntime.jsx(Dropdown.Item, {
+          onClick: onCompleteSentence,
+          children: jsxRuntime.jsxs(DropdownButton, {
+            children: [jsxRuntime.jsx(Icon, {
+              name: "PenLine"
+            }), "Complete sentence"]
+          })
+        })]
+      })
+    })]
+  });
+};
+
+const EditLinkPopover = ({
+  onSetLink
+}) => {
+  return jsxRuntime.jsxs(Popover.Root, {
+    children: [jsxRuntime.jsx(Popover.Trigger, {
+      asChild: true,
+      children: jsxRuntime.jsx(Toolbar.Button, {
+        tooltip: "Set Link",
+        children: jsxRuntime.jsx(Icon, {
+          name: "Link"
+        })
+      })
+    }), jsxRuntime.jsx(Popover.Content, {
+      children: jsxRuntime.jsx(LinkEditorPanel, {
+        onSetLink: onSetLink
+      })
+    })]
+  });
 };
 
 // We memorize the button so each button is not rerendered
 // on every editor state change
-var MemoButton = /*#__PURE__*/react.memo(Toolbar.Button);
-var MemoColorPicker = /*#__PURE__*/react.memo(ColorPicker);
-var MemoFontFamilyPicker = /*#__PURE__*/react.memo(FontFamilyPicker);
-var MemoFontSizePicker = /*#__PURE__*/react.memo(FontSizePicker);
-var MemoContentTypePicker = /*#__PURE__*/react.memo(ContentTypePicker);
-var TextMenu = function TextMenu(_ref) {
-  var editor = _ref.editor;
-  var commands = useTextmenuCommands(editor);
-  var states = useTextmenuStates(editor);
-  var blockOptions = useTextmenuContentTypes(editor);
-  return /*#__PURE__*/React.createElement(BubbleMenu, {
+const MemoButton = /*#__PURE__*/react.memo(Toolbar.Button);
+const MemoColorPicker = /*#__PURE__*/react.memo(ColorPicker);
+const MemoFontFamilyPicker = /*#__PURE__*/react.memo(FontFamilyPicker);
+const MemoFontSizePicker = /*#__PURE__*/react.memo(FontSizePicker);
+const MemoContentTypePicker = /*#__PURE__*/react.memo(ContentTypePicker);
+const TextMenu = ({
+  editor
+}) => {
+  const commands = useTextmenuCommands(editor);
+  const states = useTextmenuStates(editor);
+  const blockOptions = useTextmenuContentTypes(editor);
+  return jsxRuntime.jsx(BubbleMenu, {
     tippyOptions: {
       popperOptions: {
         placement: 'top-start',
@@ -37814,188 +39084,225 @@ var TextMenu = function TextMenu(_ref) {
     editor: editor,
     pluginKey: "textMenu",
     shouldShow: states.shouldShow,
-    updateDelay: 100
-  }, /*#__PURE__*/React.createElement(Toolbar.Wrapper, null, /*#__PURE__*/React.createElement(AIDropdown, {
-    onCompleteSentence: commands.onCompleteSentence,
-    onEmojify: commands.onEmojify,
-    onFixSpelling: commands.onFixSpelling,
-    onMakeLonger: commands.onMakeLonger,
-    onMakeShorter: commands.onMakeShorter,
-    onSimplify: commands.onSimplify,
-    onTldr: commands.onTldr,
-    onTone: commands.onTone,
-    onTranslate: commands.onTranslate
-  }), /*#__PURE__*/React.createElement(Toolbar.Divider, null), /*#__PURE__*/React.createElement(MemoContentTypePicker, {
-    options: blockOptions
-  }), /*#__PURE__*/React.createElement(MemoFontFamilyPicker, {
-    onChange: commands.onSetFont,
-    value: states.currentFont || ''
-  }), /*#__PURE__*/React.createElement(MemoFontSizePicker, {
-    onChange: commands.onSetFontSize,
-    value: states.currentSize || ''
-  }), /*#__PURE__*/React.createElement(Toolbar.Divider, null), /*#__PURE__*/React.createElement(MemoButton, {
-    tooltip: "Bold",
-    tooltipShortcut: ['Mod', 'B'],
-    onClick: commands.onBold,
-    active: states.isBold
-  }, /*#__PURE__*/React.createElement(Icon, {
-    name: "Bold"
-  })), /*#__PURE__*/React.createElement(MemoButton, {
-    tooltip: "Italic",
-    tooltipShortcut: ['Mod', 'I'],
-    onClick: commands.onItalic,
-    active: states.isItalic
-  }, /*#__PURE__*/React.createElement(Icon, {
-    name: "Italic"
-  })), /*#__PURE__*/React.createElement(MemoButton, {
-    tooltip: "Underline",
-    tooltipShortcut: ['Mod', 'U'],
-    onClick: commands.onUnderline,
-    active: states.isUnderline
-  }, /*#__PURE__*/React.createElement(Icon, {
-    name: "Underline"
-  })), /*#__PURE__*/React.createElement(MemoButton, {
-    tooltip: "Strikehrough",
-    tooltipShortcut: ['Mod', 'Shift', 'S'],
-    onClick: commands.onStrike,
-    active: states.isStrike
-  }, /*#__PURE__*/React.createElement(Icon, {
-    name: "Strikethrough"
-  })), /*#__PURE__*/React.createElement(MemoButton, {
-    tooltip: "Code",
-    tooltipShortcut: ['Mod', 'E'],
-    onClick: commands.onCode,
-    active: states.isCode
-  }, /*#__PURE__*/React.createElement(Icon, {
-    name: "Code"
-  })), /*#__PURE__*/React.createElement(MemoButton, {
-    tooltip: "Code block",
-    onClick: commands.onCodeBlock
-  }, /*#__PURE__*/React.createElement(Icon, {
-    name: "FileCode"
-  })), /*#__PURE__*/React.createElement(EditLinkPopover, {
-    onSetLink: commands.onLink
-  }), /*#__PURE__*/React.createElement(Popover.Root, null, /*#__PURE__*/React.createElement(Popover.Trigger, {
-    asChild: true
-  }, /*#__PURE__*/React.createElement(MemoButton, {
-    active: !!states.currentHighlight,
-    tooltip: "Highlight text"
-  }, /*#__PURE__*/React.createElement(Icon, {
-    name: "Highlighter"
-  }))), /*#__PURE__*/React.createElement(Popover.Content, {
-    side: "top",
-    sideOffset: 8,
-    asChild: true
-  }, /*#__PURE__*/React.createElement(Surface, {
-    className: "p-1"
-  }, /*#__PURE__*/React.createElement(MemoColorPicker, {
-    color: states.currentHighlight,
-    onChange: commands.onChangeHighlight,
-    onClear: commands.onClearHighlight
-  })))), /*#__PURE__*/React.createElement(Popover.Root, null, /*#__PURE__*/React.createElement(Popover.Trigger, {
-    asChild: true
-  }, /*#__PURE__*/React.createElement(MemoButton, {
-    active: !!states.currentColor,
-    tooltip: "Text color"
-  }, /*#__PURE__*/React.createElement(Icon, {
-    name: "Palette"
-  }))), /*#__PURE__*/React.createElement(Popover.Content, {
-    side: "top",
-    sideOffset: 8,
-    asChild: true
-  }, /*#__PURE__*/React.createElement(Surface, {
-    className: "p-1"
-  }, /*#__PURE__*/React.createElement(MemoColorPicker, {
-    color: states.currentColor,
-    onChange: commands.onChangeColor,
-    onClear: commands.onClearColor
-  })))), /*#__PURE__*/React.createElement(Popover.Root, null, /*#__PURE__*/React.createElement(Popover.Trigger, {
-    asChild: true
-  }, /*#__PURE__*/React.createElement(MemoButton, {
-    tooltip: "More options"
-  }, /*#__PURE__*/React.createElement(Icon, {
-    name: "EllipsisVertical"
-  }))), /*#__PURE__*/React.createElement(Popover.Content, {
-    side: "top",
-    asChild: true
-  }, /*#__PURE__*/React.createElement(Toolbar.Wrapper, null, /*#__PURE__*/React.createElement(MemoButton, {
-    tooltip: "Subscript",
-    tooltipShortcut: ['Mod', '.'],
-    onClick: commands.onSubscript,
-    active: states.isSubscript
-  }, /*#__PURE__*/React.createElement(Icon, {
-    name: "Subscript"
-  })), /*#__PURE__*/React.createElement(MemoButton, {
-    tooltip: "Superscript",
-    tooltipShortcut: ['Mod', ','],
-    onClick: commands.onSuperscript,
-    active: states.isSuperscript
-  }, /*#__PURE__*/React.createElement(Icon, {
-    name: "Superscript"
-  })), /*#__PURE__*/React.createElement(Toolbar.Divider, null), /*#__PURE__*/React.createElement(MemoButton, {
-    tooltip: "Align left",
-    tooltipShortcut: ['Shift', 'Mod', 'L'],
-    onClick: commands.onAlignLeft,
-    active: states.isAlignLeft
-  }, /*#__PURE__*/React.createElement(Icon, {
-    name: "AlignLeft"
-  })), /*#__PURE__*/React.createElement(MemoButton, {
-    tooltip: "Align center",
-    tooltipShortcut: ['Shift', 'Mod', 'E'],
-    onClick: commands.onAlignCenter,
-    active: states.isAlignCenter
-  }, /*#__PURE__*/React.createElement(Icon, {
-    name: "AlignCenter"
-  })), /*#__PURE__*/React.createElement(MemoButton, {
-    tooltip: "Align right",
-    tooltipShortcut: ['Shift', 'Mod', 'R'],
-    onClick: commands.onAlignRight,
-    active: states.isAlignRight
-  }, /*#__PURE__*/React.createElement(Icon, {
-    name: "AlignRight"
-  })), /*#__PURE__*/React.createElement(MemoButton, {
-    tooltip: "Justify",
-    tooltipShortcut: ['Shift', 'Mod', 'J'],
-    onClick: commands.onAlignJustify,
-    active: states.isAlignJustify
-  }, /*#__PURE__*/React.createElement(Icon, {
-    name: "AlignJustify"
-  })))))));
+    updateDelay: 100,
+    children: jsxRuntime.jsxs(Toolbar.Wrapper, {
+      children: [jsxRuntime.jsx(AIDropdown, {
+        onCompleteSentence: commands.onCompleteSentence,
+        onEmojify: commands.onEmojify,
+        onFixSpelling: commands.onFixSpelling,
+        onMakeLonger: commands.onMakeLonger,
+        onMakeShorter: commands.onMakeShorter,
+        onSimplify: commands.onSimplify,
+        onTldr: commands.onTldr,
+        onTone: commands.onTone,
+        onTranslate: commands.onTranslate
+      }), jsxRuntime.jsx(Toolbar.Divider, {}), jsxRuntime.jsx(MemoContentTypePicker, {
+        options: blockOptions
+      }), jsxRuntime.jsx(MemoFontFamilyPicker, {
+        onChange: commands.onSetFont,
+        value: states.currentFont || ''
+      }), jsxRuntime.jsx(MemoFontSizePicker, {
+        onChange: commands.onSetFontSize,
+        value: states.currentSize || ''
+      }), jsxRuntime.jsx(Toolbar.Divider, {}), jsxRuntime.jsx(MemoButton, {
+        tooltip: "Bold",
+        tooltipShortcut: ['Mod', 'B'],
+        onClick: commands.onBold,
+        active: states.isBold,
+        children: jsxRuntime.jsx(Icon, {
+          name: "Bold"
+        })
+      }), jsxRuntime.jsx(MemoButton, {
+        tooltip: "Italic",
+        tooltipShortcut: ['Mod', 'I'],
+        onClick: commands.onItalic,
+        active: states.isItalic,
+        children: jsxRuntime.jsx(Icon, {
+          name: "Italic"
+        })
+      }), jsxRuntime.jsx(MemoButton, {
+        tooltip: "Underline",
+        tooltipShortcut: ['Mod', 'U'],
+        onClick: commands.onUnderline,
+        active: states.isUnderline,
+        children: jsxRuntime.jsx(Icon, {
+          name: "Underline"
+        })
+      }), jsxRuntime.jsx(MemoButton, {
+        tooltip: "Strikehrough",
+        tooltipShortcut: ['Mod', 'Shift', 'S'],
+        onClick: commands.onStrike,
+        active: states.isStrike,
+        children: jsxRuntime.jsx(Icon, {
+          name: "Strikethrough"
+        })
+      }), jsxRuntime.jsx(MemoButton, {
+        tooltip: "Code",
+        tooltipShortcut: ['Mod', 'E'],
+        onClick: commands.onCode,
+        active: states.isCode,
+        children: jsxRuntime.jsx(Icon, {
+          name: "Code"
+        })
+      }), jsxRuntime.jsx(MemoButton, {
+        tooltip: "Code block",
+        onClick: commands.onCodeBlock,
+        children: jsxRuntime.jsx(Icon, {
+          name: "FileCode"
+        })
+      }), jsxRuntime.jsx(EditLinkPopover, {
+        onSetLink: commands.onLink
+      }), jsxRuntime.jsxs(Popover.Root, {
+        children: [jsxRuntime.jsx(Popover.Trigger, {
+          asChild: true,
+          children: jsxRuntime.jsx(MemoButton, {
+            active: !!states.currentHighlight,
+            tooltip: "Highlight text",
+            children: jsxRuntime.jsx(Icon, {
+              name: "Highlighter"
+            })
+          })
+        }), jsxRuntime.jsx(Popover.Content, {
+          side: "top",
+          sideOffset: 8,
+          asChild: true,
+          children: jsxRuntime.jsx(Surface, {
+            className: "p-1",
+            children: jsxRuntime.jsx(MemoColorPicker, {
+              color: states.currentHighlight,
+              onChange: commands.onChangeHighlight,
+              onClear: commands.onClearHighlight
+            })
+          })
+        })]
+      }), jsxRuntime.jsxs(Popover.Root, {
+        children: [jsxRuntime.jsx(Popover.Trigger, {
+          asChild: true,
+          children: jsxRuntime.jsx(MemoButton, {
+            active: !!states.currentColor,
+            tooltip: "Text color",
+            children: jsxRuntime.jsx(Icon, {
+              name: "Palette"
+            })
+          })
+        }), jsxRuntime.jsx(Popover.Content, {
+          side: "top",
+          sideOffset: 8,
+          asChild: true,
+          children: jsxRuntime.jsx(Surface, {
+            className: "p-1",
+            children: jsxRuntime.jsx(MemoColorPicker, {
+              color: states.currentColor,
+              onChange: commands.onChangeColor,
+              onClear: commands.onClearColor
+            })
+          })
+        })]
+      }), jsxRuntime.jsxs(Popover.Root, {
+        children: [jsxRuntime.jsx(Popover.Trigger, {
+          asChild: true,
+          children: jsxRuntime.jsx(MemoButton, {
+            tooltip: "More options",
+            children: jsxRuntime.jsx(Icon, {
+              name: "EllipsisVertical"
+            })
+          })
+        }), jsxRuntime.jsx(Popover.Content, {
+          side: "top",
+          asChild: true,
+          children: jsxRuntime.jsxs(Toolbar.Wrapper, {
+            children: [jsxRuntime.jsx(MemoButton, {
+              tooltip: "Subscript",
+              tooltipShortcut: ['Mod', '.'],
+              onClick: commands.onSubscript,
+              active: states.isSubscript,
+              children: jsxRuntime.jsx(Icon, {
+                name: "Subscript"
+              })
+            }), jsxRuntime.jsx(MemoButton, {
+              tooltip: "Superscript",
+              tooltipShortcut: ['Mod', ','],
+              onClick: commands.onSuperscript,
+              active: states.isSuperscript,
+              children: jsxRuntime.jsx(Icon, {
+                name: "Superscript"
+              })
+            }), jsxRuntime.jsx(Toolbar.Divider, {}), jsxRuntime.jsx(MemoButton, {
+              tooltip: "Align left",
+              tooltipShortcut: ['Shift', 'Mod', 'L'],
+              onClick: commands.onAlignLeft,
+              active: states.isAlignLeft,
+              children: jsxRuntime.jsx(Icon, {
+                name: "AlignLeft"
+              })
+            }), jsxRuntime.jsx(MemoButton, {
+              tooltip: "Align center",
+              tooltipShortcut: ['Shift', 'Mod', 'E'],
+              onClick: commands.onAlignCenter,
+              active: states.isAlignCenter,
+              children: jsxRuntime.jsx(Icon, {
+                name: "AlignCenter"
+              })
+            }), jsxRuntime.jsx(MemoButton, {
+              tooltip: "Align right",
+              tooltipShortcut: ['Shift', 'Mod', 'R'],
+              onClick: commands.onAlignRight,
+              active: states.isAlignRight,
+              children: jsxRuntime.jsx(Icon, {
+                name: "AlignRight"
+              })
+            }), jsxRuntime.jsx(MemoButton, {
+              tooltip: "Justify",
+              tooltipShortcut: ['Shift', 'Mod', 'J'],
+              onClick: commands.onAlignJustify,
+              active: states.isAlignJustify,
+              children: jsxRuntime.jsx(Icon, {
+                name: "AlignJustify"
+              })
+            })]
+          })
+        })]
+      })]
+    })
+  });
 };
 
-var useContentItemActions = function useContentItemActions(editor, currentNode, currentNodePos) {
-  var resetTextFormatting = react.useCallback(function () {
-    var chain = editor.chain();
+const useContentItemActions = (editor, currentNode, currentNodePos) => {
+  const resetTextFormatting = react.useCallback(() => {
+    const chain = editor.chain();
     chain.setNodeSelection(currentNodePos).unsetAllMarks();
     if ((currentNode == null ? void 0 : currentNode.type.name) !== 'paragraph') {
       chain.setParagraph();
     }
     chain.run();
   }, [editor, currentNodePos, currentNode == null ? void 0 : currentNode.type.name]);
-  var duplicateNode = react.useCallback(function () {
+  const duplicateNode = react.useCallback(() => {
     editor.commands.setNodeSelection(currentNodePos);
-    var $anchor = editor.state.selection.$anchor;
-    var selectedNode = $anchor.node(1) || editor.state.selection.node;
+    const {
+      $anchor
+    } = editor.state.selection;
+    const selectedNode = $anchor.node(1) || editor.state.selection.node;
     editor.chain().setMeta('hideDragHandle', true).insertContentAt(currentNodePos + ((currentNode == null ? void 0 : currentNode.nodeSize) || 0), selectedNode.toJSON()).run();
   }, [editor, currentNodePos, currentNode == null ? void 0 : currentNode.nodeSize]);
-  var copyNodeToClipboard = react.useCallback(function () {
+  const copyNodeToClipboard = react.useCallback(() => {
     editor.chain().setMeta('hideDragHandle', true).setNodeSelection(currentNodePos).run();
     document.execCommand('copy');
   }, [editor, currentNodePos]);
-  var deleteNode = react.useCallback(function () {
+  const deleteNode = react.useCallback(() => {
     editor.chain().setMeta('hideDragHandle', true).setNodeSelection(currentNodePos).deleteSelection().run();
   }, [editor, currentNodePos]);
-  var handleAdd = react.useCallback(function () {
+  const handleAdd = react.useCallback(() => {
     if (currentNodePos !== -1) {
       var _currentNode$content;
-      var currentNodeSize = (currentNode == null ? void 0 : currentNode.nodeSize) || 0;
-      var insertPos = currentNodePos + currentNodeSize;
-      var currentNodeIsEmptyParagraph = (currentNode == null ? void 0 : currentNode.type.name) === 'paragraph' && (currentNode == null || (_currentNode$content = currentNode.content) == null ? void 0 : _currentNode$content.size) === 0;
-      var focusPos = currentNodeIsEmptyParagraph ? currentNodePos + 2 : insertPos + 2;
-      editor.chain().command(function (_ref) {
-        var dispatch = _ref.dispatch,
-          tr = _ref.tr,
-          state = _ref.state;
+      const currentNodeSize = (currentNode == null ? void 0 : currentNode.nodeSize) || 0;
+      const insertPos = currentNodePos + currentNodeSize;
+      const currentNodeIsEmptyParagraph = (currentNode == null ? void 0 : currentNode.type.name) === 'paragraph' && (currentNode == null || (_currentNode$content = currentNode.content) == null ? void 0 : _currentNode$content.size) === 0;
+      const focusPos = currentNodeIsEmptyParagraph ? currentNodePos + 2 : insertPos + 2;
+      editor.chain().command(({
+        dispatch,
+        tr,
+        state
+      }) => {
         if (dispatch) {
           if (currentNodeIsEmptyParagraph) {
             tr.insertText('/', currentNodePos, currentNodePos + 1);
@@ -38009,111 +39316,126 @@ var useContentItemActions = function useContentItemActions(editor, currentNode, 
     }
   }, [currentNode, currentNodePos, editor]);
   return {
-    resetTextFormatting: resetTextFormatting,
-    duplicateNode: duplicateNode,
-    copyNodeToClipboard: copyNodeToClipboard,
-    deleteNode: deleteNode,
-    handleAdd: handleAdd
+    resetTextFormatting,
+    duplicateNode,
+    copyNodeToClipboard,
+    deleteNode,
+    handleAdd
   };
 };
 
-var useData = function useData() {
-  var _useState = react.useState(null),
-    currentNode = _useState[0],
-    setCurrentNode = _useState[1];
-  var _useState2 = react.useState(-1),
-    currentNodePos = _useState2[0],
-    setCurrentNodePos = _useState2[1];
-  var handleNodeChange = react.useCallback(function (data) {
+const useData = () => {
+  const [currentNode, setCurrentNode] = react.useState(null);
+  const [currentNodePos, setCurrentNodePos] = react.useState(-1);
+  const handleNodeChange = react.useCallback(data => {
     if (data.node) {
       setCurrentNode(data.node);
     }
     setCurrentNodePos(data.pos);
   }, [setCurrentNodePos, setCurrentNode]);
   return {
-    currentNode: currentNode,
-    currentNodePos: currentNodePos,
-    setCurrentNode: setCurrentNode,
-    setCurrentNodePos: setCurrentNodePos,
-    handleNodeChange: handleNodeChange
+    currentNode,
+    currentNodePos,
+    setCurrentNode,
+    setCurrentNodePos,
+    handleNodeChange
   };
 };
 
-var ContentItemMenu = function ContentItemMenu(_ref) {
-  var editor = _ref.editor;
-  var _useState = react.useState(false),
-    menuOpen = _useState[0],
-    setMenuOpen = _useState[1];
-  var data = useData();
-  var actions = useContentItemActions(editor, data.currentNode, data.currentNodePos);
-  react.useEffect(function () {
+const ContentItemMenu = ({
+  editor
+}) => {
+  const [menuOpen, setMenuOpen] = react.useState(false);
+  const data = useData();
+  const actions = useContentItemActions(editor, data.currentNode, data.currentNodePos);
+  react.useEffect(() => {
     if (menuOpen) {
       editor.commands.setMeta('lockDragHandle', true);
     } else {
       editor.commands.setMeta('lockDragHandle', false);
     }
   }, [editor, menuOpen]);
-  return /*#__PURE__*/React.createElement(DragHandle, {
+  return jsxRuntime.jsx(DragHandle, {
     pluginKey: "ContentItemMenu",
     editor: editor,
     onNodeChange: data.handleNodeChange,
     tippyOptions: {
       offset: [-2, 16],
       zIndex: 99
-    }
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "flex items-center gap-0.5"
-  }, /*#__PURE__*/React.createElement(Toolbar.Button, {
-    onClick: actions.handleAdd
-  }, /*#__PURE__*/React.createElement(Icon, {
-    name: "Plus"
-  })), /*#__PURE__*/React.createElement(Popover.Root, {
-    open: menuOpen,
-    onOpenChange: setMenuOpen
-  }, /*#__PURE__*/React.createElement(Popover.Trigger, {
-    asChild: true
-  }, /*#__PURE__*/React.createElement(Toolbar.Button, null, /*#__PURE__*/React.createElement(Icon, {
-    name: "GripVertical"
-  }))), /*#__PURE__*/React.createElement(Popover.Content, {
-    side: "bottom",
-    align: "start",
-    sideOffset: 8
-  }, /*#__PURE__*/React.createElement(Surface, {
-    className: "p-2 flex flex-col min-w-[16rem]"
-  }, /*#__PURE__*/React.createElement(Popover.Close, null, /*#__PURE__*/React.createElement(DropdownButton, {
-    onClick: actions.resetTextFormatting
-  }, /*#__PURE__*/React.createElement(Icon, {
-    name: "RemoveFormatting"
-  }), "Clear formatting")), /*#__PURE__*/React.createElement(Popover.Close, null, /*#__PURE__*/React.createElement(DropdownButton, {
-    onClick: actions.copyNodeToClipboard
-  }, /*#__PURE__*/React.createElement(Icon, {
-    name: "Clipboard"
-  }), "Copy to clipboard")), /*#__PURE__*/React.createElement(Popover.Close, null, /*#__PURE__*/React.createElement(DropdownButton, {
-    onClick: actions.duplicateNode
-  }, /*#__PURE__*/React.createElement(Icon, {
-    name: "Copy"
-  }), "Duplicate")), /*#__PURE__*/React.createElement(Toolbar.Divider, {
-    horizontal: true
-  }), /*#__PURE__*/React.createElement(Popover.Close, null, /*#__PURE__*/React.createElement(DropdownButton, {
-    onClick: actions.deleteNode,
-    className: "text-red-500 bg-red-500 dark:text-red-500 hover:bg-red-500 dark:hover:text-red-500 dark:hover:bg-red-500 bg-opacity-10 hover:bg-opacity-20 dark:hover:bg-opacity-20"
-  }, /*#__PURE__*/React.createElement(Icon, {
-    name: "Trash2"
-  }), "Delete")))))));
+    },
+    children: jsxRuntime.jsxs("div", {
+      className: "flex items-center gap-0.5",
+      children: [jsxRuntime.jsx(Toolbar.Button, {
+        onClick: actions.handleAdd,
+        children: jsxRuntime.jsx(Icon, {
+          name: "Plus"
+        })
+      }), jsxRuntime.jsxs(Popover.Root, {
+        open: menuOpen,
+        onOpenChange: setMenuOpen,
+        children: [jsxRuntime.jsx(Popover.Trigger, {
+          asChild: true,
+          children: jsxRuntime.jsx(Toolbar.Button, {
+            children: jsxRuntime.jsx(Icon, {
+              name: "GripVertical"
+            })
+          })
+        }), jsxRuntime.jsx(Popover.Content, {
+          side: "bottom",
+          align: "start",
+          sideOffset: 8,
+          children: jsxRuntime.jsxs(Surface, {
+            className: "p-2 flex flex-col min-w-[16rem]",
+            children: [jsxRuntime.jsx(Popover.Close, {
+              children: jsxRuntime.jsxs(DropdownButton, {
+                onClick: actions.resetTextFormatting,
+                children: [jsxRuntime.jsx(Icon, {
+                  name: "RemoveFormatting"
+                }), "Clear formatting"]
+              })
+            }), jsxRuntime.jsx(Popover.Close, {
+              children: jsxRuntime.jsxs(DropdownButton, {
+                onClick: actions.copyNodeToClipboard,
+                children: [jsxRuntime.jsx(Icon, {
+                  name: "Clipboard"
+                }), "Copy to clipboard"]
+              })
+            }), jsxRuntime.jsx(Popover.Close, {
+              children: jsxRuntime.jsxs(DropdownButton, {
+                onClick: actions.duplicateNode,
+                children: [jsxRuntime.jsx(Icon, {
+                  name: "Copy"
+                }), "Duplicate"]
+              })
+            }), jsxRuntime.jsx(Toolbar.Divider, {
+              horizontal: true
+            }), jsxRuntime.jsx(Popover.Close, {
+              children: jsxRuntime.jsxs(DropdownButton, {
+                onClick: actions.deleteNode,
+                className: "text-red-500 bg-red-500 dark:text-red-500 hover:bg-red-500 dark:hover:text-red-500 dark:hover:bg-red-500 bg-opacity-10 hover:bg-opacity-20 dark:hover:bg-opacity-20",
+                children: [jsxRuntime.jsx(Icon, {
+                  name: "Trash2"
+                }), "Delete"]
+              })
+            })]
+          })
+        })]
+      })]
+    })
+  });
 };
 
-var ExtensionKit = function ExtensionKit(_ref) {
+const ExtensionKit = ({
+  provider
+}) => {
   var _provider$document;
-  var provider = _ref.provider;
   return [Document, Columns, TaskList, TaskItem.configure({
     nested: true
   }), Column, Selection, Heading.configure({
     levels: [1, 2, 3, 4, 5, 6]
   }), HorizontalRule, UniqueID.configure({
     types: ['paragraph', 'heading', 'blockquote', 'codeBlock', 'table'],
-    filterTransaction: function filterTransaction(transaction) {
-      return !isChangeOrigin(transaction);
-    }
+    filterTransaction: transaction => !isChangeOrigin(transaction)
   }), StarterKit.configure({
     document: false,
     dropcursor: false,
@@ -38125,7 +39447,7 @@ var ExtensionKit = function ExtensionKit(_ref) {
   }), Details.configure({
     persist: true,
     HTMLAttributes: {
-      "class": 'details'
+      class: 'details'
     }
   }), DetailsContent, DetailsSummary, CodeBlock, TextStyle, FontSize, FontFamily, Color, TrailingNode, Link.configure({
     openOnClick: false
@@ -38137,39 +39459,29 @@ var ExtensionKit = function ExtensionKit(_ref) {
     clientId: provider == null || (_provider$document = provider.document) == null ? void 0 : _provider$document.clientID
   }), ImageBlock, FileHandler.configure({
     allowedMimeTypes: ['image/png', 'image/jpeg', 'image/gif', 'image/webp'],
-    onDrop: function onDrop(currentEditor, files, pos) {
-      files.forEach(function (file) {
-        try {
-          return Promise.resolve(API.uploadImage(file)).then(function (url) {
-            currentEditor.chain().setImageBlockAt({
-              pos: pos,
-              src: url
-            }).focus().run();
-          });
-        } catch (e) {
-          return Promise.reject(e);
-        }
+    onDrop: (currentEditor, files, pos) => {
+      files.forEach(async file => {
+        const url = await API.uploadImage(file);
+        currentEditor.chain().setImageBlockAt({
+          pos,
+          src: url
+        }).focus().run();
       });
     },
-    onPaste: function onPaste(currentEditor, files) {
-      files.forEach(function (file) {
-        try {
-          return Promise.resolve(API.uploadImage(file)).then(function (url) {
-            return currentEditor.chain().setImageBlockAt({
-              pos: currentEditor.state.selection.anchor,
-              src: url
-            }).focus().run();
-          });
-        } catch (e) {
-          return Promise.reject(e);
-        }
+    onPaste: (currentEditor, files) => {
+      files.forEach(async file => {
+        const url = await API.uploadImage(file);
+        return currentEditor.chain().setImageBlockAt({
+          pos: currentEditor.state.selection.anchor,
+          src: url
+        }).focus().run();
       });
     }
   }), Emoji.configure({
     enableEmoticons: true,
     suggestion: emojiSuggestion
   }), TextAlign.extend({
-    addKeyboardShortcuts: function addKeyboardShortcuts() {
+    addKeyboardShortcuts() {
       return {};
     }
   }).configure({
@@ -38177,16 +39489,14 @@ var ExtensionKit = function ExtensionKit(_ref) {
   }), Subscript, Superscript, Table, TableCell, TableHeader, TableRow, Typography, Placeholder.configure({
     includeChildren: true,
     showOnlyCurrent: false,
-    placeholder: function placeholder() {
-      return '';
-    }
+    placeholder: () => ''
   }), SlashCommand, FocusClasses, Figcaption, BlockquoteFigure, Dropcursor.configure({
     width: 2,
-    "class": 'ProseMirror-dropcursor border-black'
+    class: 'ProseMirror-dropcursor border-black'
   })];
 };
 
-var initialContent = {
+const initialContent = {
   type: 'doc',
   content: [{
     type: 'heading',
@@ -38206,7 +39516,7 @@ var initialContent = {
   }, {
     type: 'paragraph',
     attrs: {
-      "class": null,
+      class: null,
       textAlign: 'left'
     },
     content: [{
@@ -38219,7 +39529,7 @@ var initialContent = {
         attrs: {
           href: 'https://tiptap.dev/',
           target: '_blank',
-          "class": null
+          class: null
         }
       }],
       text: 'Tiptap'
@@ -38233,7 +39543,7 @@ var initialContent = {
         attrs: {
           href: 'https://nextjs.org/',
           target: '_blank',
-          "class": null
+          class: null
         }
       }],
       text: 'Next.js'
@@ -38247,7 +39557,7 @@ var initialContent = {
         attrs: {
           href: 'https://tailwindcss.com/',
           target: '_blank',
-          "class": null
+          class: null
         }
       }],
       text: 'Tailwind'
@@ -38267,7 +39577,7 @@ var initialContent = {
   }, {
     type: 'paragraph',
     attrs: {
-      "class": null,
+      class: null,
       textAlign: 'left'
     },
     content: [{
@@ -38281,7 +39591,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -38294,7 +39604,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -38325,7 +39635,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -38401,7 +39711,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -38414,7 +39724,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -38427,7 +39737,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -38465,7 +39775,7 @@ var initialContent = {
   }, {
     type: 'paragraph',
     attrs: {
-      "class": null,
+      class: null,
       textAlign: 'left'
     },
     content: [{
@@ -38478,7 +39788,7 @@ var initialContent = {
         attrs: {
           href: 'https://cloud.tiptap.dev/react-templates',
           target: '_blank',
-          "class": null
+          class: null
         }
       }],
       text: 'Tiptap Account'
@@ -38503,7 +39813,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -38516,7 +39826,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -38529,7 +39839,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -38542,7 +39852,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -38555,7 +39865,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -38568,7 +39878,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -38581,7 +39891,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -38594,7 +39904,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -38607,7 +39917,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -38620,7 +39930,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -38633,7 +39943,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -38646,7 +39956,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -38659,7 +39969,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -38672,7 +39982,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -38685,7 +39995,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -38698,7 +40008,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -38711,7 +40021,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -38724,7 +40034,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -38737,7 +40047,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -38750,7 +40060,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -38763,7 +40073,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -38776,7 +40086,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -38789,7 +40099,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -38802,7 +40112,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -38815,7 +40125,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -38828,7 +40138,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -38841,7 +40151,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -38854,7 +40164,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -38867,7 +40177,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -38880,7 +40190,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -38893,7 +40203,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -38906,7 +40216,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -38919,7 +40229,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -38932,7 +40242,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -38945,7 +40255,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -38958,7 +40268,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -38971,7 +40281,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -38984,7 +40294,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -38997,7 +40307,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -39010,7 +40320,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -39023,7 +40333,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -39036,7 +40346,7 @@ var initialContent = {
       content: [{
         type: 'paragraph',
         attrs: {
-          "class": null,
+          class: null,
           textAlign: 'left'
         },
         content: [{
@@ -39048,30 +40358,28 @@ var initialContent = {
   }, {
     type: 'paragraph',
     attrs: {
-      "class": null,
+      class: null,
       textAlign: 'left'
     }
   }]
 };
 
-var useBlockEditor = function useBlockEditor(_ref) {
-  var aiToken = _ref.aiToken,
-    ydoc = _ref.ydoc,
-    provider = _ref.provider,
-    userId = _ref.userId,
-    _ref$userName = _ref.userName,
-    userName = _ref$userName === void 0 ? 'Maxi' : _ref$userName;
-  var _useState = react.useState(provider ? WebSocketStatus.Connecting : WebSocketStatus.Disconnected),
-    collabState = _useState[0],
-    setCollabState = _useState[1];
-  var editor = useEditor({
+const useBlockEditor = ({
+  aiToken,
+  ydoc,
+  provider,
+  userId,
+  userName: _userName = 'Maxi'
+}) => {
+  const [collabState, setCollabState] = react.useState(provider ? WebSocketStatus.Connecting : WebSocketStatus.Disconnected);
+  const editor = useEditor({
     immediatelyRender: true,
     shouldRerenderOnTransaction: false,
     autofocus: true,
-    onCreate: function onCreate(ctx) {
+    onCreate: ctx => {
       if (provider && !provider.isSynced) {
-        provider.on('synced', function () {
-          setTimeout(function () {
+        provider.on('synced', () => {
+          setTimeout(() => {
             if (ctx.editor.isEmpty) {
               ctx.editor.commands.setContent(initialContent);
             }
@@ -39084,180 +40392,185 @@ var useBlockEditor = function useBlockEditor(_ref) {
         });
       }
     },
-    extensions: [].concat(ExtensionKit({
-      provider: provider
-    }), [provider ? Collaboration.configure({
+    extensions: [...ExtensionKit({
+      provider
+    }), provider ? Collaboration.configure({
       document: ydoc
     }) : undefined, provider ? CollaborationCursor.configure({
-      provider: provider,
+      provider,
       user: {
         name: randomElement(userNames),
         color: randomElement(userColors)
       }
     }) : undefined, aiToken ? AiWriter.configure({
       authorId: userId,
-      authorName: userName
+      authorName: _userName
     }) : undefined, aiToken ? AiImage.configure({
       authorId: userId,
-      authorName: userName
+      authorName: _userName
     }) : undefined, aiToken ? Ai$1.configure({
       token: aiToken
-    }) : undefined]).filter(function (e) {
-      return e !== undefined;
-    }),
+    }) : undefined].filter(e => e !== undefined),
     editorProps: {
       attributes: {
         autocomplete: 'off',
         autocorrect: 'off',
         autocapitalize: 'off',
-        "class": 'min-h-full'
+        class: 'min-h-full'
       }
     }
   }, [ydoc, provider]);
-  var users = useEditorState({
-    editor: editor,
-    selector: function selector(ctx) {
+  const users = useEditorState({
+    editor,
+    selector: ctx => {
       var _ctx$editor;
       if (!((_ctx$editor = ctx.editor) != null && (_ctx$editor = _ctx$editor.storage.collaborationCursor) != null && _ctx$editor.users)) {
         return [];
       }
-      return ctx.editor.storage.collaborationCursor.users.map(function (user) {
+      return ctx.editor.storage.collaborationCursor.users.map(user => {
         var _user$name;
-        var names = (_user$name = user.name) == null ? void 0 : _user$name.split(' ');
-        var firstName = names == null ? void 0 : names[0];
-        var lastName = names == null ? void 0 : names[names.length - 1];
-        var initials = "" + ((firstName == null ? void 0 : firstName[0]) || '?') + ((lastName == null ? void 0 : lastName[0]) || '?');
+        const names = (_user$name = user.name) == null ? void 0 : _user$name.split(' ');
+        const firstName = names == null ? void 0 : names[0];
+        const lastName = names == null ? void 0 : names[names.length - 1];
+        const initials = `${(firstName == null ? void 0 : firstName[0]) || '?'}${(lastName == null ? void 0 : lastName[0]) || '?'}`;
         return _extends({}, user, {
           initials: initials.length ? initials : '?'
         });
       });
     }
   });
-  react.useEffect(function () {
-    provider == null || provider.on('status', function (event) {
+  react.useEffect(() => {
+    provider == null || provider.on('status', event => {
       setCollabState(event.status);
     });
   }, [provider]);
   window.editor = editor;
   return {
-    editor: editor,
-    users: users,
-    collabState: collabState
+    editor,
+    users,
+    collabState
   };
 };
 
-var Sidebar = /*#__PURE__*/react.memo(function (_ref) {
-  var editor = _ref.editor,
-    isOpen = _ref.isOpen,
-    onClose = _ref.onClose;
-  var handlePotentialClose = react.useCallback(function () {
+const Sidebar = /*#__PURE__*/react.memo(({
+  editor,
+  isOpen,
+  onClose
+}) => {
+  const handlePotentialClose = react.useCallback(() => {
     if (window.innerWidth < 1024) {
       onClose();
     }
   }, [onClose]);
-  var windowClassName = cn('absolute top-0 left-0 bg-white lg:bg-white/30 lg:backdrop-blur-xl h-full lg:h-auto lg:relative z-[999] w-0 duration-300 transition-all', 'dark:bg-black lg:dark:bg-black/30', !isOpen && 'border-r-transparent', isOpen && 'w-80 border-r border-r-neutral-200 dark:border-r-neutral-800');
-  return /*#__PURE__*/React.createElement("div", {
-    className: windowClassName
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "w-full h-full overflow-hidden"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "w-full h-full p-6 overflow-auto"
-  }, /*#__PURE__*/React.createElement(TableOfContents, {
-    onItemClick: handlePotentialClose,
-    editor: editor
-  }))));
+  const windowClassName = cn('absolute top-0 left-0 bg-white lg:bg-white/30 lg:backdrop-blur-xl h-full lg:h-auto lg:relative z-[999] w-0 duration-300 transition-all', 'dark:bg-black lg:dark:bg-black/30', !isOpen && 'border-r-transparent', isOpen && 'w-80 border-r border-r-neutral-200 dark:border-r-neutral-800');
+  return jsxRuntime.jsx("div", {
+    className: windowClassName,
+    children: jsxRuntime.jsx("div", {
+      className: "w-full h-full overflow-hidden",
+      children: jsxRuntime.jsx("div", {
+        className: "w-full h-full p-6 overflow-auto",
+        children: jsxRuntime.jsx(TableOfContents, {
+          onItemClick: handlePotentialClose,
+          editor: editor
+        })
+      })
+    })
+  });
 });
 Sidebar.displayName = 'TableOfContentSidepanel';
 
-var ImageBlockWidth = /*#__PURE__*/react.memo(function (_ref) {
-  var onChange = _ref.onChange,
-    value = _ref.value;
-  var _useState = react.useState(value),
-    currentValue = _useState[0],
-    setCurrentValue = _useState[1];
-  react.useEffect(function () {
+const ImageBlockWidth = /*#__PURE__*/react.memo(({
+  onChange,
+  value
+}) => {
+  const [currentValue, setCurrentValue] = react.useState(value);
+  react.useEffect(() => {
     setCurrentValue(value);
   }, [value]);
-  var handleChange = react.useCallback(function (e) {
-    var nextValue = parseInt(e.target.value);
+  const handleChange = react.useCallback(e => {
+    const nextValue = parseInt(e.target.value);
     onChange(nextValue);
     setCurrentValue(nextValue);
   }, [onChange]);
-  return /*#__PURE__*/React.createElement("div", {
-    className: "flex items-center gap-2"
-  }, /*#__PURE__*/React.createElement("input", {
-    className: "h-2 bg-neutral-200 border-0 rounded appearance-none fill-neutral-300",
-    type: "range",
-    min: "25",
-    max: "100",
-    step: "25",
-    onChange: handleChange,
-    value: currentValue
-  }), /*#__PURE__*/React.createElement("span", {
-    className: "text-xs font-semibold text-neutral-500 select-none"
-  }, value, "%"));
+  return jsxRuntime.jsxs("div", {
+    className: "flex items-center gap-2",
+    children: [jsxRuntime.jsx("input", {
+      className: "h-2 bg-neutral-200 border-0 rounded appearance-none fill-neutral-300",
+      type: "range",
+      min: "25",
+      max: "100",
+      step: "25",
+      onChange: handleChange,
+      value: currentValue
+    }), jsxRuntime.jsxs("span", {
+      className: "text-xs font-semibold text-neutral-500 select-none",
+      children: [value, "%"]
+    })]
+  });
 });
 ImageBlockWidth.displayName = 'ImageBlockWidth';
 
-var ImageBlockMenu = function ImageBlockMenu(_ref) {
-  var editor = _ref.editor,
-    _appendTo = _ref.appendTo;
-  var menuRef = react.useRef(null);
-  var tippyInstance = react.useRef(null);
-  var getReferenceClientRect = react.useCallback(function () {
-    var renderContainer = getRenderContainer(editor, 'node-imageBlock');
-    var rect = (renderContainer == null ? void 0 : renderContainer.getBoundingClientRect()) || new DOMRect(-1000, -1000, 0, 0);
+const ImageBlockMenu = ({
+  editor,
+  appendTo
+}) => {
+  const menuRef = react.useRef(null);
+  const tippyInstance = react.useRef(null);
+  const getReferenceClientRect = react.useCallback(() => {
+    const renderContainer = getRenderContainer(editor, 'node-imageBlock');
+    const rect = (renderContainer == null ? void 0 : renderContainer.getBoundingClientRect()) || new DOMRect(-1000, -1000, 0, 0);
     return rect;
   }, [editor]);
-  var shouldShow = react.useCallback(function () {
-    var isActive = editor.isActive('imageBlock');
+  const shouldShow = react.useCallback(() => {
+    const isActive = editor.isActive('imageBlock');
     return isActive;
   }, [editor]);
-  var onAlignImageLeft = react.useCallback(function () {
+  const onAlignImageLeft = react.useCallback(() => {
     editor.chain().focus(undefined, {
       scrollIntoView: false
     }).setImageBlockAlign('left').run();
   }, [editor]);
-  var onAlignImageCenter = react.useCallback(function () {
+  const onAlignImageCenter = react.useCallback(() => {
     editor.chain().focus(undefined, {
       scrollIntoView: false
     }).setImageBlockAlign('center').run();
   }, [editor]);
-  var onAlignImageRight = react.useCallback(function () {
+  const onAlignImageRight = react.useCallback(() => {
     editor.chain().focus(undefined, {
       scrollIntoView: false
     }).setImageBlockAlign('right').run();
   }, [editor]);
-  var onWidthChange = react.useCallback(function (value) {
+  const onWidthChange = react.useCallback(value => {
     editor.chain().focus(undefined, {
       scrollIntoView: false
     }).setImageBlockWidth(value).run();
   }, [editor]);
-  var _useEditorState = useEditorState({
-      editor: editor,
-      selector: function selector(ctx) {
-        var _ctx$editor$getAttrib;
-        return {
-          isImageLeft: ctx.editor.isActive('imageBlock', {
-            align: 'left'
-          }),
-          isImageCenter: ctx.editor.isActive('imageBlock', {
-            align: 'center'
-          }),
-          isImageRight: ctx.editor.isActive('imageBlock', {
-            align: 'right'
-          }),
-          width: parseInt(((_ctx$editor$getAttrib = ctx.editor.getAttributes('imageBlock')) == null ? void 0 : _ctx$editor$getAttrib.width) || 0)
-        };
-      }
-    }),
-    isImageCenter = _useEditorState.isImageCenter,
-    isImageLeft = _useEditorState.isImageLeft,
-    isImageRight = _useEditorState.isImageRight,
-    width = _useEditorState.width;
-  return /*#__PURE__*/react.createElement(BubbleMenu, {
+  const {
+    isImageCenter,
+    isImageLeft,
+    isImageRight,
+    width
+  } = useEditorState({
+    editor,
+    selector: ctx => {
+      var _ctx$editor$getAttrib;
+      return {
+        isImageLeft: ctx.editor.isActive('imageBlock', {
+          align: 'left'
+        }),
+        isImageCenter: ctx.editor.isActive('imageBlock', {
+          align: 'center'
+        }),
+        isImageRight: ctx.editor.isActive('imageBlock', {
+          align: 'right'
+        }),
+        width: parseInt(((_ctx$editor$getAttrib = ctx.editor.getAttributes('imageBlock')) == null ? void 0 : _ctx$editor$getAttrib.width) || 0)
+      };
+    }
+  });
+  return jsxRuntime.jsx(BubbleMenu, {
     editor: editor,
-    pluginKey: "imageBlockMenu-" + v4(),
+    pluginKey: `imageBlockMenu-${v4()}`,
     shouldShow: shouldShow,
     updateDelay: 0,
     tippyOptions: {
@@ -39268,86 +40581,93 @@ var ImageBlockMenu = function ImageBlockMenu(_ref) {
           enabled: false
         }]
       },
-      getReferenceClientRect: getReferenceClientRect,
-      onCreate: function onCreate(instance) {
+      getReferenceClientRect,
+      onCreate: instance => {
         tippyInstance.current = instance;
       },
-      appendTo: function appendTo() {
-        return _appendTo == null ? void 0 : _appendTo.current;
+      appendTo: () => {
+        return appendTo == null ? void 0 : appendTo.current;
       },
       plugins: [sticky],
       sticky: 'popper'
-    }
-  }, /*#__PURE__*/react.createElement(Toolbar.Wrapper, {
-    shouldShowContent: shouldShow(),
-    ref: menuRef
-  }, /*#__PURE__*/react.createElement(Toolbar.Button, {
-    tooltip: "Align image left",
-    active: isImageLeft,
-    onClick: onAlignImageLeft
-  }, /*#__PURE__*/react.createElement(Icon, {
-    name: "AlignHorizontalDistributeStart"
-  })), /*#__PURE__*/react.createElement(Toolbar.Button, {
-    tooltip: "Align image center",
-    active: isImageCenter,
-    onClick: onAlignImageCenter
-  }, /*#__PURE__*/react.createElement(Icon, {
-    name: "AlignHorizontalDistributeCenter"
-  })), /*#__PURE__*/react.createElement(Toolbar.Button, {
-    tooltip: "Align image right",
-    active: isImageRight,
-    onClick: onAlignImageRight
-  }, /*#__PURE__*/react.createElement(Icon, {
-    name: "AlignHorizontalDistributeEnd"
-  })), /*#__PURE__*/react.createElement(Toolbar.Divider, null), /*#__PURE__*/react.createElement(ImageBlockWidth, {
-    onChange: onWidthChange,
-    value: width
-  })));
+    },
+    children: jsxRuntime.jsxs(Toolbar.Wrapper, {
+      shouldShowContent: shouldShow(),
+      ref: menuRef,
+      children: [jsxRuntime.jsx(Toolbar.Button, {
+        tooltip: "Align image left",
+        active: isImageLeft,
+        onClick: onAlignImageLeft,
+        children: jsxRuntime.jsx(Icon, {
+          name: "AlignHorizontalDistributeStart"
+        })
+      }), jsxRuntime.jsx(Toolbar.Button, {
+        tooltip: "Align image center",
+        active: isImageCenter,
+        onClick: onAlignImageCenter,
+        children: jsxRuntime.jsx(Icon, {
+          name: "AlignHorizontalDistributeCenter"
+        })
+      }), jsxRuntime.jsx(Toolbar.Button, {
+        tooltip: "Align image right",
+        active: isImageRight,
+        onClick: onAlignImageRight,
+        children: jsxRuntime.jsx(Icon, {
+          name: "AlignHorizontalDistributeEnd"
+        })
+      }), jsxRuntime.jsx(Toolbar.Divider, {}), jsxRuntime.jsx(ImageBlockWidth, {
+        onChange: onWidthChange,
+        value: width
+      })]
+    })
+  });
 };
 
-var ColumnsMenu = function ColumnsMenu(_ref) {
-  var editor = _ref.editor,
-    _appendTo = _ref.appendTo;
-  var getReferenceClientRect = react.useCallback(function () {
-    var renderContainer = getRenderContainer(editor, 'columns');
-    var rect = (renderContainer == null ? void 0 : renderContainer.getBoundingClientRect()) || new DOMRect(-1000, -1000, 0, 0);
+const ColumnsMenu = ({
+  editor,
+  appendTo
+}) => {
+  const getReferenceClientRect = react.useCallback(() => {
+    const renderContainer = getRenderContainer(editor, 'columns');
+    const rect = (renderContainer == null ? void 0 : renderContainer.getBoundingClientRect()) || new DOMRect(-1000, -1000, 0, 0);
     return rect;
   }, [editor]);
-  var shouldShow = react.useCallback(function () {
-    var isColumns = editor.isActive('columns');
+  const shouldShow = react.useCallback(() => {
+    const isColumns = editor.isActive('columns');
     return isColumns;
   }, [editor]);
-  var onColumnLeft = react.useCallback(function () {
+  const onColumnLeft = react.useCallback(() => {
     editor.chain().focus().setLayout(ColumnLayout.SidebarLeft).run();
   }, [editor]);
-  var onColumnRight = react.useCallback(function () {
+  const onColumnRight = react.useCallback(() => {
     editor.chain().focus().setLayout(ColumnLayout.SidebarRight).run();
   }, [editor]);
-  var onColumnTwo = react.useCallback(function () {
+  const onColumnTwo = react.useCallback(() => {
     editor.chain().focus().setLayout(ColumnLayout.TwoColumn).run();
   }, [editor]);
-  var _useEditorState = useEditorState({
-      editor: editor,
-      selector: function selector(ctx) {
-        return {
-          isColumnLeft: ctx.editor.isActive('columns', {
-            layout: ColumnLayout.SidebarLeft
-          }),
-          isColumnRight: ctx.editor.isActive('columns', {
-            layout: ColumnLayout.SidebarRight
-          }),
-          isColumnTwo: ctx.editor.isActive('columns', {
-            layout: ColumnLayout.TwoColumn
-          })
-        };
-      }
-    }),
-    isColumnLeft = _useEditorState.isColumnLeft,
-    isColumnRight = _useEditorState.isColumnRight,
-    isColumnTwo = _useEditorState.isColumnTwo;
-  return /*#__PURE__*/React.createElement(BubbleMenu, {
+  const {
+    isColumnLeft,
+    isColumnRight,
+    isColumnTwo
+  } = useEditorState({
+    editor,
+    selector: ctx => {
+      return {
+        isColumnLeft: ctx.editor.isActive('columns', {
+          layout: ColumnLayout.SidebarLeft
+        }),
+        isColumnRight: ctx.editor.isActive('columns', {
+          layout: ColumnLayout.SidebarRight
+        }),
+        isColumnTwo: ctx.editor.isActive('columns', {
+          layout: ColumnLayout.TwoColumn
+        })
+      };
+    }
+  });
+  return jsxRuntime.jsx(BubbleMenu, {
     editor: editor,
-    pluginKey: "columnsMenu-" + v4(),
+    pluginKey: `columnsMenu-${v4()}`,
     shouldShow: shouldShow,
     updateDelay: 0,
     tippyOptions: {
@@ -39358,115 +40678,123 @@ var ColumnsMenu = function ColumnsMenu(_ref) {
           enabled: false
         }]
       },
-      getReferenceClientRect: getReferenceClientRect,
-      appendTo: function appendTo() {
-        return _appendTo == null ? void 0 : _appendTo.current;
-      },
+      getReferenceClientRect,
+      appendTo: () => appendTo == null ? void 0 : appendTo.current,
       plugins: [sticky],
       sticky: 'popper'
-    }
-  }, /*#__PURE__*/React.createElement(Toolbar.Wrapper, null, /*#__PURE__*/React.createElement(Toolbar.Button, {
-    tooltip: "Sidebar left",
-    active: isColumnLeft,
-    onClick: onColumnLeft
-  }, /*#__PURE__*/React.createElement(Icon, {
-    name: "PanelLeft"
-  })), /*#__PURE__*/React.createElement(Toolbar.Button, {
-    tooltip: "Two columns",
-    active: isColumnTwo,
-    onClick: onColumnTwo
-  }, /*#__PURE__*/React.createElement(Icon, {
-    name: "Columns2"
-  })), /*#__PURE__*/React.createElement(Toolbar.Button, {
-    tooltip: "Sidebar right",
-    active: isColumnRight,
-    onClick: onColumnRight
-  }, /*#__PURE__*/React.createElement(Icon, {
-    name: "PanelRight"
-  }))));
+    },
+    children: jsxRuntime.jsxs(Toolbar.Wrapper, {
+      children: [jsxRuntime.jsx(Toolbar.Button, {
+        tooltip: "Sidebar left",
+        active: isColumnLeft,
+        onClick: onColumnLeft,
+        children: jsxRuntime.jsx(Icon, {
+          name: "PanelLeft"
+        })
+      }), jsxRuntime.jsx(Toolbar.Button, {
+        tooltip: "Two columns",
+        active: isColumnTwo,
+        onClick: onColumnTwo,
+        children: jsxRuntime.jsx(Icon, {
+          name: "Columns2"
+        })
+      }), jsxRuntime.jsx(Toolbar.Button, {
+        tooltip: "Sidebar right",
+        active: isColumnRight,
+        onClick: onColumnRight,
+        children: jsxRuntime.jsx(Icon, {
+          name: "PanelRight"
+        })
+      })]
+    })
+  });
 };
 
-var Item = function Item(_ref2) {
-  var label = _ref2.label,
-    _ref2$close = _ref2.close,
-    close = _ref2$close === void 0 ? true : _ref2$close,
-    icon = _ref2.icon,
-    iconComponent = _ref2.iconComponent,
-    disabled = _ref2.disabled,
-    onClick = _ref2.onClick,
-    isActive = _ref2.isActive;
-  var className = cn('flex items-center gap-2 p-1.5 text-sm font-medium text-neutral-500 text-left bg-transparent w-full rounded', !isActive && !disabled, 'hover:bg-neutral-100 hover:text-neutral-800 dark:hover:bg-neutral-900 dark:hover:text-neutral-200', isActive && !disabled && 'bg-neutral-100 text-neutral-800 dark:bg-neutral-900 dark:text-neutral-200', disabled && 'text-neutral-400 cursor-not-allowed dark:text-neutral-600');
-  var IconComponent = icon ? icons[icon] : null;
-  var IconCustomComponent = iconComponent || null;
-  var ItemComponent = close ? Popover.Close : 'button';
-  return /*#__PURE__*/React.createElement(ItemComponent, {
+const Item = ({
+  label,
+  close: _close = true,
+  icon,
+  iconComponent,
+  disabled,
+  onClick,
+  isActive
+}) => {
+  const className = cn('flex items-center gap-2 p-1.5 text-sm font-medium text-neutral-500 text-left bg-transparent w-full rounded', !isActive && !disabled, 'hover:bg-neutral-100 hover:text-neutral-800 dark:hover:bg-neutral-900 dark:hover:text-neutral-200', isActive && !disabled && 'bg-neutral-100 text-neutral-800 dark:bg-neutral-900 dark:text-neutral-200', disabled && 'text-neutral-400 cursor-not-allowed dark:text-neutral-600');
+  const IconComponent = icon ? icons[icon] : null;
+  const IconCustomComponent = iconComponent || null;
+  const ItemComponent = _close ? Popover.Close : 'button';
+  return jsxRuntime.jsxs(ItemComponent, {
     className: className,
     onClick: onClick,
-    disabled: disabled
-  }, IconComponent && /*#__PURE__*/React.createElement(IconComponent, {
-    className: "w-4 h-4"
-  }), IconCustomComponent, label);
+    disabled: disabled,
+    children: [IconComponent && jsxRuntime.jsx(IconComponent, {
+      className: "w-4 h-4"
+    }), IconCustomComponent, label]
+  });
 };
-var Divider = /*#__PURE__*/react.forwardRef(function (props, ref) {
-  return /*#__PURE__*/React.createElement("hr", _extends({}, props, {
+const Divider = /*#__PURE__*/react.forwardRef((props, ref) => {
+  return jsxRuntime.jsx("hr", _extends({}, props, {
     ref: ref,
     className: "my-1 border-neutral-200 dark:border-neutral-800"
   }));
 });
 Divider.displayName = 'Divider';
 
-var isColumnGripSelected = function isColumnGripSelected(_ref) {
-  var editor = _ref.editor,
-    view = _ref.view,
-    state = _ref.state,
-    from = _ref.from;
-  var domAtPos = view.domAtPos(from).node;
-  var nodeDOM = view.nodeDOM(from);
-  var node = nodeDOM || domAtPos;
+const isColumnGripSelected = ({
+  editor,
+  view,
+  state,
+  from
+}) => {
+  const domAtPos = view.domAtPos(from).node;
+  const nodeDOM = view.nodeDOM(from);
+  const node = nodeDOM || domAtPos;
   if (!editor.isActive(Table.name) || !node || isTableSelected(state.selection)) {
     return false;
   }
-  var container = node;
+  let container = node;
   while (container && !['TD', 'TH'].includes(container.tagName)) {
     container = container.parentElement;
   }
-  var gripColumn = container && container.querySelector && container.querySelector('a.grip-column.selected');
+  const gripColumn = container && container.querySelector && container.querySelector('a.grip-column.selected');
   return !!gripColumn;
 };
 
-var TableColumnMenu = /*#__PURE__*/react.memo(function (_ref) {
-  var editor = _ref.editor,
-    _appendTo = _ref.appendTo;
-  var shouldShow = react.useCallback(function (_ref2) {
-    var view = _ref2.view,
-      state = _ref2.state,
-      from = _ref2.from;
+const TableColumnMenu = /*#__PURE__*/react.memo(({
+  editor,
+  appendTo
+}) => {
+  const shouldShow = react.useCallback(({
+    view,
+    state,
+    from
+  }) => {
     if (!state) {
       return false;
     }
     return isColumnGripSelected({
-      editor: editor,
-      view: view,
-      state: state,
+      editor,
+      view,
+      state,
       from: from || 0
     });
   }, [editor]);
-  var onAddColumnBefore = react.useCallback(function () {
+  const onAddColumnBefore = react.useCallback(() => {
     editor.chain().focus().addColumnBefore().run();
   }, [editor]);
-  var onAddColumnAfter = react.useCallback(function () {
+  const onAddColumnAfter = react.useCallback(() => {
     editor.chain().focus().addColumnAfter().run();
   }, [editor]);
-  var onDeleteColumn = react.useCallback(function () {
+  const onDeleteColumn = react.useCallback(() => {
     editor.chain().focus().deleteColumn().run();
   }, [editor]);
-  return /*#__PURE__*/react.createElement(BubbleMenu, {
+  return jsxRuntime.jsx(BubbleMenu, {
     editor: editor,
     pluginKey: "tableColumnMenu",
     updateDelay: 0,
     tippyOptions: {
-      appendTo: function appendTo() {
-        return _appendTo == null ? void 0 : _appendTo.current;
+      appendTo: () => {
+        return appendTo == null ? void 0 : appendTo.current;
       },
       offset: [0, 15],
       popperOptions: {
@@ -39476,84 +40804,89 @@ var TableColumnMenu = /*#__PURE__*/react.memo(function (_ref) {
         }]
       }
     },
-    shouldShow: shouldShow
-  }, /*#__PURE__*/react.createElement(Toolbar.Wrapper, {
-    isVertical: true
-  }, /*#__PURE__*/react.createElement(Item, {
-    iconComponent: /*#__PURE__*/react.createElement(Icon, {
-      name: "ArrowLeftToLine"
-    }),
-    close: false,
-    label: "Add column before",
-    onClick: onAddColumnBefore
-  }), /*#__PURE__*/react.createElement(Item, {
-    iconComponent: /*#__PURE__*/react.createElement(Icon, {
-      name: "ArrowRightToLine"
-    }),
-    close: false,
-    label: "Add column after",
-    onClick: onAddColumnAfter
-  }), /*#__PURE__*/react.createElement(Item, {
-    icon: "Trash",
-    close: false,
-    label: "Delete column",
-    onClick: onDeleteColumn
-  })));
+    shouldShow: shouldShow,
+    children: jsxRuntime.jsxs(Toolbar.Wrapper, {
+      isVertical: true,
+      children: [jsxRuntime.jsx(Item, {
+        iconComponent: jsxRuntime.jsx(Icon, {
+          name: "ArrowLeftToLine"
+        }),
+        close: false,
+        label: "Add column before",
+        onClick: onAddColumnBefore
+      }), jsxRuntime.jsx(Item, {
+        iconComponent: jsxRuntime.jsx(Icon, {
+          name: "ArrowRightToLine"
+        }),
+        close: false,
+        label: "Add column after",
+        onClick: onAddColumnAfter
+      }), jsxRuntime.jsx(Item, {
+        icon: "Trash",
+        close: false,
+        label: "Delete column",
+        onClick: onDeleteColumn
+      })]
+    })
+  });
 });
 TableColumnMenu.displayName = 'TableColumnMenu';
 
-var isRowGripSelected = function isRowGripSelected(_ref) {
-  var editor = _ref.editor,
-    view = _ref.view,
-    state = _ref.state,
-    from = _ref.from;
-  var domAtPos = view.domAtPos(from).node;
-  var nodeDOM = view.nodeDOM(from);
-  var node = nodeDOM || domAtPos;
+const isRowGripSelected = ({
+  editor,
+  view,
+  state,
+  from
+}) => {
+  const domAtPos = view.domAtPos(from).node;
+  const nodeDOM = view.nodeDOM(from);
+  const node = nodeDOM || domAtPos;
   if (!editor.isActive(Table.name) || !node || isTableSelected(state.selection)) {
     return false;
   }
-  var container = node;
+  let container = node;
   while (container && !['TD', 'TH'].includes(container.tagName)) {
     container = container.parentElement;
   }
-  var gripRow = container && container.querySelector && container.querySelector('a.grip-row.selected');
+  const gripRow = container && container.querySelector && container.querySelector('a.grip-row.selected');
   return !!gripRow;
 };
 
-var TableRowMenu = /*#__PURE__*/react.memo(function (_ref) {
-  var editor = _ref.editor,
-    _appendTo = _ref.appendTo;
-  var shouldShow = react.useCallback(function (_ref2) {
-    var view = _ref2.view,
-      state = _ref2.state,
-      from = _ref2.from;
+const TableRowMenu = /*#__PURE__*/react.memo(({
+  editor,
+  appendTo
+}) => {
+  const shouldShow = react.useCallback(({
+    view,
+    state,
+    from
+  }) => {
     if (!state || !from) {
       return false;
     }
     return isRowGripSelected({
-      editor: editor,
-      view: view,
-      state: state,
-      from: from
+      editor,
+      view,
+      state,
+      from
     });
   }, [editor]);
-  var onAddRowBefore = react.useCallback(function () {
+  const onAddRowBefore = react.useCallback(() => {
     editor.chain().focus().addRowBefore().run();
   }, [editor]);
-  var onAddRowAfter = react.useCallback(function () {
+  const onAddRowAfter = react.useCallback(() => {
     editor.chain().focus().addRowAfter().run();
   }, [editor]);
-  var onDeleteRow = react.useCallback(function () {
+  const onDeleteRow = react.useCallback(() => {
     editor.chain().focus().deleteRow().run();
   }, [editor]);
-  return /*#__PURE__*/react.createElement(BubbleMenu, {
+  return jsxRuntime.jsx(BubbleMenu, {
     editor: editor,
     pluginKey: "tableRowMenu",
     updateDelay: 0,
     tippyOptions: {
-      appendTo: function appendTo() {
-        return _appendTo == null ? void 0 : _appendTo.current;
+      appendTo: () => {
+        return appendTo == null ? void 0 : appendTo.current;
       },
       placement: 'left',
       offset: [0, 15],
@@ -39564,205 +40897,210 @@ var TableRowMenu = /*#__PURE__*/react.memo(function (_ref) {
         }]
       }
     },
-    shouldShow: shouldShow
-  }, /*#__PURE__*/react.createElement(Toolbar.Wrapper, {
-    isVertical: true
-  }, /*#__PURE__*/react.createElement(Item, {
-    iconComponent: /*#__PURE__*/react.createElement(Icon, {
-      name: "ArrowUpToLine"
-    }),
-    close: false,
-    label: "Add row before",
-    onClick: onAddRowBefore
-  }), /*#__PURE__*/react.createElement(Item, {
-    iconComponent: /*#__PURE__*/react.createElement(Icon, {
-      name: "ArrowDownToLine"
-    }),
-    close: false,
-    label: "Add row after",
-    onClick: onAddRowAfter
-  }), /*#__PURE__*/react.createElement(Item, {
-    icon: "Trash",
-    close: false,
-    label: "Delete row",
-    onClick: onDeleteRow
-  })));
+    shouldShow: shouldShow,
+    children: jsxRuntime.jsxs(Toolbar.Wrapper, {
+      isVertical: true,
+      children: [jsxRuntime.jsx(Item, {
+        iconComponent: jsxRuntime.jsx(Icon, {
+          name: "ArrowUpToLine"
+        }),
+        close: false,
+        label: "Add row before",
+        onClick: onAddRowBefore
+      }), jsxRuntime.jsx(Item, {
+        iconComponent: jsxRuntime.jsx(Icon, {
+          name: "ArrowDownToLine"
+        }),
+        close: false,
+        label: "Add row after",
+        onClick: onAddRowAfter
+      }), jsxRuntime.jsx(Item, {
+        icon: "Trash",
+        close: false,
+        label: "Delete row",
+        onClick: onDeleteRow
+      })]
+    })
+  });
 });
 TableRowMenu.displayName = 'TableRowMenu';
 
-var EditorInfo = /*#__PURE__*/react.memo(function (_ref) {
-  var characters = _ref.characters,
-    collabState = _ref.collabState,
-    users = _ref.users,
-    words = _ref.words;
-  return /*#__PURE__*/React.createElement("div", {
-    className: "flex items-center"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "flex flex-col justify-center pr-4 mr-4 text-right border-r border-neutral-200 dark:border-neutral-800"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "text-xs font-semibold text-neutral-500 dark:text-neutral-400"
-  }, words, " ", words === 1 ? 'word' : 'words'), /*#__PURE__*/React.createElement("div", {
-    className: "text-xs font-semibold text-neutral-500 dark:text-neutral-400"
-  }, characters, " ", characters === 1 ? 'character' : 'characters')), /*#__PURE__*/React.createElement("div", {
-    className: "flex items-center gap-2 mr-2"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: cn('w-2 h-2 rounded-full', {
-      'bg-yellow-500 dark:bg-yellow-400': collabState === 'connecting',
-      'bg-green-500 dark:bg-green-400': collabState === 'connected',
-      'bg-red-500 dark:bg-red-400': collabState === 'disconnected'
-    })
-  }), /*#__PURE__*/React.createElement("span", {
-    className: "max-w-[4rem] text-xs text-neutral-500 dark:text-neutral-400 font-semibold"
-  }, getConnectionText(collabState))), collabState === 'connected' && /*#__PURE__*/React.createElement("div", {
-    className: "flex flex-row items-center"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "relative flex flex-row items-center ml-3"
-  }, users.slice(0, 3).map(function (user) {
-    return /*#__PURE__*/React.createElement("div", {
-      key: user.clientId,
-      className: "-ml-3"
-    }, /*#__PURE__*/React.createElement(Tooltip, {
-      title: user.name
-    }, /*#__PURE__*/React.createElement("img", {
-      className: "w-8 h-8 border border-white rounded-full dark:border-black",
-      src: "https://api.dicebear.com/7.x/notionists-neutral/svg?seed=" + user.name + "&backgroundColor=" + user.color.replace('#', ''),
-      alt: "avatar"
-    })));
-  }), users.length > 3 && /*#__PURE__*/React.createElement("div", {
-    className: "-ml-3"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "flex items-center justify-center w-8 h-8 font-bold text-xs leading-none border border-white dark:border-black bg-[#FFA2A2] rounded-full"
-  }, "+", users.length - 3)))));
+const EditorInfo = /*#__PURE__*/react.memo(({
+  characters,
+  collabState,
+  users,
+  words
+}) => {
+  return jsxRuntime.jsxs("div", {
+    className: "flex items-center",
+    children: [jsxRuntime.jsxs("div", {
+      className: "flex flex-col justify-center pr-4 mr-4 text-right border-r border-neutral-200 dark:border-neutral-800",
+      children: [jsxRuntime.jsxs("div", {
+        className: "text-xs font-semibold text-neutral-500 dark:text-neutral-400",
+        children: [words, " ", words === 1 ? 'word' : 'words']
+      }), jsxRuntime.jsxs("div", {
+        className: "text-xs font-semibold text-neutral-500 dark:text-neutral-400",
+        children: [characters, " ", characters === 1 ? 'character' : 'characters']
+      })]
+    }), jsxRuntime.jsxs("div", {
+      className: "flex items-center gap-2 mr-2",
+      children: [jsxRuntime.jsx("div", {
+        className: cn('w-2 h-2 rounded-full', {
+          'bg-yellow-500 dark:bg-yellow-400': collabState === 'connecting',
+          'bg-green-500 dark:bg-green-400': collabState === 'connected',
+          'bg-red-500 dark:bg-red-400': collabState === 'disconnected'
+        })
+      }), jsxRuntime.jsx("span", {
+        className: "max-w-[4rem] text-xs text-neutral-500 dark:text-neutral-400 font-semibold",
+        children: getConnectionText(collabState)
+      })]
+    }), collabState === 'connected' && jsxRuntime.jsx("div", {
+      className: "flex flex-row items-center",
+      children: jsxRuntime.jsxs("div", {
+        className: "relative flex flex-row items-center ml-3",
+        children: [users.slice(0, 3).map(user => jsxRuntime.jsx("div", {
+          className: "-ml-3",
+          children: jsxRuntime.jsx(Tooltip, {
+            title: user.name,
+            children: jsxRuntime.jsx("img", {
+              className: "w-8 h-8 border border-white rounded-full dark:border-black",
+              src: `https://api.dicebear.com/7.x/notionists-neutral/svg?seed=${user.name}&backgroundColor=${user.color.replace('#', '')}`,
+              alt: "avatar"
+            })
+          })
+        }, user.clientId)), users.length > 3 && jsxRuntime.jsx("div", {
+          className: "-ml-3",
+          children: jsxRuntime.jsxs("div", {
+            className: "flex items-center justify-center w-8 h-8 font-bold text-xs leading-none border border-white dark:border-black bg-[#FFA2A2] rounded-full",
+            children: ["+", users.length - 3]
+          })
+        })]
+      })
+    })]
+  });
 });
 EditorInfo.displayName = 'EditorInfo';
 
-var EditorHeader = function EditorHeader(_ref) {
-  var editor = _ref.editor,
-    collabState = _ref.collabState,
-    users = _ref.users,
-    isSidebarOpen = _ref.isSidebarOpen,
-    toggleSidebar = _ref.toggleSidebar;
-  var _useEditorState = useEditorState({
-      editor: editor,
-      selector: function selector(ctx) {
-        var _ctx$editor;
-        var _ref2 = ((_ctx$editor = ctx.editor) == null ? void 0 : _ctx$editor.storage.characterCount) || {
-            characters: function characters() {
-              return 0;
-            },
-            words: function words() {
-              return 0;
-            }
-          },
-          characters = _ref2.characters,
-          words = _ref2.words;
-        return {
-          characters: characters(),
-          words: words()
-        };
-      }
-    }),
-    characters = _useEditorState.characters,
-    words = _useEditorState.words;
-  return /*#__PURE__*/React.createElement("div", {
-    className: "flex flex-row items-center justify-between flex-none py-2 pl-6 pr-3 text-black bg-white border-b border-neutral-200 dark:bg-black dark:text-white dark:border-neutral-800"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "flex flex-row gap-x-1.5 items-center"
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "flex items-center gap-x-1.5"
-  }, /*#__PURE__*/React.createElement(Toolbar.Button, {
-    tooltip: isSidebarOpen ? 'Close sidebar' : 'Open sidebar',
-    onClick: toggleSidebar,
-    active: isSidebarOpen,
-    className: isSidebarOpen ? 'bg-transparent' : ''
-  }, /*#__PURE__*/React.createElement(Icon, {
-    name: isSidebarOpen ? 'PanelLeftClose' : 'PanelLeft'
-  })))), /*#__PURE__*/React.createElement(EditorInfo, {
-    characters: characters,
-    words: words,
-    collabState: collabState,
-    users: users
-  }));
+const EditorHeader = ({
+  editor,
+  collabState,
+  users,
+  isSidebarOpen,
+  toggleSidebar
+}) => {
+  const {
+    characters,
+    words
+  } = useEditorState({
+    editor,
+    selector: ctx => {
+      var _ctx$editor;
+      const {
+        characters,
+        words
+      } = ((_ctx$editor = ctx.editor) == null ? void 0 : _ctx$editor.storage.characterCount) || {
+        characters: () => 0,
+        words: () => 0
+      };
+      return {
+        characters: characters(),
+        words: words()
+      };
+    }
+  });
+  return jsxRuntime.jsxs("div", {
+    className: "flex flex-row items-center justify-between flex-none py-2 pl-6 pr-3 text-black bg-white border-b border-neutral-200 dark:bg-black dark:text-white dark:border-neutral-800",
+    children: [jsxRuntime.jsx("div", {
+      className: "flex flex-row gap-x-1.5 items-center",
+      children: jsxRuntime.jsx("div", {
+        className: "flex items-center gap-x-1.5",
+        children: jsxRuntime.jsx(Toolbar.Button, {
+          tooltip: isSidebarOpen ? 'Close sidebar' : 'Open sidebar',
+          onClick: toggleSidebar,
+          active: isSidebarOpen,
+          className: isSidebarOpen ? 'bg-transparent' : '',
+          children: jsxRuntime.jsx(Icon, {
+            name: isSidebarOpen ? 'PanelLeftClose' : 'PanelLeft'
+          })
+        })
+      })
+    }), jsxRuntime.jsx(EditorInfo, {
+      characters: characters,
+      words: words,
+      collabState: collabState,
+      users: users
+    })]
+  });
 };
 
-var useSidebar = function useSidebar() {
-  var _useState = react.useState(false),
-    isOpen = _useState[0],
-    setIsOpen = _useState[1];
-  return react.useMemo(function () {
+const useSidebar = () => {
+  const [isOpen, setIsOpen] = react.useState(false);
+  return react.useMemo(() => {
     return {
-      isOpen: isOpen,
-      open: function open() {
-        return setIsOpen(true);
-      },
-      close: function close() {
-        return setIsOpen(false);
-      },
-      toggle: function toggle() {
-        return setIsOpen(function (prev) {
-          return !prev;
-        });
-      }
+      isOpen,
+      open: () => setIsOpen(true),
+      close: () => setIsOpen(false),
+      toggle: () => setIsOpen(prev => !prev)
     };
   }, [isOpen]);
 };
 
-var BlockEditor = function BlockEditor(_ref) {
-  _objectDestructuringEmpty(_ref);
-  var menuContainerRef = react.useRef(null);
-  var ydoc = react.useMemo(function () {
-    return new Doc();
-  }, []);
-  var leftSidebar = useSidebar();
-  var _useBlockEditor = useBlockEditor({
-      aiToken: undefined,
-      ydoc: ydoc,
-      provider: undefined
-    }),
-    editor = _useBlockEditor.editor,
-    users = _useBlockEditor.users,
-    collabState = _useBlockEditor.collabState;
+const BlockEditor = ({}) => {
+  const menuContainerRef = react.useRef(null);
+  const ydoc = react.useMemo(() => new Doc(), []);
+  const leftSidebar = useSidebar();
+  const {
+    editor,
+    users,
+    collabState
+  } = useBlockEditor({
+    aiToken: undefined,
+    ydoc,
+    provider: undefined
+  });
   if (!editor || !users) {
     return null;
   }
-  return /*#__PURE__*/react.createElement("div", {
+  return jsxRuntime.jsxs("div", {
     className: "flex h-full",
-    ref: menuContainerRef
-  }, /*#__PURE__*/react.createElement(Sidebar, {
-    isOpen: leftSidebar.isOpen,
-    onClose: leftSidebar.close,
-    editor: editor
-  }), /*#__PURE__*/react.createElement("div", {
-    className: "relative flex flex-col flex-1 h-full overflow-hidden"
-  }, /*#__PURE__*/react.createElement(EditorHeader, {
-    editor: editor,
-    collabState: collabState,
-    users: users,
-    isSidebarOpen: leftSidebar.isOpen,
-    toggleSidebar: leftSidebar.toggle
-  }), /*#__PURE__*/react.createElement(EditorContent, {
-    editor: editor,
-    className: "flex-1 overflow-y-auto"
-  }), /*#__PURE__*/react.createElement(ContentItemMenu, {
-    editor: editor
-  }), /*#__PURE__*/react.createElement(LinkMenu, {
-    editor: editor,
-    appendTo: menuContainerRef
-  }), /*#__PURE__*/react.createElement(TextMenu, {
-    editor: editor
-  }), /*#__PURE__*/react.createElement(ColumnsMenu, {
-    editor: editor,
-    appendTo: menuContainerRef
-  }), /*#__PURE__*/react.createElement(TableRowMenu, {
-    editor: editor,
-    appendTo: menuContainerRef
-  }), /*#__PURE__*/react.createElement(TableColumnMenu, {
-    editor: editor,
-    appendTo: menuContainerRef
-  }), /*#__PURE__*/react.createElement(ImageBlockMenu, {
-    editor: editor,
-    appendTo: menuContainerRef
-  })));
+    ref: menuContainerRef,
+    children: [jsxRuntime.jsx(Sidebar, {
+      isOpen: leftSidebar.isOpen,
+      onClose: leftSidebar.close,
+      editor: editor
+    }), jsxRuntime.jsxs("div", {
+      className: "relative flex flex-col flex-1 h-full overflow-hidden",
+      children: [jsxRuntime.jsx(EditorHeader, {
+        editor: editor,
+        collabState: collabState,
+        users: users,
+        isSidebarOpen: leftSidebar.isOpen,
+        toggleSidebar: leftSidebar.toggle
+      }), jsxRuntime.jsx(EditorContent, {
+        editor: editor,
+        className: "flex-1 overflow-y-auto"
+      }), jsxRuntime.jsx(ContentItemMenu, {
+        editor: editor
+      }), jsxRuntime.jsx(LinkMenu, {
+        editor: editor,
+        appendTo: menuContainerRef
+      }), jsxRuntime.jsx(TextMenu, {
+        editor: editor
+      }), jsxRuntime.jsx(ColumnsMenu, {
+        editor: editor,
+        appendTo: menuContainerRef
+      }), jsxRuntime.jsx(TableRowMenu, {
+        editor: editor,
+        appendTo: menuContainerRef
+      }), jsxRuntime.jsx(TableColumnMenu, {
+        editor: editor,
+        appendTo: menuContainerRef
+      }), jsxRuntime.jsx(ImageBlockMenu, {
+        editor: editor,
+        appendTo: menuContainerRef
+      })]
+    })]
+  });
 };
 
 export { BlockEditor };

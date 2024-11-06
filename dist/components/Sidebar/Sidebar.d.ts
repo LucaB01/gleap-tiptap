@@ -4,4 +4,4 @@ export declare const Sidebar: import("react").MemoExoticComponent<({ editor, isO
     editor: Editor;
     isOpen?: boolean | undefined;
     onClose: () => void;
-}) => import("react").JSX.Element>;
+}) => import("react/jsx-runtime").JSX.Element>;

@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import { LoaderProps } from './types';
-export declare const Loader: ({ hasOverlay, label }: LoaderProps) => import("react").JSX.Element;
+export declare const Loader: ({ hasOverlay, label }: LoaderProps) => import("react/jsx-runtime").JSX.Element;
 export default Loader;

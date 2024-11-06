@@ -76,20 +76,20 @@
    * This source code is licensed under the MIT license found in the
    * LICENSE file in the root directory of this source tree.
    */
-  var l=Symbol.for("react.element"),n=Symbol.for("react.portal"),p$1=Symbol.for("react.fragment"),q=Symbol.for("react.strict_mode"),r=Symbol.for("react.profiler"),t=Symbol.for("react.provider"),u=Symbol.for("react.context"),v$1=Symbol.for("react.forward_ref"),w=Symbol.for("react.suspense"),x=Symbol.for("react.memo"),y=Symbol.for("react.lazy"),z$1=Symbol.iterator;function A$1(a){if(null===a||"object"!==typeof a)return null;a=z$1&&a[z$1]||a["@@iterator"];return "function"===typeof a?a:null}
+  var l$1=Symbol.for("react.element"),n$1=Symbol.for("react.portal"),p$2=Symbol.for("react.fragment"),q$1=Symbol.for("react.strict_mode"),r=Symbol.for("react.profiler"),t=Symbol.for("react.provider"),u=Symbol.for("react.context"),v$1=Symbol.for("react.forward_ref"),w=Symbol.for("react.suspense"),x=Symbol.for("react.memo"),y=Symbol.for("react.lazy"),z$1=Symbol.iterator;function A$1(a){if(null===a||"object"!==typeof a)return null;a=z$1&&a[z$1]||a["@@iterator"];return "function"===typeof a?a:null}
   var B$1={isMounted:function(){return !1},enqueueForceUpdate:function(){},enqueueReplaceState:function(){},enqueueSetState:function(){}},C$1=Object.assign,D$1={};function E$1(a,b,e){this.props=a;this.context=b;this.refs=D$1;this.updater=e||B$1;}E$1.prototype.isReactComponent={};
   E$1.prototype.setState=function(a,b){if("object"!==typeof a&&"function"!==typeof a&&null!=a)throw Error("setState(...): takes an object of state variables to update or a function which returns an object of state variables.");this.updater.enqueueSetState(this,a,b,"setState");};E$1.prototype.forceUpdate=function(a){this.updater.enqueueForceUpdate(this,a,"forceUpdate");};function F(){}F.prototype=E$1.prototype;function G$1(a,b,e){this.props=a;this.context=b;this.refs=D$1;this.updater=e||B$1;}var H$1=G$1.prototype=new F;
   H$1.constructor=G$1;C$1(H$1,E$1.prototype);H$1.isPureReactComponent=!0;var I$1=Array.isArray,J=Object.prototype.hasOwnProperty,K$1={current:null},L$1={key:!0,ref:!0,__self:!0,__source:!0};
-  function M$1(a,b,e){var d,c={},k=null,h=null;if(null!=b)for(d in void 0!==b.ref&&(h=b.ref),void 0!==b.key&&(k=""+b.key),b)J.call(b,d)&&!L$1.hasOwnProperty(d)&&(c[d]=b[d]);var g=arguments.length-2;if(1===g)c.children=e;else if(1<g){for(var f=Array(g),m=0;m<g;m++)f[m]=arguments[m+2];c.children=f;}if(a&&a.defaultProps)for(d in g=a.defaultProps,g)void 0===c[d]&&(c[d]=g[d]);return {$$typeof:l,type:a,key:k,ref:h,props:c,_owner:K$1.current}}
-  function N$1(a,b){return {$$typeof:l,type:a.type,key:b,ref:a.ref,props:a.props,_owner:a._owner}}function O$1(a){return "object"===typeof a&&null!==a&&a.$$typeof===l}function escape(a){var b={"=":"=0",":":"=2"};return "$"+a.replace(/[=:]/g,function(a){return b[a]})}var P$1=/\/+/g;function Q$1(a,b){return "object"===typeof a&&null!==a&&null!=a.key?escape(""+a.key):b.toString(36)}
-  function R$1(a,b,e,d,c){var k=typeof a;if("undefined"===k||"boolean"===k)a=null;var h=!1;if(null===a)h=!0;else switch(k){case "string":case "number":h=!0;break;case "object":switch(a.$$typeof){case l:case n:h=!0;}}if(h)return h=a,c=c(h),a=""===d?"."+Q$1(h,0):d,I$1(c)?(e="",null!=a&&(e=a.replace(P$1,"$&/")+"/"),R$1(c,b,e,"",function(a){return a})):null!=c&&(O$1(c)&&(c=N$1(c,e+(!c.key||h&&h.key===c.key?"":(""+c.key).replace(P$1,"$&/")+"/")+a)),b.push(c)),1;h=0;d=""===d?".":d+":";if(I$1(a))for(var g=0;g<a.length;g++){k=
+  function M$1(a,b,e){var d,c={},k=null,h=null;if(null!=b)for(d in void 0!==b.ref&&(h=b.ref),void 0!==b.key&&(k=""+b.key),b)J.call(b,d)&&!L$1.hasOwnProperty(d)&&(c[d]=b[d]);var g=arguments.length-2;if(1===g)c.children=e;else if(1<g){for(var f=Array(g),m=0;m<g;m++)f[m]=arguments[m+2];c.children=f;}if(a&&a.defaultProps)for(d in g=a.defaultProps,g)void 0===c[d]&&(c[d]=g[d]);return {$$typeof:l$1,type:a,key:k,ref:h,props:c,_owner:K$1.current}}
+  function N$1(a,b){return {$$typeof:l$1,type:a.type,key:b,ref:a.ref,props:a.props,_owner:a._owner}}function O$1(a){return "object"===typeof a&&null!==a&&a.$$typeof===l$1}function escape(a){var b={"=":"=0",":":"=2"};return "$"+a.replace(/[=:]/g,function(a){return b[a]})}var P$1=/\/+/g;function Q$1(a,b){return "object"===typeof a&&null!==a&&null!=a.key?escape(""+a.key):b.toString(36)}
+  function R$1(a,b,e,d,c){var k=typeof a;if("undefined"===k||"boolean"===k)a=null;var h=!1;if(null===a)h=!0;else switch(k){case "string":case "number":h=!0;break;case "object":switch(a.$$typeof){case l$1:case n$1:h=!0;}}if(h)return h=a,c=c(h),a=""===d?"."+Q$1(h,0):d,I$1(c)?(e="",null!=a&&(e=a.replace(P$1,"$&/")+"/"),R$1(c,b,e,"",function(a){return a})):null!=c&&(O$1(c)&&(c=N$1(c,e+(!c.key||h&&h.key===c.key?"":(""+c.key).replace(P$1,"$&/")+"/")+a)),b.push(c)),1;h=0;d=""===d?".":d+":";if(I$1(a))for(var g=0;g<a.length;g++){k=
   a[g];var f=d+Q$1(k,g);h+=R$1(k,b,e,f,c);}else if(f=A$1(a),"function"===typeof f)for(a=f.call(a),g=0;!(k=a.next()).done;)k=k.value,f=d+Q$1(k,g++),h+=R$1(k,b,e,f,c);else if("object"===k)throw b=String(a),Error("Objects are not valid as a React child (found: "+("[object Object]"===b?"object with keys {"+Object.keys(a).join(", ")+"}":b)+"). If you meant to render a collection of children, use an array instead.");return h}
   function S$1(a,b,e){if(null==a)return a;var d=[],c=0;R$1(a,d,"","",function(a){return b.call(e,a,c++)});return d}function T$1(a){if(-1===a._status){var b=a._result;b=b();b.then(function(b){if(0===a._status||-1===a._status)a._status=1,a._result=b;},function(b){if(0===a._status||-1===a._status)a._status=2,a._result=b;});-1===a._status&&(a._status=0,a._result=b);}if(1===a._status)return a._result.default;throw a._result;}
   var U$1={current:null},V$1={transition:null},W$1={ReactCurrentDispatcher:U$1,ReactCurrentBatchConfig:V$1,ReactCurrentOwner:K$1};function X$1(){throw Error("act(...) is not supported in production builds of React.");}
-  var Children={map:S$1,forEach:function(a,b,e){S$1(a,function(){b.apply(this,arguments);},e);},count:function(a){var b=0;S$1(a,function(){b++;});return b},toArray:function(a){return S$1(a,function(a){return a})||[]},only:function(a){if(!O$1(a))throw Error("React.Children.only expected to receive a single React element child.");return a}};var Component=E$1;var Fragment$1=p$1;var Profiler=r;var PureComponent=G$1;var StrictMode=q;var Suspense=w;
+  var Children={map:S$1,forEach:function(a,b,e){S$1(a,function(){b.apply(this,arguments);},e);},count:function(a){var b=0;S$1(a,function(){b++;});return b},toArray:function(a){return S$1(a,function(a){return a})||[]},only:function(a){if(!O$1(a))throw Error("React.Children.only expected to receive a single React element child.");return a}};var Component=E$1;var Fragment$1=p$2;var Profiler=r;var PureComponent=G$1;var StrictMode=q$1;var Suspense=w;
   var __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED$1=W$1;var act=X$1;
   var cloneElement=function(a,b,e){if(null===a||void 0===a)throw Error("React.cloneElement(...): The argument must be a React element, but you passed "+a+".");var d=C$1({},a.props),c=a.key,k=a.ref,h=a._owner;if(null!=b){void 0!==b.ref&&(k=b.ref,h=K$1.current);void 0!==b.key&&(c=""+b.key);if(a.type&&a.type.defaultProps)var g=a.type.defaultProps;for(f in b)J.call(b,f)&&!L$1.hasOwnProperty(f)&&(d[f]=void 0===b[f]&&void 0!==g?g[f]:b[f]);}var f=arguments.length-2;if(1===f)d.children=e;else if(1<f){g=Array(f);
-  for(var m=0;m<f;m++)g[m]=arguments[m+2];d.children=g;}return {$$typeof:l,type:a.type,key:c,ref:k,props:d,_owner:h}};var createContext=function(a){a={$$typeof:u,_currentValue:a,_currentValue2:a,_threadCount:0,Provider:null,Consumer:null,_defaultValue:null,_globalName:null};a.Provider={$$typeof:t,_context:a};return a.Consumer=a};var createElement=M$1;var createFactory=function(a){var b=M$1.bind(null,a);b.type=a;return b};var createRef=function(){return {current:null}};
+  for(var m=0;m<f;m++)g[m]=arguments[m+2];d.children=g;}return {$$typeof:l$1,type:a.type,key:c,ref:k,props:d,_owner:h}};var createContext=function(a){a={$$typeof:u,_currentValue:a,_currentValue2:a,_threadCount:0,Provider:null,Consumer:null,_defaultValue:null,_globalName:null};a.Provider={$$typeof:t,_context:a};return a.Consumer=a};var createElement=M$1;var createFactory=function(a){var b=M$1.bind(null,a);b.type=a;return b};var createRef=function(){return {current:null}};
   var forwardRef=function(a){return {$$typeof:v$1,render:a}};var isValidElement=O$1;var lazy=function(a){return {$$typeof:y,_payload:{_status:-1,_result:a},_init:T$1}};var memo=function(a,b){return {$$typeof:x,type:a,compare:void 0===b?null:b}};var startTransition=function(a){var b=V$1.transition;V$1.transition={};try{a();}finally{V$1.transition=b;}};var unstable_act=X$1;var useCallback=function(a,b){return U$1.current.useCallback(a,b)};var useContext=function(a){return U$1.current.useContext(a)};
   var useDebugValue=function(){};var useDeferredValue=function(a){return U$1.current.useDeferredValue(a)};var useEffect=function(a,b){return U$1.current.useEffect(a,b)};var useId=function(){return U$1.current.useId()};var useImperativeHandle=function(a,b,e){return U$1.current.useImperativeHandle(a,b,e)};var useInsertionEffect=function(a,b){return U$1.current.useInsertionEffect(a,b)};var useLayoutEffect=function(a,b){return U$1.current.useLayoutEffect(a,b)};
   var useMemo=function(a,b){return U$1.current.useMemo(a,b)};var useReducer=function(a,b,e){return U$1.current.useReducer(a,b,e)};var useRef=function(a){return U$1.current.useRef(a)};var useState=function(a){return U$1.current.useState(a)};var useSyncExternalStore=function(a,b,e){return U$1.current.useSyncExternalStore(a,b,e)};var useTransition=function(){return U$1.current.useTransition()};var version$1="18.3.1";
@@ -2882,6 +2882,1367 @@
   }
   });
 
+  /**
+   * @license React
+   * react-jsx-runtime.production.min.js
+   *
+   * Copyright (c) Facebook, Inc. and its affiliates.
+   *
+   * This source code is licensed under the MIT license found in the
+   * LICENSE file in the root directory of this source tree.
+   */
+  var k=Symbol.for("react.element"),l=Symbol.for("react.fragment"),m=Object.prototype.hasOwnProperty,n=react.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner,p$1={key:!0,ref:!0,__self:!0,__source:!0};
+  function q(c,a,g){var b,d={},e=null,h=null;void 0!==g&&(e=""+g);void 0!==a.key&&(e=""+a.key);void 0!==a.ref&&(h=a.ref);for(b in a)m.call(a,b)&&!p$1.hasOwnProperty(b)&&(d[b]=a[b]);if(c&&c.defaultProps)for(b in a=c.defaultProps,a)void 0===d[b]&&(d[b]=a[b]);return {$$typeof:k,type:c,key:e,ref:h,props:d,_owner:n.current}}var Fragment=l;var jsx=q;var jsxs=q;
+
+  var reactJsxRuntime_production_min = {
+  	Fragment: Fragment,
+  	jsx: jsx,
+  	jsxs: jsxs
+  };
+
+  /**
+   * @license React
+   * react-jsx-runtime.development.js
+   *
+   * Copyright (c) Facebook, Inc. and its affiliates.
+   *
+   * This source code is licensed under the MIT license found in the
+   * LICENSE file in the root directory of this source tree.
+   */
+
+  var reactJsxRuntime_development = createCommonjsModule(function (module, exports) {
+
+  if (process.env.NODE_ENV !== "production") {
+    (function() {
+
+  var React = react;
+
+  // ATTENTION
+  // When adding new symbols to this file,
+  // Please consider also adding to 'react-devtools-shared/src/backend/ReactSymbols'
+  // The Symbol used to tag the ReactElement-like types.
+  var REACT_ELEMENT_TYPE = Symbol.for('react.element');
+  var REACT_PORTAL_TYPE = Symbol.for('react.portal');
+  var REACT_FRAGMENT_TYPE = Symbol.for('react.fragment');
+  var REACT_STRICT_MODE_TYPE = Symbol.for('react.strict_mode');
+  var REACT_PROFILER_TYPE = Symbol.for('react.profiler');
+  var REACT_PROVIDER_TYPE = Symbol.for('react.provider');
+  var REACT_CONTEXT_TYPE = Symbol.for('react.context');
+  var REACT_FORWARD_REF_TYPE = Symbol.for('react.forward_ref');
+  var REACT_SUSPENSE_TYPE = Symbol.for('react.suspense');
+  var REACT_SUSPENSE_LIST_TYPE = Symbol.for('react.suspense_list');
+  var REACT_MEMO_TYPE = Symbol.for('react.memo');
+  var REACT_LAZY_TYPE = Symbol.for('react.lazy');
+  var REACT_OFFSCREEN_TYPE = Symbol.for('react.offscreen');
+  var MAYBE_ITERATOR_SYMBOL = Symbol.iterator;
+  var FAUX_ITERATOR_SYMBOL = '@@iterator';
+  function getIteratorFn(maybeIterable) {
+    if (maybeIterable === null || typeof maybeIterable !== 'object') {
+      return null;
+    }
+
+    var maybeIterator = MAYBE_ITERATOR_SYMBOL && maybeIterable[MAYBE_ITERATOR_SYMBOL] || maybeIterable[FAUX_ITERATOR_SYMBOL];
+
+    if (typeof maybeIterator === 'function') {
+      return maybeIterator;
+    }
+
+    return null;
+  }
+
+  var ReactSharedInternals = React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+
+  function error(format) {
+    {
+      {
+        for (var _len2 = arguments.length, args = new Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
+          args[_key2 - 1] = arguments[_key2];
+        }
+
+        printWarning('error', format, args);
+      }
+    }
+  }
+
+  function printWarning(level, format, args) {
+    // When changing this logic, you might want to also
+    // update consoleWithStackDev.www.js as well.
+    {
+      var ReactDebugCurrentFrame = ReactSharedInternals.ReactDebugCurrentFrame;
+      var stack = ReactDebugCurrentFrame.getStackAddendum();
+
+      if (stack !== '') {
+        format += '%s';
+        args = args.concat([stack]);
+      } // eslint-disable-next-line react-internal/safe-string-coercion
+
+
+      var argsWithFormat = args.map(function (item) {
+        return String(item);
+      }); // Careful: RN currently depends on this prefix
+
+      argsWithFormat.unshift('Warning: ' + format); // We intentionally don't use spread (or .apply) directly because it
+      // breaks IE9: https://github.com/facebook/react/issues/13610
+      // eslint-disable-next-line react-internal/no-production-logging
+
+      Function.prototype.apply.call(console[level], console, argsWithFormat);
+    }
+  }
+
+  // -----------------------------------------------------------------------------
+
+  var enableScopeAPI = false; // Experimental Create Event Handle API.
+  var enableCacheElement = false;
+  var enableTransitionTracing = false; // No known bugs, but needs performance testing
+
+  var enableLegacyHidden = false; // Enables unstable_avoidThisFallback feature in Fiber
+  // stuff. Intended to enable React core members to more easily debug scheduling
+  // issues in DEV builds.
+
+  var enableDebugTracing = false; // Track which Fiber(s) schedule render work.
+
+  var REACT_MODULE_REFERENCE;
+
+  {
+    REACT_MODULE_REFERENCE = Symbol.for('react.module.reference');
+  }
+
+  function isValidElementType(type) {
+    if (typeof type === 'string' || typeof type === 'function') {
+      return true;
+    } // Note: typeof might be other than 'symbol' or 'number' (e.g. if it's a polyfill).
+
+
+    if (type === REACT_FRAGMENT_TYPE || type === REACT_PROFILER_TYPE || enableDebugTracing  || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || enableLegacyHidden  || type === REACT_OFFSCREEN_TYPE || enableScopeAPI  || enableCacheElement  || enableTransitionTracing ) {
+      return true;
+    }
+
+    if (typeof type === 'object' && type !== null) {
+      if (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE || // This needs to include all possible module reference object
+      // types supported by any Flight configuration anywhere since
+      // we don't know which Flight build this will end up being used
+      // with.
+      type.$$typeof === REACT_MODULE_REFERENCE || type.getModuleId !== undefined) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
+  function getWrappedName(outerType, innerType, wrapperName) {
+    var displayName = outerType.displayName;
+
+    if (displayName) {
+      return displayName;
+    }
+
+    var functionName = innerType.displayName || innerType.name || '';
+    return functionName !== '' ? wrapperName + "(" + functionName + ")" : wrapperName;
+  } // Keep in sync with react-reconciler/getComponentNameFromFiber
+
+
+  function getContextName(type) {
+    return type.displayName || 'Context';
+  } // Note that the reconciler package should generally prefer to use getComponentNameFromFiber() instead.
+
+
+  function getComponentNameFromType(type) {
+    if (type == null) {
+      // Host root, text node or just invalid type.
+      return null;
+    }
+
+    {
+      if (typeof type.tag === 'number') {
+        error('Received an unexpected object in getComponentNameFromType(). ' + 'This is likely a bug in React. Please file an issue.');
+      }
+    }
+
+    if (typeof type === 'function') {
+      return type.displayName || type.name || null;
+    }
+
+    if (typeof type === 'string') {
+      return type;
+    }
+
+    switch (type) {
+      case REACT_FRAGMENT_TYPE:
+        return 'Fragment';
+
+      case REACT_PORTAL_TYPE:
+        return 'Portal';
+
+      case REACT_PROFILER_TYPE:
+        return 'Profiler';
+
+      case REACT_STRICT_MODE_TYPE:
+        return 'StrictMode';
+
+      case REACT_SUSPENSE_TYPE:
+        return 'Suspense';
+
+      case REACT_SUSPENSE_LIST_TYPE:
+        return 'SuspenseList';
+
+    }
+
+    if (typeof type === 'object') {
+      switch (type.$$typeof) {
+        case REACT_CONTEXT_TYPE:
+          var context = type;
+          return getContextName(context) + '.Consumer';
+
+        case REACT_PROVIDER_TYPE:
+          var provider = type;
+          return getContextName(provider._context) + '.Provider';
+
+        case REACT_FORWARD_REF_TYPE:
+          return getWrappedName(type, type.render, 'ForwardRef');
+
+        case REACT_MEMO_TYPE:
+          var outerName = type.displayName || null;
+
+          if (outerName !== null) {
+            return outerName;
+          }
+
+          return getComponentNameFromType(type.type) || 'Memo';
+
+        case REACT_LAZY_TYPE:
+          {
+            var lazyComponent = type;
+            var payload = lazyComponent._payload;
+            var init = lazyComponent._init;
+
+            try {
+              return getComponentNameFromType(init(payload));
+            } catch (x) {
+              return null;
+            }
+          }
+
+        // eslint-disable-next-line no-fallthrough
+      }
+    }
+
+    return null;
+  }
+
+  var assign = Object.assign;
+
+  // Helpers to patch console.logs to avoid logging during side-effect free
+  // replaying on render function. This currently only patches the object
+  // lazily which won't cover if the log function was extracted eagerly.
+  // We could also eagerly patch the method.
+  var disabledDepth = 0;
+  var prevLog;
+  var prevInfo;
+  var prevWarn;
+  var prevError;
+  var prevGroup;
+  var prevGroupCollapsed;
+  var prevGroupEnd;
+
+  function disabledLog() {}
+
+  disabledLog.__reactDisabledLog = true;
+  function disableLogs() {
+    {
+      if (disabledDepth === 0) {
+        /* eslint-disable react-internal/no-production-logging */
+        prevLog = console.log;
+        prevInfo = console.info;
+        prevWarn = console.warn;
+        prevError = console.error;
+        prevGroup = console.group;
+        prevGroupCollapsed = console.groupCollapsed;
+        prevGroupEnd = console.groupEnd; // https://github.com/facebook/react/issues/19099
+
+        var props = {
+          configurable: true,
+          enumerable: true,
+          value: disabledLog,
+          writable: true
+        }; // $FlowFixMe Flow thinks console is immutable.
+
+        Object.defineProperties(console, {
+          info: props,
+          log: props,
+          warn: props,
+          error: props,
+          group: props,
+          groupCollapsed: props,
+          groupEnd: props
+        });
+        /* eslint-enable react-internal/no-production-logging */
+      }
+
+      disabledDepth++;
+    }
+  }
+  function reenableLogs() {
+    {
+      disabledDepth--;
+
+      if (disabledDepth === 0) {
+        /* eslint-disable react-internal/no-production-logging */
+        var props = {
+          configurable: true,
+          enumerable: true,
+          writable: true
+        }; // $FlowFixMe Flow thinks console is immutable.
+
+        Object.defineProperties(console, {
+          log: assign({}, props, {
+            value: prevLog
+          }),
+          info: assign({}, props, {
+            value: prevInfo
+          }),
+          warn: assign({}, props, {
+            value: prevWarn
+          }),
+          error: assign({}, props, {
+            value: prevError
+          }),
+          group: assign({}, props, {
+            value: prevGroup
+          }),
+          groupCollapsed: assign({}, props, {
+            value: prevGroupCollapsed
+          }),
+          groupEnd: assign({}, props, {
+            value: prevGroupEnd
+          })
+        });
+        /* eslint-enable react-internal/no-production-logging */
+      }
+
+      if (disabledDepth < 0) {
+        error('disabledDepth fell below zero. ' + 'This is a bug in React. Please file an issue.');
+      }
+    }
+  }
+
+  var ReactCurrentDispatcher = ReactSharedInternals.ReactCurrentDispatcher;
+  var prefix;
+  function describeBuiltInComponentFrame(name, source, ownerFn) {
+    {
+      if (prefix === undefined) {
+        // Extract the VM specific prefix used by each line.
+        try {
+          throw Error();
+        } catch (x) {
+          var match = x.stack.trim().match(/\n( *(at )?)/);
+          prefix = match && match[1] || '';
+        }
+      } // We use the prefix to ensure our stacks line up with native stack frames.
+
+
+      return '\n' + prefix + name;
+    }
+  }
+  var reentry = false;
+  var componentFrameCache;
+
+  {
+    var PossiblyWeakMap = typeof WeakMap === 'function' ? WeakMap : Map;
+    componentFrameCache = new PossiblyWeakMap();
+  }
+
+  function describeNativeComponentFrame(fn, construct) {
+    // If something asked for a stack inside a fake render, it should get ignored.
+    if ( !fn || reentry) {
+      return '';
+    }
+
+    {
+      var frame = componentFrameCache.get(fn);
+
+      if (frame !== undefined) {
+        return frame;
+      }
+    }
+
+    var control;
+    reentry = true;
+    var previousPrepareStackTrace = Error.prepareStackTrace; // $FlowFixMe It does accept undefined.
+
+    Error.prepareStackTrace = undefined;
+    var previousDispatcher;
+
+    {
+      previousDispatcher = ReactCurrentDispatcher.current; // Set the dispatcher in DEV because this might be call in the render function
+      // for warnings.
+
+      ReactCurrentDispatcher.current = null;
+      disableLogs();
+    }
+
+    try {
+      // This should throw.
+      if (construct) {
+        // Something should be setting the props in the constructor.
+        var Fake = function () {
+          throw Error();
+        }; // $FlowFixMe
+
+
+        Object.defineProperty(Fake.prototype, 'props', {
+          set: function () {
+            // We use a throwing setter instead of frozen or non-writable props
+            // because that won't throw in a non-strict mode function.
+            throw Error();
+          }
+        });
+
+        if (typeof Reflect === 'object' && Reflect.construct) {
+          // We construct a different control for this case to include any extra
+          // frames added by the construct call.
+          try {
+            Reflect.construct(Fake, []);
+          } catch (x) {
+            control = x;
+          }
+
+          Reflect.construct(fn, [], Fake);
+        } else {
+          try {
+            Fake.call();
+          } catch (x) {
+            control = x;
+          }
+
+          fn.call(Fake.prototype);
+        }
+      } else {
+        try {
+          throw Error();
+        } catch (x) {
+          control = x;
+        }
+
+        fn();
+      }
+    } catch (sample) {
+      // This is inlined manually because closure doesn't do it for us.
+      if (sample && control && typeof sample.stack === 'string') {
+        // This extracts the first frame from the sample that isn't also in the control.
+        // Skipping one frame that we assume is the frame that calls the two.
+        var sampleLines = sample.stack.split('\n');
+        var controlLines = control.stack.split('\n');
+        var s = sampleLines.length - 1;
+        var c = controlLines.length - 1;
+
+        while (s >= 1 && c >= 0 && sampleLines[s] !== controlLines[c]) {
+          // We expect at least one stack frame to be shared.
+          // Typically this will be the root most one. However, stack frames may be
+          // cut off due to maximum stack limits. In this case, one maybe cut off
+          // earlier than the other. We assume that the sample is longer or the same
+          // and there for cut off earlier. So we should find the root most frame in
+          // the sample somewhere in the control.
+          c--;
+        }
+
+        for (; s >= 1 && c >= 0; s--, c--) {
+          // Next we find the first one that isn't the same which should be the
+          // frame that called our sample function and the control.
+          if (sampleLines[s] !== controlLines[c]) {
+            // In V8, the first line is describing the message but other VMs don't.
+            // If we're about to return the first line, and the control is also on the same
+            // line, that's a pretty good indicator that our sample threw at same line as
+            // the control. I.e. before we entered the sample frame. So we ignore this result.
+            // This can happen if you passed a class to function component, or non-function.
+            if (s !== 1 || c !== 1) {
+              do {
+                s--;
+                c--; // We may still have similar intermediate frames from the construct call.
+                // The next one that isn't the same should be our match though.
+
+                if (c < 0 || sampleLines[s] !== controlLines[c]) {
+                  // V8 adds a "new" prefix for native classes. Let's remove it to make it prettier.
+                  var _frame = '\n' + sampleLines[s].replace(' at new ', ' at '); // If our component frame is labeled "<anonymous>"
+                  // but we have a user-provided "displayName"
+                  // splice it in to make the stack more readable.
+
+
+                  if (fn.displayName && _frame.includes('<anonymous>')) {
+                    _frame = _frame.replace('<anonymous>', fn.displayName);
+                  }
+
+                  {
+                    if (typeof fn === 'function') {
+                      componentFrameCache.set(fn, _frame);
+                    }
+                  } // Return the line we found.
+
+
+                  return _frame;
+                }
+              } while (s >= 1 && c >= 0);
+            }
+
+            break;
+          }
+        }
+      }
+    } finally {
+      reentry = false;
+
+      {
+        ReactCurrentDispatcher.current = previousDispatcher;
+        reenableLogs();
+      }
+
+      Error.prepareStackTrace = previousPrepareStackTrace;
+    } // Fallback to just using the name if we couldn't make it throw.
+
+
+    var name = fn ? fn.displayName || fn.name : '';
+    var syntheticFrame = name ? describeBuiltInComponentFrame(name) : '';
+
+    {
+      if (typeof fn === 'function') {
+        componentFrameCache.set(fn, syntheticFrame);
+      }
+    }
+
+    return syntheticFrame;
+  }
+  function describeFunctionComponentFrame(fn, source, ownerFn) {
+    {
+      return describeNativeComponentFrame(fn, false);
+    }
+  }
+
+  function shouldConstruct(Component) {
+    var prototype = Component.prototype;
+    return !!(prototype && prototype.isReactComponent);
+  }
+
+  function describeUnknownElementTypeFrameInDEV(type, source, ownerFn) {
+
+    if (type == null) {
+      return '';
+    }
+
+    if (typeof type === 'function') {
+      {
+        return describeNativeComponentFrame(type, shouldConstruct(type));
+      }
+    }
+
+    if (typeof type === 'string') {
+      return describeBuiltInComponentFrame(type);
+    }
+
+    switch (type) {
+      case REACT_SUSPENSE_TYPE:
+        return describeBuiltInComponentFrame('Suspense');
+
+      case REACT_SUSPENSE_LIST_TYPE:
+        return describeBuiltInComponentFrame('SuspenseList');
+    }
+
+    if (typeof type === 'object') {
+      switch (type.$$typeof) {
+        case REACT_FORWARD_REF_TYPE:
+          return describeFunctionComponentFrame(type.render);
+
+        case REACT_MEMO_TYPE:
+          // Memo may contain any component type so we recursively resolve it.
+          return describeUnknownElementTypeFrameInDEV(type.type, source, ownerFn);
+
+        case REACT_LAZY_TYPE:
+          {
+            var lazyComponent = type;
+            var payload = lazyComponent._payload;
+            var init = lazyComponent._init;
+
+            try {
+              // Lazy may contain any component type so we recursively resolve it.
+              return describeUnknownElementTypeFrameInDEV(init(payload), source, ownerFn);
+            } catch (x) {}
+          }
+      }
+    }
+
+    return '';
+  }
+
+  var hasOwnProperty = Object.prototype.hasOwnProperty;
+
+  var loggedTypeFailures = {};
+  var ReactDebugCurrentFrame = ReactSharedInternals.ReactDebugCurrentFrame;
+
+  function setCurrentlyValidatingElement(element) {
+    {
+      if (element) {
+        var owner = element._owner;
+        var stack = describeUnknownElementTypeFrameInDEV(element.type, element._source, owner ? owner.type : null);
+        ReactDebugCurrentFrame.setExtraStackFrame(stack);
+      } else {
+        ReactDebugCurrentFrame.setExtraStackFrame(null);
+      }
+    }
+  }
+
+  function checkPropTypes(typeSpecs, values, location, componentName, element) {
+    {
+      // $FlowFixMe This is okay but Flow doesn't know it.
+      var has = Function.call.bind(hasOwnProperty);
+
+      for (var typeSpecName in typeSpecs) {
+        if (has(typeSpecs, typeSpecName)) {
+          var error$1 = void 0; // Prop type validation may throw. In case they do, we don't want to
+          // fail the render phase where it didn't fail before. So we log it.
+          // After these have been cleaned up, we'll let them throw.
+
+          try {
+            // This is intentionally an invariant that gets caught. It's the same
+            // behavior as without this statement except with a better message.
+            if (typeof typeSpecs[typeSpecName] !== 'function') {
+              // eslint-disable-next-line react-internal/prod-error-codes
+              var err = Error((componentName || 'React class') + ': ' + location + ' type `' + typeSpecName + '` is invalid; ' + 'it must be a function, usually from the `prop-types` package, but received `' + typeof typeSpecs[typeSpecName] + '`.' + 'This often happens because of typos such as `PropTypes.function` instead of `PropTypes.func`.');
+              err.name = 'Invariant Violation';
+              throw err;
+            }
+
+            error$1 = typeSpecs[typeSpecName](values, typeSpecName, componentName, location, null, 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED');
+          } catch (ex) {
+            error$1 = ex;
+          }
+
+          if (error$1 && !(error$1 instanceof Error)) {
+            setCurrentlyValidatingElement(element);
+
+            error('%s: type specification of %s' + ' `%s` is invalid; the type checker ' + 'function must return `null` or an `Error` but returned a %s. ' + 'You may have forgotten to pass an argument to the type checker ' + 'creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and ' + 'shape all require an argument).', componentName || 'React class', location, typeSpecName, typeof error$1);
+
+            setCurrentlyValidatingElement(null);
+          }
+
+          if (error$1 instanceof Error && !(error$1.message in loggedTypeFailures)) {
+            // Only monitor this failure once because there tends to be a lot of the
+            // same error.
+            loggedTypeFailures[error$1.message] = true;
+            setCurrentlyValidatingElement(element);
+
+            error('Failed %s type: %s', location, error$1.message);
+
+            setCurrentlyValidatingElement(null);
+          }
+        }
+      }
+    }
+  }
+
+  var isArrayImpl = Array.isArray; // eslint-disable-next-line no-redeclare
+
+  function isArray(a) {
+    return isArrayImpl(a);
+  }
+
+  /*
+   * The `'' + value` pattern (used in in perf-sensitive code) throws for Symbol
+   * and Temporal.* types. See https://github.com/facebook/react/pull/22064.
+   *
+   * The functions in this module will throw an easier-to-understand,
+   * easier-to-debug exception with a clear errors message message explaining the
+   * problem. (Instead of a confusing exception thrown inside the implementation
+   * of the `value` object).
+   */
+  // $FlowFixMe only called in DEV, so void return is not possible.
+  function typeName(value) {
+    {
+      // toStringTag is needed for namespaced types like Temporal.Instant
+      var hasToStringTag = typeof Symbol === 'function' && Symbol.toStringTag;
+      var type = hasToStringTag && value[Symbol.toStringTag] || value.constructor.name || 'Object';
+      return type;
+    }
+  } // $FlowFixMe only called in DEV, so void return is not possible.
+
+
+  function willCoercionThrow(value) {
+    {
+      try {
+        testStringCoercion(value);
+        return false;
+      } catch (e) {
+        return true;
+      }
+    }
+  }
+
+  function testStringCoercion(value) {
+    // If you ended up here by following an exception call stack, here's what's
+    // happened: you supplied an object or symbol value to React (as a prop, key,
+    // DOM attribute, CSS property, string ref, etc.) and when React tried to
+    // coerce it to a string using `'' + value`, an exception was thrown.
+    //
+    // The most common types that will cause this exception are `Symbol` instances
+    // and Temporal objects like `Temporal.Instant`. But any object that has a
+    // `valueOf` or `[Symbol.toPrimitive]` method that throws will also cause this
+    // exception. (Library authors do this to prevent users from using built-in
+    // numeric operators like `+` or comparison operators like `>=` because custom
+    // methods are needed to perform accurate arithmetic or comparison.)
+    //
+    // To fix the problem, coerce this object or symbol value to a string before
+    // passing it to React. The most reliable way is usually `String(value)`.
+    //
+    // To find which value is throwing, check the browser or debugger console.
+    // Before this exception was thrown, there should be `console.error` output
+    // that shows the type (Symbol, Temporal.PlainDate, etc.) that caused the
+    // problem and how that type was used: key, atrribute, input value prop, etc.
+    // In most cases, this console output also shows the component and its
+    // ancestor components where the exception happened.
+    //
+    // eslint-disable-next-line react-internal/safe-string-coercion
+    return '' + value;
+  }
+  function checkKeyStringCoercion(value) {
+    {
+      if (willCoercionThrow(value)) {
+        error('The provided key is an unsupported type %s.' + ' This value must be coerced to a string before before using it here.', typeName(value));
+
+        return testStringCoercion(value); // throw (to help callers find troubleshooting comments)
+      }
+    }
+  }
+
+  var ReactCurrentOwner = ReactSharedInternals.ReactCurrentOwner;
+  var RESERVED_PROPS = {
+    key: true,
+    ref: true,
+    __self: true,
+    __source: true
+  };
+  var specialPropKeyWarningShown;
+  var specialPropRefWarningShown;
+  var didWarnAboutStringRefs;
+
+  {
+    didWarnAboutStringRefs = {};
+  }
+
+  function hasValidRef(config) {
+    {
+      if (hasOwnProperty.call(config, 'ref')) {
+        var getter = Object.getOwnPropertyDescriptor(config, 'ref').get;
+
+        if (getter && getter.isReactWarning) {
+          return false;
+        }
+      }
+    }
+
+    return config.ref !== undefined;
+  }
+
+  function hasValidKey(config) {
+    {
+      if (hasOwnProperty.call(config, 'key')) {
+        var getter = Object.getOwnPropertyDescriptor(config, 'key').get;
+
+        if (getter && getter.isReactWarning) {
+          return false;
+        }
+      }
+    }
+
+    return config.key !== undefined;
+  }
+
+  function warnIfStringRefCannotBeAutoConverted(config, self) {
+    {
+      if (typeof config.ref === 'string' && ReactCurrentOwner.current && self && ReactCurrentOwner.current.stateNode !== self) {
+        var componentName = getComponentNameFromType(ReactCurrentOwner.current.type);
+
+        if (!didWarnAboutStringRefs[componentName]) {
+          error('Component "%s" contains the string ref "%s". ' + 'Support for string refs will be removed in a future major release. ' + 'This case cannot be automatically converted to an arrow function. ' + 'We ask you to manually fix this case by using useRef() or createRef() instead. ' + 'Learn more about using refs safely here: ' + 'https://reactjs.org/link/strict-mode-string-ref', getComponentNameFromType(ReactCurrentOwner.current.type), config.ref);
+
+          didWarnAboutStringRefs[componentName] = true;
+        }
+      }
+    }
+  }
+
+  function defineKeyPropWarningGetter(props, displayName) {
+    {
+      var warnAboutAccessingKey = function () {
+        if (!specialPropKeyWarningShown) {
+          specialPropKeyWarningShown = true;
+
+          error('%s: `key` is not a prop. Trying to access it will result ' + 'in `undefined` being returned. If you need to access the same ' + 'value within the child component, you should pass it as a different ' + 'prop. (https://reactjs.org/link/special-props)', displayName);
+        }
+      };
+
+      warnAboutAccessingKey.isReactWarning = true;
+      Object.defineProperty(props, 'key', {
+        get: warnAboutAccessingKey,
+        configurable: true
+      });
+    }
+  }
+
+  function defineRefPropWarningGetter(props, displayName) {
+    {
+      var warnAboutAccessingRef = function () {
+        if (!specialPropRefWarningShown) {
+          specialPropRefWarningShown = true;
+
+          error('%s: `ref` is not a prop. Trying to access it will result ' + 'in `undefined` being returned. If you need to access the same ' + 'value within the child component, you should pass it as a different ' + 'prop. (https://reactjs.org/link/special-props)', displayName);
+        }
+      };
+
+      warnAboutAccessingRef.isReactWarning = true;
+      Object.defineProperty(props, 'ref', {
+        get: warnAboutAccessingRef,
+        configurable: true
+      });
+    }
+  }
+  /**
+   * Factory method to create a new React element. This no longer adheres to
+   * the class pattern, so do not use new to call it. Also, instanceof check
+   * will not work. Instead test $$typeof field against Symbol.for('react.element') to check
+   * if something is a React Element.
+   *
+   * @param {*} type
+   * @param {*} props
+   * @param {*} key
+   * @param {string|object} ref
+   * @param {*} owner
+   * @param {*} self A *temporary* helper to detect places where `this` is
+   * different from the `owner` when React.createElement is called, so that we
+   * can warn. We want to get rid of owner and replace string `ref`s with arrow
+   * functions, and as long as `this` and owner are the same, there will be no
+   * change in behavior.
+   * @param {*} source An annotation object (added by a transpiler or otherwise)
+   * indicating filename, line number, and/or other information.
+   * @internal
+   */
+
+
+  var ReactElement = function (type, key, ref, self, source, owner, props) {
+    var element = {
+      // This tag allows us to uniquely identify this as a React Element
+      $$typeof: REACT_ELEMENT_TYPE,
+      // Built-in properties that belong on the element
+      type: type,
+      key: key,
+      ref: ref,
+      props: props,
+      // Record the component responsible for creating this element.
+      _owner: owner
+    };
+
+    {
+      // The validation flag is currently mutative. We put it on
+      // an external backing store so that we can freeze the whole object.
+      // This can be replaced with a WeakMap once they are implemented in
+      // commonly used development environments.
+      element._store = {}; // To make comparing ReactElements easier for testing purposes, we make
+      // the validation flag non-enumerable (where possible, which should
+      // include every environment we run tests in), so the test framework
+      // ignores it.
+
+      Object.defineProperty(element._store, 'validated', {
+        configurable: false,
+        enumerable: false,
+        writable: true,
+        value: false
+      }); // self and source are DEV only properties.
+
+      Object.defineProperty(element, '_self', {
+        configurable: false,
+        enumerable: false,
+        writable: false,
+        value: self
+      }); // Two elements created in two different places should be considered
+      // equal for testing purposes and therefore we hide it from enumeration.
+
+      Object.defineProperty(element, '_source', {
+        configurable: false,
+        enumerable: false,
+        writable: false,
+        value: source
+      });
+
+      if (Object.freeze) {
+        Object.freeze(element.props);
+        Object.freeze(element);
+      }
+    }
+
+    return element;
+  };
+  /**
+   * https://github.com/reactjs/rfcs/pull/107
+   * @param {*} type
+   * @param {object} props
+   * @param {string} key
+   */
+
+  function jsxDEV(type, config, maybeKey, source, self) {
+    {
+      var propName; // Reserved names are extracted
+
+      var props = {};
+      var key = null;
+      var ref = null; // Currently, key can be spread in as a prop. This causes a potential
+      // issue if key is also explicitly declared (ie. <div {...props} key="Hi" />
+      // or <div key="Hi" {...props} /> ). We want to deprecate key spread,
+      // but as an intermediary step, we will use jsxDEV for everything except
+      // <div {...props} key="Hi" />, because we aren't currently able to tell if
+      // key is explicitly declared to be undefined or not.
+
+      if (maybeKey !== undefined) {
+        {
+          checkKeyStringCoercion(maybeKey);
+        }
+
+        key = '' + maybeKey;
+      }
+
+      if (hasValidKey(config)) {
+        {
+          checkKeyStringCoercion(config.key);
+        }
+
+        key = '' + config.key;
+      }
+
+      if (hasValidRef(config)) {
+        ref = config.ref;
+        warnIfStringRefCannotBeAutoConverted(config, self);
+      } // Remaining properties are added to a new props object
+
+
+      for (propName in config) {
+        if (hasOwnProperty.call(config, propName) && !RESERVED_PROPS.hasOwnProperty(propName)) {
+          props[propName] = config[propName];
+        }
+      } // Resolve default props
+
+
+      if (type && type.defaultProps) {
+        var defaultProps = type.defaultProps;
+
+        for (propName in defaultProps) {
+          if (props[propName] === undefined) {
+            props[propName] = defaultProps[propName];
+          }
+        }
+      }
+
+      if (key || ref) {
+        var displayName = typeof type === 'function' ? type.displayName || type.name || 'Unknown' : type;
+
+        if (key) {
+          defineKeyPropWarningGetter(props, displayName);
+        }
+
+        if (ref) {
+          defineRefPropWarningGetter(props, displayName);
+        }
+      }
+
+      return ReactElement(type, key, ref, self, source, ReactCurrentOwner.current, props);
+    }
+  }
+
+  var ReactCurrentOwner$1 = ReactSharedInternals.ReactCurrentOwner;
+  var ReactDebugCurrentFrame$1 = ReactSharedInternals.ReactDebugCurrentFrame;
+
+  function setCurrentlyValidatingElement$1(element) {
+    {
+      if (element) {
+        var owner = element._owner;
+        var stack = describeUnknownElementTypeFrameInDEV(element.type, element._source, owner ? owner.type : null);
+        ReactDebugCurrentFrame$1.setExtraStackFrame(stack);
+      } else {
+        ReactDebugCurrentFrame$1.setExtraStackFrame(null);
+      }
+    }
+  }
+
+  var propTypesMisspellWarningShown;
+
+  {
+    propTypesMisspellWarningShown = false;
+  }
+  /**
+   * Verifies the object is a ReactElement.
+   * See https://reactjs.org/docs/react-api.html#isvalidelement
+   * @param {?object} object
+   * @return {boolean} True if `object` is a ReactElement.
+   * @final
+   */
+
+
+  function isValidElement(object) {
+    {
+      return typeof object === 'object' && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
+    }
+  }
+
+  function getDeclarationErrorAddendum() {
+    {
+      if (ReactCurrentOwner$1.current) {
+        var name = getComponentNameFromType(ReactCurrentOwner$1.current.type);
+
+        if (name) {
+          return '\n\nCheck the render method of `' + name + '`.';
+        }
+      }
+
+      return '';
+    }
+  }
+
+  function getSourceInfoErrorAddendum(source) {
+    {
+      if (source !== undefined) {
+        var fileName = source.fileName.replace(/^.*[\\\/]/, '');
+        var lineNumber = source.lineNumber;
+        return '\n\nCheck your code at ' + fileName + ':' + lineNumber + '.';
+      }
+
+      return '';
+    }
+  }
+  /**
+   * Warn if there's no key explicitly set on dynamic arrays of children or
+   * object keys are not valid. This allows us to keep track of children between
+   * updates.
+   */
+
+
+  var ownerHasKeyUseWarning = {};
+
+  function getCurrentComponentErrorInfo(parentType) {
+    {
+      var info = getDeclarationErrorAddendum();
+
+      if (!info) {
+        var parentName = typeof parentType === 'string' ? parentType : parentType.displayName || parentType.name;
+
+        if (parentName) {
+          info = "\n\nCheck the top-level render call using <" + parentName + ">.";
+        }
+      }
+
+      return info;
+    }
+  }
+  /**
+   * Warn if the element doesn't have an explicit key assigned to it.
+   * This element is in an array. The array could grow and shrink or be
+   * reordered. All children that haven't already been validated are required to
+   * have a "key" property assigned to it. Error statuses are cached so a warning
+   * will only be shown once.
+   *
+   * @internal
+   * @param {ReactElement} element Element that requires a key.
+   * @param {*} parentType element's parent's type.
+   */
+
+
+  function validateExplicitKey(element, parentType) {
+    {
+      if (!element._store || element._store.validated || element.key != null) {
+        return;
+      }
+
+      element._store.validated = true;
+      var currentComponentErrorInfo = getCurrentComponentErrorInfo(parentType);
+
+      if (ownerHasKeyUseWarning[currentComponentErrorInfo]) {
+        return;
+      }
+
+      ownerHasKeyUseWarning[currentComponentErrorInfo] = true; // Usually the current owner is the offender, but if it accepts children as a
+      // property, it may be the creator of the child that's responsible for
+      // assigning it a key.
+
+      var childOwner = '';
+
+      if (element && element._owner && element._owner !== ReactCurrentOwner$1.current) {
+        // Give the component that originally created this child.
+        childOwner = " It was passed a child from " + getComponentNameFromType(element._owner.type) + ".";
+      }
+
+      setCurrentlyValidatingElement$1(element);
+
+      error('Each child in a list should have a unique "key" prop.' + '%s%s See https://reactjs.org/link/warning-keys for more information.', currentComponentErrorInfo, childOwner);
+
+      setCurrentlyValidatingElement$1(null);
+    }
+  }
+  /**
+   * Ensure that every element either is passed in a static location, in an
+   * array with an explicit keys property defined, or in an object literal
+   * with valid key property.
+   *
+   * @internal
+   * @param {ReactNode} node Statically passed child of any type.
+   * @param {*} parentType node's parent's type.
+   */
+
+
+  function validateChildKeys(node, parentType) {
+    {
+      if (typeof node !== 'object') {
+        return;
+      }
+
+      if (isArray(node)) {
+        for (var i = 0; i < node.length; i++) {
+          var child = node[i];
+
+          if (isValidElement(child)) {
+            validateExplicitKey(child, parentType);
+          }
+        }
+      } else if (isValidElement(node)) {
+        // This element was passed in a valid location.
+        if (node._store) {
+          node._store.validated = true;
+        }
+      } else if (node) {
+        var iteratorFn = getIteratorFn(node);
+
+        if (typeof iteratorFn === 'function') {
+          // Entry iterators used to provide implicit keys,
+          // but now we print a separate warning for them later.
+          if (iteratorFn !== node.entries) {
+            var iterator = iteratorFn.call(node);
+            var step;
+
+            while (!(step = iterator.next()).done) {
+              if (isValidElement(step.value)) {
+                validateExplicitKey(step.value, parentType);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  /**
+   * Given an element, validate that its props follow the propTypes definition,
+   * provided by the type.
+   *
+   * @param {ReactElement} element
+   */
+
+
+  function validatePropTypes(element) {
+    {
+      var type = element.type;
+
+      if (type === null || type === undefined || typeof type === 'string') {
+        return;
+      }
+
+      var propTypes;
+
+      if (typeof type === 'function') {
+        propTypes = type.propTypes;
+      } else if (typeof type === 'object' && (type.$$typeof === REACT_FORWARD_REF_TYPE || // Note: Memo only checks outer props here.
+      // Inner props are checked in the reconciler.
+      type.$$typeof === REACT_MEMO_TYPE)) {
+        propTypes = type.propTypes;
+      } else {
+        return;
+      }
+
+      if (propTypes) {
+        // Intentionally inside to avoid triggering lazy initializers:
+        var name = getComponentNameFromType(type);
+        checkPropTypes(propTypes, element.props, 'prop', name, element);
+      } else if (type.PropTypes !== undefined && !propTypesMisspellWarningShown) {
+        propTypesMisspellWarningShown = true; // Intentionally inside to avoid triggering lazy initializers:
+
+        var _name = getComponentNameFromType(type);
+
+        error('Component %s declared `PropTypes` instead of `propTypes`. Did you misspell the property assignment?', _name || 'Unknown');
+      }
+
+      if (typeof type.getDefaultProps === 'function' && !type.getDefaultProps.isReactClassApproved) {
+        error('getDefaultProps is only used on classic React.createClass ' + 'definitions. Use a static property named `defaultProps` instead.');
+      }
+    }
+  }
+  /**
+   * Given a fragment, validate that it can only be provided with fragment props
+   * @param {ReactElement} fragment
+   */
+
+
+  function validateFragmentProps(fragment) {
+    {
+      var keys = Object.keys(fragment.props);
+
+      for (var i = 0; i < keys.length; i++) {
+        var key = keys[i];
+
+        if (key !== 'children' && key !== 'key') {
+          setCurrentlyValidatingElement$1(fragment);
+
+          error('Invalid prop `%s` supplied to `React.Fragment`. ' + 'React.Fragment can only have `key` and `children` props.', key);
+
+          setCurrentlyValidatingElement$1(null);
+          break;
+        }
+      }
+
+      if (fragment.ref !== null) {
+        setCurrentlyValidatingElement$1(fragment);
+
+        error('Invalid attribute `ref` supplied to `React.Fragment`.');
+
+        setCurrentlyValidatingElement$1(null);
+      }
+    }
+  }
+
+  var didWarnAboutKeySpread = {};
+  function jsxWithValidation(type, props, key, isStaticChildren, source, self) {
+    {
+      var validType = isValidElementType(type); // We warn in this case but don't throw. We expect the element creation to
+      // succeed and there will likely be errors in render.
+
+      if (!validType) {
+        var info = '';
+
+        if (type === undefined || typeof type === 'object' && type !== null && Object.keys(type).length === 0) {
+          info += ' You likely forgot to export your component from the file ' + "it's defined in, or you might have mixed up default and named imports.";
+        }
+
+        var sourceInfo = getSourceInfoErrorAddendum(source);
+
+        if (sourceInfo) {
+          info += sourceInfo;
+        } else {
+          info += getDeclarationErrorAddendum();
+        }
+
+        var typeString;
+
+        if (type === null) {
+          typeString = 'null';
+        } else if (isArray(type)) {
+          typeString = 'array';
+        } else if (type !== undefined && type.$$typeof === REACT_ELEMENT_TYPE) {
+          typeString = "<" + (getComponentNameFromType(type.type) || 'Unknown') + " />";
+          info = ' Did you accidentally export a JSX literal instead of a component?';
+        } else {
+          typeString = typeof type;
+        }
+
+        error('React.jsx: type is invalid -- expected a string (for ' + 'built-in components) or a class/function (for composite ' + 'components) but got: %s.%s', typeString, info);
+      }
+
+      var element = jsxDEV(type, props, key, source, self); // The result can be nullish if a mock or a custom function is used.
+      // TODO: Drop this when these are no longer allowed as the type argument.
+
+      if (element == null) {
+        return element;
+      } // Skip key warning if the type isn't valid since our key validation logic
+      // doesn't expect a non-string/function type and can throw confusing errors.
+      // We don't want exception behavior to differ between dev and prod.
+      // (Rendering will throw with a helpful message and as soon as the type is
+      // fixed, the key warnings will appear.)
+
+
+      if (validType) {
+        var children = props.children;
+
+        if (children !== undefined) {
+          if (isStaticChildren) {
+            if (isArray(children)) {
+              for (var i = 0; i < children.length; i++) {
+                validateChildKeys(children[i], type);
+              }
+
+              if (Object.freeze) {
+                Object.freeze(children);
+              }
+            } else {
+              error('React.jsx: Static children should always be an array. ' + 'You are likely explicitly calling React.jsxs or React.jsxDEV. ' + 'Use the Babel transform instead.');
+            }
+          } else {
+            validateChildKeys(children, type);
+          }
+        }
+      }
+
+      {
+        if (hasOwnProperty.call(props, 'key')) {
+          var componentName = getComponentNameFromType(type);
+          var keys = Object.keys(props).filter(function (k) {
+            return k !== 'key';
+          });
+          var beforeExample = keys.length > 0 ? '{key: someKey, ' + keys.join(': ..., ') + ': ...}' : '{key: someKey}';
+
+          if (!didWarnAboutKeySpread[componentName + beforeExample]) {
+            var afterExample = keys.length > 0 ? '{' + keys.join(': ..., ') + ': ...}' : '{}';
+
+            error('A props object containing a "key" prop is being spread into JSX:\n' + '  let props = %s;\n' + '  <%s {...props} />\n' + 'React keys must be passed directly to JSX without using spread:\n' + '  let props = %s;\n' + '  <%s key={someKey} {...props} />', beforeExample, componentName, afterExample, componentName);
+
+            didWarnAboutKeySpread[componentName + beforeExample] = true;
+          }
+        }
+      }
+
+      if (type === REACT_FRAGMENT_TYPE) {
+        validateFragmentProps(element);
+      } else {
+        validatePropTypes(element);
+      }
+
+      return element;
+    }
+  } // These two functions exist to still get child warnings in dev
+  // even with the prod transform. This means that jsxDEV is purely
+  // opt-in behavior for better messages but that we won't stop
+  // giving you warnings if you use production apis.
+
+  function jsxWithValidationStatic(type, props, key) {
+    {
+      return jsxWithValidation(type, props, key, true);
+    }
+  }
+  function jsxWithValidationDynamic(type, props, key) {
+    {
+      return jsxWithValidation(type, props, key, false);
+    }
+  }
+
+  var jsx =  jsxWithValidationDynamic ; // we may want to special case jsxs internally to take advantage of static children.
+  // for now we can ship identical prod functions
+
+  var jsxs =  jsxWithValidationStatic ;
+
+  exports.Fragment = REACT_FRAGMENT_TYPE;
+  exports.jsx = jsx;
+  exports.jsxs = jsxs;
+    })();
+  }
+  });
+
+  var jsxRuntime = createCommonjsModule(function (module) {
+
+  if (process.env.NODE_ENV === 'production') {
+    module.exports = reactJsxRuntime_production_min;
+  } else {
+    module.exports = reactJsxRuntime_development;
+  }
+  });
+
   var getConnectionText = function getConnectionText(collabState) {
     switch (collabState) {
       case provider.WebSocketStatus.Connected:
@@ -2952,11 +4313,13 @@
       activeClassname = _ref.activeClassname,
       rest = _objectWithoutPropertiesLoose(_ref, _excluded$5);
     var buttonClassName = cn('flex group items-center justify-center border border-transparent gap-2 text-sm font-semibold rounded-md disabled:opacity-50 whitespace-nowrap', variant === 'primary' && cn('text-white bg-black border-black dark:text-black dark:bg-white dark:border-white', !disabled && !active && 'hover:bg-neutral-800 active:bg-neutral-900 dark:hover:bg-neutral-200 dark:active:bg-neutral-300', active && cn('bg-neutral-900 dark:bg-neutral-300', activeClassname)), variant === 'secondary' && cn('text-neutral-900 dark:text-white', !disabled && !active && 'hover:bg-neutral-100 active:bg-neutral-200 dark:hover:bg-neutral-900 dark:active:bg-neutral-800', active && 'bg-neutral-200 dark:bg-neutral-800'), variant === 'tertiary' && cn('bg-neutral-50 text-neutral-900 dark:bg-neutral-900 dark:text-white dark:border-neutral-900', !disabled && !active && 'hover:bg-neutral-100 active:bg-neutral-200 dark:hover:bg-neutral-800 dark:active:bg-neutral-700', active && cn('bg-neutral-200 dark:bg-neutral-800', activeClassname)), variant === 'ghost' && cn('bg-transparent border-transparent text-neutral-500 dark:text-neutral-400', !disabled && !active && 'hover:bg-black/5 hover:text-neutral-700 active:bg-black/10 active:text-neutral-800 dark:hover:bg-white/10 dark:hover:text-neutral-300 dark:active:text-neutral-200', active && cn('bg-black/10 text-neutral-800 dark:bg-white/20 dark:text-neutral-200', activeClassname)), buttonSize === 'medium' && 'py-2 px-3', buttonSize === 'small' && 'py-1 px-2', buttonSize === 'icon' && 'w-8 h-8', buttonSize === 'iconSmall' && 'w-6 h-6', className);
-    return /*#__PURE__*/react.createElement("button", _extends({
+    return jsxRuntime.jsx("button", _extends({
       ref: ref,
       disabled: disabled,
       className: buttonClassName
-    }, rest), children);
+    }, rest, {
+      children: children
+    }));
   });
   Button.displayName = 'Button';
 
@@ -2970,11 +4333,12 @@
       withBorder = _ref$withBorder === void 0 ? true : _ref$withBorder,
       props = _objectWithoutPropertiesLoose(_ref, _excluded$4);
     var surfaceClass = cn(className, 'bg-white rounded-lg dark:bg-black', withShadow ? 'shadow-sm' : '', withBorder ? 'border border-neutral-200 dark:border-neutral-800' : '');
-    return /*#__PURE__*/React.createElement("div", _extends({
+    return jsxRuntime.jsx("div", _extends({
       className: surfaceClass
     }, props, {
-      ref: ref
-    }), children);
+      ref: ref,
+      children: children
+    }));
   });
   Surface.displayName = 'Surface';
 
@@ -2993,12 +4357,15 @@
       rest = _objectWithoutPropertiesLoose(_ref, _excluded$3);
     var panelClass = cn('p-2', spacing === 'small' && 'p-[0.2rem]', className);
     var Comp = asChild ? reactSlot.Slot : 'div';
-    return /*#__PURE__*/React.createElement(Comp, _extends({
+    return jsxRuntime.jsx(Comp, _extends({
       ref: ref
-    }, rest), /*#__PURE__*/React.createElement(Surface, {
-      className: panelClass,
-      withShadow: !noShadow
-    }, children));
+    }, rest, {
+      children: jsxRuntime.jsx(Surface, {
+        className: panelClass,
+        withShadow: !noShadow,
+        children: children
+      })
+    }));
   });
   Panel.displayName = 'Panel';
   var PanelDivider = /*#__PURE__*/react.forwardRef(function (_ref2, ref) {
@@ -3008,11 +4375,12 @@
       rest = _objectWithoutPropertiesLoose(_ref2, _excluded2$1);
     var dividerClass = cn('border-b border-b-black/10 mb-2 pb-2', className);
     var Comp = asChild ? reactSlot.Slot : 'div';
-    return /*#__PURE__*/React.createElement(Comp, _extends({
+    return jsxRuntime.jsx(Comp, _extends({
       className: dividerClass
     }, rest, {
-      ref: ref
-    }), children);
+      ref: ref,
+      children: children
+    }));
   });
   PanelDivider.displayName = 'PanelDivider';
   var PanelHeader = /*#__PURE__*/react.forwardRef(function (_ref3, ref) {
@@ -3022,11 +4390,12 @@
       rest = _objectWithoutPropertiesLoose(_ref3, _excluded3$1);
     var headerClass = cn('border-b border-b-black/10 text-sm mb-2 pb-2', className);
     var Comp = asChild ? reactSlot.Slot : 'div';
-    return /*#__PURE__*/React.createElement(Comp, _extends({
+    return jsxRuntime.jsx(Comp, _extends({
       className: headerClass
     }, rest, {
-      ref: ref
-    }), children);
+      ref: ref,
+      children: children
+    }));
   });
   PanelHeader.displayName = 'PanelHeader';
   var PanelSection = /*#__PURE__*/react.forwardRef(function (_ref4, ref) {
@@ -3036,11 +4405,12 @@
       rest = _objectWithoutPropertiesLoose(_ref4, _excluded4);
     var sectionClass = cn('mt-4 first:mt-1', className);
     var Comp = asChild ? reactSlot.Slot : 'div';
-    return /*#__PURE__*/React.createElement(Comp, _extends({
+    return jsxRuntime.jsx(Comp, _extends({
       className: sectionClass
     }, rest, {
-      ref: ref
-    }), children);
+      ref: ref,
+      children: children
+    }));
   });
   PanelSection.displayName = 'PanelSection';
   var PanelHeadline = /*#__PURE__*/react.forwardRef(function (_ref5, ref) {
@@ -3050,11 +4420,12 @@
       rest = _objectWithoutPropertiesLoose(_ref5, _excluded5);
     var headlineClass = cn('text-black/80 dark:text-white/80 text-xs font-medium mb-2 ml-1.5', className);
     var Comp = asChild ? reactSlot.Slot : 'div';
-    return /*#__PURE__*/React.createElement(Comp, _extends({
+    return jsxRuntime.jsx(Comp, _extends({
       className: headlineClass
     }, rest, {
-      ref: ref
-    }), children);
+      ref: ref,
+      children: children
+    }));
   });
   PanelHeadline.displayName = 'PanelHeadline';
   var PanelFooter = /*#__PURE__*/react.forwardRef(function (_ref6, ref) {
@@ -3064,11 +4435,12 @@
       rest = _objectWithoutPropertiesLoose(_ref6, _excluded6);
     var footerClass = cn('border-t border-black/10 text-sm mt-2 pt-2', className);
     var Comp = asChild ? reactSlot.Slot : 'div';
-    return /*#__PURE__*/React.createElement(Comp, _extends({
+    return jsxRuntime.jsx(Comp, _extends({
       className: footerClass
     }, rest, {
-      ref: ref
-    }), children);
+      ref: ref,
+      children: children
+    }));
   });
   PanelFooter.displayName = 'PanelFooter';
 
@@ -3077,7 +4449,7 @@
     var className = _ref.className,
       rest = _objectWithoutPropertiesLoose(_ref, _excluded$2);
     var textAreaClassName = cn('bg-black/5 border-0 rounded-lg caret-black block text-black text-sm font-medium h-[4.5rem] px-2 py-1 w-full', 'dark:bg-white/10 dark:text-white dark:caret-white', 'hover:bg-black/10', 'dark:hover:bg-white/20', 'focus:bg-transparent active:bg-transparent focus:outline focus:outline-black active:outline active:outline-black', 'dark:focus:outline-white dark:active:outline-white', className);
-    return /*#__PURE__*/React.createElement("textarea", _extends({
+    return jsxRuntime.jsx("textarea", _extends({
       className: textAreaClassName,
       ref: ref
     }, rest));
@@ -3203,23 +4575,27 @@
     var children = _ref.children;
     var className = 'inline-flex items-center justify-center w-5 h-5 p-1 text-[0.625rem] rounded font-semibold leading-none border border-neutral-200 text-neutral-500 border-b-2';
     if (children === 'Mod') {
-      return /*#__PURE__*/react.createElement("kbd", {
-        className: className
-      }, isMac ? '⌘' : 'Ctrl'); // ⌃
+      return jsxRuntime.jsx("kbd", {
+        className: className,
+        children: isMac ? '⌘' : 'Ctrl'
+      }); // ⌃
     }
     if (children === 'Shift') {
-      return /*#__PURE__*/react.createElement("kbd", {
-        className: className
-      }, "\u21E7");
+      return jsxRuntime.jsx("kbd", {
+        className: className,
+        children: "\u21E7"
+      });
     }
     if (children === 'Alt') {
-      return /*#__PURE__*/react.createElement("kbd", {
-        className: className
-      }, isMac ? '⌥' : 'Alt');
+      return jsxRuntime.jsx("kbd", {
+        className: className,
+        children: isMac ? '⌥' : 'Alt'
+      });
     }
-    return /*#__PURE__*/react.createElement("kbd", {
-      className: className
-    }, children);
+    return jsxRuntime.jsx("kbd", {
+      className: className,
+      children: children
+    });
   };
   var Tooltip = function Tooltip(_ref2) {
     var children = _ref2.children,
@@ -3230,35 +4606,42 @@
       _ref2$tippyOptions = _ref2.tippyOptions,
       tippyOptions = _ref2$tippyOptions === void 0 ? {} : _ref2$tippyOptions;
     var renderTooltip = react.useCallback(function (attrs) {
-      return /*#__PURE__*/react.createElement("span", {
+      return jsxRuntime.jsxs("span", {
         className: "flex items-center gap-2 px-2.5 py-1 bg-white border border-neutral-100 rounded-lg shadow-sm z-[999]",
         tabIndex: -1,
         "data-placement": attrs['data-placement'],
         "data-reference-hidden": attrs['data-reference-hidden'],
-        "data-escaped": attrs['data-escaped']
-      }, title && /*#__PURE__*/react.createElement("span", {
-        className: "text-xs font-medium text-neutral-500"
-      }, title), shortcut && /*#__PURE__*/react.createElement("span", {
-        className: "flex items-center gap-0.5"
-      }, shortcut.map(function (shortcutKey) {
-        return /*#__PURE__*/react.createElement(ShortcutKey, {
-          key: shortcutKey
-        }, shortcutKey);
-      })));
+        "data-escaped": attrs['data-escaped'],
+        children: [title && jsxRuntime.jsx("span", {
+          className: "text-xs font-medium text-neutral-500",
+          children: title
+        }), shortcut && jsxRuntime.jsx("span", {
+          className: "flex items-center gap-0.5",
+          children: shortcut.map(function (shortcutKey) {
+            return jsxRuntime.jsx(ShortcutKey, {
+              children: shortcutKey
+            }, shortcutKey);
+          })
+        })]
+      });
     }, [shortcut, title]);
     if (enabled) {
-      return /*#__PURE__*/react.createElement(Tippy__default["default"], _extends({
+      return jsxRuntime.jsx(Tippy__default["default"], _extends({
         delay: 500,
         offset: [0, 8],
         touch: false,
         zIndex: 99999,
         appendTo: document.body
-        // eslint-disable-next-line react/jsx-props-no-spreading
       }, tippyOptions, {
-        render: renderTooltip
-      }), /*#__PURE__*/react.createElement("span", null, children));
+        render: renderTooltip,
+        children: jsxRuntime.jsx("span", {
+          children: children
+        })
+      }));
     }
-    return /*#__PURE__*/react.createElement(Fragment, null, children);
+    return jsxRuntime.jsx(jsxRuntime.Fragment, {
+      children: children
+    });
   };
 
   var _excluded$1 = ["shouldShowContent", "children", "isVertical", "className"],
@@ -3273,11 +4656,12 @@
       className = _ref.className,
       rest = _objectWithoutPropertiesLoose(_ref, _excluded$1);
     var toolbarClassName = cn('text-black inline-flex h-full leading-none gap-0.5', isVertical ? 'flex-col p-2' : 'flex-row p-1 items-center', className);
-    return shouldShowContent && /*#__PURE__*/react.createElement(Surface, _extends({
+    return shouldShowContent && jsxRuntime.jsx(Surface, _extends({
       className: toolbarClassName
     }, rest, {
-      ref: ref
-    }), children);
+      ref: ref,
+      children: children
+    }));
   });
   ToolbarWrapper.displayName = 'Toolbar';
   var ToolbarDivider = /*#__PURE__*/react.forwardRef(function (_ref2, ref) {
@@ -3285,7 +4669,7 @@
       className = _ref2.className,
       rest = _objectWithoutPropertiesLoose(_ref2, _excluded2);
     var dividerClassName = cn('bg-neutral-200 dark:bg-neutral-800', horizontal ? 'w-full min-w-[1.5rem] h-[1px] my-1 first:mt-0 last:mt-0' : 'h-full min-h-[1.5rem] w-[1px] mx-1 first:ml-0 last:mr-0', className);
-    return /*#__PURE__*/react.createElement("div", _extends({
+    return jsxRuntime.jsx("div", _extends({
       className: dividerClassName,
       ref: ref
     }, rest));
@@ -3303,18 +4687,21 @@
       activeClassname = _ref3.activeClassname,
       rest = _objectWithoutPropertiesLoose(_ref3, _excluded3);
     var buttonClass = cn('gap-1 min-w-[2rem] px-2 w-auto', className);
-    var content = /*#__PURE__*/react.createElement(Button, _extends({
+    var content = jsxRuntime.jsx(Button, _extends({
       activeClassname: activeClassname,
       className: buttonClass,
       variant: variant,
       buttonSize: buttonSize,
       ref: ref
-    }, rest), children);
+    }, rest, {
+      children: children
+    }));
     if (tooltip) {
-      return /*#__PURE__*/react.createElement(Tooltip, {
+      return jsxRuntime.jsx(Tooltip, {
         title: tooltip,
-        shortcut: tooltipShortcut
-      }, content);
+        shortcut: tooltipShortcut,
+        children: content
+      });
     }
     return content;
   });
@@ -3327,9 +4714,10 @@
 
   var DropdownCategoryTitle = function DropdownCategoryTitle(_ref) {
     var children = _ref.children;
-    return /*#__PURE__*/react.createElement("div", {
-      className: "text-[.65rem] font-semibold mb-1 uppercase text-neutral-500 dark:text-neutral-400 px-1.5"
-    }, children);
+    return jsxRuntime.jsx("div", {
+      className: "text-[.65rem] font-semibold mb-1 uppercase text-neutral-500 dark:text-neutral-400 px-1.5",
+      children: children
+    });
   };
   var DropdownButton = /*#__PURE__*/react.forwardRef(function DropdownButtonInner(_ref2, ref) {
     var children = _ref2.children,
@@ -3338,12 +4726,13 @@
       disabled = _ref2.disabled,
       className = _ref2.className;
     var buttonClass = cn('flex items-center gap-2 p-1.5 text-sm font-medium text-neutral-500 dark:text-neutral-400 text-left bg-transparent w-full rounded', !isActive && !disabled, 'hover:bg-neutral-100 hover:text-neutral-800 dark:hover:bg-neutral-900 dark:hover:text-neutral-200', isActive && !disabled && 'bg-neutral-100 text-neutral-800 dark:bg-neutral-900 dark:text-neutral-200', disabled && 'text-neutral-400 cursor-not-allowed dark:text-neutral-600', className);
-    return /*#__PURE__*/react.createElement("button", {
+    return jsxRuntime.jsx("button", {
       className: buttonClass,
       disabled: disabled,
       onClick: onClick,
-      ref: ref
-    }, children);
+      ref: ref,
+      children: children
+    });
   });
 
   var TIPTAP_AI_APP_ID = process.env.NEXT_PUBLIC_TIPTAP_AI_APP_ID;
@@ -3442,92 +4831,121 @@
         });
       };
     }, []);
-    return /*#__PURE__*/React.createElement(react$1.NodeViewWrapper, {
-      "data-drag-handle": true
-    }, /*#__PURE__*/React.createElement(Panel, {
-      noShadow: true,
-      className: "w-full"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "flex flex-col p-1"
-    }, generatedText && /*#__PURE__*/React.createElement(Fragment, null, /*#__PURE__*/React.createElement(PanelHeadline, null, "Preview"), /*#__PURE__*/React.createElement("div", {
-      className: "bg-white dark:bg-black border-l-4 border-neutral-100 dark:border-neutral-700 text-black dark:text-white text-base max-h-[14rem] mb-4 ml-2.5 overflow-y-auto px-4 relative",
-      dangerouslySetInnerHTML: {
-        __html: (_tryParseToTiptapHTML = AiExtension.tryParseToTiptapHTML(generatedText, editor)) != null ? _tryParseToTiptapHTML : ''
-      }
-    })), /*#__PURE__*/React.createElement("div", {
-      className: "flex flex-row items-center justify-between gap-1"
-    }, /*#__PURE__*/React.createElement(PanelHeadline, {
-      asChild: true
-    }, /*#__PURE__*/React.createElement("label", {
-      htmlFor: textareaId
-    }, "Prompt"))), /*#__PURE__*/React.createElement(Textarea, {
-      id: textareaId,
-      value: data.text,
-      onChange: onTextAreaChange,
-      placeholder: 'Tell me what you want me to write about.',
-      required: true,
-      className: "mb-2"
-    }), /*#__PURE__*/React.createElement("div", {
-      className: "flex flex-row items-center justify-between gap-1"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "flex justify-between w-auto gap-1"
-    }, /*#__PURE__*/React.createElement(Dropdown__namespace.Root, null, /*#__PURE__*/React.createElement(Dropdown__namespace.Trigger, {
-      asChild: true
-    }, /*#__PURE__*/React.createElement(Button, {
-      variant: "tertiary"
-    }, /*#__PURE__*/React.createElement(Icon, {
-      name: "Mic"
-    }), (currentTone == null ? void 0 : currentTone.label) || 'Change tone', /*#__PURE__*/React.createElement(Icon, {
-      name: "ChevronDown"
-    }))), /*#__PURE__*/React.createElement(Dropdown__namespace.Portal, null, /*#__PURE__*/React.createElement(Dropdown__namespace.Content, {
-      side: "bottom",
-      align: "start",
-      asChild: true
-    }, /*#__PURE__*/React.createElement(Surface, {
-      className: "p-2 min-w-[12rem]"
-    }, !!data.tone && /*#__PURE__*/React.createElement(Fragment, null, /*#__PURE__*/React.createElement(Dropdown__namespace.Item, {
-      asChild: true
-    }, /*#__PURE__*/React.createElement(DropdownButton, {
-      isActive: data.tone === undefined,
-      onClick: onUndoClick
-    }, /*#__PURE__*/React.createElement(Icon, {
-      name: "Undo2"
-    }), "Reset")), /*#__PURE__*/React.createElement(Toolbar.Divider, {
-      horizontal: true
-    })), tones.map(function (tone) {
-      return /*#__PURE__*/React.createElement(Dropdown__namespace.Item, {
-        asChild: true,
-        key: tone.value
-      }, /*#__PURE__*/React.createElement(DropdownButton, {
-        isActive: tone.value === data.tone,
-        onClick: createItemClickHandler(tone)
-      }, tone.label));
-    })))))), /*#__PURE__*/React.createElement("div", {
-      className: "flex justify-between w-auto gap-1"
-    }, generatedText && /*#__PURE__*/React.createElement(Button, {
-      variant: "ghost",
-      className: "text-red-500 hover:bg-red-500/10 hover:text-red-500",
-      onClick: discard
-    }, /*#__PURE__*/React.createElement(Icon, {
-      name: "Trash"
-    }), "Discard"), generatedText && /*#__PURE__*/React.createElement(Button, {
-      variant: "ghost",
-      onClick: insert,
-      disabled: !generatedText
-    }, /*#__PURE__*/React.createElement(Icon, {
-      name: "Check"
-    }), "Insert"), /*#__PURE__*/React.createElement(Button, {
-      variant: "primary",
-      onClick: generateText,
-      style: {
-        whiteSpace: 'nowrap'
-      },
-      disabled: isLoading
-    }, generatedText ? /*#__PURE__*/React.createElement(Icon, {
-      name: "Repeat"
-    }) : /*#__PURE__*/React.createElement(Icon, {
-      name: "Sparkles"
-    }), generatedText ? 'Regenerate' : 'Generate text'))))));
+    return jsxRuntime.jsx(react$1.NodeViewWrapper, {
+      "data-drag-handle": true,
+      children: jsxRuntime.jsx(Panel, {
+        noShadow: true,
+        className: "w-full",
+        children: jsxRuntime.jsxs("div", {
+          className: "flex flex-col p-1",
+          children: [generatedText && jsxRuntime.jsxs(jsxRuntime.Fragment, {
+            children: [jsxRuntime.jsx(PanelHeadline, {
+              children: "Preview"
+            }), jsxRuntime.jsx("div", {
+              className: "bg-white dark:bg-black border-l-4 border-neutral-100 dark:border-neutral-700 text-black dark:text-white text-base max-h-[14rem] mb-4 ml-2.5 overflow-y-auto px-4 relative",
+              dangerouslySetInnerHTML: {
+                __html: (_tryParseToTiptapHTML = AiExtension.tryParseToTiptapHTML(generatedText, editor)) != null ? _tryParseToTiptapHTML : ''
+              }
+            })]
+          }), jsxRuntime.jsx("div", {
+            className: "flex flex-row items-center justify-between gap-1",
+            children: jsxRuntime.jsx(PanelHeadline, {
+              asChild: true,
+              children: jsxRuntime.jsx("label", {
+                htmlFor: textareaId,
+                children: "Prompt"
+              })
+            })
+          }), jsxRuntime.jsx(Textarea, {
+            id: textareaId,
+            value: data.text,
+            onChange: onTextAreaChange,
+            placeholder: 'Tell me what you want me to write about.',
+            required: true,
+            className: "mb-2"
+          }), jsxRuntime.jsxs("div", {
+            className: "flex flex-row items-center justify-between gap-1",
+            children: [jsxRuntime.jsx("div", {
+              className: "flex justify-between w-auto gap-1",
+              children: jsxRuntime.jsxs(Dropdown__namespace.Root, {
+                children: [jsxRuntime.jsx(Dropdown__namespace.Trigger, {
+                  asChild: true,
+                  children: jsxRuntime.jsxs(Button, {
+                    variant: "tertiary",
+                    children: [jsxRuntime.jsx(Icon, {
+                      name: "Mic"
+                    }), (currentTone == null ? void 0 : currentTone.label) || 'Change tone', jsxRuntime.jsx(Icon, {
+                      name: "ChevronDown"
+                    })]
+                  })
+                }), jsxRuntime.jsx(Dropdown__namespace.Portal, {
+                  children: jsxRuntime.jsx(Dropdown__namespace.Content, {
+                    side: "bottom",
+                    align: "start",
+                    asChild: true,
+                    children: jsxRuntime.jsxs(Surface, {
+                      className: "p-2 min-w-[12rem]",
+                      children: [!!data.tone && jsxRuntime.jsxs(jsxRuntime.Fragment, {
+                        children: [jsxRuntime.jsx(Dropdown__namespace.Item, {
+                          asChild: true,
+                          children: jsxRuntime.jsxs(DropdownButton, {
+                            isActive: data.tone === undefined,
+                            onClick: onUndoClick,
+                            children: [jsxRuntime.jsx(Icon, {
+                              name: "Undo2"
+                            }), "Reset"]
+                          })
+                        }), jsxRuntime.jsx(Toolbar.Divider, {
+                          horizontal: true
+                        })]
+                      }), tones.map(function (tone) {
+                        return jsxRuntime.jsx(Dropdown__namespace.Item, {
+                          asChild: true,
+                          children: jsxRuntime.jsx(DropdownButton, {
+                            isActive: tone.value === data.tone,
+                            onClick: createItemClickHandler(tone),
+                            children: tone.label
+                          })
+                        }, tone.value);
+                      })]
+                    })
+                  })
+                })]
+              })
+            }), jsxRuntime.jsxs("div", {
+              className: "flex justify-between w-auto gap-1",
+              children: [generatedText && jsxRuntime.jsxs(Button, {
+                variant: "ghost",
+                className: "text-red-500 hover:bg-red-500/10 hover:text-red-500",
+                onClick: discard,
+                children: [jsxRuntime.jsx(Icon, {
+                  name: "Trash"
+                }), "Discard"]
+              }), generatedText && jsxRuntime.jsxs(Button, {
+                variant: "ghost",
+                onClick: insert,
+                disabled: !generatedText,
+                children: [jsxRuntime.jsx(Icon, {
+                  name: "Check"
+                }), "Insert"]
+              }), jsxRuntime.jsxs(Button, {
+                variant: "primary",
+                onClick: generateText,
+                style: {
+                  whiteSpace: 'nowrap'
+                },
+                disabled: isLoading,
+                children: [generatedText ? jsxRuntime.jsx(Icon, {
+                  name: "Repeat"
+                }) : jsxRuntime.jsx(Icon, {
+                  name: "Sparkles"
+                }), generatedText ? 'Regenerate' : 'Generate text']
+              })]
+            })]
+          })]
+        })
+      })
+    });
   };
 
   var AiWriter = core.Node.create({
@@ -34521,32 +35939,36 @@
 
   var LoadingWrapper = function LoadingWrapper(_ref) {
     var label = _ref.label;
-    return /*#__PURE__*/React.createElement("div", {
-      className: "flex flex-col items-center justify-center gap-2 p-4 text-white bg-black rounded-lg shadow-2xl dark:text-black dark:bg-white"
-    }, /*#__PURE__*/React.createElement("svg", {
-      xmlns: "http://www.w3.org/2000/svg",
-      viewBox: "0 0 24 24",
-      fill: "none",
-      stroke: "currentColor",
-      strokeWidth: "2",
-      strokeLinecap: "round",
-      strokeLinejoin: "round",
-      className: "w-8 h-8 animate-spin"
-    }, /*#__PURE__*/React.createElement("path", {
-      d: "M21 12a9 9 0 1 1-6.219-8.56"
-    })), label && /*#__PURE__*/React.createElement("p", {
-      className: "text-sm font-semibold leading-tight text-white dark:text-black"
-    }, label));
+    return jsxRuntime.jsxs("div", {
+      className: "flex flex-col items-center justify-center gap-2 p-4 text-white bg-black rounded-lg shadow-2xl dark:text-black dark:bg-white",
+      children: [jsxRuntime.jsx("svg", {
+        xmlns: "http://www.w3.org/2000/svg",
+        viewBox: "0 0 24 24",
+        fill: "none",
+        stroke: "currentColor",
+        strokeWidth: "2",
+        strokeLinecap: "round",
+        strokeLinejoin: "round",
+        className: "w-8 h-8 animate-spin",
+        children: jsxRuntime.jsx("path", {
+          d: "M21 12a9 9 0 1 1-6.219-8.56"
+        })
+      }), label && jsxRuntime.jsx("p", {
+        className: "text-sm font-semibold leading-tight text-white dark:text-black",
+        children: label
+      })]
+    });
   };
   var Loader = function Loader(_ref2) {
     var _ref2$hasOverlay = _ref2.hasOverlay,
       hasOverlay = _ref2$hasOverlay === void 0 ? true : _ref2$hasOverlay,
       label = _ref2.label;
-    return hasOverlay ? (/*#__PURE__*/reactDom.createPortal(/*#__PURE__*/React.createElement("div", {
-      className: "items-center justify-center bg-black/60 flex h-full w-full fixed top-0 left-0 select-none z-[9999]"
-    }, /*#__PURE__*/React.createElement(LoadingWrapper, {
-      label: label
-    })), document.body)) : /*#__PURE__*/React.createElement(LoadingWrapper, {
+    return hasOverlay ? (/*#__PURE__*/reactDom.createPortal(jsxRuntime.jsx("div", {
+      className: "items-center justify-center bg-black/60 flex h-full w-full fixed top-0 left-0 select-none z-[9999]",
+      children: jsxRuntime.jsx(LoadingWrapper, {
+        label: label
+      })
+    }), document.body)) : jsxRuntime.jsx(LoadingWrapper, {
       label: label
     });
   };
@@ -34698,85 +36120,112 @@
         });
       };
     }, []);
-    return /*#__PURE__*/React.createElement(react$1.NodeViewWrapper, {
-      "data-drag-handle": true
-    }, /*#__PURE__*/React.createElement(Panel, {
-      noShadow: true,
-      className: "w-full"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "flex flex-col p-1"
-    }, isFetching && /*#__PURE__*/React.createElement(Loader, {
-      label: "AI is now doing its job!"
-    }), previewImage && /*#__PURE__*/React.createElement(Fragment, null, /*#__PURE__*/React.createElement(PanelHeadline, null, "Preview"), /*#__PURE__*/React.createElement("div", {
-      className: "w-full mb-4 bg-white bg-center bg-no-repeat bg-contain border border-black rounded dark:border-neutral-700 aspect-square",
-      style: {
-        backgroundImage: "url(" + previewImage + ")"
-      }
-    })), /*#__PURE__*/React.createElement("div", {
-      className: "flex items-center justify-between gap-2 row"
-    }, /*#__PURE__*/React.createElement(PanelHeadline, {
-      asChild: true
-    }, /*#__PURE__*/React.createElement("label", {
-      htmlFor: textareaId
-    }, "Prompt"))), /*#__PURE__*/React.createElement(Textarea, {
-      id: textareaId,
-      value: data.text,
-      onChange: handleTextareaChange,
-      placeholder: "Describe the image that you want me to generate.",
-      required: true,
-      className: "mb-2"
-    }), /*#__PURE__*/React.createElement("div", {
-      className: "flex flex-row items-center justify-between gap-1"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "flex justify-between w-auto gap-1"
-    }, /*#__PURE__*/React.createElement(Dropdown__namespace.Root, null, /*#__PURE__*/React.createElement(Dropdown__namespace.Trigger, {
-      asChild: true
-    }, /*#__PURE__*/React.createElement(Button, {
-      variant: "tertiary"
-    }, /*#__PURE__*/React.createElement(Icon, {
-      name: "Image"
-    }), (currentImageStyle == null ? void 0 : currentImageStyle.label) || 'Image style', /*#__PURE__*/React.createElement(Icon, {
-      name: "ChevronDown"
-    }))), /*#__PURE__*/React.createElement(Dropdown__namespace.Portal, null, /*#__PURE__*/React.createElement(Dropdown__namespace.Content, {
-      side: "bottom",
-      align: "start",
-      asChild: true
-    }, /*#__PURE__*/React.createElement(Surface, {
-      className: "p-2 min-w-[12rem]"
-    }, !!data.imageStyle && /*#__PURE__*/React.createElement(Fragment, null, /*#__PURE__*/React.createElement(DropdownButton, {
-      isActive: data.imageStyle === undefined,
-      onClick: onUndoClick
-    }, /*#__PURE__*/React.createElement(Icon, {
-      name: "Undo2"
-    }), "Reset"), /*#__PURE__*/React.createElement(Toolbar.Divider, {
-      horizontal: true
-    })), imageStyles.map(function (style) {
-      return /*#__PURE__*/React.createElement(DropdownButton, {
-        isActive: style.value === data.imageStyle,
-        key: style.value,
-        onClick: createItemClickHandler(style)
-      }, style.label);
-    })))))), /*#__PURE__*/React.createElement("div", {
-      className: "flex flex-row items-center justify-between gap-1"
-    }, previewImage && /*#__PURE__*/React.createElement(Button, {
-      variant: "ghost",
-      className: "text-red-500 hover:bg-red-500/10 hover:text-red-500",
-      onClick: discard
-    }, /*#__PURE__*/React.createElement(Icon, {
-      name: "Trash"
-    }), "Discard"), previewImage && /*#__PURE__*/React.createElement(Button, {
-      variant: "ghost",
-      onClick: insert
-    }, /*#__PURE__*/React.createElement(Icon, {
-      name: "Check"
-    }), "Insert"), /*#__PURE__*/React.createElement(Button, {
-      variant: "primary",
-      onClick: generateImage
-    }, previewImage ? /*#__PURE__*/React.createElement(Icon, {
-      name: "Repeat"
-    }) : /*#__PURE__*/React.createElement(Icon, {
-      name: "Sparkles"
-    }), previewImage ? 'Regenerate' : 'Generate image'))))));
+    return jsxRuntime.jsx(react$1.NodeViewWrapper, {
+      "data-drag-handle": true,
+      children: jsxRuntime.jsx(Panel, {
+        noShadow: true,
+        className: "w-full",
+        children: jsxRuntime.jsxs("div", {
+          className: "flex flex-col p-1",
+          children: [isFetching && jsxRuntime.jsx(Loader, {
+            label: "AI is now doing its job!"
+          }), previewImage && jsxRuntime.jsxs(jsxRuntime.Fragment, {
+            children: [jsxRuntime.jsx(PanelHeadline, {
+              children: "Preview"
+            }), jsxRuntime.jsx("div", {
+              className: "w-full mb-4 bg-white bg-center bg-no-repeat bg-contain border border-black rounded dark:border-neutral-700 aspect-square",
+              style: {
+                backgroundImage: "url(" + previewImage + ")"
+              }
+            })]
+          }), jsxRuntime.jsx("div", {
+            className: "flex items-center justify-between gap-2 row",
+            children: jsxRuntime.jsx(PanelHeadline, {
+              asChild: true,
+              children: jsxRuntime.jsx("label", {
+                htmlFor: textareaId,
+                children: "Prompt"
+              })
+            })
+          }), jsxRuntime.jsx(Textarea, {
+            id: textareaId,
+            value: data.text,
+            onChange: handleTextareaChange,
+            placeholder: "Describe the image that you want me to generate.",
+            required: true,
+            className: "mb-2"
+          }), jsxRuntime.jsxs("div", {
+            className: "flex flex-row items-center justify-between gap-1",
+            children: [jsxRuntime.jsx("div", {
+              className: "flex justify-between w-auto gap-1",
+              children: jsxRuntime.jsxs(Dropdown__namespace.Root, {
+                children: [jsxRuntime.jsx(Dropdown__namespace.Trigger, {
+                  asChild: true,
+                  children: jsxRuntime.jsxs(Button, {
+                    variant: "tertiary",
+                    children: [jsxRuntime.jsx(Icon, {
+                      name: "Image"
+                    }), (currentImageStyle == null ? void 0 : currentImageStyle.label) || 'Image style', jsxRuntime.jsx(Icon, {
+                      name: "ChevronDown"
+                    })]
+                  })
+                }), jsxRuntime.jsx(Dropdown__namespace.Portal, {
+                  children: jsxRuntime.jsx(Dropdown__namespace.Content, {
+                    side: "bottom",
+                    align: "start",
+                    asChild: true,
+                    children: jsxRuntime.jsxs(Surface, {
+                      className: "p-2 min-w-[12rem]",
+                      children: [!!data.imageStyle && jsxRuntime.jsxs(jsxRuntime.Fragment, {
+                        children: [jsxRuntime.jsxs(DropdownButton, {
+                          isActive: data.imageStyle === undefined,
+                          onClick: onUndoClick,
+                          children: [jsxRuntime.jsx(Icon, {
+                            name: "Undo2"
+                          }), "Reset"]
+                        }), jsxRuntime.jsx(Toolbar.Divider, {
+                          horizontal: true
+                        })]
+                      }), imageStyles.map(function (style) {
+                        return jsxRuntime.jsx(DropdownButton, {
+                          isActive: style.value === data.imageStyle,
+                          onClick: createItemClickHandler(style),
+                          children: style.label
+                        }, style.value);
+                      })]
+                    })
+                  })
+                })]
+              })
+            }), jsxRuntime.jsxs("div", {
+              className: "flex flex-row items-center justify-between gap-1",
+              children: [previewImage && jsxRuntime.jsxs(Button, {
+                variant: "ghost",
+                className: "text-red-500 hover:bg-red-500/10 hover:text-red-500",
+                onClick: discard,
+                children: [jsxRuntime.jsx(Icon, {
+                  name: "Trash"
+                }), "Discard"]
+              }), previewImage && jsxRuntime.jsxs(Button, {
+                variant: "ghost",
+                onClick: insert,
+                children: [jsxRuntime.jsx(Icon, {
+                  name: "Check"
+                }), "Insert"]
+              }), jsxRuntime.jsxs(Button, {
+                variant: "primary",
+                onClick: generateImage,
+                children: [previewImage ? jsxRuntime.jsx(Icon, {
+                  name: "Repeat"
+                }) : jsxRuntime.jsx(Icon, {
+                  name: "Sparkles"
+                }), previewImage ? 'Regenerate' : 'Generate image']
+              })]
+            })]
+          })]
+        })
+      })
+    });
   };
 
   var AiImage = core.Node.create({
@@ -35555,29 +37004,31 @@
     if (!props.items.length) {
       return null;
     }
-    return /*#__PURE__*/react.createElement(Surface, {
+    return jsxRuntime.jsx(Surface, {
       ref: scrollContainer,
-      className: "text-black max-h-[min(80vh,24rem)] overflow-auto flex-wrap mb-8 p-2"
-    }, /*#__PURE__*/react.createElement("div", {
-      className: "grid grid-cols-1 gap-0.5"
-    }, props.items.map(function (group, groupIndex) {
-      return /*#__PURE__*/react.createElement(react.Fragment, {
-        key: group.title + "-wrapper"
-      }, /*#__PURE__*/react.createElement("div", {
-        className: "text-neutral-500 text-[0.65rem] col-[1/-1] mx-2 mt-4 font-semibold tracking-wider select-none uppercase first:mt-0.5",
-        key: "" + group.title
-      }, group.title), group.commands.map(function (command, commandIndex) {
-        return /*#__PURE__*/react.createElement(DropdownButton, {
-          key: "" + command.label,
-          ref: selectedGroupIndex === groupIndex && selectedCommandIndex === commandIndex ? activeItem : null,
-          isActive: selectedGroupIndex === groupIndex && selectedCommandIndex === commandIndex,
-          onClick: createCommandClickHandler(groupIndex, commandIndex)
-        }, /*#__PURE__*/react.createElement(Icon, {
-          name: command.iconName,
-          className: "mr-1"
-        }), command.label);
-      }));
-    })));
+      className: "text-black max-h-[min(80vh,24rem)] overflow-auto flex-wrap mb-8 p-2",
+      children: jsxRuntime.jsx("div", {
+        className: "grid grid-cols-1 gap-0.5",
+        children: props.items.map(function (group, groupIndex) {
+          return jsxRuntime.jsxs(react.Fragment, {
+            children: [jsxRuntime.jsx("div", {
+              className: "text-neutral-500 text-[0.65rem] col-[1/-1] mx-2 mt-4 font-semibold tracking-wider select-none uppercase first:mt-0.5",
+              children: group.title
+            }, "" + group.title), group.commands.map(function (command, commandIndex) {
+              return jsxRuntime.jsxs(DropdownButton, {
+                ref: selectedGroupIndex === groupIndex && selectedCommandIndex === commandIndex ? activeItem : null,
+                isActive: selectedGroupIndex === groupIndex && selectedCommandIndex === commandIndex,
+                onClick: createCommandClickHandler(groupIndex, commandIndex),
+                children: [jsxRuntime.jsx(Icon, {
+                  name: command.iconName,
+                  className: "mr-1"
+                }), command.label]
+              }, "" + command.label);
+            })]
+          }, group.title + "-wrapper");
+        })
+      })
+    });
   });
   MenuList.displayName = 'MenuList';
 
@@ -36123,7 +37574,7 @@
     var className = _ref.className,
       rest = _objectWithoutPropertiesLoose(_ref, _excluded);
     var spinnerClass = cn('animate-spin rounded-full border-2 border-current border-t-transparent h-4 w-4', className);
-    return /*#__PURE__*/React.createElement("div", _extends({
+    return jsxRuntime.jsx("div", _extends({
       className: spinnerClass,
       ref: ref
     }, rest));
@@ -36281,41 +37732,48 @@
       return e.target.files ? uploadFile(e.target.files[0]) : null;
     }, [uploadFile]);
     if (loading) {
-      return /*#__PURE__*/React.createElement("div", {
-        className: "flex items-center justify-center p-8 rounded-lg min-h-[10rem] bg-opacity-80"
-      }, /*#__PURE__*/React.createElement(Spinner, {
-        className: "text-neutral-500",
-        size: 1.5
-      }));
+      return jsxRuntime.jsx("div", {
+        className: "flex items-center justify-center p-8 rounded-lg min-h-[10rem] bg-opacity-80",
+        children: jsxRuntime.jsx(Spinner, {
+          className: "text-neutral-500",
+          size: 1.5
+        })
+      });
     }
     var wrapperClass = cn('flex flex-col items-center justify-center px-8 py-10 rounded-lg bg-opacity-80', draggedInside && 'bg-neutral-100');
-    return /*#__PURE__*/React.createElement("div", {
+    return jsxRuntime.jsxs("div", {
       className: wrapperClass,
       onDrop: onDrop,
       onDragOver: onDragEnter,
       onDragLeave: onDragLeave,
-      contentEditable: false
-    }, /*#__PURE__*/React.createElement(Icon, {
-      name: "Image",
-      className: "w-12 h-12 mb-4 text-black dark:text-white opacity-20"
-    }), /*#__PURE__*/React.createElement("div", {
-      className: "flex flex-col items-center justify-center gap-2"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "text-sm font-medium text-center text-neutral-400 dark:text-neutral-500"
-    }, draggedInside ? 'Drop image here' : 'Drag and drop or'), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Button, {
-      disabled: draggedInside,
-      onClick: handleUploadClick,
-      variant: "primary",
-      buttonSize: "small"
-    }, /*#__PURE__*/React.createElement(Icon, {
-      name: "Upload"
-    }), "Upload an image"))), /*#__PURE__*/React.createElement("input", {
-      className: "w-0 h-0 overflow-hidden opacity-0",
-      ref: ref,
-      type: "file",
-      accept: ".jpg,.jpeg,.png,.webp,.gif",
-      onChange: onFileChange
-    }));
+      contentEditable: false,
+      children: [jsxRuntime.jsx(Icon, {
+        name: "Image",
+        className: "w-12 h-12 mb-4 text-black dark:text-white opacity-20"
+      }), jsxRuntime.jsxs("div", {
+        className: "flex flex-col items-center justify-center gap-2",
+        children: [jsxRuntime.jsx("div", {
+          className: "text-sm font-medium text-center text-neutral-400 dark:text-neutral-500",
+          children: draggedInside ? 'Drop image here' : 'Drag and drop or'
+        }), jsxRuntime.jsx("div", {
+          children: jsxRuntime.jsxs(Button, {
+            disabled: draggedInside,
+            onClick: handleUploadClick,
+            variant: "primary",
+            buttonSize: "small",
+            children: [jsxRuntime.jsx(Icon, {
+              name: "Upload"
+            }), "Upload an image"]
+          })
+        })]
+      }), jsxRuntime.jsx("input", {
+        className: "w-0 h-0 overflow-hidden opacity-0",
+        ref: ref,
+        type: "file",
+        accept: ".jpg,.jpeg,.png,.webp,.gif",
+        onChange: onFileChange
+      })]
+    });
   };
 
   var ImageUpload$1 = function ImageUpload(_ref) {
@@ -36331,12 +37789,15 @@
         }).focus().run();
       }
     }, [getPos, editor]);
-    return /*#__PURE__*/React.createElement(react$1.NodeViewWrapper, null, /*#__PURE__*/React.createElement("div", {
-      className: "p-0 m-0",
-      "data-drag-handle": true
-    }, /*#__PURE__*/React.createElement(ImageUploader, {
-      onUpload: onUpload
-    })));
+    return jsxRuntime.jsx(react$1.NodeViewWrapper, {
+      children: jsxRuntime.jsx("div", {
+        className: "p-0 m-0",
+        "data-drag-handle": true,
+        children: jsxRuntime.jsx(ImageUploader, {
+          onUpload: onUpload
+        })
+      })
+    });
   };
 
   var ImageUpload = react$1.Node.create({
@@ -36383,20 +37844,24 @@
     var onClick = react.useCallback(function () {
       editor.commands.setNodeSelection(getPos());
     }, [getPos, editor.commands]);
-    return /*#__PURE__*/React.createElement(react$1.NodeViewWrapper, null, /*#__PURE__*/React.createElement("div", {
-      className: wrapperClassName,
-      style: {
-        width: node.attrs.width
-      }
-    }, /*#__PURE__*/React.createElement("div", {
-      contentEditable: false,
-      ref: imageWrapperRef
-    }, /*#__PURE__*/React.createElement("img", {
-      className: "block",
-      src: src,
-      alt: "",
-      onClick: onClick
-    }))));
+    return jsxRuntime.jsx(react$1.NodeViewWrapper, {
+      children: jsxRuntime.jsx("div", {
+        className: wrapperClassName,
+        style: {
+          width: node.attrs.width
+        },
+        children: jsxRuntime.jsx("div", {
+          contentEditable: false,
+          ref: imageWrapperRef,
+          children: jsxRuntime.jsx("img", {
+            className: "block",
+            src: src,
+            alt: "",
+            onClick: onClick
+          })
+        })
+      })
+    });
   };
 
   var ImageBlock = Image.extend({
@@ -36658,25 +38123,27 @@
     if (!props.items || !props.items.length) {
       return null;
     }
-    return /*#__PURE__*/react.createElement(Panel, {
-      className: "overflow-y-auto max-w-[18rem] max-h-[18rem]"
-    }, props.items.map(function (item, index) {
-      return /*#__PURE__*/react.createElement(Button, {
-        active: index === selectedIndex,
-        variant: "ghost",
-        className: "justify-start w-full",
-        buttonSize: "small",
-        key: item.name,
-        onClick: createClickHandler(index),
-        "data-emoji-name": item.name
-      }, item.fallbackImage ? /*#__PURE__*/react.createElement("img", {
-        src: item.fallbackImage,
-        className: "w-5 h-5",
-        alt: "emoji"
-      }) : item.emoji, ' ', /*#__PURE__*/react.createElement("span", {
-        className: "truncate text-ellipsis"
-      }, ":", item.name, ":"));
-    }));
+    return jsxRuntime.jsx(Panel, {
+      className: "overflow-y-auto max-w-[18rem] max-h-[18rem]",
+      children: props.items.map(function (item, index) {
+        return jsxRuntime.jsxs(Button, {
+          active: index === selectedIndex,
+          variant: "ghost",
+          className: "justify-start w-full",
+          buttonSize: "small",
+          onClick: createClickHandler(index),
+          "data-emoji-name": item.name,
+          children: [item.fallbackImage ? jsxRuntime.jsx("img", {
+            src: item.fallbackImage,
+            className: "w-5 h-5",
+            alt: "emoji"
+          }) : item.emoji, ' ', jsxRuntime.jsxs("span", {
+            className: "truncate text-ellipsis",
+            children: [":", item.name, ":"]
+          })]
+        }, item.name);
+      })
+    });
   });
   EmojiList.displayName = 'EmojiList';
 
@@ -36748,34 +38215,42 @@
         return ctx.editor.storage.tableOfContents.content;
       }
     });
-    return /*#__PURE__*/react.createElement(Fragment, null, /*#__PURE__*/react.createElement("div", {
-      className: "mb-2 text-xs font-semibold uppercase text-neutral-500 dark:text-neutral-400"
-    }, "Table of contents"), content.length > 0 ? /*#__PURE__*/react.createElement("div", {
-      className: "flex flex-col gap-1"
-    }, content.map(function (item) {
-      return /*#__PURE__*/react.createElement("a", {
-        key: item.id,
-        href: "#" + item.id,
-        style: {
-          marginLeft: 1 * item.level - 1 + "rem"
-        },
-        onClick: onItemClick,
-        className: cn('block font-medium text-neutral-500 dark:text-neutral-300 p-1 rounded bg-opacity-10 text-sm hover:text-neutral-800 transition-all hover:bg-black hover:bg-opacity-5 truncate w-full', item.isActive && 'text-neutral-800 bg-neutral-100 dark:text-neutral-100 dark:bg-neutral-900')
-      }, item.itemIndex, ". ", item.textContent);
-    })) : /*#__PURE__*/react.createElement("div", {
-      className: "text-sm text-neutral-500"
-    }, "Start adding headlines to your document \u2026"));
+    return jsxRuntime.jsxs(jsxRuntime.Fragment, {
+      children: [jsxRuntime.jsx("div", {
+        className: "mb-2 text-xs font-semibold uppercase text-neutral-500 dark:text-neutral-400",
+        children: "Table of contents"
+      }), content.length > 0 ? jsxRuntime.jsx("div", {
+        className: "flex flex-col gap-1",
+        children: content.map(function (item) {
+          return jsxRuntime.jsxs("a", {
+            href: "#" + item.id,
+            style: {
+              marginLeft: 1 * item.level - 1 + "rem"
+            },
+            onClick: onItemClick,
+            className: cn('block font-medium text-neutral-500 dark:text-neutral-300 p-1 rounded bg-opacity-10 text-sm hover:text-neutral-800 transition-all hover:bg-black hover:bg-opacity-5 truncate w-full', item.isActive && 'text-neutral-800 bg-neutral-100 dark:text-neutral-100 dark:bg-neutral-900'),
+            children: [item.itemIndex, ". ", item.textContent]
+          }, item.id);
+        })
+      }) : jsxRuntime.jsx("div", {
+        className: "text-sm text-neutral-500",
+        children: "Start adding headlines to your document \u2026"
+      })]
+    });
   });
   TableOfContents.displayName = 'TableOfContents';
 
   var TableOfNodeContent = function TableOfNodeContent(props) {
     var editor = props.editor;
-    return /*#__PURE__*/react.createElement(react$1.NodeViewWrapper, null, /*#__PURE__*/react.createElement("div", {
-      className: "p-2 -m-2 rounded-lg",
-      contentEditable: false
-    }, /*#__PURE__*/react.createElement(TableOfContents, {
-      editor: editor
-    })));
+    return jsxRuntime.jsx(react$1.NodeViewWrapper, {
+      children: jsxRuntime.jsx("div", {
+        className: "p-2 -m-2 rounded-lg",
+        contentEditable: false,
+        children: jsxRuntime.jsx(TableOfContents, {
+          editor: editor
+        })
+      })
+    });
   };
   var TableOfContentsNode = core.Node.create({
     name: 'tableOfContentsNode',
@@ -36866,7 +38341,7 @@
     if (!IconComponent) {
       return null;
     }
-    return /*#__PURE__*/React.createElement(IconComponent, {
+    return jsxRuntime.jsx(IconComponent, {
       className: cn('w-4 h-4', className),
       strokeWidth: strokeWidth || 2.5
     });
@@ -36877,26 +38352,32 @@
     var onClear = _ref.onClear,
       onEdit = _ref.onEdit,
       url = _ref.url;
-    return /*#__PURE__*/React.createElement(Surface, {
-      className: "flex items-center gap-2 p-2"
-    }, /*#__PURE__*/React.createElement("a", {
-      href: url,
-      target: "_blank",
-      rel: "noopener noreferrer",
-      className: "text-sm underline break-all"
-    }, url), /*#__PURE__*/React.createElement(Toolbar.Divider, null), /*#__PURE__*/React.createElement(Tooltip, {
-      title: "Edit link"
-    }, /*#__PURE__*/React.createElement(Toolbar.Button, {
-      onClick: onEdit
-    }, /*#__PURE__*/React.createElement(Icon, {
-      name: "Pen"
-    }))), /*#__PURE__*/React.createElement(Tooltip, {
-      title: "Remove link"
-    }, /*#__PURE__*/React.createElement(Toolbar.Button, {
-      onClick: onClear
-    }, /*#__PURE__*/React.createElement(Icon, {
-      name: "Trash2"
-    }))));
+    return jsxRuntime.jsxs(Surface, {
+      className: "flex items-center gap-2 p-2",
+      children: [jsxRuntime.jsx("a", {
+        href: url,
+        target: "_blank",
+        rel: "noopener noreferrer",
+        className: "text-sm underline break-all",
+        children: url
+      }), jsxRuntime.jsx(Toolbar.Divider, {}), jsxRuntime.jsx(Tooltip, {
+        title: "Edit link",
+        children: jsxRuntime.jsx(Toolbar.Button, {
+          onClick: onEdit,
+          children: jsxRuntime.jsx(Icon, {
+            name: "Pen"
+          })
+        })
+      }), jsxRuntime.jsx(Tooltip, {
+        title: "Remove link",
+        children: jsxRuntime.jsx(Toolbar.Button, {
+          onClick: onClear,
+          children: jsxRuntime.jsx(Icon, {
+            name: "Trash2"
+          })
+        })
+      })]
+    });
   };
 
   var ColorButton = /*#__PURE__*/react.memo(function (_ref) {
@@ -36910,16 +38391,17 @@
         onColorChange(color || '');
       }
     }, [onColorChange, color]);
-    return /*#__PURE__*/React.createElement("button", {
+    return jsxRuntime.jsx("button", {
       onClick: handleClick,
-      className: wrapperClassName
-    }, /*#__PURE__*/React.createElement("div", {
-      style: {
-        backgroundColor: color,
-        color: color
-      },
-      className: bubbleClassName
-    }));
+      className: wrapperClassName,
+      children: jsxRuntime.jsx("div", {
+        style: {
+          backgroundColor: color,
+          color: color
+        },
+        className: bubbleClassName
+      })
+    });
   });
   ColorButton.displayName = 'ColorButton';
 
@@ -36945,34 +38427,36 @@
         onChange(colorInputValue);
       }
     }, [colorInputValue, onChange]);
-    return /*#__PURE__*/React.createElement("div", {
-      className: "flex flex-col gap-2"
-    }, /*#__PURE__*/React.createElement(reactColorful.HexColorPicker, {
-      className: "w-full",
-      color: color || '',
-      onChange: onChange
-    }), /*#__PURE__*/React.createElement("input", {
-      type: "text",
-      className: "w-full p-2 text-black bg-white border rounded dark:bg-black dark:text-white border-neutral-200 dark:border-neutral-800 focus:outline-1 focus:ring-0 focus:outline-neutral-300 dark:focus:outline-neutral-700",
-      placeholder: "#000000",
-      value: colorInputValue,
-      onChange: handleColorUpdate,
-      onBlur: handleColorChange
-    }), /*#__PURE__*/React.createElement("div", {
-      className: "flex flex-wrap items-center gap-1 max-w-[15rem]"
-    }, themeColors.map(function (currentColor) {
-      return /*#__PURE__*/React.createElement(ColorButton, {
-        active: currentColor === color,
-        color: currentColor,
-        key: currentColor,
-        onColorChange: onChange
-      });
-    }), /*#__PURE__*/React.createElement(Toolbar.Button, {
-      tooltip: "Reset color to default",
-      onClick: onClear
-    }, /*#__PURE__*/React.createElement(Icon, {
-      name: "Undo"
-    }))));
+    return jsxRuntime.jsxs("div", {
+      className: "flex flex-col gap-2",
+      children: [jsxRuntime.jsx(reactColorful.HexColorPicker, {
+        className: "w-full",
+        color: color || '',
+        onChange: onChange
+      }), jsxRuntime.jsx("input", {
+        type: "text",
+        className: "w-full p-2 text-black bg-white border rounded dark:bg-black dark:text-white border-neutral-200 dark:border-neutral-800 focus:outline-1 focus:ring-0 focus:outline-neutral-300 dark:focus:outline-neutral-700",
+        placeholder: "#000000",
+        value: colorInputValue,
+        onChange: handleColorUpdate,
+        onBlur: handleColorChange
+      }), jsxRuntime.jsxs("div", {
+        className: "flex flex-wrap items-center gap-1 max-w-[15rem]",
+        children: [themeColors.map(function (currentColor) {
+          return jsxRuntime.jsx(ColorButton, {
+            active: currentColor === color,
+            color: currentColor,
+            onColorChange: onChange
+          }, currentColor);
+        }), jsxRuntime.jsx(Toolbar.Button, {
+          tooltip: "Reset color to default",
+          onClick: onClear,
+          children: jsxRuntime.jsx(Icon, {
+            name: "Undo"
+          })
+        })]
+      })]
+    });
   };
 
   var Toggle = function Toggle(_ref) {
@@ -36988,18 +38472,19 @@
     var handleChange = react.useCallback(function () {
       onChange(!active);
     }, [active, onChange]);
-    return /*#__PURE__*/React.createElement("button", {
+    return jsxRuntime.jsx("button", {
       className: buttonClass,
       type: "button",
       role: "switch",
       "aria-checked": active,
       "data-state": state,
       value: value,
-      onClick: handleChange
-    }, /*#__PURE__*/React.createElement("span", {
-      className: pinClass,
-      "data-state": state
-    }));
+      onClick: handleChange,
+      children: jsxRuntime.jsx("span", {
+        className: pinClass,
+        "data-state": state
+      })
+    });
   };
 
   var useLinkEditorState = function useLinkEditorState(_ref) {
@@ -37043,35 +38528,41 @@
       initialOpenInNewTab: initialOpenInNewTab,
       initialUrl: initialUrl
     });
-    return /*#__PURE__*/React.createElement(Surface, {
-      className: "p-2"
-    }, /*#__PURE__*/React.createElement("form", {
-      onSubmit: state.handleSubmit,
-      className: "flex items-center gap-2"
-    }, /*#__PURE__*/React.createElement("label", {
-      className: "flex items-center gap-2 p-2 rounded-lg bg-neutral-100 dark:bg-neutral-900 cursor-text"
-    }, /*#__PURE__*/React.createElement(Icon, {
-      name: "Link",
-      className: "flex-none text-black dark:text-white"
-    }), /*#__PURE__*/React.createElement("input", {
-      type: "url",
-      className: "flex-1 bg-transparent outline-none min-w-[12rem] text-black text-sm dark:text-white",
-      placeholder: "Enter URL",
-      value: state.url,
-      onChange: state.onChange
-    })), /*#__PURE__*/React.createElement(Button, {
-      variant: "primary",
-      buttonSize: "small",
-      type: "submit",
-      disabled: !state.isValidUrl
-    }, "Set Link")), /*#__PURE__*/React.createElement("div", {
-      className: "mt-3"
-    }, /*#__PURE__*/React.createElement("label", {
-      className: "flex items-center justify-start gap-2 text-sm font-semibold cursor-pointer select-none text-neutral-500 dark:text-neutral-400"
-    }, "Open in new tab", /*#__PURE__*/React.createElement(Toggle, {
-      active: state.openInNewTab,
-      onChange: state.setOpenInNewTab
-    }))));
+    return jsxRuntime.jsxs(Surface, {
+      className: "p-2",
+      children: [jsxRuntime.jsxs("form", {
+        onSubmit: state.handleSubmit,
+        className: "flex items-center gap-2",
+        children: [jsxRuntime.jsxs("label", {
+          className: "flex items-center gap-2 p-2 rounded-lg bg-neutral-100 dark:bg-neutral-900 cursor-text",
+          children: [jsxRuntime.jsx(Icon, {
+            name: "Link",
+            className: "flex-none text-black dark:text-white"
+          }), jsxRuntime.jsx("input", {
+            type: "url",
+            className: "flex-1 bg-transparent outline-none min-w-[12rem] text-black text-sm dark:text-white",
+            placeholder: "Enter URL",
+            value: state.url,
+            onChange: state.onChange
+          })]
+        }), jsxRuntime.jsx(Button, {
+          variant: "primary",
+          buttonSize: "small",
+          type: "submit",
+          disabled: !state.isValidUrl,
+          children: "Set Link"
+        })]
+      }), jsxRuntime.jsx("div", {
+        className: "mt-3",
+        children: jsxRuntime.jsxs("label", {
+          className: "flex items-center justify-start gap-2 text-sm font-semibold cursor-pointer select-none text-neutral-500 dark:text-neutral-400",
+          children: ["Open in new tab", jsxRuntime.jsx(Toggle, {
+            active: state.openInNewTab,
+            onChange: state.setOpenInNewTab
+          })]
+        })
+      })]
+    });
   };
 
   var LinkMenu = function LinkMenu(_ref) {
@@ -37111,7 +38602,7 @@
       setShowEdit(false);
       return null;
     }, [editor]);
-    return /*#__PURE__*/react.createElement(react$1.BubbleMenu, {
+    return jsxRuntime.jsx(react$1.BubbleMenu, {
       editor: editor,
       pluginKey: "textMenu",
       shouldShow: shouldShow,
@@ -37129,16 +38620,17 @@
         onHidden: function onHidden() {
           setShowEdit(false);
         }
-      }
-    }, showEdit ? /*#__PURE__*/react.createElement(LinkEditorPanel, {
-      initialUrl: link,
-      initialOpenInNewTab: target === '_blank',
-      onSetLink: onSetLink
-    }) : /*#__PURE__*/react.createElement(LinkPreviewPanel, {
-      url: link,
-      onClear: onUnsetLink,
-      onEdit: handleEdit
-    }));
+      },
+      children: showEdit ? jsxRuntime.jsx(LinkEditorPanel, {
+        initialUrl: link,
+        initialOpenInNewTab: target === '_blank',
+        onSetLink: onSetLink
+      }) : jsxRuntime.jsx(LinkPreviewPanel, {
+        url: link,
+        onClear: onUnsetLink,
+        onEdit: handleEdit
+      })
+    });
   };
 
   var useTextmenuCommands = function useTextmenuCommands(editor) {
@@ -37398,33 +38890,42 @@
         return onChange(font);
       };
     }, [onChange]);
-    return /*#__PURE__*/React.createElement(Dropdown__namespace.Root, null, /*#__PURE__*/React.createElement(Dropdown__namespace.Trigger, {
-      asChild: true
-    }, /*#__PURE__*/React.createElement(Toolbar.Button, {
-      active: !!(currentValue != null && currentValue.value)
-    }, currentFontLabel, /*#__PURE__*/React.createElement(Icon, {
-      name: "ChevronDown",
-      className: "w-2 h-2"
-    }))), /*#__PURE__*/React.createElement(Dropdown__namespace.Content, {
-      asChild: true
-    }, /*#__PURE__*/React.createElement(Surface, {
-      className: "flex flex-col gap-1 px-2 py-4"
-    }, FONT_FAMILY_GROUPS.map(function (group) {
-      return /*#__PURE__*/React.createElement("div", {
-        className: "mt-2.5 first:mt-0 gap-0.5 flex flex-col",
-        key: group.label
-      }, /*#__PURE__*/React.createElement(DropdownCategoryTitle, null, group.label), group.options.map(function (font) {
-        return /*#__PURE__*/React.createElement(DropdownButton, {
-          isActive: value === font.value,
-          onClick: selectFont(font.value),
-          key: font.label + "_" + font.value
-        }, /*#__PURE__*/React.createElement("span", {
-          style: {
-            fontFamily: font.value
-          }
-        }, font.label));
-      }));
-    }))));
+    return jsxRuntime.jsxs(Dropdown__namespace.Root, {
+      children: [jsxRuntime.jsx(Dropdown__namespace.Trigger, {
+        asChild: true,
+        children: jsxRuntime.jsxs(Toolbar.Button, {
+          active: !!(currentValue != null && currentValue.value),
+          children: [currentFontLabel, jsxRuntime.jsx(Icon, {
+            name: "ChevronDown",
+            className: "w-2 h-2"
+          })]
+        })
+      }), jsxRuntime.jsx(Dropdown__namespace.Content, {
+        asChild: true,
+        children: jsxRuntime.jsx(Surface, {
+          className: "flex flex-col gap-1 px-2 py-4",
+          children: FONT_FAMILY_GROUPS.map(function (group) {
+            return jsxRuntime.jsxs("div", {
+              className: "mt-2.5 first:mt-0 gap-0.5 flex flex-col",
+              children: [jsxRuntime.jsx(DropdownCategoryTitle, {
+                children: group.label
+              }), group.options.map(function (font) {
+                return jsxRuntime.jsx(DropdownButton, {
+                  isActive: value === font.value,
+                  onClick: selectFont(font.value),
+                  children: jsxRuntime.jsx("span", {
+                    style: {
+                      fontFamily: font.value
+                    },
+                    children: font.label
+                  })
+                }, font.label + "_" + font.value);
+              })]
+            }, group.label);
+          })
+        })
+      })]
+    });
   };
 
   var FONT_SIZES = [{
@@ -37455,28 +38956,35 @@
         return onChange(size);
       };
     }, [onChange]);
-    return /*#__PURE__*/React.createElement(Dropdown__namespace.Root, null, /*#__PURE__*/React.createElement(Dropdown__namespace.Trigger, {
-      asChild: true
-    }, /*#__PURE__*/React.createElement(Toolbar.Button, {
-      active: !!(currentValue != null && currentValue.value)
-    }, currentSizeLabel, /*#__PURE__*/React.createElement(Icon, {
-      name: "ChevronDown",
-      className: "w-2 h-2"
-    }))), /*#__PURE__*/React.createElement(Dropdown__namespace.Content, {
-      asChild: true
-    }, /*#__PURE__*/React.createElement(Surface, {
-      className: "flex flex-col gap-1 px-2 py-4"
-    }, FONT_SIZES.map(function (size) {
-      return /*#__PURE__*/React.createElement(DropdownButton, {
-        isActive: value === size.value,
-        onClick: selectSize(size.value),
-        key: size.label + "_" + size.value
-      }, /*#__PURE__*/React.createElement("span", {
-        style: {
-          fontSize: size.value
-        }
-      }, size.label));
-    }))));
+    return jsxRuntime.jsxs(Dropdown__namespace.Root, {
+      children: [jsxRuntime.jsx(Dropdown__namespace.Trigger, {
+        asChild: true,
+        children: jsxRuntime.jsxs(Toolbar.Button, {
+          active: !!(currentValue != null && currentValue.value),
+          children: [currentSizeLabel, jsxRuntime.jsx(Icon, {
+            name: "ChevronDown",
+            className: "w-2 h-2"
+          })]
+        })
+      }), jsxRuntime.jsx(Dropdown__namespace.Content, {
+        asChild: true,
+        children: jsxRuntime.jsx(Surface, {
+          className: "flex flex-col gap-1 px-2 py-4",
+          children: FONT_SIZES.map(function (size) {
+            return jsxRuntime.jsx(DropdownButton, {
+              isActive: value === size.value,
+              onClick: selectSize(size.value),
+              children: jsxRuntime.jsx("span", {
+                style: {
+                  fontSize: size.value
+                },
+                children: size.label
+              })
+            }, size.label + "_" + size.value);
+          })
+        })
+      })]
+    });
   };
 
   var useTextmenuContentTypes = function useTextmenuContentTypes(editor) {
@@ -37625,38 +39133,44 @@
         return option.type === 'option' && option.isActive();
       });
     }, [options]);
-    return /*#__PURE__*/React.createElement(Dropdown__namespace.Root, null, /*#__PURE__*/React.createElement(Dropdown__namespace.Trigger, {
-      asChild: true
-    }, /*#__PURE__*/React.createElement(Toolbar.Button, {
-      active: (activeItem == null ? void 0 : activeItem.id) !== 'paragraph' && !!(activeItem != null && activeItem.type)
-    }, /*#__PURE__*/React.createElement(Icon, {
-      name: (activeItem == null ? void 0 : activeItem.type) === 'option' && activeItem.icon || 'Pilcrow'
-    }), /*#__PURE__*/React.createElement(Icon, {
-      name: "ChevronDown",
-      className: "w-2 h-2"
-    }))), /*#__PURE__*/React.createElement(Dropdown__namespace.Content, {
-      asChild: true
-    }, /*#__PURE__*/React.createElement(Surface, {
-      className: "flex flex-col gap-1 px-2 py-4"
-    }, options.map(function (option) {
-      if (isOption(option)) {
-        return /*#__PURE__*/React.createElement(DropdownButton, {
-          key: option.id,
-          onClick: option.onClick,
-          isActive: option.isActive()
-        }, /*#__PURE__*/React.createElement(Icon, {
-          name: option.icon,
-          className: "w-4 h-4 mr-1"
-        }), option.label);
-      } else if (isCategory(option)) {
-        return /*#__PURE__*/React.createElement("div", {
-          className: "mt-2 first:mt-0",
-          key: option.id
-        }, /*#__PURE__*/React.createElement(DropdownCategoryTitle, {
-          key: option.id
-        }, option.label));
-      }
-    }))));
+    return jsxRuntime.jsxs(Dropdown__namespace.Root, {
+      children: [jsxRuntime.jsx(Dropdown__namespace.Trigger, {
+        asChild: true,
+        children: jsxRuntime.jsxs(Toolbar.Button, {
+          active: (activeItem == null ? void 0 : activeItem.id) !== 'paragraph' && !!(activeItem != null && activeItem.type),
+          children: [jsxRuntime.jsx(Icon, {
+            name: (activeItem == null ? void 0 : activeItem.type) === 'option' && activeItem.icon || 'Pilcrow'
+          }), jsxRuntime.jsx(Icon, {
+            name: "ChevronDown",
+            className: "w-2 h-2"
+          })]
+        })
+      }), jsxRuntime.jsx(Dropdown__namespace.Content, {
+        asChild: true,
+        children: jsxRuntime.jsx(Surface, {
+          className: "flex flex-col gap-1 px-2 py-4",
+          children: options.map(function (option) {
+            if (isOption(option)) {
+              return jsxRuntime.jsxs(DropdownButton, {
+                onClick: option.onClick,
+                isActive: option.isActive(),
+                children: [jsxRuntime.jsx(Icon, {
+                  name: option.icon,
+                  className: "w-4 h-4 mr-1"
+                }), option.label]
+              }, option.id);
+            } else if (isCategory(option)) {
+              return jsxRuntime.jsx("div", {
+                className: "mt-2 first:mt-0",
+                children: jsxRuntime.jsx(DropdownCategoryTitle, {
+                  children: option.label
+                }, option.id)
+              }, option.id);
+            }
+          })
+        })
+      })]
+    });
   };
 
   var AIDropdown = function AIDropdown(_ref) {
@@ -37679,87 +39193,142 @@
         return onTranslate(language);
       };
     }, [onTranslate]);
-    return /*#__PURE__*/React.createElement(Dropdown__namespace.Root, null, /*#__PURE__*/React.createElement(Dropdown__namespace.Trigger, {
-      asChild: true
-    }, /*#__PURE__*/React.createElement(Toolbar.Button, {
-      className: "text-purple-500 hover:text-purple-600 active:text-purple-600 dark:text-purple-400 dark:hover:text-purple-300 dark:active:text-purple-400",
-      activeClassname: "text-purple-600 hover:text-purple-600 dark:text-purple-400 dark:hover:text-purple-200"
-    }, /*#__PURE__*/React.createElement(Icon, {
-      name: "Sparkles",
-      className: "mr-1"
-    }), "AI Tools", /*#__PURE__*/React.createElement(Icon, {
-      name: "ChevronDown",
-      className: "w-2 h-2 ml-1"
-    }))), /*#__PURE__*/React.createElement(Dropdown__namespace.Content, {
-      asChild: true
-    }, /*#__PURE__*/React.createElement(Surface, {
-      className: "p-2 min-w-[10rem]"
-    }, /*#__PURE__*/React.createElement(Dropdown__namespace.Item, {
-      onClick: onSimplify
-    }, /*#__PURE__*/React.createElement(DropdownButton, null, /*#__PURE__*/React.createElement(Icon, {
-      name: "CircleSlash"
-    }), "Simplify")), /*#__PURE__*/React.createElement(Dropdown__namespace.Item, {
-      onClick: onFixSpelling
-    }, /*#__PURE__*/React.createElement(DropdownButton, null, /*#__PURE__*/React.createElement(Icon, {
-      name: "Eraser"
-    }), "Fix spelling & grammar")), /*#__PURE__*/React.createElement(Dropdown__namespace.Item, {
-      onClick: onMakeShorter
-    }, /*#__PURE__*/React.createElement(DropdownButton, null, /*#__PURE__*/React.createElement(Icon, {
-      name: "ArrowLeftToLine"
-    }), "Make shorter")), /*#__PURE__*/React.createElement(Dropdown__namespace.Item, {
-      onClick: onMakeLonger
-    }, /*#__PURE__*/React.createElement(DropdownButton, null, /*#__PURE__*/React.createElement(Icon, {
-      name: "ArrowRightToLine"
-    }), "Make longer")), /*#__PURE__*/React.createElement(Dropdown__namespace.Sub, null, /*#__PURE__*/React.createElement(Dropdown__namespace.SubTrigger, null, /*#__PURE__*/React.createElement(DropdownButton, null, /*#__PURE__*/React.createElement(Icon, {
-      name: "Mic"
-    }), "Change tone", /*#__PURE__*/React.createElement(Icon, {
-      name: "ChevronRight",
-      className: "w-4 h-4 ml-auto"
-    }))), /*#__PURE__*/React.createElement(Dropdown__namespace.SubContent, null, /*#__PURE__*/React.createElement(Surface, {
-      className: "flex flex-col min-w-[15rem] p-2 max-h-[20rem] overflow-auto"
-    }, tones.map(function (tone) {
-      return /*#__PURE__*/React.createElement(Dropdown__namespace.Item, {
-        onClick: handleTone(tone.value),
-        key: tone.value
-      }, /*#__PURE__*/React.createElement(DropdownButton, null, tone.label));
-    })))), /*#__PURE__*/React.createElement(Dropdown__namespace.Item, {
-      onClick: onTldr
-    }, /*#__PURE__*/React.createElement(DropdownButton, null, /*#__PURE__*/React.createElement(Icon, {
-      name: "Ellipsis"
-    }), "Tl;dr:")), /*#__PURE__*/React.createElement(Dropdown__namespace.Item, {
-      onClick: onEmojify
-    }, /*#__PURE__*/React.createElement(DropdownButton, null, /*#__PURE__*/React.createElement(Icon, {
-      name: "SmilePlus"
-    }), "Emojify")), /*#__PURE__*/React.createElement(Dropdown__namespace.Sub, null, /*#__PURE__*/React.createElement(Dropdown__namespace.SubTrigger, null, /*#__PURE__*/React.createElement(DropdownButton, null, /*#__PURE__*/React.createElement(Icon, {
-      name: "Languages"
-    }), "Translate", /*#__PURE__*/React.createElement(Icon, {
-      name: "ChevronRight",
-      className: "w-4 h-4 ml-auto"
-    }))), /*#__PURE__*/React.createElement(Dropdown__namespace.SubContent, null, /*#__PURE__*/React.createElement(Surface, {
-      className: "flex flex-col min-w-[15rem] p-2 max-h-[20rem] overflow-auto"
-    }, languages.map(function (lang) {
-      return /*#__PURE__*/React.createElement(Dropdown__namespace.Item, {
-        onClick: handleTranslate(lang.value),
-        key: lang.value
-      }, /*#__PURE__*/React.createElement(DropdownButton, null, lang.label));
-    })))), /*#__PURE__*/React.createElement(Dropdown__namespace.Item, {
-      onClick: onCompleteSentence
-    }, /*#__PURE__*/React.createElement(DropdownButton, null, /*#__PURE__*/React.createElement(Icon, {
-      name: "PenLine"
-    }), "Complete sentence")))));
+    return jsxRuntime.jsxs(Dropdown__namespace.Root, {
+      children: [jsxRuntime.jsx(Dropdown__namespace.Trigger, {
+        asChild: true,
+        children: jsxRuntime.jsxs(Toolbar.Button, {
+          className: "text-purple-500 hover:text-purple-600 active:text-purple-600 dark:text-purple-400 dark:hover:text-purple-300 dark:active:text-purple-400",
+          activeClassname: "text-purple-600 hover:text-purple-600 dark:text-purple-400 dark:hover:text-purple-200",
+          children: [jsxRuntime.jsx(Icon, {
+            name: "Sparkles",
+            className: "mr-1"
+          }), "AI Tools", jsxRuntime.jsx(Icon, {
+            name: "ChevronDown",
+            className: "w-2 h-2 ml-1"
+          })]
+        })
+      }), jsxRuntime.jsx(Dropdown__namespace.Content, {
+        asChild: true,
+        children: jsxRuntime.jsxs(Surface, {
+          className: "p-2 min-w-[10rem]",
+          children: [jsxRuntime.jsx(Dropdown__namespace.Item, {
+            onClick: onSimplify,
+            children: jsxRuntime.jsxs(DropdownButton, {
+              children: [jsxRuntime.jsx(Icon, {
+                name: "CircleSlash"
+              }), "Simplify"]
+            })
+          }), jsxRuntime.jsx(Dropdown__namespace.Item, {
+            onClick: onFixSpelling,
+            children: jsxRuntime.jsxs(DropdownButton, {
+              children: [jsxRuntime.jsx(Icon, {
+                name: "Eraser"
+              }), "Fix spelling & grammar"]
+            })
+          }), jsxRuntime.jsx(Dropdown__namespace.Item, {
+            onClick: onMakeShorter,
+            children: jsxRuntime.jsxs(DropdownButton, {
+              children: [jsxRuntime.jsx(Icon, {
+                name: "ArrowLeftToLine"
+              }), "Make shorter"]
+            })
+          }), jsxRuntime.jsx(Dropdown__namespace.Item, {
+            onClick: onMakeLonger,
+            children: jsxRuntime.jsxs(DropdownButton, {
+              children: [jsxRuntime.jsx(Icon, {
+                name: "ArrowRightToLine"
+              }), "Make longer"]
+            })
+          }), jsxRuntime.jsxs(Dropdown__namespace.Sub, {
+            children: [jsxRuntime.jsx(Dropdown__namespace.SubTrigger, {
+              children: jsxRuntime.jsxs(DropdownButton, {
+                children: [jsxRuntime.jsx(Icon, {
+                  name: "Mic"
+                }), "Change tone", jsxRuntime.jsx(Icon, {
+                  name: "ChevronRight",
+                  className: "w-4 h-4 ml-auto"
+                })]
+              })
+            }), jsxRuntime.jsx(Dropdown__namespace.SubContent, {
+              children: jsxRuntime.jsx(Surface, {
+                className: "flex flex-col min-w-[15rem] p-2 max-h-[20rem] overflow-auto",
+                children: tones.map(function (tone) {
+                  return jsxRuntime.jsx(Dropdown__namespace.Item, {
+                    onClick: handleTone(tone.value),
+                    children: jsxRuntime.jsx(DropdownButton, {
+                      children: tone.label
+                    })
+                  }, tone.value);
+                })
+              })
+            })]
+          }), jsxRuntime.jsx(Dropdown__namespace.Item, {
+            onClick: onTldr,
+            children: jsxRuntime.jsxs(DropdownButton, {
+              children: [jsxRuntime.jsx(Icon, {
+                name: "Ellipsis"
+              }), "Tl;dr:"]
+            })
+          }), jsxRuntime.jsx(Dropdown__namespace.Item, {
+            onClick: onEmojify,
+            children: jsxRuntime.jsxs(DropdownButton, {
+              children: [jsxRuntime.jsx(Icon, {
+                name: "SmilePlus"
+              }), "Emojify"]
+            })
+          }), jsxRuntime.jsxs(Dropdown__namespace.Sub, {
+            children: [jsxRuntime.jsx(Dropdown__namespace.SubTrigger, {
+              children: jsxRuntime.jsxs(DropdownButton, {
+                children: [jsxRuntime.jsx(Icon, {
+                  name: "Languages"
+                }), "Translate", jsxRuntime.jsx(Icon, {
+                  name: "ChevronRight",
+                  className: "w-4 h-4 ml-auto"
+                })]
+              })
+            }), jsxRuntime.jsx(Dropdown__namespace.SubContent, {
+              children: jsxRuntime.jsx(Surface, {
+                className: "flex flex-col min-w-[15rem] p-2 max-h-[20rem] overflow-auto",
+                children: languages.map(function (lang) {
+                  return jsxRuntime.jsx(Dropdown__namespace.Item, {
+                    onClick: handleTranslate(lang.value),
+                    children: jsxRuntime.jsx(DropdownButton, {
+                      children: lang.label
+                    })
+                  }, lang.value);
+                })
+              })
+            })]
+          }), jsxRuntime.jsx(Dropdown__namespace.Item, {
+            onClick: onCompleteSentence,
+            children: jsxRuntime.jsxs(DropdownButton, {
+              children: [jsxRuntime.jsx(Icon, {
+                name: "PenLine"
+              }), "Complete sentence"]
+            })
+          })]
+        })
+      })]
+    });
   };
 
   var EditLinkPopover = function EditLinkPopover(_ref) {
     var onSetLink = _ref.onSetLink;
-    return /*#__PURE__*/React.createElement(Popover__namespace.Root, null, /*#__PURE__*/React.createElement(Popover__namespace.Trigger, {
-      asChild: true
-    }, /*#__PURE__*/React.createElement(Toolbar.Button, {
-      tooltip: "Set Link"
-    }, /*#__PURE__*/React.createElement(Icon, {
-      name: "Link"
-    }))), /*#__PURE__*/React.createElement(Popover__namespace.Content, null, /*#__PURE__*/React.createElement(LinkEditorPanel, {
-      onSetLink: onSetLink
-    })));
+    return jsxRuntime.jsxs(Popover__namespace.Root, {
+      children: [jsxRuntime.jsx(Popover__namespace.Trigger, {
+        asChild: true,
+        children: jsxRuntime.jsx(Toolbar.Button, {
+          tooltip: "Set Link",
+          children: jsxRuntime.jsx(Icon, {
+            name: "Link"
+          })
+        })
+      }), jsxRuntime.jsx(Popover__namespace.Content, {
+        children: jsxRuntime.jsx(LinkEditorPanel, {
+          onSetLink: onSetLink
+        })
+      })]
+    });
   };
 
   // We memorize the button so each button is not rerendered
@@ -37774,7 +39343,7 @@
     var commands = useTextmenuCommands(editor);
     var states = useTextmenuStates(editor);
     var blockOptions = useTextmenuContentTypes(editor);
-    return /*#__PURE__*/React.createElement(react$1.BubbleMenu, {
+    return jsxRuntime.jsx(react$1.BubbleMenu, {
       tippyOptions: {
         popperOptions: {
           placement: 'top-start',
@@ -37796,153 +39365,187 @@
       editor: editor,
       pluginKey: "textMenu",
       shouldShow: states.shouldShow,
-      updateDelay: 100
-    }, /*#__PURE__*/React.createElement(Toolbar.Wrapper, null, /*#__PURE__*/React.createElement(AIDropdown, {
-      onCompleteSentence: commands.onCompleteSentence,
-      onEmojify: commands.onEmojify,
-      onFixSpelling: commands.onFixSpelling,
-      onMakeLonger: commands.onMakeLonger,
-      onMakeShorter: commands.onMakeShorter,
-      onSimplify: commands.onSimplify,
-      onTldr: commands.onTldr,
-      onTone: commands.onTone,
-      onTranslate: commands.onTranslate
-    }), /*#__PURE__*/React.createElement(Toolbar.Divider, null), /*#__PURE__*/React.createElement(MemoContentTypePicker, {
-      options: blockOptions
-    }), /*#__PURE__*/React.createElement(MemoFontFamilyPicker, {
-      onChange: commands.onSetFont,
-      value: states.currentFont || ''
-    }), /*#__PURE__*/React.createElement(MemoFontSizePicker, {
-      onChange: commands.onSetFontSize,
-      value: states.currentSize || ''
-    }), /*#__PURE__*/React.createElement(Toolbar.Divider, null), /*#__PURE__*/React.createElement(MemoButton, {
-      tooltip: "Bold",
-      tooltipShortcut: ['Mod', 'B'],
-      onClick: commands.onBold,
-      active: states.isBold
-    }, /*#__PURE__*/React.createElement(Icon, {
-      name: "Bold"
-    })), /*#__PURE__*/React.createElement(MemoButton, {
-      tooltip: "Italic",
-      tooltipShortcut: ['Mod', 'I'],
-      onClick: commands.onItalic,
-      active: states.isItalic
-    }, /*#__PURE__*/React.createElement(Icon, {
-      name: "Italic"
-    })), /*#__PURE__*/React.createElement(MemoButton, {
-      tooltip: "Underline",
-      tooltipShortcut: ['Mod', 'U'],
-      onClick: commands.onUnderline,
-      active: states.isUnderline
-    }, /*#__PURE__*/React.createElement(Icon, {
-      name: "Underline"
-    })), /*#__PURE__*/React.createElement(MemoButton, {
-      tooltip: "Strikehrough",
-      tooltipShortcut: ['Mod', 'Shift', 'S'],
-      onClick: commands.onStrike,
-      active: states.isStrike
-    }, /*#__PURE__*/React.createElement(Icon, {
-      name: "Strikethrough"
-    })), /*#__PURE__*/React.createElement(MemoButton, {
-      tooltip: "Code",
-      tooltipShortcut: ['Mod', 'E'],
-      onClick: commands.onCode,
-      active: states.isCode
-    }, /*#__PURE__*/React.createElement(Icon, {
-      name: "Code"
-    })), /*#__PURE__*/React.createElement(MemoButton, {
-      tooltip: "Code block",
-      onClick: commands.onCodeBlock
-    }, /*#__PURE__*/React.createElement(Icon, {
-      name: "FileCode"
-    })), /*#__PURE__*/React.createElement(EditLinkPopover, {
-      onSetLink: commands.onLink
-    }), /*#__PURE__*/React.createElement(Popover__namespace.Root, null, /*#__PURE__*/React.createElement(Popover__namespace.Trigger, {
-      asChild: true
-    }, /*#__PURE__*/React.createElement(MemoButton, {
-      active: !!states.currentHighlight,
-      tooltip: "Highlight text"
-    }, /*#__PURE__*/React.createElement(Icon, {
-      name: "Highlighter"
-    }))), /*#__PURE__*/React.createElement(Popover__namespace.Content, {
-      side: "top",
-      sideOffset: 8,
-      asChild: true
-    }, /*#__PURE__*/React.createElement(Surface, {
-      className: "p-1"
-    }, /*#__PURE__*/React.createElement(MemoColorPicker, {
-      color: states.currentHighlight,
-      onChange: commands.onChangeHighlight,
-      onClear: commands.onClearHighlight
-    })))), /*#__PURE__*/React.createElement(Popover__namespace.Root, null, /*#__PURE__*/React.createElement(Popover__namespace.Trigger, {
-      asChild: true
-    }, /*#__PURE__*/React.createElement(MemoButton, {
-      active: !!states.currentColor,
-      tooltip: "Text color"
-    }, /*#__PURE__*/React.createElement(Icon, {
-      name: "Palette"
-    }))), /*#__PURE__*/React.createElement(Popover__namespace.Content, {
-      side: "top",
-      sideOffset: 8,
-      asChild: true
-    }, /*#__PURE__*/React.createElement(Surface, {
-      className: "p-1"
-    }, /*#__PURE__*/React.createElement(MemoColorPicker, {
-      color: states.currentColor,
-      onChange: commands.onChangeColor,
-      onClear: commands.onClearColor
-    })))), /*#__PURE__*/React.createElement(Popover__namespace.Root, null, /*#__PURE__*/React.createElement(Popover__namespace.Trigger, {
-      asChild: true
-    }, /*#__PURE__*/React.createElement(MemoButton, {
-      tooltip: "More options"
-    }, /*#__PURE__*/React.createElement(Icon, {
-      name: "EllipsisVertical"
-    }))), /*#__PURE__*/React.createElement(Popover__namespace.Content, {
-      side: "top",
-      asChild: true
-    }, /*#__PURE__*/React.createElement(Toolbar.Wrapper, null, /*#__PURE__*/React.createElement(MemoButton, {
-      tooltip: "Subscript",
-      tooltipShortcut: ['Mod', '.'],
-      onClick: commands.onSubscript,
-      active: states.isSubscript
-    }, /*#__PURE__*/React.createElement(Icon, {
-      name: "Subscript"
-    })), /*#__PURE__*/React.createElement(MemoButton, {
-      tooltip: "Superscript",
-      tooltipShortcut: ['Mod', ','],
-      onClick: commands.onSuperscript,
-      active: states.isSuperscript
-    }, /*#__PURE__*/React.createElement(Icon, {
-      name: "Superscript"
-    })), /*#__PURE__*/React.createElement(Toolbar.Divider, null), /*#__PURE__*/React.createElement(MemoButton, {
-      tooltip: "Align left",
-      tooltipShortcut: ['Shift', 'Mod', 'L'],
-      onClick: commands.onAlignLeft,
-      active: states.isAlignLeft
-    }, /*#__PURE__*/React.createElement(Icon, {
-      name: "AlignLeft"
-    })), /*#__PURE__*/React.createElement(MemoButton, {
-      tooltip: "Align center",
-      tooltipShortcut: ['Shift', 'Mod', 'E'],
-      onClick: commands.onAlignCenter,
-      active: states.isAlignCenter
-    }, /*#__PURE__*/React.createElement(Icon, {
-      name: "AlignCenter"
-    })), /*#__PURE__*/React.createElement(MemoButton, {
-      tooltip: "Align right",
-      tooltipShortcut: ['Shift', 'Mod', 'R'],
-      onClick: commands.onAlignRight,
-      active: states.isAlignRight
-    }, /*#__PURE__*/React.createElement(Icon, {
-      name: "AlignRight"
-    })), /*#__PURE__*/React.createElement(MemoButton, {
-      tooltip: "Justify",
-      tooltipShortcut: ['Shift', 'Mod', 'J'],
-      onClick: commands.onAlignJustify,
-      active: states.isAlignJustify
-    }, /*#__PURE__*/React.createElement(Icon, {
-      name: "AlignJustify"
-    })))))));
+      updateDelay: 100,
+      children: jsxRuntime.jsxs(Toolbar.Wrapper, {
+        children: [jsxRuntime.jsx(AIDropdown, {
+          onCompleteSentence: commands.onCompleteSentence,
+          onEmojify: commands.onEmojify,
+          onFixSpelling: commands.onFixSpelling,
+          onMakeLonger: commands.onMakeLonger,
+          onMakeShorter: commands.onMakeShorter,
+          onSimplify: commands.onSimplify,
+          onTldr: commands.onTldr,
+          onTone: commands.onTone,
+          onTranslate: commands.onTranslate
+        }), jsxRuntime.jsx(Toolbar.Divider, {}), jsxRuntime.jsx(MemoContentTypePicker, {
+          options: blockOptions
+        }), jsxRuntime.jsx(MemoFontFamilyPicker, {
+          onChange: commands.onSetFont,
+          value: states.currentFont || ''
+        }), jsxRuntime.jsx(MemoFontSizePicker, {
+          onChange: commands.onSetFontSize,
+          value: states.currentSize || ''
+        }), jsxRuntime.jsx(Toolbar.Divider, {}), jsxRuntime.jsx(MemoButton, {
+          tooltip: "Bold",
+          tooltipShortcut: ['Mod', 'B'],
+          onClick: commands.onBold,
+          active: states.isBold,
+          children: jsxRuntime.jsx(Icon, {
+            name: "Bold"
+          })
+        }), jsxRuntime.jsx(MemoButton, {
+          tooltip: "Italic",
+          tooltipShortcut: ['Mod', 'I'],
+          onClick: commands.onItalic,
+          active: states.isItalic,
+          children: jsxRuntime.jsx(Icon, {
+            name: "Italic"
+          })
+        }), jsxRuntime.jsx(MemoButton, {
+          tooltip: "Underline",
+          tooltipShortcut: ['Mod', 'U'],
+          onClick: commands.onUnderline,
+          active: states.isUnderline,
+          children: jsxRuntime.jsx(Icon, {
+            name: "Underline"
+          })
+        }), jsxRuntime.jsx(MemoButton, {
+          tooltip: "Strikehrough",
+          tooltipShortcut: ['Mod', 'Shift', 'S'],
+          onClick: commands.onStrike,
+          active: states.isStrike,
+          children: jsxRuntime.jsx(Icon, {
+            name: "Strikethrough"
+          })
+        }), jsxRuntime.jsx(MemoButton, {
+          tooltip: "Code",
+          tooltipShortcut: ['Mod', 'E'],
+          onClick: commands.onCode,
+          active: states.isCode,
+          children: jsxRuntime.jsx(Icon, {
+            name: "Code"
+          })
+        }), jsxRuntime.jsx(MemoButton, {
+          tooltip: "Code block",
+          onClick: commands.onCodeBlock,
+          children: jsxRuntime.jsx(Icon, {
+            name: "FileCode"
+          })
+        }), jsxRuntime.jsx(EditLinkPopover, {
+          onSetLink: commands.onLink
+        }), jsxRuntime.jsxs(Popover__namespace.Root, {
+          children: [jsxRuntime.jsx(Popover__namespace.Trigger, {
+            asChild: true,
+            children: jsxRuntime.jsx(MemoButton, {
+              active: !!states.currentHighlight,
+              tooltip: "Highlight text",
+              children: jsxRuntime.jsx(Icon, {
+                name: "Highlighter"
+              })
+            })
+          }), jsxRuntime.jsx(Popover__namespace.Content, {
+            side: "top",
+            sideOffset: 8,
+            asChild: true,
+            children: jsxRuntime.jsx(Surface, {
+              className: "p-1",
+              children: jsxRuntime.jsx(MemoColorPicker, {
+                color: states.currentHighlight,
+                onChange: commands.onChangeHighlight,
+                onClear: commands.onClearHighlight
+              })
+            })
+          })]
+        }), jsxRuntime.jsxs(Popover__namespace.Root, {
+          children: [jsxRuntime.jsx(Popover__namespace.Trigger, {
+            asChild: true,
+            children: jsxRuntime.jsx(MemoButton, {
+              active: !!states.currentColor,
+              tooltip: "Text color",
+              children: jsxRuntime.jsx(Icon, {
+                name: "Palette"
+              })
+            })
+          }), jsxRuntime.jsx(Popover__namespace.Content, {
+            side: "top",
+            sideOffset: 8,
+            asChild: true,
+            children: jsxRuntime.jsx(Surface, {
+              className: "p-1",
+              children: jsxRuntime.jsx(MemoColorPicker, {
+                color: states.currentColor,
+                onChange: commands.onChangeColor,
+                onClear: commands.onClearColor
+              })
+            })
+          })]
+        }), jsxRuntime.jsxs(Popover__namespace.Root, {
+          children: [jsxRuntime.jsx(Popover__namespace.Trigger, {
+            asChild: true,
+            children: jsxRuntime.jsx(MemoButton, {
+              tooltip: "More options",
+              children: jsxRuntime.jsx(Icon, {
+                name: "EllipsisVertical"
+              })
+            })
+          }), jsxRuntime.jsx(Popover__namespace.Content, {
+            side: "top",
+            asChild: true,
+            children: jsxRuntime.jsxs(Toolbar.Wrapper, {
+              children: [jsxRuntime.jsx(MemoButton, {
+                tooltip: "Subscript",
+                tooltipShortcut: ['Mod', '.'],
+                onClick: commands.onSubscript,
+                active: states.isSubscript,
+                children: jsxRuntime.jsx(Icon, {
+                  name: "Subscript"
+                })
+              }), jsxRuntime.jsx(MemoButton, {
+                tooltip: "Superscript",
+                tooltipShortcut: ['Mod', ','],
+                onClick: commands.onSuperscript,
+                active: states.isSuperscript,
+                children: jsxRuntime.jsx(Icon, {
+                  name: "Superscript"
+                })
+              }), jsxRuntime.jsx(Toolbar.Divider, {}), jsxRuntime.jsx(MemoButton, {
+                tooltip: "Align left",
+                tooltipShortcut: ['Shift', 'Mod', 'L'],
+                onClick: commands.onAlignLeft,
+                active: states.isAlignLeft,
+                children: jsxRuntime.jsx(Icon, {
+                  name: "AlignLeft"
+                })
+              }), jsxRuntime.jsx(MemoButton, {
+                tooltip: "Align center",
+                tooltipShortcut: ['Shift', 'Mod', 'E'],
+                onClick: commands.onAlignCenter,
+                active: states.isAlignCenter,
+                children: jsxRuntime.jsx(Icon, {
+                  name: "AlignCenter"
+                })
+              }), jsxRuntime.jsx(MemoButton, {
+                tooltip: "Align right",
+                tooltipShortcut: ['Shift', 'Mod', 'R'],
+                onClick: commands.onAlignRight,
+                active: states.isAlignRight,
+                children: jsxRuntime.jsx(Icon, {
+                  name: "AlignRight"
+                })
+              }), jsxRuntime.jsx(MemoButton, {
+                tooltip: "Justify",
+                tooltipShortcut: ['Shift', 'Mod', 'J'],
+                onClick: commands.onAlignJustify,
+                active: states.isAlignJustify,
+                children: jsxRuntime.jsx(Icon, {
+                  name: "AlignJustify"
+                })
+              })]
+            })
+          })]
+        })]
+      })
+    });
   };
 
   var useContentItemActions = function useContentItemActions(editor, currentNode, currentNodePos) {
@@ -38035,53 +39638,74 @@
         editor.commands.setMeta('lockDragHandle', false);
       }
     }, [editor, menuOpen]);
-    return /*#__PURE__*/React.createElement(DragHandle__default["default"], {
+    return jsxRuntime.jsx(DragHandle__default["default"], {
       pluginKey: "ContentItemMenu",
       editor: editor,
       onNodeChange: data.handleNodeChange,
       tippyOptions: {
         offset: [-2, 16],
         zIndex: 99
-      }
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "flex items-center gap-0.5"
-    }, /*#__PURE__*/React.createElement(Toolbar.Button, {
-      onClick: actions.handleAdd
-    }, /*#__PURE__*/React.createElement(Icon, {
-      name: "Plus"
-    })), /*#__PURE__*/React.createElement(Popover__namespace.Root, {
-      open: menuOpen,
-      onOpenChange: setMenuOpen
-    }, /*#__PURE__*/React.createElement(Popover__namespace.Trigger, {
-      asChild: true
-    }, /*#__PURE__*/React.createElement(Toolbar.Button, null, /*#__PURE__*/React.createElement(Icon, {
-      name: "GripVertical"
-    }))), /*#__PURE__*/React.createElement(Popover__namespace.Content, {
-      side: "bottom",
-      align: "start",
-      sideOffset: 8
-    }, /*#__PURE__*/React.createElement(Surface, {
-      className: "p-2 flex flex-col min-w-[16rem]"
-    }, /*#__PURE__*/React.createElement(Popover__namespace.Close, null, /*#__PURE__*/React.createElement(DropdownButton, {
-      onClick: actions.resetTextFormatting
-    }, /*#__PURE__*/React.createElement(Icon, {
-      name: "RemoveFormatting"
-    }), "Clear formatting")), /*#__PURE__*/React.createElement(Popover__namespace.Close, null, /*#__PURE__*/React.createElement(DropdownButton, {
-      onClick: actions.copyNodeToClipboard
-    }, /*#__PURE__*/React.createElement(Icon, {
-      name: "Clipboard"
-    }), "Copy to clipboard")), /*#__PURE__*/React.createElement(Popover__namespace.Close, null, /*#__PURE__*/React.createElement(DropdownButton, {
-      onClick: actions.duplicateNode
-    }, /*#__PURE__*/React.createElement(Icon, {
-      name: "Copy"
-    }), "Duplicate")), /*#__PURE__*/React.createElement(Toolbar.Divider, {
-      horizontal: true
-    }), /*#__PURE__*/React.createElement(Popover__namespace.Close, null, /*#__PURE__*/React.createElement(DropdownButton, {
-      onClick: actions.deleteNode,
-      className: "text-red-500 bg-red-500 dark:text-red-500 hover:bg-red-500 dark:hover:text-red-500 dark:hover:bg-red-500 bg-opacity-10 hover:bg-opacity-20 dark:hover:bg-opacity-20"
-    }, /*#__PURE__*/React.createElement(Icon, {
-      name: "Trash2"
-    }), "Delete")))))));
+      },
+      children: jsxRuntime.jsxs("div", {
+        className: "flex items-center gap-0.5",
+        children: [jsxRuntime.jsx(Toolbar.Button, {
+          onClick: actions.handleAdd,
+          children: jsxRuntime.jsx(Icon, {
+            name: "Plus"
+          })
+        }), jsxRuntime.jsxs(Popover__namespace.Root, {
+          open: menuOpen,
+          onOpenChange: setMenuOpen,
+          children: [jsxRuntime.jsx(Popover__namespace.Trigger, {
+            asChild: true,
+            children: jsxRuntime.jsx(Toolbar.Button, {
+              children: jsxRuntime.jsx(Icon, {
+                name: "GripVertical"
+              })
+            })
+          }), jsxRuntime.jsx(Popover__namespace.Content, {
+            side: "bottom",
+            align: "start",
+            sideOffset: 8,
+            children: jsxRuntime.jsxs(Surface, {
+              className: "p-2 flex flex-col min-w-[16rem]",
+              children: [jsxRuntime.jsx(Popover__namespace.Close, {
+                children: jsxRuntime.jsxs(DropdownButton, {
+                  onClick: actions.resetTextFormatting,
+                  children: [jsxRuntime.jsx(Icon, {
+                    name: "RemoveFormatting"
+                  }), "Clear formatting"]
+                })
+              }), jsxRuntime.jsx(Popover__namespace.Close, {
+                children: jsxRuntime.jsxs(DropdownButton, {
+                  onClick: actions.copyNodeToClipboard,
+                  children: [jsxRuntime.jsx(Icon, {
+                    name: "Clipboard"
+                  }), "Copy to clipboard"]
+                })
+              }), jsxRuntime.jsx(Popover__namespace.Close, {
+                children: jsxRuntime.jsxs(DropdownButton, {
+                  onClick: actions.duplicateNode,
+                  children: [jsxRuntime.jsx(Icon, {
+                    name: "Copy"
+                  }), "Duplicate"]
+                })
+              }), jsxRuntime.jsx(Toolbar.Divider, {
+                horizontal: true
+              }), jsxRuntime.jsx(Popover__namespace.Close, {
+                children: jsxRuntime.jsxs(DropdownButton, {
+                  onClick: actions.deleteNode,
+                  className: "text-red-500 bg-red-500 dark:text-red-500 hover:bg-red-500 dark:hover:text-red-500 dark:hover:bg-red-500 bg-opacity-10 hover:bg-opacity-20 dark:hover:bg-opacity-20",
+                  children: [jsxRuntime.jsx(Icon, {
+                    name: "Trash2"
+                  }), "Delete"]
+                })
+              })]
+            })
+          })]
+        })]
+      })
+    });
   };
 
   var ExtensionKit = function ExtensionKit(_ref) {
@@ -39138,16 +40762,19 @@
       }
     }, [onClose]);
     var windowClassName = cn('absolute top-0 left-0 bg-white lg:bg-white/30 lg:backdrop-blur-xl h-full lg:h-auto lg:relative z-[999] w-0 duration-300 transition-all', 'dark:bg-black lg:dark:bg-black/30', !isOpen && 'border-r-transparent', isOpen && 'w-80 border-r border-r-neutral-200 dark:border-r-neutral-800');
-    return /*#__PURE__*/React.createElement("div", {
-      className: windowClassName
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "w-full h-full overflow-hidden"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "w-full h-full p-6 overflow-auto"
-    }, /*#__PURE__*/React.createElement(TableOfContents, {
-      onItemClick: handlePotentialClose,
-      editor: editor
-    }))));
+    return jsxRuntime.jsx("div", {
+      className: windowClassName,
+      children: jsxRuntime.jsx("div", {
+        className: "w-full h-full overflow-hidden",
+        children: jsxRuntime.jsx("div", {
+          className: "w-full h-full p-6 overflow-auto",
+          children: jsxRuntime.jsx(TableOfContents, {
+            onItemClick: handlePotentialClose,
+            editor: editor
+          })
+        })
+      })
+    });
   });
   Sidebar.displayName = 'TableOfContentSidepanel';
 
@@ -39165,19 +40792,21 @@
       onChange(nextValue);
       setCurrentValue(nextValue);
     }, [onChange]);
-    return /*#__PURE__*/React.createElement("div", {
-      className: "flex items-center gap-2"
-    }, /*#__PURE__*/React.createElement("input", {
-      className: "h-2 bg-neutral-200 border-0 rounded appearance-none fill-neutral-300",
-      type: "range",
-      min: "25",
-      max: "100",
-      step: "25",
-      onChange: handleChange,
-      value: currentValue
-    }), /*#__PURE__*/React.createElement("span", {
-      className: "text-xs font-semibold text-neutral-500 select-none"
-    }, value, "%"));
+    return jsxRuntime.jsxs("div", {
+      className: "flex items-center gap-2",
+      children: [jsxRuntime.jsx("input", {
+        className: "h-2 bg-neutral-200 border-0 rounded appearance-none fill-neutral-300",
+        type: "range",
+        min: "25",
+        max: "100",
+        step: "25",
+        onChange: handleChange,
+        value: currentValue
+      }), jsxRuntime.jsxs("span", {
+        className: "text-xs font-semibold text-neutral-500 select-none",
+        children: [value, "%"]
+      })]
+    });
   });
   ImageBlockWidth.displayName = 'ImageBlockWidth';
 
@@ -39237,7 +40866,7 @@
       isImageLeft = _useEditorState.isImageLeft,
       isImageRight = _useEditorState.isImageRight,
       width = _useEditorState.width;
-    return /*#__PURE__*/react.createElement(react$1.BubbleMenu, {
+    return jsxRuntime.jsx(react$1.BubbleMenu, {
       editor: editor,
       pluginKey: "imageBlockMenu-" + uuid.v4(),
       shouldShow: shouldShow,
@@ -39259,32 +40888,37 @@
         },
         plugins: [tippy.sticky],
         sticky: 'popper'
-      }
-    }, /*#__PURE__*/react.createElement(Toolbar.Wrapper, {
-      shouldShowContent: shouldShow(),
-      ref: menuRef
-    }, /*#__PURE__*/react.createElement(Toolbar.Button, {
-      tooltip: "Align image left",
-      active: isImageLeft,
-      onClick: onAlignImageLeft
-    }, /*#__PURE__*/react.createElement(Icon, {
-      name: "AlignHorizontalDistributeStart"
-    })), /*#__PURE__*/react.createElement(Toolbar.Button, {
-      tooltip: "Align image center",
-      active: isImageCenter,
-      onClick: onAlignImageCenter
-    }, /*#__PURE__*/react.createElement(Icon, {
-      name: "AlignHorizontalDistributeCenter"
-    })), /*#__PURE__*/react.createElement(Toolbar.Button, {
-      tooltip: "Align image right",
-      active: isImageRight,
-      onClick: onAlignImageRight
-    }, /*#__PURE__*/react.createElement(Icon, {
-      name: "AlignHorizontalDistributeEnd"
-    })), /*#__PURE__*/react.createElement(Toolbar.Divider, null), /*#__PURE__*/react.createElement(ImageBlockWidth, {
-      onChange: onWidthChange,
-      value: width
-    })));
+      },
+      children: jsxRuntime.jsxs(Toolbar.Wrapper, {
+        shouldShowContent: shouldShow(),
+        ref: menuRef,
+        children: [jsxRuntime.jsx(Toolbar.Button, {
+          tooltip: "Align image left",
+          active: isImageLeft,
+          onClick: onAlignImageLeft,
+          children: jsxRuntime.jsx(Icon, {
+            name: "AlignHorizontalDistributeStart"
+          })
+        }), jsxRuntime.jsx(Toolbar.Button, {
+          tooltip: "Align image center",
+          active: isImageCenter,
+          onClick: onAlignImageCenter,
+          children: jsxRuntime.jsx(Icon, {
+            name: "AlignHorizontalDistributeCenter"
+          })
+        }), jsxRuntime.jsx(Toolbar.Button, {
+          tooltip: "Align image right",
+          active: isImageRight,
+          onClick: onAlignImageRight,
+          children: jsxRuntime.jsx(Icon, {
+            name: "AlignHorizontalDistributeEnd"
+          })
+        }), jsxRuntime.jsx(Toolbar.Divider, {}), jsxRuntime.jsx(ImageBlockWidth, {
+          onChange: onWidthChange,
+          value: width
+        })]
+      })
+    });
   };
 
   var ColumnsMenu = function ColumnsMenu(_ref) {
@@ -39327,7 +40961,7 @@
       isColumnLeft = _useEditorState.isColumnLeft,
       isColumnRight = _useEditorState.isColumnRight,
       isColumnTwo = _useEditorState.isColumnTwo;
-    return /*#__PURE__*/React.createElement(react$1.BubbleMenu, {
+    return jsxRuntime.jsx(react$1.BubbleMenu, {
       editor: editor,
       pluginKey: "columnsMenu-" + uuid.v4(),
       shouldShow: shouldShow,
@@ -39346,26 +40980,32 @@
         },
         plugins: [tippy.sticky],
         sticky: 'popper'
-      }
-    }, /*#__PURE__*/React.createElement(Toolbar.Wrapper, null, /*#__PURE__*/React.createElement(Toolbar.Button, {
-      tooltip: "Sidebar left",
-      active: isColumnLeft,
-      onClick: onColumnLeft
-    }, /*#__PURE__*/React.createElement(Icon, {
-      name: "PanelLeft"
-    })), /*#__PURE__*/React.createElement(Toolbar.Button, {
-      tooltip: "Two columns",
-      active: isColumnTwo,
-      onClick: onColumnTwo
-    }, /*#__PURE__*/React.createElement(Icon, {
-      name: "Columns2"
-    })), /*#__PURE__*/React.createElement(Toolbar.Button, {
-      tooltip: "Sidebar right",
-      active: isColumnRight,
-      onClick: onColumnRight
-    }, /*#__PURE__*/React.createElement(Icon, {
-      name: "PanelRight"
-    }))));
+      },
+      children: jsxRuntime.jsxs(Toolbar.Wrapper, {
+        children: [jsxRuntime.jsx(Toolbar.Button, {
+          tooltip: "Sidebar left",
+          active: isColumnLeft,
+          onClick: onColumnLeft,
+          children: jsxRuntime.jsx(Icon, {
+            name: "PanelLeft"
+          })
+        }), jsxRuntime.jsx(Toolbar.Button, {
+          tooltip: "Two columns",
+          active: isColumnTwo,
+          onClick: onColumnTwo,
+          children: jsxRuntime.jsx(Icon, {
+            name: "Columns2"
+          })
+        }), jsxRuntime.jsx(Toolbar.Button, {
+          tooltip: "Sidebar right",
+          active: isColumnRight,
+          onClick: onColumnRight,
+          children: jsxRuntime.jsx(Icon, {
+            name: "PanelRight"
+          })
+        })]
+      })
+    });
   };
 
   var Item = function Item(_ref2) {
@@ -39381,16 +41021,17 @@
     var IconComponent = icon ? lucideReact.icons[icon] : null;
     var IconCustomComponent = iconComponent || null;
     var ItemComponent = close ? Popover__namespace.Close : 'button';
-    return /*#__PURE__*/React.createElement(ItemComponent, {
+    return jsxRuntime.jsxs(ItemComponent, {
       className: className,
       onClick: onClick,
-      disabled: disabled
-    }, IconComponent && /*#__PURE__*/React.createElement(IconComponent, {
-      className: "w-4 h-4"
-    }), IconCustomComponent, label);
+      disabled: disabled,
+      children: [IconComponent && jsxRuntime.jsx(IconComponent, {
+        className: "w-4 h-4"
+      }), IconCustomComponent, label]
+    });
   };
   var Divider = /*#__PURE__*/react.forwardRef(function (props, ref) {
-    return /*#__PURE__*/React.createElement("hr", _extends({}, props, {
+    return jsxRuntime.jsx("hr", _extends({}, props, {
       ref: ref,
       className: "my-1 border-neutral-200 dark:border-neutral-800"
     }));
@@ -39442,7 +41083,7 @@
     var onDeleteColumn = react.useCallback(function () {
       editor.chain().focus().deleteColumn().run();
     }, [editor]);
-    return /*#__PURE__*/react.createElement(react$1.BubbleMenu, {
+    return jsxRuntime.jsx(react$1.BubbleMenu, {
       editor: editor,
       pluginKey: "tableColumnMenu",
       updateDelay: 0,
@@ -39458,29 +41099,31 @@
           }]
         }
       },
-      shouldShow: shouldShow
-    }, /*#__PURE__*/react.createElement(Toolbar.Wrapper, {
-      isVertical: true
-    }, /*#__PURE__*/react.createElement(Item, {
-      iconComponent: /*#__PURE__*/react.createElement(Icon, {
-        name: "ArrowLeftToLine"
-      }),
-      close: false,
-      label: "Add column before",
-      onClick: onAddColumnBefore
-    }), /*#__PURE__*/react.createElement(Item, {
-      iconComponent: /*#__PURE__*/react.createElement(Icon, {
-        name: "ArrowRightToLine"
-      }),
-      close: false,
-      label: "Add column after",
-      onClick: onAddColumnAfter
-    }), /*#__PURE__*/react.createElement(Item, {
-      icon: "Trash",
-      close: false,
-      label: "Delete column",
-      onClick: onDeleteColumn
-    })));
+      shouldShow: shouldShow,
+      children: jsxRuntime.jsxs(Toolbar.Wrapper, {
+        isVertical: true,
+        children: [jsxRuntime.jsx(Item, {
+          iconComponent: jsxRuntime.jsx(Icon, {
+            name: "ArrowLeftToLine"
+          }),
+          close: false,
+          label: "Add column before",
+          onClick: onAddColumnBefore
+        }), jsxRuntime.jsx(Item, {
+          iconComponent: jsxRuntime.jsx(Icon, {
+            name: "ArrowRightToLine"
+          }),
+          close: false,
+          label: "Add column after",
+          onClick: onAddColumnAfter
+        }), jsxRuntime.jsx(Item, {
+          icon: "Trash",
+          close: false,
+          label: "Delete column",
+          onClick: onDeleteColumn
+        })]
+      })
+    });
   });
   TableColumnMenu.displayName = 'TableColumnMenu';
 
@@ -39529,7 +41172,7 @@
     var onDeleteRow = react.useCallback(function () {
       editor.chain().focus().deleteRow().run();
     }, [editor]);
-    return /*#__PURE__*/react.createElement(react$1.BubbleMenu, {
+    return jsxRuntime.jsx(react$1.BubbleMenu, {
       editor: editor,
       pluginKey: "tableRowMenu",
       updateDelay: 0,
@@ -39546,29 +41189,31 @@
           }]
         }
       },
-      shouldShow: shouldShow
-    }, /*#__PURE__*/react.createElement(Toolbar.Wrapper, {
-      isVertical: true
-    }, /*#__PURE__*/react.createElement(Item, {
-      iconComponent: /*#__PURE__*/react.createElement(Icon, {
-        name: "ArrowUpToLine"
-      }),
-      close: false,
-      label: "Add row before",
-      onClick: onAddRowBefore
-    }), /*#__PURE__*/react.createElement(Item, {
-      iconComponent: /*#__PURE__*/react.createElement(Icon, {
-        name: "ArrowDownToLine"
-      }),
-      close: false,
-      label: "Add row after",
-      onClick: onAddRowAfter
-    }), /*#__PURE__*/react.createElement(Item, {
-      icon: "Trash",
-      close: false,
-      label: "Delete row",
-      onClick: onDeleteRow
-    })));
+      shouldShow: shouldShow,
+      children: jsxRuntime.jsxs(Toolbar.Wrapper, {
+        isVertical: true,
+        children: [jsxRuntime.jsx(Item, {
+          iconComponent: jsxRuntime.jsx(Icon, {
+            name: "ArrowUpToLine"
+          }),
+          close: false,
+          label: "Add row before",
+          onClick: onAddRowBefore
+        }), jsxRuntime.jsx(Item, {
+          iconComponent: jsxRuntime.jsx(Icon, {
+            name: "ArrowDownToLine"
+          }),
+          close: false,
+          label: "Add row after",
+          onClick: onAddRowAfter
+        }), jsxRuntime.jsx(Item, {
+          icon: "Trash",
+          close: false,
+          label: "Delete row",
+          onClick: onDeleteRow
+        })]
+      })
+    });
   });
   TableRowMenu.displayName = 'TableRowMenu';
 
@@ -39577,44 +41222,55 @@
       collabState = _ref.collabState,
       users = _ref.users,
       words = _ref.words;
-    return /*#__PURE__*/React.createElement("div", {
-      className: "flex items-center"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "flex flex-col justify-center pr-4 mr-4 text-right border-r border-neutral-200 dark:border-neutral-800"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "text-xs font-semibold text-neutral-500 dark:text-neutral-400"
-    }, words, " ", words === 1 ? 'word' : 'words'), /*#__PURE__*/React.createElement("div", {
-      className: "text-xs font-semibold text-neutral-500 dark:text-neutral-400"
-    }, characters, " ", characters === 1 ? 'character' : 'characters')), /*#__PURE__*/React.createElement("div", {
-      className: "flex items-center gap-2 mr-2"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: cn('w-2 h-2 rounded-full', {
-        'bg-yellow-500 dark:bg-yellow-400': collabState === 'connecting',
-        'bg-green-500 dark:bg-green-400': collabState === 'connected',
-        'bg-red-500 dark:bg-red-400': collabState === 'disconnected'
-      })
-    }), /*#__PURE__*/React.createElement("span", {
-      className: "max-w-[4rem] text-xs text-neutral-500 dark:text-neutral-400 font-semibold"
-    }, getConnectionText(collabState))), collabState === 'connected' && /*#__PURE__*/React.createElement("div", {
-      className: "flex flex-row items-center"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "relative flex flex-row items-center ml-3"
-    }, users.slice(0, 3).map(function (user) {
-      return /*#__PURE__*/React.createElement("div", {
-        key: user.clientId,
-        className: "-ml-3"
-      }, /*#__PURE__*/React.createElement(Tooltip, {
-        title: user.name
-      }, /*#__PURE__*/React.createElement("img", {
-        className: "w-8 h-8 border border-white rounded-full dark:border-black",
-        src: "https://api.dicebear.com/7.x/notionists-neutral/svg?seed=" + user.name + "&backgroundColor=" + user.color.replace('#', ''),
-        alt: "avatar"
-      })));
-    }), users.length > 3 && /*#__PURE__*/React.createElement("div", {
-      className: "-ml-3"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "flex items-center justify-center w-8 h-8 font-bold text-xs leading-none border border-white dark:border-black bg-[#FFA2A2] rounded-full"
-    }, "+", users.length - 3)))));
+    return jsxRuntime.jsxs("div", {
+      className: "flex items-center",
+      children: [jsxRuntime.jsxs("div", {
+        className: "flex flex-col justify-center pr-4 mr-4 text-right border-r border-neutral-200 dark:border-neutral-800",
+        children: [jsxRuntime.jsxs("div", {
+          className: "text-xs font-semibold text-neutral-500 dark:text-neutral-400",
+          children: [words, " ", words === 1 ? 'word' : 'words']
+        }), jsxRuntime.jsxs("div", {
+          className: "text-xs font-semibold text-neutral-500 dark:text-neutral-400",
+          children: [characters, " ", characters === 1 ? 'character' : 'characters']
+        })]
+      }), jsxRuntime.jsxs("div", {
+        className: "flex items-center gap-2 mr-2",
+        children: [jsxRuntime.jsx("div", {
+          className: cn('w-2 h-2 rounded-full', {
+            'bg-yellow-500 dark:bg-yellow-400': collabState === 'connecting',
+            'bg-green-500 dark:bg-green-400': collabState === 'connected',
+            'bg-red-500 dark:bg-red-400': collabState === 'disconnected'
+          })
+        }), jsxRuntime.jsx("span", {
+          className: "max-w-[4rem] text-xs text-neutral-500 dark:text-neutral-400 font-semibold",
+          children: getConnectionText(collabState)
+        })]
+      }), collabState === 'connected' && jsxRuntime.jsx("div", {
+        className: "flex flex-row items-center",
+        children: jsxRuntime.jsxs("div", {
+          className: "relative flex flex-row items-center ml-3",
+          children: [users.slice(0, 3).map(function (user) {
+            return jsxRuntime.jsx("div", {
+              className: "-ml-3",
+              children: jsxRuntime.jsx(Tooltip, {
+                title: user.name,
+                children: jsxRuntime.jsx("img", {
+                  className: "w-8 h-8 border border-white rounded-full dark:border-black",
+                  src: "https://api.dicebear.com/7.x/notionists-neutral/svg?seed=" + user.name + "&backgroundColor=" + user.color.replace('#', ''),
+                  alt: "avatar"
+                })
+              })
+            }, user.clientId);
+          }), users.length > 3 && jsxRuntime.jsx("div", {
+            className: "-ml-3",
+            children: jsxRuntime.jsxs("div", {
+              className: "flex items-center justify-center w-8 h-8 font-bold text-xs leading-none border border-white dark:border-black bg-[#FFA2A2] rounded-full",
+              children: ["+", users.length - 3]
+            })
+          })]
+        })
+      })]
+    });
   });
   EditorInfo.displayName = 'EditorInfo';
 
@@ -39646,25 +41302,29 @@
       }),
       characters = _useEditorState.characters,
       words = _useEditorState.words;
-    return /*#__PURE__*/React.createElement("div", {
-      className: "flex flex-row items-center justify-between flex-none py-2 pl-6 pr-3 text-black bg-white border-b border-neutral-200 dark:bg-black dark:text-white dark:border-neutral-800"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "flex flex-row gap-x-1.5 items-center"
-    }, /*#__PURE__*/React.createElement("div", {
-      className: "flex items-center gap-x-1.5"
-    }, /*#__PURE__*/React.createElement(Toolbar.Button, {
-      tooltip: isSidebarOpen ? 'Close sidebar' : 'Open sidebar',
-      onClick: toggleSidebar,
-      active: isSidebarOpen,
-      className: isSidebarOpen ? 'bg-transparent' : ''
-    }, /*#__PURE__*/React.createElement(Icon, {
-      name: isSidebarOpen ? 'PanelLeftClose' : 'PanelLeft'
-    })))), /*#__PURE__*/React.createElement(EditorInfo, {
-      characters: characters,
-      words: words,
-      collabState: collabState,
-      users: users
-    }));
+    return jsxRuntime.jsxs("div", {
+      className: "flex flex-row items-center justify-between flex-none py-2 pl-6 pr-3 text-black bg-white border-b border-neutral-200 dark:bg-black dark:text-white dark:border-neutral-800",
+      children: [jsxRuntime.jsx("div", {
+        className: "flex flex-row gap-x-1.5 items-center",
+        children: jsxRuntime.jsx("div", {
+          className: "flex items-center gap-x-1.5",
+          children: jsxRuntime.jsx(Toolbar.Button, {
+            tooltip: isSidebarOpen ? 'Close sidebar' : 'Open sidebar',
+            onClick: toggleSidebar,
+            active: isSidebarOpen,
+            className: isSidebarOpen ? 'bg-transparent' : '',
+            children: jsxRuntime.jsx(Icon, {
+              name: isSidebarOpen ? 'PanelLeftClose' : 'PanelLeft'
+            })
+          })
+        })
+      }), jsxRuntime.jsx(EditorInfo, {
+        characters: characters,
+        words: words,
+        collabState: collabState,
+        users: users
+      })]
+    });
   };
 
   var useSidebar = function useSidebar() {
@@ -39707,44 +41367,46 @@
     if (!editor || !users) {
       return null;
     }
-    return /*#__PURE__*/react.createElement("div", {
+    return jsxRuntime.jsxs("div", {
       className: "flex h-full",
-      ref: menuContainerRef
-    }, /*#__PURE__*/react.createElement(Sidebar, {
-      isOpen: leftSidebar.isOpen,
-      onClose: leftSidebar.close,
-      editor: editor
-    }), /*#__PURE__*/react.createElement("div", {
-      className: "relative flex flex-col flex-1 h-full overflow-hidden"
-    }, /*#__PURE__*/react.createElement(EditorHeader, {
-      editor: editor,
-      collabState: collabState,
-      users: users,
-      isSidebarOpen: leftSidebar.isOpen,
-      toggleSidebar: leftSidebar.toggle
-    }), /*#__PURE__*/react.createElement(react$1.EditorContent, {
-      editor: editor,
-      className: "flex-1 overflow-y-auto"
-    }), /*#__PURE__*/react.createElement(ContentItemMenu, {
-      editor: editor
-    }), /*#__PURE__*/react.createElement(LinkMenu, {
-      editor: editor,
-      appendTo: menuContainerRef
-    }), /*#__PURE__*/react.createElement(TextMenu, {
-      editor: editor
-    }), /*#__PURE__*/react.createElement(ColumnsMenu, {
-      editor: editor,
-      appendTo: menuContainerRef
-    }), /*#__PURE__*/react.createElement(TableRowMenu, {
-      editor: editor,
-      appendTo: menuContainerRef
-    }), /*#__PURE__*/react.createElement(TableColumnMenu, {
-      editor: editor,
-      appendTo: menuContainerRef
-    }), /*#__PURE__*/react.createElement(ImageBlockMenu, {
-      editor: editor,
-      appendTo: menuContainerRef
-    })));
+      ref: menuContainerRef,
+      children: [jsxRuntime.jsx(Sidebar, {
+        isOpen: leftSidebar.isOpen,
+        onClose: leftSidebar.close,
+        editor: editor
+      }), jsxRuntime.jsxs("div", {
+        className: "relative flex flex-col flex-1 h-full overflow-hidden",
+        children: [jsxRuntime.jsx(EditorHeader, {
+          editor: editor,
+          collabState: collabState,
+          users: users,
+          isSidebarOpen: leftSidebar.isOpen,
+          toggleSidebar: leftSidebar.toggle
+        }), jsxRuntime.jsx(react$1.EditorContent, {
+          editor: editor,
+          className: "flex-1 overflow-y-auto"
+        }), jsxRuntime.jsx(ContentItemMenu, {
+          editor: editor
+        }), jsxRuntime.jsx(LinkMenu, {
+          editor: editor,
+          appendTo: menuContainerRef
+        }), jsxRuntime.jsx(TextMenu, {
+          editor: editor
+        }), jsxRuntime.jsx(ColumnsMenu, {
+          editor: editor,
+          appendTo: menuContainerRef
+        }), jsxRuntime.jsx(TableRowMenu, {
+          editor: editor,
+          appendTo: menuContainerRef
+        }), jsxRuntime.jsx(TableColumnMenu, {
+          editor: editor,
+          appendTo: menuContainerRef
+        }), jsxRuntime.jsx(ImageBlockMenu, {
+          editor: editor,
+          appendTo: menuContainerRef
+        })]
+      })]
+    });
   };
 
   exports.BlockEditor = BlockEditor;

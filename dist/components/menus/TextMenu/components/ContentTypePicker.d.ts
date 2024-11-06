@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import { icons } from 'lucide-react';
 export type ContentTypePickerOption = {
     label: string;
@@ -18,4 +17,4 @@ export type ContentPickerOptions = Array<ContentTypePickerOption | ContentTypePi
 export type ContentTypePickerProps = {
     options: ContentPickerOptions;
 };
-export declare const ContentTypePicker: ({ options }: ContentTypePickerProps) => import("react").JSX.Element;
+export declare const ContentTypePicker: ({ options }: ContentTypePickerProps) => import("react/jsx-runtime").JSX.Element;

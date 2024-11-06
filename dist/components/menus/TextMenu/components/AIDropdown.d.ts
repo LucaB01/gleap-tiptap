@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import type { Language } from '@/extensions/Ai';
 export type AIDropdownProps = {
     onSimplify: () => void;
@@ -11,4 +10,4 @@ export type AIDropdownProps = {
     onTone: (tone: string) => void;
     onCompleteSentence: () => void;
 };
-export declare const AIDropdown: ({ onCompleteSentence, onEmojify, onFixSpelling, onMakeLonger, onMakeShorter, onSimplify, onTldr, onTone, onTranslate, }: AIDropdownProps) => import("react").JSX.Element;
+export declare const AIDropdown: ({ onCompleteSentence, onEmojify, onFixSpelling, onMakeLonger, onMakeShorter, onSimplify, onTldr, onTone, onTranslate, }: AIDropdownProps) => import("react/jsx-runtime").JSX.Element;

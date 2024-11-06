@@ -5,4 +5,4 @@ export type IconProps = {
     className?: string;
     strokeWidth?: number;
 };
-export declare const Icon: import("react").MemoExoticComponent<({ name, className, strokeWidth }: IconProps) => import("react").JSX.Element | null>;
+export declare const Icon: import("react").MemoExoticComponent<({ name, className, strokeWidth }: IconProps) => import("react/jsx-runtime").JSX.Element | null>;

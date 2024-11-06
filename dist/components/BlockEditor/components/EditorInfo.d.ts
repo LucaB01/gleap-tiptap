@@ -7,4 +7,4 @@ export type EditorInfoProps = {
     collabState: WebSocketStatus;
     users: EditorUser[];
 };
-export declare const EditorInfo: import("react").MemoExoticComponent<({ characters, collabState, users, words }: EditorInfoProps) => import("react").JSX.Element>;
+export declare const EditorInfo: import("react").MemoExoticComponent<({ characters, collabState, users, words }: EditorInfoProps) => import("react/jsx-runtime").JSX.Element>;

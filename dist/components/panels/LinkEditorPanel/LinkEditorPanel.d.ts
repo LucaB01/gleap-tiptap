@@ -13,4 +13,4 @@ export declare const useLinkEditorState: ({ initialUrl, initialOpenInNewTab, onS
     handleSubmit: (e: React.FormEvent) => void;
     isValidUrl: boolean;
 };
-export declare const LinkEditorPanel: ({ onSetLink, initialOpenInNewTab, initialUrl }: LinkEditorPanelProps) => import("react").JSX.Element;
+export declare const LinkEditorPanel: ({ onSetLink, initialOpenInNewTab, initialUrl }: LinkEditorPanelProps) => import("react/jsx-runtime").JSX.Element;

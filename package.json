@@ -7,9 +7,17 @@
   "module": "dist/index.modern.mjs",
   "unpkg": "dist/index.umd.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.modern.mjs",
+      "require": "./dist/index.js"
+    }
+  },
   "scripts": {
-    "build": "microbundle --jsx React.createElement --no-compress",
-    "dev": "microbundle watch --jsx React.createElement --no-compress"
+    "clean": "rimraf dist",
+    "build": "npm run clean && microbundle --jsx React.createElement --no-compress --format modern,cjs,umd",
+    "dev": "microbundle watch --jsx React.createElement --no-compress --format modern,cjs,umd"
   },
   "dependencies": {
     "@fontsource/inter": "^5.0.20",
@@ -96,14 +104,15 @@
     "@tailwindcss/typography": "^0.5.14",
     "@types/jsonwebtoken": "^9.0.6",
     "@types/lodash.debounce": "^4.0.9",
-    "@types/react": "18.2.48",
-    "@types/react-dom": "18.2.18",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
     "@types/styled-components": "^5.1.34",
     "@types/uuid": "^9.0.8",
     "babel-plugin-module-resolver": "^5.0.2",
     "eslint": "8.45.0",
     "eslint-plugin-prettier": "^5.2.1",
     "microbundle": "^0.15.1",
+    "rimraf": "^6.0.1",
     "rollup": "^3.20.0",
     "rollup-plugin-dts": "^5.0.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
