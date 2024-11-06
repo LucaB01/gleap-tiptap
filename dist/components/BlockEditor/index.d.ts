@@ -1,1 +1,1 @@
-export * from './BlockEditor';
+export { BlockEditor } from './BlockEditor';
